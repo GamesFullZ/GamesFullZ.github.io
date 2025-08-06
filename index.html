@@ -489,9 +489,28 @@ const juegos = [
       { nombre: "REVIEW", url: "https://www.youtube.com/watch?v=wHuGSDixewk" },
     ],
     generos: ["action", "horror"],
+    review: "Resident Evil 4 es un clásico del survival horror que revolucionó la franquicia con su innovador sistema de combate y atmósfera tensa.",
+    youtube: "https://www.youtube.com/watch?v=4v5f7B1yO1g"
+  },
+  // ✅ NUEVO JUEGO AGREGADO: DEAD ISLAND 1
+  {
+    titulo: "DEAD ISLAND",
+    imagen: "https://cdn.akamai.steamstatic.com/steam/apps/21140/header.jpg?t=1629212105", // Imagen oficial de Steam
+    ano: 2011,
+    tamano: "5.5 GB",
+    genero: "ACCION / RPG / HORROR",
+    version: "FULL GAME",
+    minimo: "Win XP, 2GB RAM, GeForce 8800 GT",
+    recomendado: "Win 7, 4GB RAM, GTX 560",
+    enlaces: [
+      { nombre: "GOFILE", url: "https://gofile.io/d/deadislandlink" }, // Reemplaza con el link real
+      { nombre: "GAMEPLAY", url: "https://www.youtube.com/watch?v=DeadIslandGameplay" }, // Reemplaza con el link real
+    ],
+    generos: ["action", "rpg"], // Coincide con los filtros existentes
+    review: "Dead Island combina acción intensa con elementos de RPG en un mundo abierto infestado de zombies. Su campaña cooperativa y sistema de combate cuerpo a cuerpo lo hacen muy adictivo.",
+    youtube: "https://www.youtube.com/watch?v=DeadIslandTrailer" // Reemplaza con el link real
   }
 ];
-
     function renderGames(juegosFiltrados) {
       const gallery = document.getElementById('gameGallery');
       gallery.innerHTML = juegosFiltrados.map(j => `
@@ -562,3 +581,4 @@ const juegos = [
 </body>
 
 </html>
+
