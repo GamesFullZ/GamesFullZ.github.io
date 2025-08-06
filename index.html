@@ -560,9 +560,32 @@ const juegos = [
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    renderGames(juegos);
+    function renderGames(juegosFiltrados) {
+  const gallery = document.getElementById('gameGallery');
+  if (juegosFiltrados.length === 0) {
+    gallery.innerHTML = `
+      <div style="grid-column: 1/-1; text-align: center; padding: 40px; font-family: var(--font-comic); font-size: 1.5rem; color: var(--azul);">
+        😿 No se encontraron juegos.
+      </div>
+    `;
+    return; // Importante: salir si no hay juegos
+  }
+
+  gallery.innerHTML = juegosFiltrados.map(j => `
+    <div class="game-card" onclick="openModal(${juegos.indexOf(j)})">
+      <img src="${j.imagen}" alt="${j.titulo}" class="game-img" onerror="this.src='https://via.placeholder.com/300x160/000/fff?text=NO+IMAGE';">
+      <div class="game-info">
+        <div class="game-title">${j.titulo}</div>
+        <div class="game-meta">📅 ${j.ano} | 💾 ${j.tamano}</div>
+        <!-- Botón "Ver Detalles" en la tarjeta principal -->
+        <button class="btn-details">VER DETALLES</button>
+      </div>
+    </div>
+  `).join('');
+}
   </script>
 </body>
 
 </html>
+
 
