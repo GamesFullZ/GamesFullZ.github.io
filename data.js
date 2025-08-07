@@ -76,7 +76,7 @@ const recursos = [
         rating: "⭐⭐⭐⭐☆",
         comments: ["Divertido Pero con mods mas", "Me encanta el combate", "Recomendado para fans de left 4 dead 2"],
         links: {
-            direct: "https://gofile.io/d/def456",
+            direct: "https://gofile.io/d/78ptPe",
             mediafire: "https://www.mediafire.com/file/uvw"
         },
         imagen: "Images/Tony.png"
