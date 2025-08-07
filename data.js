@@ -116,7 +116,7 @@ const recursos = [
             direct: "https://www.mediafire.com/file/y7z5pibt4j1ol9q/PayDay.2.v1.143.246-Repack.iso.torrent/file",
             mediafire: "https://www.mediafire.com/file/y7z5pibt4j1ol9q/PayDay.2.v1.143.246-Repack.iso.torrent/file"
         },
-        imagen: "Images/gta_v_cover.jpg", // <--- RUTA RELATIVA A TU IMAGEN LOCAL
+        imagen: "Images/Payday2cover.jpg", // <--- RUTA RELATIVA A TU IMAGEN LOCAL
         password: "contraseña123" // <--- Contraseña del archivo
 ]; // <--- PARENTESIS DE CIERRE PARA EL ARRAY 'recursos' Y PUNTO Y COMA FINAL
 
