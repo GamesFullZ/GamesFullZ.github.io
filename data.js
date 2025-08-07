@@ -11,7 +11,7 @@ const recursos = [
         comments: ["Excelente Juego!", "Gráficos 4K increíbles xdd", "Un poco pesado en mi PC"],
         links: {
             direct: "https://gofile.io/d/x9dhme",
-            mediafire: "https://www.mediafire.com/file/xyz"
+            mediafire: "https://gofile.io/d/x9dhme"
         },
         imagen: "Images/Resi4-gc-cover.jpg"
     },
