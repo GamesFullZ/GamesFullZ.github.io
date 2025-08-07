@@ -70,10 +70,10 @@ const recursos = [
         id: 20,
         nombre: "Call of Duty Black ops 1",
         tipo: "juego",
-        descripcion: "Juego de skate con historia loca y humor absurdo donde viajas por el mundo haciendo trucos extremos.",
-        requisitos: "SO: Windows 98/ME/2000/XP<br>Procesador: Pentium III 1.0 GHz<br>Memoria: 256 MB RAM<br>Gráficos: 64 MB (GeForce 3 o superior)<br>Almacenamiento: 1.8 GB libres",
+        descripcion: "Un shooter en primera persona ambientado en la Guerra Fría, lleno de acción, espionaje y misiones secretas.",
+        requisitos: "SO: Windows XP/Vista/7<br>Procesador: Intel Core2 Duo E6600 / AMD Phenom X3 8750<br>RAM: 2 GB<br>Gráficos: NVIDIA GeForce 8600GT / ATI Radeon X1950Pro<br>Almacenamiento: 12 GB",
         downloads: 0,
-        rating: "⭐⭐⭐⭐☆",
+        rating: "⭐⭐⭐⭐⭐",
         comments: ["Divertido Pero con mods mas", "Me encanta el combate", "Recomendado para fans de left 4 dead 2"],
         links: {
             direct: "https://gofile.io/d/78ptPe",
