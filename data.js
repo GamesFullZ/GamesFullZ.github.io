@@ -37,7 +37,7 @@ const recursos = [
         descripcion: "Juego de disparos en primera persona satírico y violento con mundo abierto y misiones absurdas.",
         requisitos: "SO: Windows XP / Vista / 7 / 8 / 10<br>Procesador: Pentium III o Athlon a 1.2 GHz<br>Memoria: 384 MB RAM<br>Gráficos: DirectX 8.1 compatible con al menos 64 MB<br>Almacenamiento: 4 GB",
         downloads: 3200,
-        rating: "⭐⭐⭐⭐☆",
+        rating: "⭐⭐⭐✰☆",
         comments: [
             "Juegazo xdd lo jugaba de niño",
             "Obra maestra xd"
