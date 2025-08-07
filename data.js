@@ -10,7 +10,7 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Excelente remake!", "Gráficos 4K increíbles", "Un poco pesado en mi PC"],
         links: {
-            direct: "https://gofile.io/d/abc123",
+            direct: "https://gofile.io/d/x9dhme",
             mediafire: "https://www.mediafire.com/file/xyz"
         },
         imagen: "Images/Resi4-gc-cover.jpg"
