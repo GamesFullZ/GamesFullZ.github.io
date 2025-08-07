@@ -8,7 +8,7 @@ const recursos = [
         requisitos: "SO: Windows 10<br>Procesador: Intel Core i5-7500<br>Memoria: 8 GB RAM<br>Gráficos: GTX 1050 Ti<br>Almacenamiento: 50 GB",
         downloads: 5320,
         rating: "⭐⭐⭐⭐⭐",
-        comments: ["Excelente remake!", "Gráficos 4K increíbles", "Un poco pesado en mi PC"],
+        comments: ["Excelente Juego!", "Gráficos 4K increíbles xdd", "Un poco pesado en mi PC"],
         links: {
             direct: "https://gofile.io/d/x9dhme",
             mediafire: "https://www.mediafire.com/file/xyz"
