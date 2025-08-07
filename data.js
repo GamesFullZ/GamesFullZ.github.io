@@ -68,7 +68,7 @@ const recursos = [
     },
     {
         id: 20,
-        nombre: "Call of Duty Black Ops 1",
+        nombre: "Call of Duty Black ops 1",
         tipo: "juego",
         descripcion: "Juego de skate con historia loca y humor absurdo donde viajas por el mundo haciendo trucos extremos.",
         requisitos: "SO: Windows 98/ME/2000/XP<br>Procesador: Pentium III 1.0 GHz<br>Memoria: 256 MB RAM<br>Gráficos: 64 MB (GeForce 3 o superior)<br>Almacenamiento: 1.8 GB libres",
