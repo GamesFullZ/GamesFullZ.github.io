@@ -773,13 +773,11 @@ select#theme-selector:focus {
         width: 95%;
         padding: 20px;
     }
-    .ia-section {
-        padding: 15px;
-    }
     .
     select#theme-selector {
         margin: 10px auto;
         display: block;
     }
 }
+
 
