@@ -87,7 +87,7 @@ const recursos = [
         password: "123" // <--- Contraseña agregada
     },
     {
-        id: 20,
+        id: 13,
         nombre: "Red Dead Redemption 1",
         tipo: "juego",
         descripcion: "un exforajido obligado por el gobierno a cazar a su antigua banda para recuperar a su familia en el viejo oeste de 1911.",
