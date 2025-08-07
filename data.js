@@ -26,7 +26,7 @@ const recursos = [
         comments: ["Divertido pero bugueado", "Me encanta el combate", "Recomendado para fans de left 4 dead 2"],
         links: {
             direct: "https://gofile.io/d/78ptPe",
-            mediafire: "https://www.mediafire.com/file/uvw"
+            mediafire: "https://gofile.io/d/78ptPe"
         },
         imagen: "Images/Dead_island_PC_packshot.png"
     },
