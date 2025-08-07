@@ -217,6 +217,22 @@ document.addEventListener('DOMContentLoaded', function () {
             showNotification("🎮 ¡Nuevo juego disponible!");
         }, 10000);
     }
+
+    // === IA RECOMENDADORA DE JUEGOS ===
+    // Esta función se necesita para showGameRecommendations
+    function recommendGames(gameTitle) {
+        const game = recursos.find(g => g.nombre === gameTitle);
+        if (!game || !game.tipo) return [];
+
+        // Buscar juegos del mismo tipo, excluyendo el actual
+        const similar = recursos.filter(g =>
+            g.id != game.id && // Excluir el juego actual por ID
+            g.tipo === game.tipo
+        ).slice(0, 3); // Limitar a 3 recomendaciones
+
+        return similar;
+    }
+
     // Mostrar recomendaciones cuando se ve un juego
     function showGameRecommendations(gameTitle) {
         const recommendations = recommendGames(gameTitle);
@@ -226,32 +242,37 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // === MODO BAJO RECURSOS ===
+    // === MODO BAJO RECURSOS (Corregido) ===
     function enableLowResourceMode() {
-        const isLowMode = confirm("¿Activar modo bajo recursos? Esto desactivará imágenes y animaciones.");
+        const isLowMode = confirm("¿Activar modo bajo recursos? Esto desactivará imágenes (excepto las de juegos) y animaciones.");
         if (!isLowMode) return;
 
-        // Desactivar imágenes
-        document.querySelectorAll("img").forEach(img => {
+        // Desactivar imágenes, pero NO las de los juegos en la galería principal
+        // Seleccionamos todas las imágenes que NO están dentro de .gallery__container
+        document.querySelectorAll("img:not(.gallery__container img)").forEach(img => {
             img.style.display = "none";
         });
 
         // Desactivar animaciones
-        const style = document.createElement('style');
-        style.textContent = `
-            * {
-                animation: none !important;
-                transition: none !important;
-            }
-            .no-animation {
-                display: none !important;
-            }
-        `;
-        document.head.appendChild(style);
+        // Verificar si ya se ha agregado el estilo para evitar duplicados
+        if (!document.getElementById('low-resource-style')) {
+            const style = document.createElement('style');
+            style.id = 'low-resource-style'; // Damos un ID para identificarlo
+            style.textContent = `
+                * {
+                    animation: none !important;
+                    transition: none !important;
+                }
+                .no-animation {
+                    display: none !important;
+                }
+            `;
+            document.head.appendChild(style);
+        }
 
         // Desactivar scripts pesados (simulado)
         console.log("Modo bajo recursos activado");
-        showNotification("📱 Modo bajo recursos activado");
+        showNotification("📱 Modo bajo recursos activado. Imágenes (excepto juegos) y animaciones desactivadas.");
     }
 
     // === JUEGO ALEATORIO ===
@@ -265,15 +286,33 @@ document.addEventListener('DOMContentLoaded', function () {
         showNotification(`🎲 Juego aleatorio: ${random.nombre}`);
     }
 
+    // === FUNCIONES PARA TEMAS ===
+    function changeTheme() {
+        const theme = document.getElementById("theme-selector").value;
+        document.body.setAttribute("data-theme", theme);
+        localStorage.setItem("selectedTheme", theme);
+        // Opcional: Notificación al cambiar tema
+        // showNotification(`🎨 Tema cambiado a ${theme || 'Oscuro'}`);
+    }
+
+    // Cargar tema guardado al inicio
+    function loadSavedTheme() {
+        const savedTheme = localStorage.getItem("selectedTheme");
+        if (savedTheme !== null) { // Comprobar si existe (incluso si es "")
+            document.getElementById("theme-selector").value = savedTheme;
+            document.body.setAttribute("data-theme", savedTheme);
+        }
+    }
+
     // === INICIALIZACIÓN DE FUNCIONES ===
     // Inicializar notificaciones
     initNotifications();
+    
+    // Cargar tema guardado
+    loadSavedTheme();
 
     // Exponer funciones globales que se usan desde el HTML inline
     window.randomGame = randomGame;
     window.enableLowResourceMode = enableLowResourceMode;
-    // changeTheme se define en el HTML inline y usa localStorage directamente, no necesita exposición aquí.
+    window.changeTheme = changeTheme; // Exponer changeTheme
 });
-
-
-
