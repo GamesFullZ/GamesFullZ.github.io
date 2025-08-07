@@ -10,11 +10,11 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Excelente Juego!", "Gráficos decentes increíbles", "el mejor resident evil viejo"],
         links: {
-            direct: "https://gofile.io/d/x9dhme  ",
-            mediafire: "https://gofile.io/d/x9dhme  "
+            direct: "https://gofile.io/d/x9dhme",
+            mediafire: "https://gofile.io/d/x9dhme"
         },
         imagen: "Images/Resi4-gc-cover.jpg",
-        password: "123" // <--- Contraseña agregada
+        password: "123"
     },
     {
         id: 2,
@@ -26,11 +26,11 @@ const recursos = [
         rating: "⭐⭐⭐☆☆",
         comments: ["Divertido pero bugueado", "Me encanta el combate", "Recomendado para fans de left 4 dead 2"],
         links: {
-            direct: "https://gofile.io/d/78ptPe  ",
-            mediafire: "https://gofile.io/d/78ptPe  "
+            direct: "https://gofile.io/d/78ptPe",
+            mediafire: "https://gofile.io/d/78ptPe"
         },
         imagen: "Images/Dead_island_PC_packshot.png",
-        password: "123" // <--- Contraseña agregada
+        password: "123"
     },
     {
         id: 3,
@@ -45,11 +45,11 @@ const recursos = [
             "Obra maestra xd"
         ],
         links: {
-            direct: "https://gofile.io/d/avMKZl  ",
-            mediafire: "https://gofile.io/d/avMKZl  "
+            direct: "https://gofile.io/d/avMKZl",
+            mediafire: "https://gofile.io/d/avMKZl"
         },
         imagen: "Images/Postal_2_cover.png",
-        password: "123" // <--- Contraseña agregada
+        password: "123"
     },
     {
         id: 4,
@@ -64,11 +64,11 @@ const recursos = [
             "Mejor juego de zombies"
         ],
         links: {
-            direct: "https://gofile.io/d/Js6Zsk  ",
-            mediafire: "https://gofile.io/d/Js6Zsk  "
+            direct: "https://gofile.io/d/Js6Zsk",
+            mediafire: "https://gofile.io/d/Js6Zsk"
         },
         imagen: "Images/Left4Dead2.jpg",
-        password: "123" // <--- Contraseña agregada
+        password: "123"
     },
     {
         id: 20,
@@ -84,9 +84,9 @@ const recursos = [
             mediafire: "https://gofile.io/d/Qax9uu"
         },
         imagen: "Images/CoD_Black_Ops_cover.png",
-        password: "123" // <--- Contraseña agregada
+        password: "123"
     },
-       {
+    {
         id: 13,
         nombre: "Red Dead Redemption 1",
         tipo: "juego",
@@ -96,29 +96,26 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Divertido", "Me encanta Los caballos", "Recomendado para fans de vaqueros"],
         links: {
-            direct: "https://gofile.io/d/c2B4Cd  ",
-            mediafire: "https://gofile.io/d/c2B4Cd  "
+            direct: "https://gofile.io/d/c2B4Cd",
+            mediafire: "https://gofile.io/d/c2B4Cd"
         },
         imagen: "Images/Red_Dead_Redemption.jpg",
-        password: "123" // <--- Contraseña agregada
-    }, // <--- LLAVE DE CIERRE PARA EL OBJETO id:13
-       {
-        id: 14, // <--- ID ÚNICO
+        password: "123"
+    },
+    {
+        id: 14,
         nombre: "Payday 2",
         tipo: "juego",
-        descripcion: " un grupo de criminales que realiza asaltos, robos y misiones cooperativas en primera persona, donde el sigilo o la acción afectan el resultado.", // <--- Descripción del juego
-        requisitos: "SO: Windows 7<br>Procesador: 2 GHz Dual Core<br>Memoria: 4 GB RAM<br>Gráficos: NVIDIA GeForce 8800 / ATI Radeon HD 2600 (512 MB VRAM)<br>Almacenamiento: 31 GB", // <--- Requisitos
-        downloads: 0, // <--- Puedes dejarlo en 0 o poner un valor estimado
-        rating: "⭐⭐⭐⭐⭐", // <--- Calificación
-        comments: ["Juegazo", "XD"], // <--- Comentarios iniciales
+        descripcion: "un grupo de criminales que realiza asaltos, robos y misiones cooperativas en primera persona, donde el sigilo o la acción afectan el resultado.",
+        requisitos: "SO: Windows 7<br>Procesador: 2 GHz Dual Core<br>Memoria: 4 GB RAM<br>Gráficos: NVIDIA GeForce 8800 / ATI Radeon HD 2600 (512 MB VRAM)<br>Almacenamiento: 31 GB",
+        downloads: 0,
+        rating: "⭐⭐⭐⭐⭐",
+        comments: ["Juegazo", "XD"],
         links: {
-            // <--- ENLACES DE DESCARGA VÁLIDOS (subidos a Gofile, Mediafire, etc.)
             direct: "https://www.mediafire.com/file/y7z5pibt4j1ol9q/PayDay.2.v1.143.246-Repack.iso.torrent/file",
             mediafire: "https://www.mediafire.com/file/y7z5pibt4j1ol9q/PayDay.2.v1.143.246-Repack.iso.torrent/file"
         },
-        imagen: "Images/Payday2cover.jpg", // <--- RUTA RELATIVA A TU IMAGEN LOCAL
-        password: "contraseña123" // <--- Contraseña del archivo
-]; // <--- PARENTESIS DE CIERRE PARA EL ARRAY 'recursos' Y PUNTO Y COMA FINAL
-
-// <--- Elimina cualquier '}' adicional suelto que haya estado aquí
-// Nota: El '}' adicional al final de tu archivo original parece ser un error de copiado/pegado, así que lo he eliminado.
+        imagen: "Images/Payday2cover.jpg",
+        password: "contraseña123"
+    }
+];
