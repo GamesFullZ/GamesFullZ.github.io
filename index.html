@@ -15,12 +15,11 @@
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="🔍 Buscar juegos...">
         </div>
-        <!-- SELECTOR DE TEMA (agregado en el header) -->
+        <!-- SELECTOR DE TEMA (simplificado) -->
         <div style="margin-left: 20px;">
             <select id="theme-selector" onchange="changeTheme()">
-                <option value="">Tema por defecto</option>
-                <option value="retro">Retro</option>
-                <option value="futurista">Futurista</option>
+                <option value="">Oscuro</option>
+                <option value="light">Claro</option>
                 <option value="pixel">Pixel Art</option>
             </select>
         </div>
@@ -51,24 +50,22 @@
             </form>
         </section>
         
-        <!-- ==================== ESTADÍSTICAS PÚBLICAS ==================== -->
-        <section class="stats-section" style="margin-top: 30px; padding: 20px; background: rgba(0,0,0,0.1); border-radius: 10px;">
-            <h2>📊 Estadísticas de la Comunidad</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                <div>
-                    <h3>🔥 Juegos más populares</h3>
-                    <ul id="top-downloads-public" style="list-style: none; padding: 0;"></ul>
-                </div>
-                <div>
-                    <h3>👁️ Juegos más vistos</h3>
-                    <ul id="top-views-public" style="list-style: none; padding: 0;"></ul>
-                </div>
-                <div>
-                    <h3>💻 Sistemas operativos</h3>
-                    <ul id="os-stats-public" style="list-style: none; padding: 0;"></ul>
-                </div>
+        <!-- ==================== IA ASISTENTE ==================== -->
+        <section class="ia-section" style="margin-top: 30px; padding: 20px; background: rgba(0,0,0,0.1); border-radius: 10px; text-align: center;">
+            <h2>🤖 IA Asistente</h2>
+            <p>¡Pregúntame cualquier cosa sobre la página o juegos!</p>
+            <div style="max-width: 600px; margin: 20px auto;">
+                <input type="text" id="ia-input" placeholder="Ej: ¿Cómo descargo un juego?" style="width: 70%; padding: 10px; border-radius: 5px; border: 1px solid #334466; background: #1e2a47; color: white;" />
+                <button onclick="askIA()" style="padding: 10px 15px; background: #00ffcc; color: #003333; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; margin-left: 10px;">Preguntar</button>
             </div>
+            <div id="ia-response" style="margin-top: 20px; padding: 15px; background: rgba(26, 36, 58, 0.5); border-radius: 8px; min-height: 50px; text-align: left; display: none;"></div>
+            <p style="margin-top: 20px; font-size: 14px; color: #aaa;">¿Quieres algo más? ¡Mándanos un mensaje!</p>
         </section>
+        
+        <!-- ==================== NOTA DE AGRADECIMIENTO ==================== -->
+        <div style="text-align: center; margin: 40px 0; padding: 20px; font-size: 18px; color: #00ffcc;">
+            <p>🎮 ¡Gracias por apoyar la weba, amigo! 🎮</p>
+        </div>
     </main>
     <!-- Modal -->
     <div id="gameModal" class="modal">
@@ -126,52 +123,18 @@
     </div>
 
     <!-- ================================================ -->
-    <!-- NUEVAS FUNCIONES AGREGADAS -->
+    <!-- ELEMENTOS SIMPLIFICADOS -->
     <!-- ================================================ -->
 
-    <!-- CHAT / FORO -->
-    <div id="chat-box" class="hidden">
-        <h3>💬 Comunidad</h3>
-        <div id="chat-messages"></div>
-        <div style="display: flex;">
-            <input type="text" id="chat-input" placeholder="Escribe tu mensaje..." style="flex: 1; padding: 5px;" />
-            <button onclick="sendMessage()" style="margin-left: 5px;">Enviar</button>
-        </div>
-        <button onclick="toggleChat()" style="margin-top: 10px; width: 100%;">Cerrar Chat</button>
-    </div>
-    
-    <!-- BOTÓN PARA ABRIR CHAT -->
-    <button id="chat-toggle" onclick="toggleChat()" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: #4CAF50; color: white; border: none; padding: 15px; border-radius: 50%; font-size: 18px; cursor: pointer;">💬</button>
-    
-    <!-- NOTIFICACIONES -->
-    <div id="notifications"></div>
-    
-    <!-- ASISTENTE DE BÚSQUEDA -->
-    <div id="search-assistant" style="position: fixed; top: 80px; left: 20px; z-index: 1000; background: rgba(0,0,0,0.9); color: white; padding: 15px; border-radius: 8px; width: 250px;">
-        <input type="text" id="search-input" placeholder="🔍 Buscar juegos..." onkeyup="handleSearchAssistant()" style="width: 100%; padding: 8px; margin-bottom: 10px;" />
-        <div id="assistant-results" style="max-height: 200px; overflow-y: auto;"></div>
-    </div>
-    
     <!-- BOTÓN JUEGO ALEATORIO -->
     <button onclick="randomGame()" style="position: fixed; bottom: 80px; right: 20px; z-index: 1000; background: #9c27b0; color: white; border: none; padding: 15px; border-radius: 50%; font-size: 18px; cursor: pointer;">🎲</button>
     
     <!-- BOTÓN MODO BAJO RECURSOS -->
     <button onclick="enableLowResourceMode()" style="position: fixed; bottom: 140px; right: 20px; z-index: 1000; background: #2196F3; color: white; border: none; padding: 15px; border-radius: 50%; font-size: 18px; cursor: pointer;">📱</button>
     
-    <!-- CONTROLES DE MÚSICA -->
-    <div id="music-controls" style="position: fixed; top: 140px; right: 20px; z-index: 1000; background: rgba(0,0,0,0.8); color: white; padding: 10px; border-radius: 5px;">
-        <label style="display: block; margin-bottom: 5px;">
-            <input type="checkbox" id="music-toggle" onchange="toggleMusic()" /> 🎵 Música
-        </label>
-        <select id="music-selector" onchange="changeTrack()" disabled style="width: 100%; padding: 3px;">
-            <option value="track1.mp3">Tema Retro 1</option>
-            <option value="track2.mp3">Tema Pixel 2</option>
-        </select>
-    </div>
+    <!-- NOTIFICACIONES (menos intrusivas) -->
+    <div id="notifications"></div>
     
-    <!-- AUDIO -->
-    <audio id="background-music" loop></audio>
-
     <!-- Carga de datos y scripts -->
     <script src="data.js"></script>
     <script>
