@@ -6,7 +6,7 @@
     <title>GamesFullZ</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
-    <!-- Iconos con Font Awesome -->
+    <!-- Iconos con Font Awesome (sin espacios) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -32,25 +32,20 @@
         <section class="contact-section">
             <h2>¿Necesitas ayuda?</h2>
             <p>Contáctanos si tienes problemas con una descarga o reportar un error.</p>
-<form action="https://formspree.io/f/mpwlozqz" method="POST" enctype="multipart/form-data">
-  <div class="form-group">
-    <label for="email">Tu Correo</label>
-    <input type="email" name="Correo" id="email" placeholder="tu@correo.com" required>
-  </div>
+            <!-- Formulario corregido: method="POST" y sin espacios en el action -->
+            <form action="https://formspree.io/f/mpwlozqz" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="email">Tu Correo</label>
+                    <input type="email" name="Correo" id="email" placeholder="tu@correo.com" required>
+                </div>
 
-  <div class="form-group">
-    <label for="mensaje">Mensaje</label>
-    <textarea name="Mensaje" id="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
-  </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="Mensaje" id="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+                </div>
 
-  <div class="form-group">
-    <label for="archivo">Adjuntar imagen (opcional)</label>
-    <input type="file" name="Archivo" id="archivo" accept="image/*, .png, .jpg, .jpeg, .gif">
-    <small>Formatos permitidos: PNG, JPG, JPEG, GIF</small>
-  </div>
-
-  <button type="submit">Enviar mensaje ✉️</button>
-</form>
+                <button type="submit">Enviar mensaje ✉️</button>
+            </form>
         </section>
     </main>
 
@@ -80,7 +75,8 @@
                     <div class="download-options">
                         <h3>Descargar desde:</h3>
                         <div class="links">
-                            <a href="#" id="gofile" target="_blank" class="download-link Gofile">
+                            <!-- ID corregido: debe ser "linkGofile" para coincidir con script.js -->
+                            <a href="#" id="linkGofile" target="_blank" class="download-link gofile">
                                 <i class="fas fa-cloud"></i> Gofile
                             </a>
                         </div>
@@ -102,6 +98,8 @@
         </div>
     </div>
 
+    <!-- Asegúrate de cargar data.js ANTES que script.js -->
+    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
