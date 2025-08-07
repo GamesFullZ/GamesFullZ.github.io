@@ -25,7 +25,7 @@ $question = trim($data['question']);
 // ==========================================
 // ===== ¡¡¡COLOCA TU NUEVA CLAVE AQUÍ !!! ====
 // ==========================================
-$OPENAI_API_KEY = 'sk-tu_nueva_clave_api_aqui'; // <--- ¡¡¡TU NUEVA CLAVE API!!!
+$OPENAI_API_KEY = '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'; // <--- ¡¡¡TU NUEVA CLAVE API!!!
 
 // 5. Preparar el mensaje para ChatGPT
 // Puedes personalizar este "contexto" para que la IA sepa sobre tu web
@@ -89,4 +89,5 @@ if (isset($responseData['choices']) && count($responseData['choices']) > 0) {
         echo json_encode(['error' => 'Error desconocido al obtener respuesta de OpenAI.']);
     }
 }
+
 ?>
