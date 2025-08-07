@@ -4,7 +4,7 @@ const recursos = [
         id: 1,
         nombre: "Resident Evil 4",
         tipo: "juego",
-        descripcion: "Un clásico del survival horror remasterizado. Leon S. Kennedy debe rescatar a la hija del presidente.",
+        descripcion: "Un clásico del survival horror. Leon S. Kennedy debe rescatar a la hija del presidente.",
         requisitos: "SO: Windows XP<br>Procesador: Pentium III 1.4 GHz<br>Memoria: 256 MB RAM<br>Gráficos: GeForce 2 / Radeon 9200 (128 MB VRAM)<br>Almacenamiento: 7 GB",
         downloads: 12,
         rating: "⭐⭐⭐⭐⭐",
