@@ -279,53 +279,6 @@ document.addEventListener('DOMContentLoaded', function () {
         showNotification(`🎲 Juego aleatorio: ${random.nombre}`);
     }
 
-    // === IA ASISTENTE CON CHATGPT (a través de tu backend) ===
-    async function askIA() {
-        const input = document.getElementById("ia-input");
-        const responseDiv = document.getElementById("ia-response");
-        const question = input.value.trim();
-
-        if (!question) {
-            showNotification("Por favor, escribe una pregunta.");
-            return;
-        }
-
-        // Mostrar que está "pensando"
-        responseDiv.style.display = "block";
-        responseDiv.innerHTML = '<div class="loader">Pensando</div>'; // Asegúrate de tener el estilo .loader en tu CSS
-
-        try {
-            // =======> ESTA ES LA PARTE IMPORTANTE <=======
-            // En lugar de lógica local, llamamos a TU backend
-            const response = await fetch('api_proxy.php', { // <--- Cambia 'api_proxy.php' por la ruta a tu archivo backend
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ question: question })
-            });
-
-            if (!response.ok) {
-                throw new Error(`Error del servidor: ${response.status}`);
-            }
-
-            const data = await response.json();
-            
-            if (data && data.answer) {
-                responseDiv.innerHTML = `<p><strong>IA:</strong> ${data.answer}</p>`;
-            } else {
-                throw new Error("Respuesta inválida del servidor.");
-            }
-        } catch (error) {
-            console.error("Error al contactar con la IA:", error);
-            responseDiv.innerHTML = `<p><strong>Error:</strong> No se pudo obtener una respuesta. (${error.message})</p>`;
-            showNotification("Hubo un error al contactar con la IA.");
-        }
-    }
-
-    // Exponer la función askIA globalmente para que el botón del HTML la pueda llamar
-    window.askIA = askIA;
-
     // === INICIALIZACIÓN DE FUNCIONES ===
     // Inicializar notificaciones
     initNotifications();
@@ -335,4 +288,5 @@ document.addEventListener('DOMContentLoaded', function () {
     window.enableLowResourceMode = enableLowResourceMode;
     // changeTheme se define en el HTML inline y usa localStorage directamente, no necesita exposición aquí.
 });
+
 
