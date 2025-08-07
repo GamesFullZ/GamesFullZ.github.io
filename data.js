@@ -43,8 +43,8 @@ const recursos = [
             "Obra maestra xd"
         ],
         links: {
-            direct: "https://gofile.io/d/ghi789",
-            mediafire: "https://www.mediafire.com/file/qrs"
+            direct: "https://gofile.io/d/avMKZl",
+            mediafire: "https://gofile.io/d/avMKZl"
         },
         imagen: "Images/Postal_2_cover.png"
     },
