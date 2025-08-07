@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const gameId = img.dataset.gameId;
             const game = recursos.find(g => g.id == gameId);
             if (game) {
-                const matches = game.nombre.toLowerCase().includes(term) || 
-                                game.tipo.toLowerCase().includes(term);
+                const matches = game.nombre.toLowerCase().includes(term) ||
+                    game.tipo.toLowerCase().includes(term);
                 img.style.display = matches ? 'block' : 'none';
             }
         });
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
-        
+
         // Mostrar recomendaciones
         showGameRecommendations(game.nombre);
     }
@@ -162,71 +162,8 @@ document.addEventListener('DOMContentLoaded', function () {
     loadGames();
 
     // ================================================
-    // NUEVAS FUNCIONES AGREGADAS
+    // NUEVAS FUNCIONES AGREGADAS Y SIMPLIFICADAS
     // ================================================
-
-    // === CHAT EN TIEMPO REAL ===
-    function toggleChat() {
-        const chatBox = document.getElementById("chat-box");
-        chatBox.classList.toggle("hidden");
-    }
-
-    function sendMessage() {
-        const input = document.getElementById("chat-input");
-        const message = input.value.trim();
-        if (!message) return;
-
-        const messagesDiv = document.getElementById("chat-messages");
-        const msgElement = document.createElement("div");
-        msgElement.textContent = `Tú: ${message}`;
-        msgElement.style.marginBottom = "5px";
-        msgElement.style.padding = "5px";
-        msgElement.style.backgroundColor = "rgba(255,255,255,0.1)";
-        msgElement.style.borderRadius = "3px";
-        messagesDiv.appendChild(msgElement);
-        messagesDiv.scrollTop = messagesDiv.scrollHeight;
-        input.value = "";
-        
-        // Guardar en localStorage
-        const chatHistory = JSON.parse(localStorage.getItem("chatHistory") || "[]");
-        chatHistory.push({ user: "Tú", text: message, timestamp: new Date().toLocaleTimeString() });
-        localStorage.setItem("chatHistory", JSON.stringify(chatHistory));
-    }
-
-    // === ESTADÍSTICAS PÚBLICAS ===
-    function loadPublicStats() {
-        // Juegos más descargados
-        const downloads = {};
-        const views = {};
-
-        recursos.forEach(game => {
-            downloads[game.nombre] = game.downloads || 0;
-            // Simular visitas si no existen
-            views[game.nombre] = game.views || Math.floor(Math.random() * 10000);
-        });
-
-        // Mostrar top juegos
-        const sortedDownloads = Object.entries(downloads).sort((a,b) => b[1] - a[1]);
-        const sortedViews = Object.entries(views).sort((a,b) => b[1] - a[1]);
-
-        const topDownloadsElement = document.getElementById("top-downloads-public");
-        const topViewsElement = document.getElementById("top-views-public");
-        
-        if (topDownloadsElement) {
-            topDownloadsElement.innerHTML = sortedDownloads.slice(0,5).map(([k,v]) => `<li style="margin: 5px 0;">🏆 ${k}: ${formatNumber(v)} descargas</li>`).join("");
-        }
-        
-        if (topViewsElement) {
-            topViewsElement.innerHTML = sortedViews.slice(0,5).map(([k,v]) => `<li style="margin: 5px 0;">👁️ ${k}: ${formatNumber(v)} visitas</li>`).join("");
-        }
-
-        // Sistemas operativos simulados
-        const osStats = { Windows: 70, macOS: 15, Linux: 10, Android: 5 };
-        const osStatsElement = document.getElementById("os-stats-public");
-        if (osStatsElement) {
-            osStatsElement.innerHTML = Object.entries(osStats).map(([k,v]) => `<li style="margin: 5px 0;">💻 ${k}: ${v}%</li>`).join("");
-        }
-    }
 
     // === NOTIFICACIONES INTELIGENTES ===
     function showNotification(text) {
@@ -234,33 +171,38 @@ document.addEventListener('DOMContentLoaded', function () {
         notif.className = "notification";
         notif.textContent = text;
         notif.style.position = "fixed";
-        notif.style.top = "20px";
+        notif.style.bottom = "20px"; // Cambiado a abajo
         notif.style.right = "20px";
-        notif.style.background = "#4CAF50";
+        notif.style.background = "rgba(50, 50, 50, 0.9)"; // Fondo más sutil
         notif.style.color = "white";
-        notif.style.padding = "15px";
-        notif.style.borderRadius = "5px";
+        notif.style.padding = "12px 20px"; // Ajustado padding
+        notif.style.borderRadius = "8px";
         notif.style.zIndex = "9999";
-        notif.style.boxShadow = "0 2px 10px rgba(0,0,0,0.2)";
-        notif.style.animation = "fadeInOut 4s forwards";
-        
-        // Agregar animación CSS
+        notif.style.boxShadow = "0 2px 10px rgba(0,0,0,0.3)";
+        notif.style.fontSize = "14px"; // Tamaño de fuente más pequeño
+        notif.style.maxWidth = "300px"; // Ancho máximo
+        notif.style.animation = "slideIn 0.3s ease"; // Animación más sutil
+
+        // Agregar animación CSS si no existe
         if (!document.querySelector('#notification-style')) {
             const style = document.createElement('style');
             style.id = 'notification-style';
             style.textContent = `
-                @keyframes fadeInOut {
-                    0% { opacity: 0; transform: translateX(100px); }
-                    10% { opacity: 1; transform: translateX(0); }
-                    90% { opacity: 1; transform: translateX(0); }
-                    100% { opacity: 0; transform: translateX(100px); }
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
                 }
             `;
             document.head.appendChild(style);
         }
-        
+
         document.body.appendChild(notif);
-        setTimeout(() => notif.remove(), 4000);
+        setTimeout(() => {
+            if (notif.parentNode) {
+                notif.style.animation = "slideIn 0.3s ease reverse";
+                setTimeout(() => notif.remove(), 300);
+            }
+        }, 3000); // Auto-eliminar después de 3 segundos
     }
 
     // Función para mostrar notificaciones automáticas
@@ -269,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             showNotification("¡Bienvenido a GamesFullZ! 🎮");
         }, 2000);
-        
+
         // Notificación de nuevo juego (simulada)
         setTimeout(() => {
             showNotification("🎮 ¡Nuevo juego disponible!");
@@ -307,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll("img").forEach(img => {
             img.style.display = "none";
         });
-        
+
         // Desactivar animaciones
         const style = document.createElement('style');
         style.textContent = `
@@ -320,75 +262,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         `;
         document.head.appendChild(style);
-        
+
         // Desactivar scripts pesados (simulado)
         console.log("Modo bajo recursos activado");
         showNotification("📱 Modo bajo recursos activado");
-    }
-
-    // === ASISTENTE PARA BUSCAR JUEGOS ===
-    function handleSearchAssistant() {
-        const input = document.getElementById("search-input").value.toLowerCase();
-        const resultsDiv = document.getElementById("assistant-results");
-        const games = recursos || [];
-
-        if (!input) {
-            resultsDiv.innerHTML = "";
-            return;
-        }
-
-        const matches = games.filter(g => 
-            g.nombre.toLowerCase().includes(input) ||
-            (g.tipo && g.tipo.toLowerCase().includes(input)) ||
-            (g.descripcion && g.descripcion.toLowerCase().includes(input))
-        );
-
-        resultsDiv.innerHTML = matches.slice(0,5).map(g => 
-            `<div onclick="openGameFromAssistant('${g.id}')" 
-                  style="padding: 8px; margin: 2px; background: #444; cursor: pointer; border-radius: 3px;">
-               🎮 ${g.nombre}
-             </div>`
-        ).join("");
-    }
-
-    // Función para abrir juego desde el asistente
-    function openGameFromAssistant(gameId) {
-        const game = recursos.find(g => g.id == gameId);
-        if (game) {
-            openModal(game);
-            document.getElementById("search-input").value = "";
-        }
-    }
-
-    // === MÚSICA DE FONDO ===
-    function toggleMusic() {
-        const toggle = document.getElementById("music-toggle");
-        const selector = document.getElementById("music-selector");
-        const audio = document.getElementById("background-music");
-
-        if (toggle.checked) {
-            selector.disabled = false;
-            const track = selector.value || "track1.mp3";
-            audio.src = `assets/music/${track}`;
-            audio.play().catch(e => console.log("Autoplay bloqueado:", e));
-        } else {
-            selector.disabled = true;
-            audio.pause();
-        }
-    }
-
-    function changeTrack() {
-        const track = document.getElementById("music-selector").value;
-        const audio = document.getElementById("background-music");
-        audio.src = `assets/music/${track}`;
-        audio.play().catch(e => console.log("Error al cambiar pista:", e));
-    }
-
-    // === CAMBIAR TEMA VISUAL ===
-    function changeTheme() {
-        const theme = document.getElementById("theme-selector").value;
-        document.body.setAttribute("data-theme", theme);
-        localStorage.setItem("selectedTheme", theme);
     }
 
     // === JUEGO ALEATORIO ===
@@ -402,46 +279,65 @@ document.addEventListener('DOMContentLoaded', function () {
         showNotification(`🎲 Juego aleatorio: ${random.nombre}`);
     }
 
+    // === IA ASISTENTE SIMPLE ===
+    function askIA() {
+        const input = document.getElementById("ia-input");
+        const responseDiv = document.getElementById("ia-response");
+        const question = input.value.trim().toLowerCase();
+
+        if (!question) {
+            showNotification("Por favor, escribe una pregunta.");
+            return;
+        }
+
+        // Mostrar que está "pensando"
+        responseDiv.style.display = "block";
+        responseDiv.innerHTML = '<div class="loader">Pensando</div>';
+
+        // Simular un pequeño retraso para parecer más "real"
+        setTimeout(() => {
+            let answer = "Lo siento, no entendí esa pregunta. ¿Podrías reformularla o enviarnos un mensaje?";
+
+            // Respuestas pre-programadas simples
+            if (question.includes("hola") || question.includes("buenas")) {
+                answer = "¡Hola! Bienvenido a GamesFullZ. ¿En qué puedo ayudarte?";
+            } else if (question.includes("descarg") || question.includes("bajar") || question.includes("download")) {
+                answer = "Para descargar un juego, haz clic en su imagen, luego en el botón 'Gofile' y finalmente en 'Download' en la página que se abre.";
+            } else if (question.includes("coment") || question.includes("opin") || question.includes("reseña")) {
+                answer = "Puedes dejar tu opinión en la sección de comentarios de cada juego. ¡Tu feedback es muy valioso!";
+            } else if (question.includes("nuevo") || question.includes("reciente")) {
+                answer = "Estamos constantemente agregando nuevos juegos. ¡Mantente atento a las notificaciones!";
+            } else if (question.includes("problema") || question.includes("error") || question.includes("ayuda")) {
+                answer = "Si tienes un problema, por favor contáctanos usando el formulario al final de la página. Estaremos encantados de ayudarte.";
+            } else if (question.includes("gracias") || question.includes("agradec")) {
+                answer = "¡De nada, amigo! Gracias a ti por apoyar la weba. 🎮";
+            } else if (question.includes("tema") || question.includes("oscuro") || question.includes("claro")) {
+                answer = "Puedes cambiar el tema usando el selector en la parte superior de la página.";
+            } else if (question.includes("aleat") || question.includes("azar") || question.includes("random")) {
+                answer = "Haz clic en el botón 🎲 en la esquina inferior derecha para descubrir un juego aleatorio.";
+            } else if (question.includes("contact") || question.includes("mensaje") || question.includes("correo")) {
+                answer = "Puedes enviarnos un mensaje usando el formulario de contacto al final de la página.";
+            } else if (question.includes("recomend") || question.includes("parecid")) {
+                answer = "Cuando ves un juego, te mostramos recomendaciones de juegos similares basadas en su categoría.";
+            } else if (question.includes("pc") || question.includes("requisito") || question.includes("hardware")) {
+                answer = "La caja que aparece abajo a la izquierda analiza tu PC y te recomienda juegos compatibles.";
+            } else if (question.includes("novat") || question.includes("principiante") || question.includes("guia")) {
+                answer = "Haz clic en el botón 🎮 'Soy nuevo' en la esquina inferior izquierda para ver una guía rápida.";
+            }
+
+            responseDiv.innerHTML = `<p><strong>IA:</strong> ${answer}</p>`;
+        }, 800); // Retraso de 800ms
+    }
+
+    // Exponer la función askIA globalmente para que el botón del HTML la pueda llamar
+    window.askIA = askIA;
+
     // === INICIALIZACIÓN DE FUNCIONES ===
-    // Cargar tema guardado
-    const savedTheme = localStorage.getItem("selectedTheme");
-    if (savedTheme) {
-        document.getElementById("theme-selector").value = savedTheme;
-        document.body.setAttribute("data-theme", savedTheme);
-    }
-
-    // Cargar historial de chat
-    function loadChatHistory() {
-        const chatHistory = JSON.parse(localStorage.getItem("chatHistory") || "[]");
-        const messagesDiv = document.getElementById("chat-messages");
-        chatHistory.forEach(msg => {
-            const el = document.createElement("div");
-            el.textContent = `${msg.user}: ${msg.text}`;
-            el.style.marginBottom = "5px";
-            el.style.padding = "5px";
-            el.style.backgroundColor = "rgba(255,255,255,0.1)";
-            el.style.borderRadius = "3px";
-            messagesDiv.appendChild(el);
-        });
-    }
-
     // Inicializar notificaciones
     initNotifications();
 
-    // Cargar chat al inicio
-    loadChatHistory();
-
-    // Cargar estadísticas públicas
-    loadPublicStats();
-
-    // Exponer funciones globales
-    window.toggleChat = toggleChat;
-    window.sendMessage = sendMessage;
-    window.changeTheme = changeTheme;
-    window.toggleMusic = toggleMusic;
-    window.changeTrack = changeTrack;
+    // Exponer funciones globales que se usan desde el HTML inline
     window.randomGame = randomGame;
-    window.handleSearchAssistant = handleSearchAssistant;
-    window.openGameFromAssistant = openGameFromAssistant;
     window.enableLowResourceMode = enableLowResourceMode;
+    // changeTheme se define en el HTML inline y usa localStorage directamente, no necesita exposición aquí.
 });
