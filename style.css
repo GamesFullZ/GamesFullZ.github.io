@@ -776,17 +776,10 @@ select#theme-selector:focus {
     .ia-section {
         padding: 15px;
     }
-    #ia-input {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    #ask-ia-btn {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 10px;
-    }
+    .
     select#theme-selector {
         margin: 10px auto;
         display: block;
     }
 }
+
