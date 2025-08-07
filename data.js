@@ -10,10 +10,11 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Excelente Juego!", "Gráficos 4K increíbles xdd", "Un poco pesado en mi PC"],
         links: {
-            direct: "https://gofile.io/d/x9dhme",
-            mediafire: "https://gofile.io/d/x9dhme"
+            direct: "https://gofile.io/d/x9dhme  ",
+            mediafire: "https://gofile.io/d/x9dhme  "
         },
-        imagen: "Images/Resi4-gc-cover.jpg"
+        imagen: "Images/Resi4-gc-cover.jpg",
+        password: "123" // <--- Contraseña agregada
     },
     {
         id: 2,
@@ -25,10 +26,11 @@ const recursos = [
         rating: "⭐⭐⭐☆☆",
         comments: ["Divertido pero bugueado", "Me encanta el combate", "Recomendado para fans de left 4 dead 2"],
         links: {
-            direct: "https://gofile.io/d/78ptPe",
-            mediafire: "https://gofile.io/d/78ptPe"
+            direct: "https://gofile.io/d/78ptPe  ",
+            mediafire: "https://gofile.io/d/78ptPe  "
         },
-        imagen: "Images/Dead_island_PC_packshot.png"
+        imagen: "Images/Dead_island_PC_packshot.png",
+        password: "123" // <--- Contraseña agregada
     },
     {
         id: 3,
@@ -43,10 +45,11 @@ const recursos = [
             "Obra maestra xd"
         ],
         links: {
-            direct: "https://gofile.io/d/avMKZl",
-            mediafire: "https://gofile.io/d/avMKZl"
+            direct: "https://gofile.io/d/avMKZl  ",
+            mediafire: "https://gofile.io/d/avMKZl  "
         },
-        imagen: "Images/Postal_2_cover.png"
+        imagen: "Images/Postal_2_cover.png",
+        password: "123" // <--- Contraseña agregada
     },
     {
         id: 4,
@@ -61,10 +64,11 @@ const recursos = [
             "Mejor juego de zombies"
         ],
         links: {
-            direct: "https://gofile.io/d/Js6Zsk",
-            mediafire: "https://gofile.io/d/Js6Zsk"
+            direct: "https://gofile.io/d/Js6Zsk  ",
+            mediafire: "https://gofile.io/d/Js6Zsk  "
         },
-        imagen: "Images/Left4Dead2.jpg"
+        imagen: "Images/Left4Dead2.jpg",
+        password: "123" // <--- Contraseña agregada
     },
     {
         id: 20,
@@ -76,9 +80,11 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Divertido Pero con mods mas", "Me encanta el combate", "Recomendado para fans de left 4 dead 2"],
         links: {
-            direct: "https://gofile.io/d/78ptPe",
-            mediafire: "https://www.mediafire.com/file/uvw"
+            direct: "https://gofile.io/d/78ptPe  ",
+            mediafire: "https://www.mediafire.com/file/uvw  "
         },
-        imagen: "Images/CoD_Black_Ops_cover.png"
+        imagen: "Images/CoD_Black_Ops_cover.png",
+        password: "123" // <--- Contraseña agregada
     }
 ];
+// Nota: El '}' adicional al final de tu archivo original parece ser un error de copiado/pegado, así que lo he eliminado.
