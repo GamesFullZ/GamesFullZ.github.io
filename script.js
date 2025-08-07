@@ -279,11 +279,11 @@ document.addEventListener('DOMContentLoaded', function () {
         showNotification(`🎲 Juego aleatorio: ${random.nombre}`);
     }
 
-    // === IA ASISTENTE SIMPLE ===
-    function askIA() {
+    // === IA ASISTENTE CON CHATGPT (a través de tu backend) ===
+    async function askIA() {
         const input = document.getElementById("ia-input");
         const responseDiv = document.getElementById("ia-response");
-        const question = input.value.trim().toLowerCase();
+        const question = input.value.trim();
 
         if (!question) {
             showNotification("Por favor, escribe una pregunta.");
@@ -292,41 +292,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Mostrar que está "pensando"
         responseDiv.style.display = "block";
-        responseDiv.innerHTML = '<div class="loader">Pensando</div>';
+        responseDiv.innerHTML = '<div class="loader">Pensando</div>'; // Asegúrate de tener el estilo .loader en tu CSS
 
-        // Simular un pequeño retraso para parecer más "real"
-        setTimeout(() => {
-            let answer = "Lo siento, no entendí esa pregunta. ¿Podrías reformularla o enviarnos un mensaje?";
+        try {
+            // =======> ESTA ES LA PARTE IMPORTANTE <=======
+            // En lugar de lógica local, llamamos a TU backend
+            const response = await fetch('api_proxy.php', { // <--- Cambia 'api_proxy.php' por la ruta a tu archivo backend
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ question: question })
+            });
 
-            // Respuestas pre-programadas simples
-            if (question.includes("hola") || question.includes("buenas")) {
-                answer = "¡Hola! Bienvenido a GamesFullZ. ¿En qué puedo ayudarte?";
-            } else if (question.includes("descarg") || question.includes("bajar") || question.includes("download")) {
-                answer = "Para descargar un juego, haz clic en su imagen, luego en el botón 'Gofile' y finalmente en 'Download' en la página que se abre.";
-            } else if (question.includes("coment") || question.includes("opin") || question.includes("reseña")) {
-                answer = "Puedes dejar tu opinión en la sección de comentarios de cada juego. ¡Tu feedback es muy valioso!";
-            } else if (question.includes("nuevo") || question.includes("reciente")) {
-                answer = "Estamos constantemente agregando nuevos juegos. ¡Mantente atento a las notificaciones!";
-            } else if (question.includes("problema") || question.includes("error") || question.includes("ayuda")) {
-                answer = "Si tienes un problema, por favor contáctanos usando el formulario al final de la página. Estaremos encantados de ayudarte.";
-            } else if (question.includes("gracias") || question.includes("agradec")) {
-                answer = "¡De nada, amigo! Gracias a ti por apoyar la weba. 🎮";
-            } else if (question.includes("tema") || question.includes("oscuro") || question.includes("claro")) {
-                answer = "Puedes cambiar el tema usando el selector en la parte superior de la página.";
-            } else if (question.includes("aleat") || question.includes("azar") || question.includes("random")) {
-                answer = "Haz clic en el botón 🎲 en la esquina inferior derecha para descubrir un juego aleatorio.";
-            } else if (question.includes("contact") || question.includes("mensaje") || question.includes("correo")) {
-                answer = "Puedes enviarnos un mensaje usando el formulario de contacto al final de la página.";
-            } else if (question.includes("recomend") || question.includes("parecid")) {
-                answer = "Cuando ves un juego, te mostramos recomendaciones de juegos similares basadas en su categoría.";
-            } else if (question.includes("pc") || question.includes("requisito") || question.includes("hardware")) {
-                answer = "La caja que aparece abajo a la izquierda analiza tu PC y te recomienda juegos compatibles.";
-            } else if (question.includes("novat") || question.includes("principiante") || question.includes("guia")) {
-                answer = "Haz clic en el botón 🎮 'Soy nuevo' en la esquina inferior izquierda para ver una guía rápida.";
+            if (!response.ok) {
+                throw new Error(`Error del servidor: ${response.status}`);
             }
 
-            responseDiv.innerHTML = `<p><strong>IA:</strong> ${answer}</p>`;
-        }, 800); // Retraso de 800ms
+            const data = await response.json();
+            
+            if (data && data.answer) {
+                responseDiv.innerHTML = `<p><strong>IA:</strong> ${data.answer}</p>`;
+            } else {
+                throw new Error("Respuesta inválida del servidor.");
+            }
+        } catch (error) {
+            console.error("Error al contactar con la IA:", error);
+            responseDiv.innerHTML = `<p><strong>Error:</strong> No se pudo obtener una respuesta. (${error.message})</p>`;
+            showNotification("Hubo un error al contactar con la IA.");
+        }
     }
 
     // Exponer la función askIA globalmente para que el botón del HTML la pueda llamar
@@ -341,3 +335,4 @@ document.addEventListener('DOMContentLoaded', function () {
     window.enableLowResourceMode = enableLowResourceMode;
     // changeTheme se define en el HTML inline y usa localStorage directamente, no necesita exposición aquí.
 });
+
