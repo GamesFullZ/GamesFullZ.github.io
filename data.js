@@ -61,8 +61,8 @@ const recursos = [
             "Mejor juego de zombies"
         ],
         links: {
-            direct: "https://gofile.io/d/jkl012",
-            mediafire: "https://www.mediafire.com/file/tuv"
+            direct: "https://gofile.io/d/Js6Zsk",
+            mediafire: "https://gofile.io/d/Js6Zsk"
         },
         imagen: "Images/Left4Dead2.jpg"
     },
