@@ -8,7 +8,7 @@ const recursos = [
         requisitos: "SO: Windows XP<br>Procesador: Pentium III 1.4 GHz<br>Memoria: 256 MB RAM<br>Gráficos: GeForce 2 / Radeon 9200 (128 MB VRAM)<br>Almacenamiento: 7 GB",
         downloads: 12,
         rating: "⭐⭐⭐⭐⭐",
-        comments: ["Excelente Juego!", "Gráficos decentes increíbles xdd", "el mejor resident evil viejo"],
+        comments: ["Excelente Juego!", "Gráficos decentes increíbles", "el mejor resident evil viejo"],
         links: {
             direct: "https://gofile.io/d/x9dhme  ",
             mediafire: "https://gofile.io/d/x9dhme  "
