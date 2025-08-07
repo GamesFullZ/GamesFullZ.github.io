@@ -85,7 +85,7 @@ const recursos = [
         },
         imagen: "Images/CoD_Black_Ops_cover.png",
         password: "123" // <--- Contraseña agregada
-    }
+    },
     {
         id: 20,
         nombre: "Red Dead Redemption 1",
