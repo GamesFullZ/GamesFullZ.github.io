@@ -80,8 +80,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Divertido Pero con mods mas", "Me encanta el combate", "Recomendado para fans de left 4 dead 2"],
         links: {
-            direct: "https://gofile.io/d/78ptPe  ",
-            mediafire: "https://www.mediafire.com/file/uvw  "
+            direct: "https://gofile.io/d/Qax9uu",
+            mediafire: "https://gofile.io/d/Qax9uu"
         },
         imagen: "Images/CoD_Black_Ops_cover.png",
         password: "123" // <--- Contraseña agregada
