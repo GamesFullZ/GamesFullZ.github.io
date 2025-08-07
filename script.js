@@ -217,20 +217,6 @@ document.addEventListener('DOMContentLoaded', function () {
             showNotification("🎮 ¡Nuevo juego disponible!");
         }, 10000);
     }
-
-    // === IA RECOMENDADORA DE JUEGOS ===
-    function recommendGames(gameTitle) {
-        const game = recursos.find(g => g.nombre === gameTitle);
-        if (!game || !game.tipo) return [];
-
-        const similar = recursos.filter(g =>
-            g !== game &&
-            g.tipo === game.tipo
-        ).slice(0, 3);
-
-        return similar;
-    }
-
     // Mostrar recomendaciones cuando se ve un juego
     function showGameRecommendations(gameTitle) {
         const recommendations = recommendGames(gameTitle);
@@ -288,5 +274,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.enableLowResourceMode = enableLowResourceMode;
     // changeTheme se define en el HTML inline y usa localStorage directamente, no necesita exposición aquí.
 });
+
 
 
