@@ -6,7 +6,7 @@ const recursos = [
         tipo: "juego",
         descripcion: "Un clásico del survival horror remasterizado. Leon S. Kennedy debe rescatar a la hija del presidente.",
         requisitos: "SO: Windows 10<br>Procesador: Intel Core i5-7500<br>Memoria: 8 GB RAM<br>Gráficos: GTX 1050 Ti<br>Almacenamiento: 50 GB",
-        downloads: 5320,
+        downloads: 12,
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Excelente Juego!", "Gráficos 4K increíbles xdd", "Un poco pesado en mi PC"],
         links: {
