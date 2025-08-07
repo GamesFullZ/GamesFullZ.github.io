@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     background: linear-gradient(135deg, #0f0f15, #1a1a2e);
     color: #e0e0ff;
@@ -13,7 +12,6 @@ body {
     min-height: 100vh;
     touch-action: pan-y; /* Permite scroll táctil */
 }
-
 /* Header */
 header {
     background: rgba(20, 20, 35, 0.9);
@@ -21,8 +19,12 @@ header {
     padding: 20px;
     text-align: center;
     border-bottom: 1px solid #334466;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
-
 h1 {
     margin: 0;
     font-size: 32px;
@@ -31,15 +33,14 @@ h1 {
     font-family: 'Space Grotesk', sans-serif;
     letter-spacing: 1px;
 }
-
 .search-container {
-    margin-top: 15px;
+    margin: 0;
+    flex: 1;
+    max-width: 500px;
 }
-
 #searchInput {
     padding: 12px 20px;
-    width: 90%;
-    max-width: 500px;
+    width: 100%;
     border: none;
     border-radius: 50px;
     background: #1e2a47;
@@ -48,12 +49,10 @@ h1 {
     outline: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-
 #searchInput:focus {
     background: #253555;
     transform: translateY(-2px);
 }
-
 /* Galería con scroll horizontal en móvil */
 .gallery__container {
     width: 90%;
@@ -65,7 +64,6 @@ h1 {
     padding: 20px 0;
     justify-items: center;
 }
-
 /* Soporte táctil: evita zoom accidental */
 .gallery__container img {
     width: 100%;
@@ -78,19 +76,16 @@ h1 {
     border: 2px solid transparent;
     aspect-ratio: 2 / 3;
 }
-
 .gallery__container img:hover {
     transform: scale(1.1) translateY(-6px);
     box-shadow: 0 12px 30px rgba(0, 255, 204, 0.25);
     border-color: #00ffcc;
 }
-
 /* Botón "Ver más" */
 .load-more-container {
     text-align: center;
     margin: 40px 0;
 }
-
 .btn-load-more {
     padding: 14px 30px;
     background: #1e2a47;
@@ -101,13 +96,11 @@ h1 {
     cursor: pointer;
     transition: all 0.3s;
 }
-
 .btn-load-more:hover {
     background: #00ffcc;
     color: #003333;
     transform: translateY(-2px);
 }
-
 /* Modal */
 .modal {
     display: none;
@@ -121,7 +114,6 @@ h1 {
     backdrop-filter: blur(5px);
     animation: fadeIn 0.3s ease;
 }
-
 .modal-content {
     position: relative;
     background: #121a2a;
@@ -133,7 +125,6 @@ h1 {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
     border: 1px solid #2a4060;
 }
-
 .close {
     color: #aaa;
     position: absolute;
@@ -152,12 +143,10 @@ h1 {
     justify-content: center;
     transition: all 0.3s;
 }
-
 .close:hover {
     color: #fff;
     background: #ff3366;
 }
-
 .modal-body {
     display: flex;
     flex-direction: column;
@@ -166,14 +155,12 @@ h1 {
     max-height: 80vh;
     overflow-y: auto;
 }
-
 @media (min-width: 768px) {
     .modal-body {
         flex-direction: row;
         align-items: flex-start;
     }
 }
-
 .modal-body img {
     width: 100%;
     max-width: 280px;
@@ -181,12 +168,10 @@ h1 {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     align-self: center;
 }
-
 .modal-info {
     flex: 1;
     color: #ddd;
 }
-
 .modal-info h2 {
     font-size: 26px;
     margin-bottom: 12px;
@@ -194,7 +179,6 @@ h1 {
     font-weight: 600;
     font-family: 'Space Grotesk', sans-serif;
 }
-
 /* Rating y descargas */
 .rating-downloads {
     display: flex;
@@ -203,18 +187,15 @@ h1 {
     margin: 10px 0 15px;
     align-items: center;
 }
-
 .rating {
     font-size: 20px;
     font-weight: bold;
 }
-
 .downloads {
     color: #00ffcc;
     font-size: 14px;
     font-weight: 500;
 }
-
 /* Requisitos */
 .requirements h3,
 .download-options h3,
@@ -224,7 +205,6 @@ h1 {
     margin: 20px 0 10px;
     font-weight: 600;
 }
-
 .requirements p {
     font-family: 'Courier New', monospace;
     background: #142030;
@@ -236,14 +216,12 @@ h1 {
     border: 1px solid #00ffcc33;
     white-space: pre-line;
 }
-
 /* Descargas con íconos */
 .download-options .links {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
 .download-link {
     display: block;
     padding: 12px 18px;
@@ -254,32 +232,26 @@ h1 {
     transition: all 0.3s;
     color: white;
 }
-
 .download-link i {
     margin-right: 8px;
 }
-
 .download-link.gofile {
     background: #f7941d;
 }
-
 .download-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
 }
-
 /* Comentarios */
 .comments-section {
     margin-top: 20px;
 }
-
 .comments-list {
     max-height: 200px;
     overflow-y: auto;
     margin-bottom: 15px;
     padding-right: 5px;
 }
-
 .comment {
     background: #1a243a;
     padding: 10px;
@@ -289,13 +261,11 @@ h1 {
     color: #ccc;
     border-left: 3px solid #00ffcc;
 }
-
 .add-comment {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
 #commentInput {
     padding: 10px;
     border: 1px solid #334466;
@@ -303,7 +273,6 @@ h1 {
     background: #1e2a47;
     color: white;
 }
-
 #addCommentBtn {
     padding: 10px;
     background: #00ffcc;
@@ -313,11 +282,9 @@ h1 {
     font-weight: 600;
     cursor: pointer;
 }
-
 #addCommentBtn:hover {
     background: #00e6b8;
 }
-
 /* Contacto */
 .contact-section {
     max-width: 600px;
@@ -328,7 +295,6 @@ h1 {
     border-radius: 16px;
     border: 1px solid #334466;
 }
-
 .contact-section input,
 .contact-section textarea,
 .contact-section button {
@@ -339,45 +305,36 @@ h1 {
     border-radius: 8px;
     font-size: 15px;
 }
-
 .contact-section input,
 .contact-section textarea {
     background: #1e2a47;
     color: white;
 }
-
 .contact-section button {
     background: #00ffcc;
     color: #003333;
     font-weight: 600;
     cursor: pointer;
 }
-
 .contact-section button:hover {
     background: #00e6b8;
 }
-
 /* Scroll */
 ::-webkit-scrollbar {
     width: 6px;
 }
-
 ::-webkit-scrollbar-track {
     background: #0a0f1a;
 }
-
 ::-webkit-scrollbar-thumb {
     background: #00ffcc;
     border-radius: 10px;
 }
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
 /* ==================== ESTILOS NUEVOS AGREGADOS ==================== */
-
 /* --- BOTÓN DE MODO NOVATO --- */
 .btn-novato {
     position: fixed;
@@ -399,18 +356,15 @@ h1 {
     gap: 8px;
     animation: pulse 2s infinite;
 }
-
 .btn-novato:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 255, 255, 0.6);
 }
-
 @keyframes pulse {
     0% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); }
     50% { box-shadow: 0 0 20px rgba(255, 0, 130, 0.7); }
     100% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); }
 }
-
 /* --- TUTORIAL MODAL --- */
 .tutorial-modal {
     display: none;
@@ -424,7 +378,6 @@ h1 {
     backdrop-filter: blur(5px);
     animation: fadeIn 0.4s ease;
 }
-
 .tutorial-content {
     position: relative;
     background: #121a2a;
@@ -437,7 +390,6 @@ h1 {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
     border: 1px solid #00ffcc33;
 }
-
 .tutorial-close {
     position: absolute;
     top: 15px;
@@ -452,12 +404,10 @@ h1 {
     text-align: center;
     transition: 0.3s;
 }
-
 .tutorial-close:hover {
     color: #fff;
     background: #ff3366;
 }
-
 .tutorial-steps .step {
     margin: 20px 0;
     padding: 15px;
@@ -470,23 +420,19 @@ h1 {
     transform: translateY(10px);
     transition: all 0.4s;
 }
-
 .tutorial-steps .step.active {
     opacity: 1;
     transform: translateY(0);
 }
-
 .tutorial-steps .step h3 {
     margin: 0 0 10px;
     color: #00ffcc;
     font-size: 17px;
 }
-
 .tutorial-steps .step i {
     color: #00ffcc;
     margin-right: 8px;
 }
-
 /* --- RECOMENDACIONES DE HARDWARE --- */
 .recomendacion-box {
     position: fixed;
@@ -505,7 +451,6 @@ h1 {
     animation: slideUp 0.5s ease;
     font-size: 14px;
 }
-
 .recomendacion-box .close-rec {
     float: right;
     cursor: pointer;
@@ -513,11 +458,9 @@ h1 {
     font-weight: bold;
     font-size: 20px;
 }
-
 .recomendacion-box .close-rec:hover {
     color: #fff;
 }
-
 .juegos-rec {
     margin-top: 10px;
     display: flex;
@@ -526,7 +469,6 @@ h1 {
     padding: 5px 0;
     scrollbar-width: thin;
 }
-
 .juegos-rec img {
     width: 60px;
     height: 80px;
@@ -534,7 +476,6 @@ h1 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
 /* Animación adicional para recomendaciones */
 @keyframes slideUp {
     from {
@@ -544,5 +485,360 @@ h1 {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* ================================================ */
+/* ESTILOS PARA NUEVAS FUNCIONES */
+/* ================================================ */
+
+/* === CHAT / FORO === */
+#chat-box {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: #1a243a;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    border: 1px solid #00ffcc33;
+    z-index: 1000;
+}
+#chat-box h3 {
+    margin: 0 0 10px 0;
+    color: #00ffcc;
+    font-size: 16px;
+}
+#chat-messages {
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 5px;
+    font-size: 13px;
+}
+#chat-input {
+    padding: 8px;
+    border: 1px solid #334466;
+    border-radius: 5px;
+    background: #1e2a47;
+    color: white;
+    width: calc(100% - 70px);
+    margin-right: 5px;
+}
+#chat-box button {
+    padding: 8px 12px;
+    background: #00ffcc;
+    color: #003333;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 12px;
+}
+#chat-box button:hover {
+    background: #00e6b8;
+}
+.hidden {
+    display: none !important;
+}
+
+/* === NOTIFICACIONES === */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(100px); }
+    10% { opacity: 1; transform: translateX(0); }
+    90% { opacity: 1; transform: translateX(0); }
+    100% { opacity: 0; transform: translateX(100px); }
+}
+
+/* === ASISTENTE DE BÚSQUEDA === */
+#search-assistant {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.9);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+}
+#search-assistant input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #334466;
+    border-radius: 5px;
+    background: #1e2a47;
+    color: white;
+}
+#assistant-results {
+    max-height: 200px;
+    overflow-y: auto;
+}
+#assistant-results div {
+    padding: 8px;
+    margin: 2px;
+    background: #444;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 13px;
+}
+#assistant-results div:hover {
+    background: #555;
+}
+
+/* === ESTADÍSTICAS PÚBLICAS === */
+.stats-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    border: 1px solid #334466;
+}
+.stats-section h2 {
+    color: #00ffcc;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.stats-section h3 {
+    color: #00ffcc;
+    margin: 15px 0 10px 0;
+    font-size: 16px;
+}
+.stats-section ul {
+    list-style: none;
+    padding: 0;
+}
+.stats-section li {
+    margin: 5px 0;
+    padding: 5px;
+    background: rgba(26, 36, 58, 0.5);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* === TEMAS VISUALES === */
+body[data-theme="retro"] {
+    background: linear-gradient(135deg, #f0e68c, #ffd700);
+    color: #333;
+}
+body[data-theme="retro"] h1,
+body[data-theme="retro"] .modal-info h2,
+body[data-theme="retro"] .tutorial-steps .step h3,
+body[data-theme="retro"] .stats-section h2,
+body[data-theme="retro"] .stats-section h3 {
+    color: #8B4513;
+}
+body[data-theme="retro"] #searchInput,
+body[data-theme="retro"] #chat-input,
+body[data-theme="retro"] #search-assistant input,
+body[data-theme="retro"] .contact-section input,
+body[data-theme="retro"] .contact-section textarea,
+body[data-theme="retro"] #commentInput {
+    background: #fff8dc;
+    color: #333;
+}
+body[data-theme="retro"] .btn-load-more,
+body[data-theme="retro"] #addCommentBtn,
+body[data-theme="retro"] .contact-section button {
+    background: #8B4513;
+    color: white;
+    border-color: #8B4513;
+}
+body[data-theme="retro"] .gallery__container img:hover {
+    box-shadow: 0 12px 30px rgba(139, 69, 19, 0.25);
+    border-color: #8B4513;
+}
+body[data-theme="retro"] .modal-content,
+body[data-theme="retro"] .tutorial-content,
+body[data-theme="retro"] #chat-box,
+body[data-theme="retro"] .recomendacion-box {
+    background: #fffaf0;
+    color: #333;
+}
+body[data-theme="retro"] .comment,
+body[data-theme="retro"] .requirements p,
+body[data-theme="retro"] #chat-messages,
+body[data-theme="retro"] .tutorial-steps .step {
+    background: #f5f5dc;
+    color: #333;
+}
+body[data-theme="retro"] .btn-novato {
+    background: linear-gradient(45deg, #8B4513, #daa520);
+}
+
+body[data-theme="futurista"] {
+    background: linear-gradient(135deg, #000000, #001122);
+    color: #00ffff;
+}
+body[data-theme="futurista"] h1,
+body[data-theme="futurista"] .modal-info h2,
+body[data-theme="futurista"] .tutorial-steps .step h3,
+body[data-theme="futurista"] .stats-section h2,
+body[data-theme="futurista"] .stats-section h3 {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+body[data-theme="futurista"] #searchInput,
+body[data-theme="futurista"] #chat-input,
+body[data-theme="futurista"] #search-assistant input,
+body[data-theme="futurista"] .contact-section input,
+body[data-theme="futurista"] .contact-section textarea,
+body[data-theme="futurista"] #commentInput {
+    background: #001a33;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+}
+body[data-theme="futurista"] .btn-load-more,
+body[data-theme="futurista"] #addCommentBtn,
+body[data-theme="futurista"] .contact-section button {
+    background: #001a33;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+}
+body[data-theme="futurista"] .gallery__container img:hover {
+    box-shadow: 0 12px 30px rgba(0, 255, 255, 0.25);
+    border-color: #00ffff;
+}
+body[data-theme="futurista"] .modal-content,
+body[data-theme="futurista"] .tutorial-content,
+body[data-theme="futurista"] #chat-box,
+body[data-theme="futurista"] .recomendacion-box {
+    background: #000a14;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+}
+body[data-theme="futurista"] .comment,
+body[data-theme="futurista"] .requirements p,
+body[data-theme="futurista"] #chat-messages,
+body[data-theme="futurista"] .tutorial-steps .step {
+    background: #001122;
+    color: #00ffff;
+    border: 1px solid #004444;
+}
+body[data-theme="futurista"] .btn-novato {
+    background: linear-gradient(45deg, #006666, #00ffff);
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+}
+
+body[data-theme="pixel"] {
+    background: linear-gradient(135deg, #6a0dad, #4b0082);
+    color: #ffff00;
+    font-family: 'Courier New', monospace;
+}
+body[data-theme="pixel"] * {
+    font-family: 'Courier New', monospace;
+}
+body[data-theme="pixel"] h1,
+body[data-theme="pixel"] .modal-info h2,
+body[data-theme="pixel"] .tutorial-steps .step h3,
+body[data-theme="pixel"] .stats-section h2,
+body[data-theme="pixel"] .stats-section h3 {
+    color: #ffff00;
+    text-shadow: 2px 2px 0 #ff00ff;
+}
+body[data-theme="pixel"] #searchInput,
+body[data-theme="pixel"] #chat-input,
+body[data-theme="pixel"] #search-assistant input,
+body[data-theme="pixel"] .contact-section input,
+body[data-theme="pixel"] .contact-section textarea,
+body[data-theme="pixel"] #commentInput {
+    background: #000;
+    color: #ffff00;
+    border: 2px solid #ff00ff;
+}
+body[data-theme="pixel"] .btn-load-more,
+body[data-theme="pixel"] #addCommentBtn,
+body[data-theme="pixel"] .contact-section button {
+    background: #ff00ff;
+    color: #000;
+    border: 2px solid #ffff00;
+    text-shadow: 1px 1px 0 #000;
+}
+body[data-theme="pixel"] .gallery__container img:hover {
+    box-shadow: 0 12px 30px rgba(255, 0, 255, 0.25);
+    border-color: #ffff00;
+}
+body[data-theme="pixel"] .modal-content,
+body[data-theme="pixel"] .tutorial-content,
+body[data-theme="pixel"] #chat-box,
+body[data-theme="pixel"] .recomendacion-box {
+    background: #000;
+    color: #ffff00;
+    border: 2px solid #ff00ff;
+}
+body[data-theme="pixel"] .comment,
+body[data-theme="pixel"] .requirements p,
+body[data-theme="pixel"] #chat-messages,
+body[data-theme="pixel"] .tutorial-steps .step {
+    background: #111;
+    color: #ffff00;
+    border: 1px solid #ff00ff;
+}
+body[data-theme="pixel"] .btn-novato {
+    background: linear-gradient(45deg, #ff00ff, #ffff00);
+    color: #000;
+    text-shadow: 1px 1px 0 #000;
+}
+
+/* === MODO BAJO RECURSOS === */
+.low-resources * {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* === ESTILOS PARA SELECTORES === */
+select {
+    padding: 8px;
+    border: 1px solid #334466;
+    border-radius: 5px;
+    background: #1e2a47;
+    color: white;
+    font-size: 14px;
+}
+select:focus {
+    outline: none;
+    border-color: #00ffcc;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .search-container {
+        width: 100%;
+    }
+    #chat-box {
+        width: calc(100% - 40px);
+        right: 20px;
+        left: 20px;
+    }
+    #search-assistant {
+        left: 10px;
+        right: 10px;
+        width: auto;
+    }
+    .stats-section {
+        padding: 15px;
+    }
+    .stats-section h2 {
+        font-size: 20px;
     }
 }
