@@ -86,5 +86,20 @@ const recursos = [
         imagen: "Images/CoD_Black_Ops_cover.png",
         password: "123" // <--- Contraseña agregada
     }
+    {
+        id: 20,
+        nombre: "Red Dead Redemption 1",
+        tipo: "juego",
+        descripcion: "un exforajido obligado por el gobierno a cazar a su antigua banda para recuperar a su familia en el viejo oeste de 1911.",
+        requisitos: "SO: Windows 10 64‑bit<br>Procesador: Intel Core i5‑4670 / AMD FX‑9590<br>Memoria: 8 GB RAM<br>Gráficos: NVIDIA GeForce GTX 960 / AMD Radeon R7 360<br>Almacenamiento: 12 GB<br>DirectX: 12<br>SSD recomendado",
+        downloads: 0,
+        rating: "⭐⭐⭐⭐⭐",
+        comments: ["Divertido Pero con mods mas", "Me encanta el combate", "Recomendado para fans de left 4 dead 2"],
+        links: {
+            direct: "https://gofile.io/d/c2B4Cd",
+            mediafire: "https://gofile.io/d/c2B4Cd"
+        },
+        imagen: "Images/CoD_Black_Ops_cover.png",
+        password: "123" // <--- Contraseña agregada
 ];
 // Nota: El '}' adicional al final de tu archivo original parece ser un error de copiado/pegado, así que lo he eliminado.
