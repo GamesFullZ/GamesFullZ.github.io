@@ -86,7 +86,7 @@ const recursos = [
         imagen: "Images/CoD_Black_Ops_cover.png",
         password: "123" // <--- Contraseña agregada
     },
-    {
+       {
         id: 13,
         nombre: "Red Dead Redemption 1",
         tipo: "juego",
@@ -96,10 +96,13 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Divertido", "Me encanta Los caballos", "Recomendado para fans de vaqueros"],
         links: {
-            direct: "https://gofile.io/d/c2B4Cd",
-            mediafire: "https://gofile.io/d/c2B4Cd"
+            direct: "https://gofile.io/d/c2B4Cd  ",
+            mediafire: "https://gofile.io/d/c2B4Cd  "
         },
         imagen: "Images/Red_Dead_Redemption.jpg",
         password: "123" // <--- Contraseña agregada
-];
+    } // <--- LLAVE DE CIERRE PARA EL OBJETO id:13
+]; // <--- PARENTESIS DE CIERRE PARA EL ARRAY 'recursos' Y PUNTO Y COMA FINAL
+
+// <--- Elimina cualquier '}' adicional suelto que haya estado aquí
 // Nota: El '}' adicional al final de tu archivo original parece ser un error de copiado/pegado, así que lo he eliminado.
