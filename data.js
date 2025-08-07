@@ -22,7 +22,7 @@ const recursos = [
         descripcion: "Supervivencia en una isla infestada de zombis. Combate cuerpo a cuerpo brutal.",
         requisitos: "SO: Windows 7 / Vista / XP<br>Procesador: Core2Duo 2.66 GHz<br>Memoria: 1 GB RAM<br>Gráficos: GeForce 8600 GT / Radeon HD 2600XT (256 MB VRAM)<br>Almacenamiento: 7 GB",
         downloads: 8740,
-        rating: "⭐⭐⭐⭐☆",
+        rating: "⭐⭐⭐☆☆",
         comments: ["Divertido pero bugueado", "Me encanta el combate", "Recomendado para fans de left 4 dead 2"],
         links: {
             direct: "https://gofile.io/d/78ptPe",
