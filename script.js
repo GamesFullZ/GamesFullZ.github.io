@@ -64,12 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('modalRating').textContent = game.rating;
         document.getElementById('modalDownloads').textContent = `Descargado por +${formatNumber(game.downloads)} usuarios`;
 
-        // Enlaces de descarga
-        const linkDirect = document.getElementById('linkDirect');
-        const linkMediaFire = document.getElementById('linkMediaFire');
-
-        if (linkDirect) linkDirect.href = game.links.direct || "#";
-        if (linkMediaFire) linkMediaFire.href = game.links.mediafire || "#";
+        // 🔁 Corregido: ID es linkGofile, no linkDirect
+        const linkGofile = document.getElementById('linkGofile');
+        if (linkGofile) {
+            linkGofile.href = game.links.direct || "#";
+        }
 
         // Comentarios
         const commentsContainer = document.getElementById('commentsContainer');

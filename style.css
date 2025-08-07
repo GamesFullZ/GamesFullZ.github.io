@@ -375,3 +375,174 @@ h1 {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* ==================== ESTILOS NUEVOS AGREGADOS ==================== */
+
+/* --- BOTÓN DE MODO NOVATO --- */
+.btn-novato {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #ff0080, #00ffff);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+    transition: all 0.3s;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: pulse 2s infinite;
+}
+
+.btn-novato:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.6);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(255, 0, 130, 0.7); }
+    100% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); }
+}
+
+/* --- TUTORIAL MODAL --- */
+.tutorial-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.4s ease;
+}
+
+.tutorial-content {
+    position: relative;
+    background: #121a2a;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 20px;
+    padding: 30px;
+    color: #e0e0ff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    border: 1px solid #00ffcc33;
+}
+
+.tutorial-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    color: #aaa;
+    cursor: pointer;
+    background: #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.tutorial-close:hover {
+    color: #fff;
+    background: #ff3366;
+}
+
+.tutorial-steps .step {
+    margin: 20px 0;
+    padding: 15px;
+    background: #1a243a;
+    border-left: 4px solid #00ffcc;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s;
+}
+
+.tutorial-steps .step.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tutorial-steps .step h3 {
+    margin: 0 0 10px;
+    color: #00ffcc;
+    font-size: 17px;
+}
+
+.tutorial-steps .step i {
+    color: #00ffcc;
+    margin-right: 8px;
+}
+
+/* --- RECOMENDACIONES DE HARDWARE --- */
+.recomendacion-box {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    right: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #1a243a;
+    color: #e0e0ff;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #00ffcc33;
+    z-index: 900;
+    animation: slideUp 0.5s ease;
+    font-size: 14px;
+}
+
+.recomendacion-box .close-rec {
+    float: right;
+    cursor: pointer;
+    color: #aaa;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.recomendacion-box .close-rec:hover {
+    color: #fff;
+}
+
+.juegos-rec {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 5px 0;
+    scrollbar-width: thin;
+}
+
+.juegos-rec img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Animación adicional para recomendaciones */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
