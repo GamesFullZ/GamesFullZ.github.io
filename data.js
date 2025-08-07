@@ -94,12 +94,12 @@ const recursos = [
         requisitos: "SO: Windows 10 64‑bit<br>Procesador: Intel Core i5‑4670 / AMD FX‑9590<br>Memoria: 8 GB RAM<br>Gráficos: NVIDIA GeForce GTX 960 / AMD Radeon R7 360<br>Almacenamiento: 12 GB<br>DirectX: 12<br>SSD recomendado",
         downloads: 0,
         rating: "⭐⭐⭐⭐⭐",
-        comments: ["Divertido Pero con mods mas", "Me encanta el combate", "Recomendado para fans de left 4 dead 2"],
+        comments: ["Divertido", "Me encanta Los caballos", "Recomendado para fans de vaqueros"],
         links: {
             direct: "https://gofile.io/d/c2B4Cd",
             mediafire: "https://gofile.io/d/c2B4Cd"
         },
-        imagen: "Images/CoD_Black_Ops_cover.png",
+        imagen: "Images/Red_Dead_Redemption.jpg",
         password: "123" // <--- Contraseña agregada
 ];
 // Nota: El '}' adicional al final de tu archivo original parece ser un error de copiado/pegado, así que lo he eliminado.
