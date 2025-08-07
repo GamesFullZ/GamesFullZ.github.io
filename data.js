@@ -101,7 +101,23 @@ const recursos = [
         },
         imagen: "Images/Red_Dead_Redemption.jpg",
         password: "123" // <--- Contraseña agregada
-    } // <--- LLAVE DE CIERRE PARA EL OBJETO id:13
+    }, // <--- LLAVE DE CIERRE PARA EL OBJETO id:13
+       {
+        id: 14, // <--- ID ÚNICO
+        nombre: "Payday 2",
+        tipo: "juego",
+        descripcion: " un grupo de criminales que realiza asaltos, robos y misiones cooperativas en primera persona, donde el sigilo o la acción afectan el resultado.", // <--- Descripción del juego
+        requisitos: "SO: Windows 7<br>Procesador: 2 GHz Dual Core<br>Memoria: 4 GB RAM<br>Gráficos: NVIDIA GeForce 8800 / ATI Radeon HD 2600 (512 MB VRAM)<br>Almacenamiento: 31 GB", // <--- Requisitos
+        downloads: 0, // <--- Puedes dejarlo en 0 o poner un valor estimado
+        rating: "⭐⭐⭐⭐⭐", // <--- Calificación
+        comments: ["Juegazo", "XD"], // <--- Comentarios iniciales
+        links: {
+            // <--- ENLACES DE DESCARGA VÁLIDOS (subidos a Gofile, Mediafire, etc.)
+            direct: "https://www.mediafire.com/file/y7z5pibt4j1ol9q/PayDay.2.v1.143.246-Repack.iso.torrent/file",
+            mediafire: "https://www.mediafire.com/file/y7z5pibt4j1ol9q/PayDay.2.v1.143.246-Repack.iso.torrent/file"
+        },
+        imagen: "Images/gta_v_cover.jpg", // <--- RUTA RELATIVA A TU IMAGEN LOCAL
+        password: "contraseña123" // <--- Contraseña del archivo
 ]; // <--- PARENTESIS DE CIERRE PARA EL ARRAY 'recursos' Y PUNTO Y COMA FINAL
 
 // <--- Elimina cualquier '}' adicional suelto que haya estado aquí
