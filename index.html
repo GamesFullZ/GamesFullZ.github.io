@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamesFullZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    <!-- Iconos con Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>GamesFullZ</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="🔍 Buscar juegos...">
+        </div>
+    </header>
+
+    <main>
+        <!-- Galería de juegos -->
+        <div class="gallery__container" id="gallery">
+            <!-- Los juegos se cargarán dinámicamente -->
+        </div>
+
+        <!-- Botón para ver más juegos -->
+        <div class="load-more-container">
+            <button id="loadMoreBtn" class="btn-load-more">Ver más juegos ↓</button>
+        </div>
+
+        <!-- Sección de contacto -->
+        <section class="contact-section">
+            <h2>¿Necesitas ayuda?</h2>
+            <p>Contáctanos si tienes problemas con una descarga o reportar un error.</p>
+<form action="https://formspree.io/f/mpwlozqz" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="email">Tu Correo</label>
+    <input type="email" name="Correo" id="email" placeholder="tu@correo.com" required>
+  </div>
+
+  <div class="form-group">
+    <label for="mensaje">Mensaje</label>
+    <textarea name="Mensaje" id="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="archivo">Adjuntar imagen (opcional)</label>
+    <input type="file" name="Archivo" id="archivo" accept="image/*, .png, .jpg, .jpeg, .gif">
+    <small>Formatos permitidos: PNG, JPG, JPEG, GIF</small>
+  </div>
+
+  <button type="submit">Enviar mensaje ✉️</button>
+</form>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Portada del juego">
+                <div class="modal-info">
+                    <h2 id="modalTitle">Título del juego</h2>
+
+                    <!-- Estrellas y descargas -->
+                    <div class="rating-downloads">
+                        <div class="rating" id="modalRating">⭐⭐⭐⭐☆</div>
+                        <div class="downloads" id="modalDownloads">Descargado por +5,300 usuarios</div>
+                    </div>
+
+                    <p id="modalInfo">Descripción del juego.</p>
+
+                    <div class="requirements">
+                        <h3>Requisitos mínimos</h3>
+                        <p id="modalRequirements">Procesador: ...</p>
+                    </div>
+
+                    <!-- Opciones de descarga con íconos -->
+                    <div class="download-options">
+                        <h3>Descargar desde:</h3>
+                        <div class="links">
+                            <a href="#" id="gofile" target="_blank" class="download-link Gofile">
+                                <i class="fas fa-cloud"></i> Gofile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Comentarios -->
+                    <div class="comments-section">
+                        <h3>Reseñas de usuarios</h3>
+                        <div id="commentsContainer" class="comments-list">
+                            <!-- Comentarios se cargarán aquí -->
+                        </div>
+                        <div class="add-comment">
+                            <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput"></textarea>
+                            <button id="addCommentBtn">Publicar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
