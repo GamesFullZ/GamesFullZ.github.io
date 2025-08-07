@@ -5,7 +5,7 @@ const recursos = [
         nombre: "Resident Evil 4",
         tipo: "juego",
         descripcion: "Un clásico del survival horror remasterizado. Leon S. Kennedy debe rescatar a la hija del presidente.",
-        requisitos: "SO: Windows 10<br>Procesador: Intel Core i5-7500<br>Memoria: 8 GB RAM<br>Gráficos: GTX 1050 Ti<br>Almacenamiento: 50 GB",
+        requisitos: "SO: Windows XP<br>Procesador: Pentium III 1.4 GHz<br>Memoria: 256 MB RAM<br>Gráficos: GeForce 2 / Radeon 9200 (128 MB VRAM)<br>Almacenamiento: 7 GB",
         downloads: 12,
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Excelente Juego!", "Gráficos 4K increíbles xdd", "Un poco pesado en mi PC"],
