@@ -214,7 +214,7 @@ const recursos = [
             direct: "https://www.mediafire.com/file/m54hdi7s9uaoinj/DELTARUNE.zip.torrent/file",
             mediafire: "https://www.mediafire.com/file/m54hdi7s9uaoinj/DELTARUNE.zip.torrent/file"
         },
-        imagen: "Images/deltarune.jpg",
+        imagen: "Images/0x1900-000000-80-0-0.jpg",
         password: "deltarune"
     },
     {
@@ -246,7 +246,7 @@ const recursos = [
             direct: "https://www.mediafire.com/file/cwdumqbqjz3j3nb/Call+of+Duty+-+Black+Ops+2.rar.torrent/file",
             mediafire: "https://www.mediafire.com/file/cwdumqbqjz3j3nb/Call+of+Duty+-+Black+Ops+2.rar.torrent/file"
         },
-        imagen: "Images/black_ops_2_cover.jpg",
+        imagen: "Images/BlackOPS2.jpg",
         password: "123"
     }
 ];
