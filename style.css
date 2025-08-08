@@ -637,6 +637,7 @@ select#theme-selector:focus {
     outline: none;
     border-color: #00ffcc;
 }
+
 /* === ESTILOS PARA LA IA ASISTENTE === */
 .ia-section {
     margin-top: 30px;
@@ -780,4 +781,68 @@ select#theme-selector:focus {
     }
 }
 
+/* ==================== ESTILOS PARA EL BOTÓN DE TELEGRAM ==================== */
+/* Estilos para el botón de Telegram */
+.boton-telegram {
+    background-color: #2AABEE; /* Color azul característico de Telegram */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 15px; /* Espacio a la izquierda del botón */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+}
 
+.boton-telegram:hover {
+    background-color: #1c9bd9; /* Color más oscuro al pasar el mouse */
+    transform: translateY(-1px); /* Efecto hover coherente con tu diseño */
+}
+
+.boton-telegram i {
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+/* Asegurar que el header tenga espacio para los elementos */
+header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no caben */
+    padding: 15px;
+}
+
+.search-container {
+    flex-grow: 1;
+    margin: 0 20px;
+    max-width: 500px; /* Limitar el ancho del buscador */
+}
+
+/* Ajustar el margen del selector de tema */
+#theme-selector {
+    margin-left: 0; /* El margen ahora lo maneja el contenedor */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-container {
+        order: 3; /* Mueve el buscador al final en móviles */
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+
+    .boton-telegram {
+        margin-top: 10px; /* Espacio arriba en móviles */
+        margin-left: 0;
+    }
+}
