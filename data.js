@@ -10,8 +10,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Excelente Juego!", "Gráficos decentes increíbles", "el mejor resident evil viejo"],
         links: {
-            direct: "https://gofile.io/d/x9dhme  ",
-            mediafire: "https://gofile.io/d/x9dhme  "
+            direct: "https://gofile.io/d/x9dhme    ",
+            mediafire: "https://gofile.io/d/x9dhme    "
         },
         imagen: "Images/Resi4-gc-cover.jpg",
         password: "123"
@@ -26,8 +26,8 @@ const recursos = [
         rating: "⭐⭐⭐☆☆",
         comments: ["Divertido pero bugueado", "Me encanta el combate", "Recomendado para fans de left 4 dead 2"],
         links: {
-            direct: "https://gofile.io/d/78ptPe  ",
-            mediafire: "https://gofile.io/d/78ptPe  "
+            direct: "https://gofile.io/d/78ptPe    ",
+            mediafire: "https://gofile.io/d/78ptPe    "
         },
         imagen: "Images/Dead_island_PC_packshot.png",
         password: "123"
@@ -45,8 +45,8 @@ const recursos = [
             "Obra maestra xd"
         ],
         links: {
-            direct: "https://gofile.io/d/avMKZl  ",
-            mediafire: "https://gofile.io/d/avMKZl  "
+            direct: "https://gofile.io/d/avMKZl    ",
+            mediafire: "https://gofile.io/d/avMKZl    "
         },
         imagen: "Images/Postal_2_cover.png",
         password: "123"
@@ -64,8 +64,8 @@ const recursos = [
             "Mejor juego de zombies"
         ],
         links: {
-            direct: "https://gofile.io/d/Js6Zsk  ",
-            mediafire: "https://gofile.io/d/Js6Zsk  "
+            direct: "https://gofile.io/d/Js6Zsk    ",
+            mediafire: "https://gofile.io/d/Js6Zsk    "
         },
         imagen: "Images/Left4Dead2.jpg",
         password: "123"
@@ -80,8 +80,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Divertido Pero con mods mas", "Me encanta el combate", "Recomendado para fans de left 4 dead 2"],
         links: {
-            direct: "https://gofile.io/d/Qax9uu  ",
-            mediafire: "https://gofile.io/d/Qax9uu  "
+            direct: "https://gofile.io/d/Qax9uu    ",
+            mediafire: "https://gofile.io/d/Qax9uu    "
         },
         imagen: "Images/CoD_Black_Ops_cover.png",
         password: "123"
@@ -96,8 +96,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Divertido", "Me encanta Los caballos", "Recomendado para fans de vaqueros"],
         links: {
-            direct: "https://gofile.io/d/c2B4Cd  ",
-            mediafire: "https://gofile.io/d/c2B4Cd  "
+            direct: "https://gofile.io/d/c2B4Cd    ",
+            mediafire: "https://gofile.io/d/c2B4Cd    "
         },
         imagen: "Images/Red_Dead_Redemption.jpg",
         password: "123"
@@ -112,8 +112,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Juegazo", "XD"],
         links: {
-            direct: "https://www.mediafire.com/file/y7z5pibt4j1ol9q/PayDay.2.v1.143.246-Repack.iso.torrent/file  ",
-            mediafire: "https://www.mediafire.com/file/y7z5pibt4j1ol9q/PayDay.2.v1.143.246-Repack.iso.torrent/file  "
+            direct: "https://www.mediafire.com/file/y7z5pibt4j1ol9q/PayDay.2.v1.143.246-Repack.iso.torrent/file    ",
+            mediafire: "https://www.mediafire.com/file/y7z5pibt4j1ol9q/PayDay.2.v1.143.246-Repack.iso.torrent/file    "
         },
         imagen: "Images/Payday2cover.jpg",
         password: "contraseña123"
@@ -128,8 +128,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐☆",
         comments: ["Clásico de los shooters", "Épicas batallas con vehículos"],
         links: {
-            direct: "https://gofile.io/d/DDlRTY  ",
-            mediafire: "https://gofile.io/d/DDlRTY  "
+            direct: "https://gofile.io/d/DDlRTY    ",
+            mediafire: "https://gofile.io/d/DDlRTY    "
         },
         imagen: "Images/51XE9qx04ML._UF1000,1000_QL80_.jpg",
         password: "123"
@@ -144,8 +144,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Obra maestra del storytelling", "Combate brutal y emocional"],
         links: {
-            direct: "https://gofile.io/d/bYr0O4  ",
-            mediafire: "https://gofile.io/d/bYr0O4  "
+            direct: "https://gofile.io/d/bYr0O4    ",
+            mediafire: "https://gofile.io/d/bYr0O4    "
         },
         imagen: "Images/God_of_War_4_cover.jpg",
         password: "123"
@@ -160,8 +160,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["La secuela épica", "Gráficos impresionantes"],
         links: {
-            direct: "https://gofile.io/d/bYr0O4  ",
-            mediafire: "https://gofile.io/d/bYr0O4  "
+            direct: "https://gofile.io/d/bYr0O4    ",
+            mediafire: "https://gofile.io/d/bYr0O4    "
         },
         imagen: "Images/God_of_War_Ragnarök_cover.jpg",
         password: "123"
@@ -176,11 +176,27 @@ const recursos = [
         rating: "⭐⭐⭐⭐☆",
         comments: ["Intenso y realista", "Una experiencia de supervivencia única"],
         links: {
-            direct: "https://gofile.io/d/2uRoh0",
-            mediafire: "https://gofile.io/d/2uRoh0"
+            direct: "https://gofile.io/d/2uRoh0  ",
+            mediafire: "https://gofile.io/d/2uRoh0  "
         },
         imagen: "Images/images.jpg",
         password: "123"
+    },
+    {
+        id: 19, // <--- ID ÚNICO para Sons of the Forest
+        nombre: "Sons of the Forest",
+        tipo: "juego",
+        descripcion: "Un joven llega a una isla remota en busca de un multimillonario desaparecido, pero descubre que no está solo en esta experiencia de supervivencia aterradora.",
+        requisitos: "SO: Windows 10 64-bit<br>Procesador: Intel i5-8400 o AMD Ryzen 5 2600<br>Memoria: 16 GB RAM<br>Gráficos: NVIDIA GTX 1060 6GB o AMD RX 5700<br>Almacenamiento: 30 GB",
+        downloads: 0,
+        rating: "⭐⭐⭐⭐☆",
+        comments: ["Terror psicológico y supervivencia", "Muy prometedor"],
+        links: {
+            // NOTA: Reemplaza estos enlaces con enlaces válidos al juego
+            direct: "https://gofile.io/d/ENLACE_NUEVO_SOTF",
+            mediafire: "https://www.mediafire.com/file/ENLACE_NUEVO_SOTF"
+        },
+        imagen: "Images/Sons_of_the_Forest.jpg", // Asegúrate de tener esta imagen
+        password: "123" // Reemplaza si es necesario
     }
-    // El juego "Sons of the Forest" (id: 19) ha sido eliminado
 ];
