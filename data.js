@@ -128,8 +128,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐☆",
         comments: ["Clásico de los shooters", "Épicas batallas con vehículos"],
         links: {
-            direct: "https://gofile.io/d/ENLACE_NUEVO_BF2",
-            mediafire: "https://www.mediafire.com/file/ENLACE_NUEVO_BF2"
+            direct: "https://gofile.io/d/DDlRTY",
+            mediafire: "https://gofile.io/d/DDlRTY"
         },
         imagen: "Images/51XE9qx04ML._UF1000,1000_QL80_.jpg",
         password: "123"
