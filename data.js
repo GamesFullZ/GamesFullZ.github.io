@@ -176,8 +176,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐☆",
         comments: ["Intenso y realista", "Una experiencia de supervivencia única"],
         links: {
-            direct: "https://gofile.io/d/ENLACE_NUEVO_PEAK  ",
-            mediafire: "https://www.mediafire.com/file/ENLACE_NUEVO_PEAK  "
+            direct: "https://gofile.io/d/2uRoh0",
+            mediafire: "https://gofile.io/d/2uRoh0"
         },
         imagen: "Images/images.jpg",
         password: "123"
