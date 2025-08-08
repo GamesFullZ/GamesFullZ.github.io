@@ -119,7 +119,7 @@ const recursos = [
         password: "contraseña123"
     },
     {
-        id: 15, // <--- ID ÚNICO (siguiente número disponible)
+        id: 15,
         nombre: "Battlefield 2",
         tipo: "juego",
         descripcion: "Juego de disparos en primera persona con combates a gran escala, vehículos y mapas grandes ambientado en una guerra ficticia moderna.",
@@ -128,11 +128,74 @@ const recursos = [
         rating: "⭐⭐⭐⭐☆",
         comments: ["Clásico de los shooters", "Épicas batallas con vehículos"],
         links: {
-            // NOTA: Necesitas reemplazar estos enlaces con enlaces válidos a un archivo de Battlefield 2
-            direct: "https://gofile.io/d/DDlRTY",
-            mediafire: "https://gofile.io/d/DDlRTY"
+            direct: "https://gofile.io/d/ENLACE_NUEVO_BF2",
+            mediafire: "https://www.mediafire.com/file/ENLACE_NUEVO_BF2"
         },
-        imagen: "Images/51XE9qx04ML._UF1000,1000_QL80_.jpg", // Asegúrate de tener esta imagen en tu carpeta Images
-        password: "123" // Reemplaza con la contraseña real si la hay
+        imagen: "Images/Battlefield_2_cover.jpg",
+        password: "123"
+    },
+    {
+        id: 16,
+        nombre: "God of War (2018)",
+        tipo: "juego",
+        descripcion: "Kratos y su hijo Atreus emprenden un viaje en busca de la respuesta de la esposa de Kratos, en una mitología nórdica brutal y emocional.",
+        requisitos: "SO: Windows 10 64-bit<br>Procesador: Intel i5-2500K o AMD FX-6300<br>Memoria: 8 GB RAM<br>Gráficos: NVIDIA GTX 960 4GB o AMD R9 290 4GB<br>Almacenamiento: 70 GB",
+        downloads: 0,
+        rating: "⭐⭐⭐⭐⭐",
+        comments: ["Obra maestra del storytelling", "Combate brutal y emocional"],
+        links: {
+            direct: "https://gofile.io/d/bYr0O4",
+            mediafire: "https://gofile.io/d/bYr0O4"
+        },
+        imagen: "Images/God_of_War_2018_cover.jpg",
+        password: "123"
+    },
+    {
+        id: 17,
+        nombre: "God of War: Ragnarök",
+        tipo: "juego",
+        descripcion: "Kratos y Atreus se aventuran en Niflheim en busca de respuestas mientras se preparan para la profetizada batalla del Ragnarök.",
+        requisitos: "SO: Windows 10 64-bit<br>Procesador: Intel i5-6600K o AMD Ryzen 5 2600X<br>Memoria: 16 GB RAM<br>Gráficos: NVIDIA GTX 1060 6GB o AMD RX 570 4GB<br>Almacenamiento: 120 GB",
+        downloads: 0,
+        rating: "⭐⭐⭐⭐⭐",
+        comments: ["La secuela épica", "Gráficos impresionantes"],
+        links: {
+            direct: "https://gofile.io/d/bYr0O4",
+            mediafire: "https://gofile.io/d/bYr0O4"
+        },
+        imagen: "Images/God_of_War_Ragnarok_cover.jpg",
+        password: "123"
+    },
+    {
+        id: 18,
+        nombre: "Peak",
+        tipo: "juego",
+        descripcion: "Un trepador experimentado se encuentra atrapado en una montaña nevada y debe encontrar la forma de sobrevivir y descender.",
+        requisitos: "SO: Windows 7 64-bit<br>Procesador: Intel i5-4430 o AMD FX-6300<br>Memoria: 8 GB RAM<br>Gráficos: NVIDIA GTX 660 2GB o AMD Radeon HD 7850 2GB<br>Almacenamiento: 30 GB",
+        downloads: 0,
+        rating: "⭐⭐⭐⭐☆",
+        comments: ["Intenso y realista", "Una experiencia de supervivencia única"],
+        links: {
+            direct: "https://gofile.io/d/ENLACE_NUEVO_PEAK",
+            mediafire: "https://www.mediafire.com/file/ENLACE_NUEVO_PEAK"
+        },
+        imagen: "Images/Peak_cover.jpg",
+        password: "123"
+    },
+    {
+        id: 19,
+        nombre: "Sons of the Forest",
+        tipo: "juego",
+        descripcion: "Un joven llega a una isla remota en busca de un multimillonario desaparecido, pero descubre que no está solo en esta experiencia de supervivencia aterradora.",
+        requisitos: "SO: Windows 10 64-bit<br>Procesador: Intel i5-8400 o AMD Ryzen 5 2600<br>Memoria: 16 GB RAM<br>Gráficos: NVIDIA GTX 1060 6GB o AMD RX 5700<br>Almacenamiento: 30 GB",
+        downloads: 0,
+        rating: "⭐⭐⭐⭐☆",
+        comments: ["Terror psicológico y supervivencia", "Muy prometedor"],
+        links: {
+            direct: "https://gofile.io/d/ENLACE_NUEVO_SOTF",
+            mediafire: "https://www.mediafire.com/file/ENLACE_NUEVO_SOTF"
+        },
+        imagen: "Images/Sons_of_the_Forest_cover.jpg",
+        password: "123"
     }
 ];
