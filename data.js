@@ -131,7 +131,7 @@ const recursos = [
             direct: "https://gofile.io/d/ENLACE_NUEVO_BF2",
             mediafire: "https://www.mediafire.com/file/ENLACE_NUEVO_BF2"
         },
-        imagen: "Images/Battlefield_2_cover.jpg",
+        imagen: "Images/51XE9qx04ML._UF1000,1000_QL80_.jpg",
         password: "123"
     },
     {
