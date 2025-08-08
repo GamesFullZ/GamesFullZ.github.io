@@ -147,7 +147,7 @@ const recursos = [
             direct: "https://gofile.io/d/bYr0O4",
             mediafire: "https://gofile.io/d/bYr0O4"
         },
-        imagen: "Images/God_of_War_2018_cover.jpg",
+        imagen: "Images/God_of_War_4_cover.jpg",
         password: "123"
     },
     {
