@@ -163,7 +163,7 @@ const recursos = [
             direct: "https://gofile.io/d/bYr0O4",
             mediafire: "https://gofile.io/d/bYr0O4"
         },
-        imagen: "Images/Images/God_of_War_Ragnarök_cover.jpg",
+        imagen: "Images/God_of_War_Ragnarök_cover.jpg",
         password: "123"
     },
     {
