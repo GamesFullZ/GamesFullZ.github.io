@@ -179,7 +179,7 @@ const recursos = [
             direct: "https://gofile.io/d/ENLACE_NUEVO_PEAK",
             mediafire: "https://www.mediafire.com/file/ENLACE_NUEVO_PEAK"
         },
-        imagen: "Images/Peak_cover.jpg",
+        imagen: "Images/images.jpg",
         password: "123"
     },
     {
@@ -195,7 +195,7 @@ const recursos = [
             direct: "https://gofile.io/d/ENLACE_NUEVO_SOTF",
             mediafire: "https://www.mediafire.com/file/ENLACE_NUEVO_SOTF"
         },
-        imagen: "Images/Sons_of_the_Forest_cover.jpg",
+        imagen: "Images/Sons_of_the_Forest.jpg",
         password: "123"
     }
 ];
