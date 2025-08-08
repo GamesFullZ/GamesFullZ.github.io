@@ -248,5 +248,24 @@ const recursos = [
         },
         imagen: "Images/BlackOPS2.jpg",
         password: "123"
-    }
+    },
+    {
+    id: 16,  // ← Cambia al siguiente número disponible
+    nombre: "Nombre del Juego",
+    tipo: "juego",
+    descripcion: "Una descripción corta del juego. Ej: Aventura en un mundo abierto lleno de misterios.",
+    requisitos: "SO: Windows 10<br>Procesador: Intel Core i5-7500<br>Memoria: 8 GB RAM<br>Gráficos: GTX 1050 Ti<br>Almacenamiento: 50 GB",
+    downloads: 0,  // Número de descargas (puedes dejarlo en 0)
+    rating: "⭐⭐⭐⭐☆",  // De 1 a 5 estrellas (usa ⭐)
+    comments: [
+        "Juego muy bueno",
+        "Se traba un poco"
+    ],
+    links: {
+        direct: "https://gofile.io/d/tuID",
+        mediafire: "https://www.mediafire.com/file/tuarchivo"
+    },
+    imagen: "Images/nombre-imagen.jpg",  // ← Debe estar en la carpeta Images/
+    password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
+  },
 ];
