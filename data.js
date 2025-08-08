@@ -262,10 +262,10 @@ const recursos = [
         "Se traba un poco"
     ],
     links: {
-        direct: "https://gofile.io/d/tuID",
-        mediafire: "https://www.mediafire.com/file/tuarchivo"
+        direct: "https://www.mediafire.com/file/84w2ozjtilvi6s6/The-Quarry-SteamRIP.com.torrent/file",
+        mediafire: "https://www.mediafire.com/file/84w2ozjtilvi6s6/The-Quarry-SteamRIP.com.torrent/file"
     },
-    imagen: "Images/nombre-imagen.jpg",  // ← Debe estar en la carpeta Images/
+    imagen: "The_Quarry_cover_art.png",  // ← Debe estar en la carpeta Images/
     password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
   },
 ];
