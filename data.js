@@ -193,8 +193,8 @@ const recursos = [
         comments: ["Terror psicológico y supervivencia", "Muy prometedor"],
         links: {
             // NOTA: Reemplaza estos enlaces con enlaces válidos al juego
-            direct: "https://gofile.io/d/ENLACE_NUEVO_SOTF",
-            mediafire: "https://www.mediafire.com/file/ENLACE_NUEVO_SOTF"
+            direct: "https://www.mediafire.com/file/0vci1qnuuw6ms0q/Sons+Of+The+Forest+Opti.7z.torrent/file",
+            mediafire: "https://www.mediafire.com/file/0vci1qnuuw6ms0q/Sons+Of+The+Forest+Opti.7z.torrent/file"
         },
         imagen: "Images/Sons_of_the_Forest.jpg", // Asegúrate de tener esta imagen
         password: "123" // Reemplaza si es necesario
