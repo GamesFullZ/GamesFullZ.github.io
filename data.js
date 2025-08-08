@@ -227,8 +227,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐☆",
         comments: ["Divertido para toda la familia", "Lleno de referencias"],
         links: {
-            direct: "https://gofile.io/d/lego-marvel",
-            mediafire: "https://www.mediafire.com/file/lego-marvel"
+            direct: "https://www.mediafire.com/file/bzh8jle3p3i7eil/LEGO-MARVEL-Super-Heroes-SteamRIP.com.rar.torrent/file",
+            mediafire: "https://www.mediafire.com/file/bzh8jle3p3i7eil/LEGO-MARVEL-Super-Heroes-SteamRIP.com.rar.torrent/file"
         },
         imagen: "Images/7YrRqN2wgRzpzX4K5RLUEecDyu53mz8U.jpg",
         password: "123"
