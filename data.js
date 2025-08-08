@@ -251,10 +251,10 @@ const recursos = [
     },
     {
     id: 16,  // ← Cambia al siguiente número disponible
-    nombre: "Nombre del Juego",
+    nombre: "The Quarry",
     tipo: "juego",
-    descripcion: "Una descripción corta del juego. Ej: Aventura en un mundo abierto lleno de misterios.",
-    requisitos: "SO: Windows 10<br>Procesador: Intel Core i5-7500<br>Memoria: 8 GB RAM<br>Gráficos: GTX 1050 Ti<br>Almacenamiento: 50 GB",
+    descripcion: "Aventura interactiva de terror donde nueve adolescentes deben sobrevivir una noche en un campamento lleno de misterios y criaturas letales.",
+    requisitos: "SO: Windows 10 64-bit<br>Procesador: Intel Core i5-3570 / AMD FX-8350<br>RAM: 8 GB<br>Gráficos: NVIDIA GTX 780 / AMD Radeon RX 470<br>Almacenamiento: 50 GB",
     downloads: 0,  // Número de descargas (puedes dejarlo en 0)
     rating: "⭐⭐⭐⭐☆",  // De 1 a 5 estrellas (usa ⭐)
     comments: [
