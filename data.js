@@ -230,7 +230,7 @@ const recursos = [
             direct: "https://gofile.io/d/lego-marvel",
             mediafire: "https://www.mediafire.com/file/lego-marvel"
         },
-        imagen: "Images/lego_marvel_superheroes.jpg",
+        imagen: "Images/7YrRqN2wgRzpzX4K5RLUEecDyu53mz8U.jpg",
         password: "123"
     },
     {
