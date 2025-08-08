@@ -211,8 +211,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Hermoso y emotivo", "Perfecto para fans de Undertale"],
         links: {
-            direct: "https://gofile.io/d/deltarune",
-            mediafire: "https://www.mediafire.com/file/deltarune"
+            direct: "https://www.mediafire.com/file/m54hdi7s9uaoinj/DELTARUNE.zip.torrent/file",
+            mediafire: "https://www.mediafire.com/file/m54hdi7s9uaoinj/DELTARUNE.zip.torrent/file"
         },
         imagen: "Images/deltarune.jpg",
         password: "deltarune"
@@ -243,8 +243,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Uno de los mejores CoD", "Campaña con múltiples finales"],
         links: {
-            direct: "https://gofile.io/d/blackops2",
-            mediafire: "https://www.mediafire.com/file/blackops2"
+            direct: "https://www.mediafire.com/file/cwdumqbqjz3j3nb/Call+of+Duty+-+Black+Ops+2.rar.torrent/file",
+            mediafire: "https://www.mediafire.com/file/cwdumqbqjz3j3nb/Call+of+Duty+-+Black+Ops+2.rar.torrent/file"
         },
         imagen: "Images/black_ops_2_cover.jpg",
         password: "123"
