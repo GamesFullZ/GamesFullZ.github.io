@@ -117,5 +117,22 @@ const recursos = [
         },
         imagen: "Images/Payday2cover.jpg",
         password: "contraseña123"
+    },
+    {
+        id: 15, // <--- ID ÚNICO (siguiente número disponible)
+        nombre: "Battlefield 2",
+        tipo: "juego",
+        descripcion: "Juego de disparos en primera persona con combates a gran escala, vehículos y mapas grandes ambientado en una guerra ficticia moderna.",
+        requisitos: "SO: Windows 2000/XP<br>Procesador: 1.5 GHz P4 o equivalente<br>Memoria: 512 MB RAM<br>Gráficos: 100% DirectX 9.0c compatible con 128 MB VRAM (NVIDIA GeForce FX 5700 o ATI Radeon 9500)<br>Almacenamiento: 4.5 GB",
+        downloads: 0,
+        rating: "⭐⭐⭐⭐☆",
+        comments: ["Clásico de los shooters", "Épicas batallas con vehículos"],
+        links: {
+            // NOTA: Necesitas reemplazar estos enlaces con enlaces válidos a un archivo de Battlefield 2
+            direct: "https://gofile.io/d/DDlRTY",
+            mediafire: "https://gofile.io/d/DDlRTY"
+        },
+        imagen: "Images/51XE9qx04ML._UF1000,1000_QL80_.jpg", // Asegúrate de tener esta imagen en tu carpeta Images
+        password: "123" // Reemplaza con la contraseña real si la hay
     }
 ];
