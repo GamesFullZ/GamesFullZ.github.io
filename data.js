@@ -270,6 +270,25 @@ const recursos = [
   },
   {
     id: 17,  // ← Cambia al siguiente número disponible
+    nombre: "Bendy and the Ink Machine",
+    tipo: "juego",
+    descripcion: " Aventura de terror y puzles en primera persona donde exploras un viejo estudio de animación abandonado lleno de criaturas de tinta.",
+    requisitos: "SO: Windows 7<br>Procesador: Intel Core 2 Duo E5200<br>RAM: 4 GB<br>Gráficos: GeForce 9800 GTX / AMD Radeon HD 5670<br>Almacenamiento: 2 GB",
+    downloads: 0,  // Número de descargas (puedes dejarlo en 0)
+    rating: "⭐⭐⭐⭐☆",  // De 1 a 5 estrellas (usa ⭐)
+    comments: [
+        "Juego muy bueno",
+        "Se traba un poco pero es mi pc xd"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file",
+        mediafire: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file"
+    },
+    imagen: "Images/nombre-imagen.jpg",  // ← Debe estar en la carpeta Images/
+    password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
+    },
+    {
+    id: 18,  // ← Cambia al siguiente número disponible
     nombre: "Nombre del Juego",
     tipo: "juego",
     descripcion: "Una descripción corta del juego. Ej: Aventura en un mundo abierto lleno de misterios.",
