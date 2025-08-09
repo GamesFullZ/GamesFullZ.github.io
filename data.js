@@ -319,8 +319,8 @@ const recursos = [
         "un clasico"
     ],
     links: {
-        direct: "https://gofile.io/d/tuID",
-        mediafire: "https://www.mediafire.com/file/tuarchivo"
+        direct: "https://www.mediafire.com/file/jy6gzcnydlolmpa/Call-of-Juarez-Gunslinger-SteamRIP.com.rar.torrent/file",
+        mediafire: "https://www.mediafire.com/file/jy6gzcnydlolmpa/Call-of-Juarez-Gunslinger-SteamRIP.com.rar.torrent/file"
     },
     imagen: "Images/call_of_juarez_gunslinger-2242897.jpg",  // ← Debe estar en la carpeta Images/
     password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
