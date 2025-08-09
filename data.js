@@ -306,4 +306,23 @@ const recursos = [
     imagen: "Images/618lYWO7raL._UF894,1000_QL80_.jpg",  // ← Debe estar en la carpeta Images/
     password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
     },
+    {
+    id: 19,  // ← Cambia al siguiente número disponible
+    nombre: "Call of Juarez: Gunslinger",
+    tipo: "juego",
+    descripcion: "Shooter en primera persona ambientado en el Salvaje Oeste, donde un cazarrecompensas narra sus hazañas mientras enfrentas duelos y tiroteos intensos.",
+    requisitos: "SO: Windows XP/Vista/7<br>Procesador: Intel Core 2 Duo 2.0 GHz / AMD Athlon 64 X2 2.0 GHz<br>RAM: 2 GB<br>Gráficos: 256 MB DirectX 9.0c compatible (GeForce 8800 GT / Radeon HD 3870)<br>Almacenamiento: 4 GB",
+    downloads: 0,  // Número de descargas (puedes dejarlo en 0)
+    rating: "⭐⭐⭐⭐☆",  // De 1 a 5 estrellas (usa ⭐)
+    comments: [
+        "Juego chido",
+        "un clasico"
+    ],
+    links: {
+        direct: "https://gofile.io/d/tuID",
+        mediafire: "https://www.mediafire.com/file/tuarchivo"
+    },
+    imagen: "Images/call_of_juarez_gunslinger-2242897.jpg",  // ← Debe estar en la carpeta Images/
+    password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
+   },
 ];
