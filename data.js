@@ -289,19 +289,19 @@ const recursos = [
     },
     {
     id: 18,  // ← Cambia al siguiente número disponible
-    nombre: "Nombre del Juego",
+    nombre: "Bendy and the Dark Revivalo",
     tipo: "juego",
-    descripcion: "Una descripción corta del juego. Ej: Aventura en un mundo abierto lleno de misterios.",
-    requisitos: "SO: Windows 10<br>Procesador: Intel Core i5-7500<br>Memoria: 8 GB RAM<br>Gráficos: GTX 1050 Ti<br>Almacenamiento: 50 GB",
+    descripcion: "Secuela de terror en primera persona donde Audrey explora un retorcido estudio de animación plagado de criaturas de tinta, resolviendo puzles y luchando por escapar.",
+    requisitos: "SO: Windows 10 64-bit<br>RAM: 8 GB<br>Gráficos: GeForce GTX 1030 / AMD RX 550 (2 GB VRAM)<br>DirectX: 11<br>Almacenamiento: 15 GB",
     downloads: 0,  // Número de descargas (puedes dejarlo en 0)
     rating: "⭐⭐⭐⭐☆",  // De 1 a 5 estrellas (usa ⭐)
     comments: [
-        "Juego muy bueno",
-        "Se traba un poco"
+        "no esta tan buena",
+        "xd casi no da miedo"
     ],
     links: {
-        direct: "https://gofile.io/d/tuID",
-        mediafire: "https://www.mediafire.com/file/tuarchivo"
+        direct: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file",
+        mediafire: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file"
     },
     imagen: "Images/nombre-imagen.jpg",  // ← Debe estar en la carpeta Images/
     password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
