@@ -343,4 +343,22 @@ const recursos = [
     },
     imagen: "Images/13147.jpg"
    },
+    {
+    id: 21,
+    nombre: "Call of Duty: Modern Warfare 3",
+    tipo: "juego",
+    descripcion: "Shooter en primera persona con campañas intensas y multijugador competitivo.",
+    requisitos: "SO Windows XP/Vista/7, Intel Core 2 Duo 2.66 GHz, 2 GB RAM, GeForce 8800 GT, 16 GB almacenamiento.",
+    downloads: 0,  // Número de descargas
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "juegenlo esta chido",
+        "juegazo"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/ioxs8mh1bgafbxl/Call+OF+Duty+2+Modern+Warfare+Opti.torrent/file",
+        mediafire: "https://www.mediafire.com/file/ioxs8mh1bgafbxl/Call+OF+Duty+2+Modern+Warfare+Opti.torrent/file"
+    },
+    imagen: "Images/Call_of_Duty_Modern_Warfare_2_(2009)_cover.png"
+   },
 ];
