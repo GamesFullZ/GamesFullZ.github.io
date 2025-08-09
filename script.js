@@ -3,18 +3,28 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('searchInput');
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     const modal = document.getElementById('gameModal');
-    const contactForm = document.querySelector('form'); // Corregido el selector
+    const contactForm = document.querySelector('form');
 
     let displayedGames = 0;
     const gamesPerLoad = 2;
 
-    // Formatear números
+    // ================================ 
+    // 1. FORMATO DE NÚMEROS
+    // ================================
     function formatNumber(num) {
         return num.toLocaleString();
     }
 
-    // Cargar juegos
+    // ================================ 
+    // 2. CARGA DE JUEGOS
+    // ================================
     function loadGames() {
+        if (!window.recursos || recursos.length === 0) {
+            gallery.innerHTML = '<p style="color: #aaa; text-align: center;">No hay juegos disponibles.</p>';
+            loadMoreBtn.style.display = 'none';
+            return;
+        }
+
         const fragment = document.createDocumentFragment();
         const toLoad = recursos.slice(displayedGames, displayedGames + gamesPerLoad);
 
@@ -36,9 +46,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Buscador
+    // ================================ 
+    // 3. BUSCADOR
+    // ================================
     searchInput.addEventListener('input', () => {
-        const term = searchInput.value.toLowerCase();
+        const term = searchInput.value.toLowerCase().trim();
+        if (!term) {
+            document.querySelectorAll('.game-item').forEach(img => img.style.display = 'block');
+            return;
+        }
+
         document.querySelectorAll('.game-item').forEach(img => {
             const gameId = img.dataset.gameId;
             const game = recursos.find(g => g.id == gameId);
@@ -50,31 +67,38 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Botón "Ver más"
+    // ================================ 
+    // 4. BOTÓN "VER MÁS"
+    // ================================
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener('click', loadGames);
     }
 
-    // Modal
+    // ================================ 
+    // 5. MODAL DE JUEGO
+    // ================================
     function openModal(game) {
         document.getElementById('modalImage').src = game.imagen;
         document.getElementById('modalTitle').textContent = game.nombre;
         document.getElementById('modalInfo').textContent = game.descripcion;
-        document.getElementById('modalRequirements').innerHTML = game.requisitos;
+        document.getElementById('modalRequirements').textContent = game.requisitos;
         document.getElementById('modalRating').textContent = game.rating;
         document.getElementById('modalDownloads').textContent = `Descargado por +${formatNumber(game.downloads)} usuarios`;
 
-        // 🔁 Corregido: ID es linkGofile, no linkDirect
         const linkGofile = document.getElementById('linkGofile');
-        if (linkGofile) {
-            linkGofile.href = game.links.direct || "#";
+        if (linkGofile && game.links && game.links.direct) {
+            linkGofile.href = game.links.direct;
+        } else if (linkGofile) {
+            linkGofile.href = "#";
+            linkGofile.style.opacity = "0.6";
+            linkGofile.textContent = "Enlace no disponible";
         }
 
-        // Comentarios
+        // Limpiar y cargar comentarios
         const commentsContainer = document.getElementById('commentsContainer');
         commentsContainer.innerHTML = '';
 
-        // Comentarios originales
+        // Comentarios predefinidos
         game.comments.forEach(text => {
             const div = document.createElement('div');
             div.className = 'comment';
@@ -82,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
             commentsContainer.appendChild(div);
         });
 
-        // Comentarios del usuario (localStorage)
+        // Comentarios del usuario
         const userComments = loadComments(game.id);
         userComments.forEach(text => {
             const div = document.createElement('div');
@@ -91,9 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
             commentsContainer.appendChild(div);
         });
 
-        // Guardar ID del juego en el modal
         modal.dataset.gameId = game.id;
-
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
 
@@ -117,7 +139,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Funciones de comentarios
+    // ================================ 
+    // 6. COMENTARIOS (localStorage)
+    // ================================
     function saveComments(gameId, comments) {
         localStorage.setItem(`comments_${gameId}`, JSON.stringify(comments));
     }
@@ -127,8 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return saved ? JSON.parse(saved) : [];
     }
 
-    // Añadir comentario
-    document.getElementById('addCommentBtn').addEventListener('click', function () {
+    document.getElementById('addCommentBtn')?.addEventListener('click', function () {
         const input = document.getElementById('commentInput');
         const commentsContainer = document.getElementById('commentsContainer');
         const currentGameId = modal.dataset.gameId;
@@ -149,7 +172,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Formulario de contacto
+    // ================================ 
+    // 7. FORMULARIO DE CONTACTO
+    // ================================
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -158,32 +183,30 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Cargar primeros juegos
-    loadGames();
-
-    // ================================================
-    // NUEVAS FUNCIONES AGREGADAS Y SIMPLIFICADAS
-    // ================================================
-
-    // === NOTIFICACIONES INTELIGENTES ===
+    // ================================ 
+    // 8. NOTIFICACIONES
+    // ================================
     function showNotification(text) {
         const notif = document.createElement("div");
         notif.className = "notification";
         notif.textContent = text;
-        notif.style.position = "fixed";
-        notif.style.bottom = "20px"; // Cambiado a abajo
-        notif.style.right = "20px";
-        notif.style.background = "rgba(50, 50, 50, 0.9)"; // Fondo más sutil
-        notif.style.color = "white";
-        notif.style.padding = "12px 20px"; // Ajustado padding
-        notif.style.borderRadius = "8px";
-        notif.style.zIndex = "9999";
-        notif.style.boxShadow = "0 2px 10px rgba(0,0,0,0.3)";
-        notif.style.fontSize = "14px"; // Tamaño de fuente más pequeño
-        notif.style.maxWidth = "300px"; // Ancho máximo
-        notif.style.animation = "slideIn 0.3s ease"; // Animación más sutil
+        notif.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(50, 50, 50, 0.9);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            z-index: 9999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            font-size: 14px;
+            max-width: 300px;
+            animation: slideIn 0.3s ease;
+            pointer-events: auto;
+        `;
 
-        // Agregar animación CSS si no existe
+        // Evitar duplicar estilos
         if (!document.querySelector('#notification-style')) {
             const style = document.createElement('style');
             style.id = 'notification-style';
@@ -202,38 +225,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 notif.style.animation = "slideIn 0.3s ease reverse";
                 setTimeout(() => notif.remove(), 300);
             }
-        }, 3000); // Auto-eliminar después de 3 segundos
+        }, 3000);
     }
 
-    // Función para mostrar notificaciones automáticas
     function initNotifications() {
-        // Notificación de bienvenida
-        setTimeout(() => {
-            showNotification("¡Bienvenido a GamesFullZ! 🎮");
-        }, 2000);
-
-        // Notificación de nuevo juego (simulada)
-        setTimeout(() => {
-            showNotification("🎮 ¡Nuevo juego disponible!");
-        }, 10000);
+        setTimeout(() => showNotification("¡Bienvenido a GamesFullZ! 🎮"), 2000);
+        setTimeout(() => showNotification("🎮 ¡Nuevo juego disponible!"), 10000);
     }
 
-    // === IA RECOMENDADORA DE JUEGOS ===
-    // Esta función se necesita para showGameRecommendations
+    // ================================ 
+    // 9. RECOMENDACIONES DE JUEGOS
+    // ================================
     function recommendGames(gameTitle) {
         const game = recursos.find(g => g.nombre === gameTitle);
         if (!game || !game.tipo) return [];
 
-        // Buscar juegos del mismo tipo, excluyendo el actual
-        const similar = recursos.filter(g =>
-            g.id != game.id && // Excluir el juego actual por ID
-            g.tipo === game.tipo
-        ).slice(0, 3); // Limitar a 3 recomendaciones
-
-        return similar;
+        return recursos
+            .filter(g => g.id != game.id && g.tipo === game.tipo)
+            .slice(0, 3);
     }
 
-    // Mostrar recomendaciones cuando se ve un juego
     function showGameRecommendations(gameTitle) {
         const recommendations = recommendGames(gameTitle);
         if (recommendations.length > 0) {
@@ -242,42 +253,34 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // === MODO BAJO RECURSOS (Corregido) ===
+    // ================================ 
+    // 10. MODO BAJO RECURSOS
+    // ================================
     function enableLowResourceMode() {
-        const isLowMode = confirm("¿Activar modo bajo recursos? Esto desactivará imágenes (excepto las de juegos) y animaciones.");
+        const isLowMode = confirm("¿Activar modo bajo recursos? Esto desactivará imágenes (excepto juegos) y animaciones.");
         if (!isLowMode) return;
 
-        // Desactivar imágenes, pero NO las de los juegos en la galería principal
-        // Seleccionamos todas las imágenes que NO están dentro de .gallery__container
         document.querySelectorAll("img:not(.gallery__container img)").forEach(img => {
             img.style.display = "none";
         });
 
-        // Desactivar animaciones
-        // Verificar si ya se ha agregado el estilo para evitar duplicados
         if (!document.getElementById('low-resource-style')) {
             const style = document.createElement('style');
-            style.id = 'low-resource-style'; // Damos un ID para identificarlo
+            style.id = 'low-resource-style';
             style.textContent = `
-                * {
-                    animation: none !important;
-                    transition: none !important;
-                }
-                .no-animation {
-                    display: none !important;
-                }
+                * { animation: none !important; transition: none !important; }
             `;
             document.head.appendChild(style);
         }
 
-        // Desactivar scripts pesados (simulado)
-        console.log("Modo bajo recursos activado");
-        showNotification("📱 Modo bajo recursos activado. Imágenes (excepto juegos) y animaciones desactivadas.");
+        showNotification("📱 Modo bajo recursos activado.");
     }
 
-    // === JUEGO ALEATORIO ===
+    // ================================ 
+    // 11. JUEGO ALEATORIO
+    // ================================
     function randomGame() {
-        if (recursos.length === 0) {
+        if (!window.recursos || recursos.length === 0) {
             showNotification("❌ No hay juegos disponibles.");
             return;
         }
@@ -286,33 +289,32 @@ document.addEventListener('DOMContentLoaded', function () {
         showNotification(`🎲 Juego aleatorio: ${random.nombre}`);
     }
 
-    // === FUNCIONES PARA TEMAS ===
+    // ================================ 
+    // 12. GESTIÓN DE TEMAS
+    // ================================
     function changeTheme() {
         const theme = document.getElementById("theme-selector").value;
         document.body.setAttribute("data-theme", theme);
         localStorage.setItem("selectedTheme", theme);
-        // Opcional: Notificación al cambiar tema
-        // showNotification(`🎨 Tema cambiado a ${theme || 'Oscuro'}`);
     }
 
-    // Cargar tema guardado al inicio
     function loadSavedTheme() {
         const savedTheme = localStorage.getItem("selectedTheme");
-        if (savedTheme !== null) { // Comprobar si existe (incluso si es "")
+        if (savedTheme !== null) {
             document.getElementById("theme-selector").value = savedTheme;
             document.body.setAttribute("data-theme", savedTheme);
         }
     }
 
-    // === INICIALIZACIÓN DE FUNCIONES ===
-    // Inicializar notificaciones
+    // ================================ 
+    // 13. INICIALIZACIÓN
+    // ================================
+    loadGames();
     initNotifications();
-    
-    // Cargar tema guardado
     loadSavedTheme();
 
-    // Exponer funciones globales que se usan desde el HTML inline
+    // Hacer funciones accesibles globalmente
     window.randomGame = randomGame;
     window.enableLowResourceMode = enableLowResourceMode;
-    window.changeTheme = changeTheme; // Exponer changeTheme
+    window.changeTheme = changeTheme;
 });
