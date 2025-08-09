@@ -1,5 +1,5 @@
 // data.js
-window.recursos = [
+const recursos = [
     {
         id: 1,
         nombre: "Resident Evil 4",
@@ -198,6 +198,9 @@ window.recursos = [
         imagen: "Images/Sons_of_the_Forest.jpg",
         password: "123"
     },
+
+    // ====== NUEVOS JUEGOS AÑADIDOS ======
+
     {
         id: 13,
         nombre: "Deltarune",
@@ -247,115 +250,115 @@ window.recursos = [
         password: "123"
     },
     {
-        id: 16,
-        nombre: "The Quarry",
-        tipo: "juego",
-        descripcion: "Aventura interactiva de terror donde nueve adolescentes deben sobrevivir una noche en un campamento lleno de misterios y criaturas letales.",
-        requisitos: "SO: Windows 10 64-bit<br>Procesador: Intel Core i5-3570 / AMD FX-8350<br>RAM: 8 GB<br>Gráficos: NVIDIA GTX 780 / AMD Radeon RX 470<br>Almacenamiento: 50 GB",
-        downloads: 0,
-        rating: "⭐⭐⭐⭐☆",
-        comments: [
-            "Juego muy bueno",
-            "Se traba un poco"
-        ],
-        links: {
-            direct: "https://www.mediafire.com/file/84w2ozjtilvi6s6/The-Quarry-SteamRIP.com.torrent/file",
-            mediafire: "https://www.mediafire.com/file/84w2ozjtilvi6s6/The-Quarry-SteamRIP.com.torrent/file"
-        },
-        imagen: "Images/The_Quarry_cover_art.png",
-        password: "123"
+    id: 16,  // ← Cambia al siguiente número disponible
+    nombre: "The Quarry",
+    tipo: "juego",
+    descripcion: "Aventura interactiva de terror donde nueve adolescentes deben sobrevivir una noche en un campamento lleno de misterios y criaturas letales.",
+    requisitos: "SO: Windows 10 64-bit<br>Procesador: Intel Core i5-3570 / AMD FX-8350<br>RAM: 8 GB<br>Gráficos: NVIDIA GTX 780 / AMD Radeon RX 470<br>Almacenamiento: 50 GB",
+    downloads: 0,  // Número de descargas (puedes dejarlo en 0)
+    rating: "⭐⭐⭐⭐☆",  // De 1 a 5 estrellas (usa ⭐)
+    comments: [
+        "Juego muy bueno",
+        "Se traba un poco"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/84w2ozjtilvi6s6/The-Quarry-SteamRIP.com.torrent/file",
+        mediafire: "https://www.mediafire.com/file/84w2ozjtilvi6s6/The-Quarry-SteamRIP.com.torrent/file"
+    },
+    imagen: "Images/The_Quarry_cover_art.png",  // ← Debe estar en la carpeta Images/
+    password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
+  },
+  {
+    id: 17,  // ← Cambia al siguiente número disponible
+    nombre: "Bendy and the Ink Machine",
+    tipo: "juego",
+    descripcion: " Aventura de terror y puzles en primera persona donde exploras un viejo estudio de animación abandonado lleno de criaturas de tinta.",
+    requisitos: "SO: Windows 7<br>Procesador: Intel Core 2 Duo E5200<br>RAM: 4 GB<br>Gráficos: GeForce 9800 GTX / AMD Radeon HD 5670<br>Almacenamiento: 2 GB",
+    downloads: 0,  // Número de descargas (puedes dejarlo en 0)
+    rating: "⭐⭐⭐⭐☆",  // De 1 a 5 estrellas (usa ⭐)
+    comments: [
+        "Juego muy bueno",
+        "Se traba un poco pero es mi pc xd"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file",
+        mediafire: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file"
+    },
+    imagen: "Images/7288998-bendy-and-the-ink-machine-playstation-4-front-cover.png",  // ← Debe estar en la carpeta Images/
+    password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
     },
     {
-        id: 17,
-        nombre: "Bendy and the Ink Machine",
-        tipo: "juego",
-        descripcion: "Aventura de terror y puzles en primera persona donde exploras un viejo estudio de animación abandonado lleno de criaturas de tinta.",
-        requisitos: "SO: Windows 7<br>Procesador: Intel Core 2 Duo E5200<br>RAM: 4 GB<br>Gráficos: GeForce 9800 GTX / AMD Radeon HD 5670<br>Almacenamiento: 2 GB",
-        downloads: 0,
-        rating: "⭐⭐⭐⭐☆",
-        comments: [
-            "Juego muy bueno",
-            "Se traba un poco pero es mi pc xd"
-        ],
-        links: {
-            direct: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file",
-            mediafire: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file"
-        },
-        imagen: "Images/7288998-bendy-and-the-ink-machine-playstation-4-front-cover.png",
-        password: "123"
+    id: 18,  // ← Cambia al siguiente número disponible
+    nombre: "Bendy and the Dark Revivalo",
+    tipo: "juego",
+    descripcion: "Secuela de terror en primera persona donde Audrey explora un retorcido estudio de animación plagado de criaturas de tinta, resolviendo puzles y luchando por escapar.",
+    requisitos: "SO: Windows 10 64-bit<br>RAM: 8 GB<br>Gráficos: GeForce GTX 1030 / AMD RX 550 (2 GB VRAM)<br>DirectX: 11<br>Almacenamiento: 15 GB",
+    downloads: 0,  // Número de descargas (puedes dejarlo en 0)
+    rating: "⭐⭐⭐⭐☆",  // De 1 a 5 estrellas (usa ⭐)
+    comments: [
+        "no esta tan buena",
+        "xd casi no da miedo"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file",
+        mediafire: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file"
+    },
+    imagen: "Images/618lYWO7raL._UF894,1000_QL80_.jpg",  // ← Debe estar en la carpeta Images/
+    password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
     },
     {
-        id: 18,
-        nombre: "Bendy and the Dark Revivalo",
-        tipo: "juego",
-        descripcion: "Secuela de terror en primera persona donde Audrey explora un retorcido estudio de animación plagado de criaturas de tinta, resolviendo puzles y luchando por escapar.",
-        requisitos: "SO: Windows 10 64-bit<br>RAM: 8 GB<br>Gráficos: GeForce GTX 1030 / AMD RX 550 (2 GB VRAM)<br>DirectX: 11<br>Almacenamiento: 15 GB",
-        downloads: 0,
-        rating: "⭐⭐⭐⭐☆",
-        comments: [
-            "no esta tan buena",
-            "xd casi no da miedo"
-        ],
-        links: {
-            direct: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file",
-            mediafire: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file"
-        },
-        imagen: "Images/618lYWO7raL._UF894,1000_QL80_.jpg",
-        password: "123"
+    id: 19,  // ← Cambia al siguiente número disponible
+    nombre: "Call of Juarez: Gunslinger",
+    tipo: "juego",
+    descripcion: "Shooter en primera persona ambientado en el Salvaje Oeste, donde un cazarrecompensas narra sus hazañas mientras enfrentas duelos y tiroteos intensos.",
+    requisitos: "SO: Windows XP/Vista/7<br>Procesador: Intel Core 2 Duo 2.0 GHz / AMD Athlon 64 X2 2.0 GHz<br>RAM: 2 GB<br>Gráficos: 256 MB DirectX 9.0c compatible (GeForce 8800 GT / Radeon HD 3870)<br>Almacenamiento: 4 GB",
+    downloads: 0,  // Número de descargas (puedes dejarlo en 0)
+    rating: "⭐⭐⭐⭐☆",  // De 1 a 5 estrellas (usa ⭐)
+    comments: [
+        "Juego chido",
+        "un clasico"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/jy6gzcnydlolmpa/Call-of-Juarez-Gunslinger-SteamRIP.com.rar.torrent/file",
+        mediafire: "https://www.mediafire.com/file/jy6gzcnydlolmpa/Call-of-Juarez-Gunslinger-SteamRIP.com.rar.torrent/file"
     },
+    imagen: "Images/call_of_juarez_gunslinger-2242897.jpg",  // ← Debe estar en la carpeta Images/
+    password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
+   },
     {
-        id: 19,
-        nombre: "Call of Juarez: Gunslinger",
-        tipo: "juego",
-        descripcion: "Shooter en primera persona ambientado en el Salvaje Oeste, donde un cazarrecompensas narra sus hazañas mientras enfrentas duelos y tiroteos intensos.",
-        requisitos: "SO: Windows XP/Vista/7<br>Procesador: Intel Core 2 Duo 2.0 GHz / AMD Athlon 64 X2 2.0 GHz<br>RAM: 2 GB<br>Gráficos: 256 MB DirectX 9.0c compatible (GeForce 8800 GT / Radeon HD 3870)<br>Almacenamiento: 4 GB",
-        downloads: 0,
-        rating: "⭐⭐⭐⭐☆",
-        comments: [
-            "Juego chido",
-            "un clasico"
-        ],
-        links: {
-            direct: "https://www.mediafire.com/file/jy6gzcnydlolmpa/Call-of-Juarez-Gunslinger-SteamRIP.com.rar.torrent/file",
-            mediafire: "https://www.mediafire.com/file/jy6gzcnydlolmpa/Call-of-Juarez-Gunslinger-SteamRIP.com.rar.torrent/file"
-        },
-        imagen: "Images/call_of_juarez_gunslinger-2242897.jpg",
-        password: "123"
+    id: 20,
+    nombre: "Far Cry 3",
+    tipo: "juego",
+    descripcion: "mundo abierto donde un turista debe sobrevivir en una isla tropical llena de piratas y peligros",
+    requisitos: "<br>SO: Windows Vista SP2 / 7 / 8<br>Procesador: Intel Core 2 Duo E6700 2.6 GHz / AMD Phenom X3 8750 2.4 GHz<br>RAM: 4 GB<br>Gráficos: NVIDIA GeForce 8800 GT / ATI Radeon HD 3850<br>Almacenamiento: 15 GB",
+    downloads: 0,  // Número de descargas
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Uno de los mejores far cry",
+        "gracias"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/k2o4z2jheijin5q/Far+Cry+3+Optimized.torrent/file",
+        mediafire: "https://www.mediafire.com/file/k2o4z2jheijin5q/Far+Cry+3+Optimized.torrent/file"
     },
+    imagen: "Images/13147.jpg"
+   },
     {
-        id: 20,
-        nombre: "Far Cry 3",
-        tipo: "juego",
-        descripcion: "mundo abierto donde un turista debe sobrevivir en una isla tropical llena de piratas y peligros",
-        requisitos: "SO: Windows Vista SP2 / 7 / 8<br>Procesador: Intel Core 2 Duo E6700 2.6 GHz / AMD Phenom X3 8750 2.4 GHz<br>RAM: 4 GB<br>Gráficos: NVIDIA GeForce 8800 GT / ATI Radeon HD 3850<br>Almacenamiento: 15 GB",
-        downloads: 0,
-        rating: "⭐⭐⭐⭐☆",
-        comments: [
-            "Uno de los mejores far cry",
-            "gracias"
-        ],
-        links: {
-            direct: "https://www.mediafire.com/file/k2o4z2jheijin5q/Far+Cry+3+Optimized.torrent/file",
-            mediafire: "https://www.mediafire.com/file/k2o4z2jheijin5q/Far+Cry+3+Optimized.torrent/file"
-        },
-        imagen: "Images/13147.jpg"
+    id: 21,
+    nombre: "Call of Duty: Modern Warfare 3",
+    tipo: "juego",
+    descripcion: "Shooter en primera persona con campañas intensas y multijugador competitivo.",
+    requisitos: "SO Windows XP/Vista/7, Intel Core 2 Duo 2.66 GHz, 2 GB RAM, GeForce 8800 GT, 16 GB almacenamiento.",
+    downloads: 0,  // Número de descargas
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "juegenlo esta chido",
+        "juegazo"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/ioxs8mh1bgafbxl/Call+OF+Duty+2+Modern+Warfare+Opti.torrent/file",
+        mediafire: "https://www.mediafire.com/file/ioxs8mh1bgafbxl/Call+OF+Duty+2+Modern+Warfare+Opti.torrent/file"
     },
-    {
-        id: 21,
-        nombre: "Call of Duty: Modern Warfare 3",
-        tipo: "juego",
-        descripcion: "Shooter en primera persona con campañas intensas y multijugador competitivo.",
-        requisitos: "SO: Windows XP/Vista/7<br>Procesador: Intel Core 2 Duo 2.66 GHz<br>RAM: 2 GB<br>Gráficos: GeForce 8800 GT<br>Almacenamiento: 16 GB",
-        downloads: 0,
-        rating: "⭐⭐⭐⭐☆",
-        comments: [
-            "juegenlo esta chido",
-            "juegazo"
-        ],
-        links: {
-            direct: "https://www.mediafire.com/file/ioxs8mh1bgafbxl/Call+OF+Duty+2+Modern+Warfare+Opti.torrent/file",
-            mediafire: "https://www.mediafire.com/file/ioxs8mh1bgafbxl/Call+OF+Duty+2+Modern+Warfare+Opti.torrent/file"
-        },
-        imagen: "Images/Call_of_Duty_Modern_Warfare_2_(2009)_cover.png"
-    }
+    imagen: "Images/Call_of_Duty_Modern_Warfare_2_(2009)_cover.png"
+   },
 ];
