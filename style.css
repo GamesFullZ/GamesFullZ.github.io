@@ -3,37 +3,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* ✨ ANIMACIÓN DE CARGA CON PUNTITOS & Transiciones suaves */
     transition: all 0.3s ease-in-out;
 }
+
 body {
-    /* 🌌 FONDO CON DEGRADADO ANIMADO (Simplificado para mejor rendimiento) */
-    /* 
-    background: linear-gradient(-45deg, #0f0f0f, #111827, #1a1a1a, #000000);
-    background-size: 400% 400%;
-    animation: fondoMoviéndose 20s ease infinite;
-    */
-    /* Fondo estático por defecto, puedes activar el animado con JS si quieres */
     background: #0f0f15;
     color: #e0e0ff;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     min-height: 100vh;
-    /* touch-action: pan-y; */
 }
-
-/* 
-@keyframes fondoMoviéndose {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
-*/
 
 /* Header */
 header {
     background: #141423;
-    /* backdrop-filter: blur(5px); */
     padding: 15px 20px;
     text-align: center;
     border-bottom: 1px solid #2a3a5a;
@@ -43,30 +26,30 @@ header {
     align-items: center;
     gap: 15px;
 }
+
 h1 {
     margin: 0;
     font-size: 28px;
     font-weight: 700;
-    /* 🎮 EFECTO "PIXELADO" O RETRO A LOS TÍTULOS (Opcional, activable con clase) */
-    /* font-family: 'Press Start 2P', monospace; */
-    /* text-shadow: 2px 2px #000; */
     color: #00ffcc;
     font-family: 'Space Grotesk', sans-serif;
     letter-spacing: 1px;
 }
+
 /* Aplicar efecto retro si se usa la clase */
 .titulo-juego {
     font-family: 'Press Start 2P', monospace;
     color: #00ffcc;
     text-shadow: 2px 2px #000;
-    font-size: 20px; /* Ajustar tamaño para el pixelado */
+    font-size: 20px;
 }
 
+/* Barra de búsqueda */
 .search-container {
-    margin: 0;
-    flex: 1;
+    flex-grow: 1;
     max-width: 500px;
 }
+
 #searchInput {
     padding: 10px 15px;
     width: 100%;
@@ -77,13 +60,12 @@ h1 {
     font-size: 14px;
     outline: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    /* transition: all 0.2s ease; */
 }
+
 #searchInput:focus {
     background: #253555;
-    /* transform: translateY(-1px); */
-    /* box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); */
 }
+
 /* Galería */
 .gallery__container {
     width: 90%;
@@ -95,53 +77,48 @@ h1 {
     padding: 15px 0;
     justify-items: center;
 }
-/* 📦 TARJETAS DE JUEGOS CON EFECTO HOVER */
+
 .gallery__container img, .tarjeta-juego {
     width: 100%;
     height: 220px;
     object-fit: cover;
     border-radius: 10px;
-    /* transition: transform 0.2s ease, border-color 0.2s ease; */
     cursor: pointer;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     border: 2px solid transparent;
     aspect-ratio: 2 / 3;
-    /* Efecto hover para tarjetas */
-    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
+
 .gallery__container img:hover, .tarjeta-juego:hover {
     transform: scale(1.03) translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 255, 204, 0.3);
     border-color: #00ffcc;
 }
+
 /* Botón "Ver más" */
 .load-more-container {
     text-align: center;
     margin: 30px 0;
 }
-/* 🔥 EFECTOS PARA BOTONES */
+
 .btn-load-more, .boton, #addCommentBtn, .contact-section button, #ask-ia-btn {
     padding: 12px 25px;
-    /* background-color: #00ffaa; */
-    background: #1e2a47; /* Mantener tu esquema de color base */
-    color: #00ffcc; /* Texto compatible con tu tema */
-    border: 1px solid #00ffcc; /* Borde para resaltar */
+    background: #1e2a47;
+    color: #00ffcc;
+    border: 1px solid #00ffcc;
     border-radius: 8px;
-    /* box-shadow: 0 0 8px #00ffaa; */
     font-weight: 600;
     cursor: pointer;
     font-size: 14px;
-    /* font-family: 'Orbitron', sans-serif; */
-    /* transition: all 0.2s ease-in-out; */
 }
+
 .btn-load-more:hover, .boton:hover, #addCommentBtn:hover, .contact-section button:hover, #ask-ia-btn:hover {
-    /* transform: scale(1.05); */
     background: #00ffcc;
     color: #003333;
-    /* box-shadow: 0 0 16px #00ffaa; */
-    transform: translateY(-2px); /* Efecto hover coherente con tu diseño */
+    transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
 /* Modal */
 .modal {
     display: none;
@@ -152,9 +129,9 @@ h1 {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.9);
-    /* backdrop-filter: blur(3px); */
     animation: fadeIn 0.2s ease;
 }
+
 .modal-content {
     position: relative;
     background: #121a2a;
@@ -166,6 +143,7 @@ h1 {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border: 1px solid #2a4060;
 }
+
 .close {
     color: #aaa;
     position: absolute;
@@ -182,12 +160,13 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* transition: all 0.2s ease; */
 }
+
 .close:hover {
     color: #fff;
     background: #ff3366;
 }
+
 .modal-body {
     display: flex;
     flex-direction: column;
@@ -196,12 +175,14 @@ h1 {
     max-height: 80vh;
     overflow-y: auto;
 }
+
 @media (min-width: 768px) {
     .modal-body {
         flex-direction: row;
         align-items: flex-start;
     }
 }
+
 .modal-body img {
     width: 100%;
     max-width: 240px;
@@ -209,10 +190,12 @@ h1 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     align-self: center;
 }
+
 .modal-info {
     flex: 1;
     color: #ddd;
 }
+
 .modal-info h2 {
     font-size: 22px;
     margin-bottom: 10px;
@@ -220,6 +203,7 @@ h1 {
     font-weight: 600;
     font-family: 'Space Grotesk', sans-serif;
 }
+
 /* Rating y descargas */
 .rating-downloads {
     display: flex;
@@ -228,15 +212,18 @@ h1 {
     margin: 8px 0 12px;
     align-items: center;
 }
+
 .rating {
     font-size: 18px;
     font-weight: bold;
 }
+
 .downloads {
     color: #00ffcc;
     font-size: 13px;
     font-weight: 500;
 }
+
 /* Requisitos */
 .requirements h3,
 .download-options h3,
@@ -246,6 +233,7 @@ h1 {
     margin: 15px 0 8px;
     font-weight: 600;
 }
+
 .requirements p {
     font-family: 'Courier New', monospace;
     background: #142030;
@@ -257,12 +245,14 @@ h1 {
     border: 1px solid #00ffcc33;
     white-space: pre-line;
 }
+
 /* Descargas con íconos */
 .download-options .links {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
+
 .download-link {
     display: block;
     padding: 10px 15px;
@@ -270,30 +260,35 @@ h1 {
     font-weight: 600;
     text-decoration: none;
     text-align: center;
-    /* transition: all 0.2s ease; */
     color: white;
     font-size: 14px;
 }
+
 .download-link i {
     margin-right: 6px;
 }
+
 .download-link.gofile {
     background: #f7941d;
 }
+
 .download-link:hover {
     transform: translateY(-1px);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
+
 /* Comentarios */
 .comments-section {
     margin-top: 15px;
 }
+
 .comments-list {
     max-height: 150px;
     overflow-y: auto;
     margin-bottom: 12px;
     padding-right: 5px;
 }
+
 .comment {
     background: #1a243a;
     padding: 8px;
@@ -303,11 +298,13 @@ h1 {
     color: #ccc;
     border-left: 2px solid #00ffcc;
 }
+
 .add-comment {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
+
 #commentInput {
     padding: 8px;
     border: 1px solid #334466;
@@ -316,6 +313,7 @@ h1 {
     color: white;
     font-size: 13px;
 }
+
 /* Contacto */
 .contact-section {
     max-width: 550px;
@@ -326,6 +324,7 @@ h1 {
     border-radius: 12px;
     border: 1px solid #2a3a5a;
 }
+
 .contact-section input,
 .contact-section textarea,
 .contact-section button {
@@ -336,28 +335,142 @@ h1 {
     border-radius: 6px;
     font-size: 14px;
 }
+
 .contact-section input,
 .contact-section textarea {
     background: #1e2a47;
     color: white;
 }
+
 /* Scroll personalizado */
 ::-webkit-scrollbar {
     width: 5px;
 }
+
 ::-webkit-scrollbar-track {
     background: #0a0f1a;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #00ffcc;
     border-radius: 8px;
 }
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-/* ==================== ESTILOS NUEVOS AGREGADOS ==================== */
-/* --- BOTÓN DE MODO NOVATO --- */
+
+/* ==================== SECCIÓN: SISTEMAS OPERATIVOS ==================== */
+.os-section {
+    margin: 40px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #1e2a47, #141d33);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+}
+
+.os-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #00ffcc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.os-section p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 25px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.os-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.os-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.os-icon:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.os-icon i {
+    font-size: 50px;
+    margin-bottom: 8px;
+}
+
+.os-icon span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Colores específicos por SO */
+.os-windows i { color: #0078d7; }
+.os-mac i { color: #a2a9b6; }
+.os-linux i { color: #f05732; }
+.os-android i { color: #3ddc84; }
+.os-ios i { color: #000000; }
+
+@media (max-width: 600px) {
+    .os-icons {
+        gap: 20px;
+    }
+    .os-icon i {
+        font-size: 40px;
+    }
+    .os-section h2 {
+        font-size: 24px;
+    }
+}
+
+/* ==================== COMPONENTES ADICIONALES ==================== */
+
+/* --- Botón de Telegram --- */
+.boton-telegram {
+    background-color: #2AABEE;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-telegram:hover {
+    background-color: #1c9bd9;
+    transform: translateY(-1px);
+}
+
+.boton-telegram i {
+    margin-right: 5px;
+}
+
+/* --- Botón de Modo Novato --- */
 .btn-novato {
     position: fixed;
     bottom: 20px;
@@ -371,18 +484,18 @@ h1 {
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0, 200, 200, 0.3);
-    /* transition: all 0.2s ease; */
     font-size: 13px;
     display: flex;
     align-items: center;
     gap: 6px;
-    /* animation: pulse 3s infinite; */
 }
+
 .btn-novato:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 200, 200, 0.4);
 }
-/* --- TUTORIAL MODAL --- */
+
+/* --- Tutorial Modal --- */
 .tutorial-modal {
     display: none;
     position: fixed;
@@ -392,9 +505,9 @@ h1 {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.9);
-    /* backdrop-filter: blur(3px); */
     animation: fadeIn 0.2s ease;
 }
+
 .tutorial-content {
     position: relative;
     background: #121a2a;
@@ -407,6 +520,7 @@ h1 {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border: 1px solid #00ffcc33;
 }
+
 .tutorial-close {
     position: absolute;
     top: 12px;
@@ -419,15 +533,16 @@ h1 {
     height: 26px;
     border-radius: 50%;
     text-align: center;
-    /* transition: 0.2s; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .tutorial-close:hover {
     color: #fff;
     background: #ff3366;
 }
+
 .tutorial-steps .step {
     margin: 15px 0;
     padding: 12px;
@@ -440,20 +555,24 @@ h1 {
     transform: translateY(5px);
     transition: all 0.3s ease;
 }
+
 .tutorial-steps .step.active {
     opacity: 1;
     transform: translateY(0);
 }
+
 .tutorial-steps .step h3 {
     margin: 0 0 8px;
     color: #00ffcc;
     font-size: 15px;
 }
+
 .tutorial-steps .step i {
     color: #00ffcc;
     margin-right: 6px;
 }
-/* --- RECOMENDACIONES DE HARDWARE --- */
+
+/* --- Recomendaciones de Hardware --- */
 .recomendacion-box {
     position: fixed;
     bottom: 80px;
@@ -471,6 +590,7 @@ h1 {
     animation: slideUp 0.3s ease;
     font-size: 13px;
 }
+
 .recomendacion-box .close-rec {
     float: right;
     cursor: pointer;
@@ -478,9 +598,11 @@ h1 {
     font-weight: bold;
     font-size: 18px;
 }
+
 .recomendacion-box .close-rec:hover {
     color: #fff;
 }
+
 .juegos-rec {
     margin-top: 8px;
     display: flex;
@@ -489,6 +611,7 @@ h1 {
     padding: 4px 0;
     scrollbar-width: thin;
 }
+
 .juegos-rec img {
     width: 50px;
     height: 70px;
@@ -496,6 +619,7 @@ h1 {
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
 @keyframes slideUp {
     from {
         opacity: 0;
@@ -507,17 +631,17 @@ h1 {
     }
 }
 
-/* ================================================ */
-/* TEMAS VISUALES SIMPLIFICADOS */
-/* ================================================ */
+/* ==================== TEMAS ==================== */
 body[data-theme="light"] {
     background: #f0f0f5;
     color: #333333;
 }
+
 body[data-theme="light"] header {
     background: #ffffff;
     border-bottom: 1px solid #ddd;
 }
+
 body[data-theme="light"] #searchInput,
 body[data-theme="light"] .contact-section input,
 body[data-theme="light"] .contact-section textarea,
@@ -526,6 +650,7 @@ body[data-theme="light"] #commentInput {
     color: #333;
     border: 1px solid #ddd;
 }
+
 body[data-theme="light"] .modal-content,
 body[data-theme="light"] .tutorial-content,
 body[data-theme="light"] .recomendacion-box {
@@ -533,6 +658,7 @@ body[data-theme="light"] .recomendacion-box {
     color: #333;
     border: 1px solid #ddd;
 }
+
 body[data-theme="light"] .comment,
 body[data-theme="light"] .requirements p,
 body[data-theme="light"] .tutorial-steps .step {
@@ -540,6 +666,7 @@ body[data-theme="light"] .tutorial-steps .step {
     color: #333;
     border: 1px solid #eee;
 }
+
 body[data-theme="light"] .btn-load-more,
 body[data-theme="light"] #addCommentBtn,
 body[data-theme="light"] .contact-section button {
@@ -547,30 +674,35 @@ body[data-theme="light"] .contact-section button {
     color: #333;
     border: 1px solid #ccc;
 }
+
 body[data-theme="light"] .btn-novato {
     background: linear-gradient(45deg, #ff66b3, #66ccff);
     color: white;
     box-shadow: 0 2px 8px rgba(100, 100, 200, 0.3);
 }
+
 body[data-theme="light"] .tutorial-close {
     background: #e0e0e0;
     color: #666;
 }
+
 body[data-theme="light"] .tutorial-close:hover {
     background: #ff3366;
     color: white;
 }
+
 body[data-theme="pixel"] {
     background: linear-gradient(135deg, #4b0082, #6a0dad);
     color: #ffff00;
-    /* font-family: 'Courier New', monospace; */
 }
+
 body[data-theme="pixel"] h1,
 body[data-theme="pixel"] .modal-info h2,
 body[data-theme="pixel"] .tutorial-steps .step h3 {
     color: #ffff00;
     text-shadow: 1px 1px 0 #ff00ff;
 }
+
 body[data-theme="pixel"] #searchInput,
 body[data-theme="pixel"] .contact-section input,
 body[data-theme="pixel"] .contact-section textarea,
@@ -579,6 +711,7 @@ body[data-theme="pixel"] #commentInput {
     color: #ffff00;
     border: 2px solid #ff00ff;
 }
+
 body[data-theme="pixel"] .btn-load-more,
 body[data-theme="pixel"] #addCommentBtn,
 body[data-theme="pixel"] .contact-section button {
@@ -587,10 +720,12 @@ body[data-theme="pixel"] .contact-section button {
     border: 2px solid #ffff00;
     text-shadow: 0.5px 0.5px 0 #000;
 }
+
 body[data-theme="pixel"] .gallery__container img:hover {
     box-shadow: 0 5px 15px rgba(255, 0, 255, 0.2);
     border-color: #ffff00;
 }
+
 body[data-theme="pixel"] .modal-content,
 body[data-theme="pixel"] .tutorial-content,
 body[data-theme="pixel"] .recomendacion-box {
@@ -598,6 +733,7 @@ body[data-theme="pixel"] .recomendacion-box {
     color: #ffff00;
     border: 2px solid #ff00ff;
 }
+
 body[data-theme="pixel"] .comment,
 body[data-theme="pixel"] .requirements p,
 body[data-theme="pixel"] .tutorial-steps .step {
@@ -605,24 +741,30 @@ body[data-theme="pixel"] .tutorial-steps .step {
     color: #ffff00;
     border: 1px solid #ff00ff;
 }
+
 body[data-theme="pixel"] .btn-novato {
     background: linear-gradient(45deg, #ff00ff, #ffff00);
     color: #000;
     text-shadow: 0.5px 0.5px 0 #000;
     box-shadow: 0 2px 8px rgba(255, 0, 255, 0.4);
 }
+
 body[data-theme="pixel"] header {
     background: rgba(0, 0, 0, 0.9);
     border-bottom: 2px solid #ff00ff;
 }
+
 body[data-theme="pixel"] .tutorial-close {
     background: #333;
     color: #ffff00;
 }
+
 body[data-theme="pixel"] .tutorial-close:hover {
     background: #ff3366;
     color: white;
 }
+
+/* Selector de tema */
 select#theme-selector {
     padding: 6px 10px;
     border: 1px solid #334466;
@@ -633,112 +775,27 @@ select#theme-selector {
     margin-left: 10px;
     cursor: pointer;
 }
+
 select#theme-selector:focus {
     outline: none;
     border-color: #00ffcc;
 }
 
-/* === ESTILOS PARA LA IA ASISTENTE === */
-.ia-section {
-    margin-top: 30px;
-    padding: 20px;
-    background: rgba(26, 36, 58, 0.3);
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid #2a3a5a;
-}
-.ia-section h2 {
-    color: #00ffcc;
-    margin-bottom: 15px;
-    font-size: 22px;
-}
-.ia-section p {
-    margin-bottom: 15px;
-    font-size: 15px;
-}
-#ia-input {
-    width: 70%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #334466;
-    background: #1e2a47;
-    color: white;
-    font-size: 14px;
-}
-#ia-input::placeholder {
-    color: #aaa;
-}
-#ask-ia-btn {
-    padding: 10px 15px;
-    background: #00ffcc;
-    color: #003333;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-left: 10px;
-    font-size: 14px;
-    /* transition: background-color 0.2s ease; */
-}
-#ask-ia-btn:hover {
-    background: #00e6b8;
-}
-#ia-response {
-    margin-top: 20px;
-    padding: 15px;
-    background: rgba(20, 30, 50, 0.4);
-    border-radius: 8px;
-    min-height: 50px;
-    text-align: left;
-    display: none;
-    border: 1px solid #00ffcc33;
-    color: #e0e0ff;
-    font-size: 14px;
-    line-height: 1.5;
-}
-/* === ESTILO PARA LA NOTA DE AGRADECIMIENTO === */
-.gracias-section {
-    text-align: center;
-    margin: 40px 0;
-    padding: 20px;
-    font-size: 18px;
-    color: #00ffcc;
-    font-weight: bold;
-}
-/* 🔥 EFECTO BRILLO EN TEXTOS (como neón) - Clase reutilizable */
-.neon-text {
-    color: #39ff14;
-    text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
-}
-/* 🌗 BOTÓN PARA CAMBIAR MODO CLARO / OSCURO (Estilos base) */
-.dark-mode {
-    background-color: #111;
-    color: white;
-}
-.light-mode {
-    background-color: white;
-    color: #111;
-}
-/* ✨ ANIMACIÓN DE CARGA CON PUNTITOS */
-.loader {
-    color: #00ffcc;
-    font-size: 20px;
-    letter-spacing: 4px;
-    text-align: center;
-    padding: 20px;
-}
-.loader::after {
-    content: '';
-    animation: puntos 1s steps(4, end) infinite;
-}
+/* ==================== ANIMACIONES Y EFECTOS ==================== */
 @keyframes puntos {
     0% { content: ''; }
     25% { content: '.'; }
     50% { content: '..'; }
     75% { content: '...'; }
-    100% { content: ''; } /* Reinicia para crear el efecto de parpadeo */
+    100% { content: ''; }
 }
-/* RESPONSIVE */
+
+.loader::after {
+    content: '';
+    animation: puntos 1s steps(4, end) infinite;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -774,75 +831,8 @@ select#theme-selector:focus {
         width: 95%;
         padding: 20px;
     }
-    .
     select#theme-selector {
         margin: 10px auto;
         display: block;
-    }
-}
-
-/* ==================== ESTILOS PARA EL BOTÓN DE TELEGRAM ==================== */
-/* Estilos para el botón de Telegram */
-.boton-telegram {
-    background-color: #2AABEE; /* Color azul característico de Telegram */
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 14px;
-    margin-left: 15px; /* Espacio a la izquierda del botón */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
-}
-
-.boton-telegram:hover {
-    background-color: #1c9bd9; /* Color más oscuro al pasar el mouse */
-    transform: translateY(-1px); /* Efecto hover coherente con tu diseño */
-}
-
-.boton-telegram i {
-    margin-right: 5px; /* Espacio entre el ícono y el texto */
-}
-
-/* Asegurar que el header tenga espacio para los elementos */
-header {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no caben */
-    padding: 15px;
-}
-
-.search-container {
-    flex-grow: 1;
-    margin: 0 20px;
-    max-width: 500px; /* Limitar el ancho del buscador */
-}
-
-/* Ajustar el margen del selector de tema */
-#theme-selector {
-    margin-left: 0; /* El margen ahora lo maneja el contenedor */
-}
-
-/* Media query para pantallas pequeñas */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .search-container {
-        order: 3; /* Mueve el buscador al final en móviles */
-        width: 100%;
-        margin: 15px 0 0 0;
-    }
-
-    .boton-telegram {
-        margin-top: 10px; /* Espacio arriba en móviles */
-        margin-left: 0;
     }
 }
