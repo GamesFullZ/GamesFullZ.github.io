@@ -286,5 +286,5 @@ const recursos = [
     },
     imagen: "Images/nombre-imagen.jpg",  // ← Debe estar en la carpeta Images/
     password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
-  {
+    },
 ];
