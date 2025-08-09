@@ -72,6 +72,86 @@
                 margin-left: 0;
             }
         }
+
+        /* ===== NUEVA SECCIÓN: SISTEMAS OPERATIVOS ===== */
+        .os-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, #1e2a47, #141d33);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: #fff;
+        }
+
+        .os-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #00ffcc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .os-section p {
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 25px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .os-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .os-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .os-icon:hover {
+            opacity: 1;
+            transform: translateY(-5px);
+        }
+
+        .os-icon i {
+            font-size: 50px;
+            margin-bottom: 8px;
+        }
+
+        .os-icon span {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Colores específicos por SO */
+        .os-windows i { color: #0078d7; }
+        .os-mac i { color: #a2a9b6; }
+        .os-linux i { color: #f05732; }
+        .os-android i { color: #3ddc84; }
+        .os-ios i { color: #000000; }
+
+        @media (max-width: 600px) {
+            .os-icons {
+                gap: 20px;
+            }
+            .os-icon i {
+                font-size: 40px;
+            }
+            .os-section h2 {
+                font-size: 24px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -102,6 +182,35 @@
         <div class="load-more-container">
             <button id="loadMoreBtn" class="btn-load-more">Ver más juegos ↓</button>
         </div>
+
+        <!-- ===== NUEVA SECCIÓN: SISTEMAS OPERATIVOS COMPATIBLES ===== -->
+        <section class="os-section">
+            <h2><i class="fas fa-laptop"></i> Compatibilidad por Sistema Operativo</h2>
+            <p>Nuestros juegos están disponibles principalmente para Windows, pero también ofrecemos compatibilidad con otros sistemas. A continuación, los más soportados:</p>
+            <div class="os-icons">
+                <div class="os-icon os-windows">
+                    <i class="fab fa-windows"></i>
+                    <span>Windows</span>
+                </div>
+                <div class="os-icon os-mac">
+                    <i class="fab fa-apple"></i>
+                    <span>macOS</span>
+                </div>
+                <div class="os-icon os-linux">
+                    <i class="fab fa-linux"></i>
+                    <span>Linux</span>
+                </div>
+                <div class="os-icon os-android">
+                    <i class="fab fa-android"></i>
+                    <span>Android</span>
+                </div>
+                <div class="os-icon os-ios">
+                    <i class="fab fa-apple"></i>
+                    <span>iOS</span>
+                </div>
+            </div>
+        </section>
+
         <!-- Sección de contacto -->
         <section class="contact-section">
             <h2>¿Necesitas ayuda?</h2>
@@ -372,4 +481,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
