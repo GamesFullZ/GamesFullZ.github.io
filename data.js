@@ -284,7 +284,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file",
         mediafire: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file"
     },
-    imagen: "Images/nombre-imagen.jpg",  // ← Debe estar en la carpeta Images/
+    imagen: "Images/7288998-bendy-and-the-ink-machine-playstation-4-front-cover.png",  // ← Debe estar en la carpeta Images/
     password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
     },
     {
