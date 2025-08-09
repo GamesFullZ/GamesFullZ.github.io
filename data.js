@@ -342,6 +342,5 @@ const recursos = [
         mediafire: "https://www.mediafire.com/file/k2o4z2jheijin5q/Far+Cry+3+Optimized.torrent/file"
     },
     imagen: "Images/13147.jpg"
-    password: "123"
-    },
+   },
 ];
