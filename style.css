@@ -1,4 +1,4 @@
-/* Reset y transiciones suaves */
+/* ==================== RESET Y BASE ==================== */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
+/* ==================== HEADER ==================== */
 header {
     background: #141423;
     padding: 15px 20px;
@@ -36,7 +36,6 @@ h1 {
     letter-spacing: 1px;
 }
 
-/* Aplicar efecto retro si se usa la clase */
 .titulo-juego {
     font-family: 'Press Start 2P', monospace;
     color: #00ffcc;
@@ -44,7 +43,7 @@ h1 {
     font-size: 20px;
 }
 
-/* Barra de búsqueda */
+/* ==================== BARRA DE BÚSQUEDA ==================== */
 .search-container {
     flex-grow: 1;
     max-width: 500px;
@@ -66,7 +65,42 @@ h1 {
     background: #253555;
 }
 
-/* Galería */
+/* ==================== PESTAÑAS DE NAVEGACIÓN ==================== */
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0 20px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: #1e2a47;
+    color: #aaa;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab-btn.active {
+    background: #00ffcc;
+    color: #003333;
+    box-shadow: 0 2px 8px rgba(0, 255, 204, 0.3);
+}
+
+.tab-btn:hover:not(.active) {
+    background: #2a3a5a;
+    color: #00ffcc;
+}
+
+/* ==================== GALERÍA DE JUEGOS ==================== */
 .gallery__container {
     width: 90%;
     max-width: 1300px;
@@ -78,7 +112,8 @@ h1 {
     justify-items: center;
 }
 
-.gallery__container img, .tarjeta-juego {
+.gallery__container img,
+.tarjeta-juego {
     width: 100%;
     height: 220px;
     object-fit: cover;
@@ -89,19 +124,80 @@ h1 {
     aspect-ratio: 2 / 3;
 }
 
-.gallery__container img:hover, .tarjeta-juego:hover {
+.gallery__container img:hover,
+.tarjeta-juego:hover {
     transform: scale(1.03) translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 255, 204, 0.3);
     border-color: #00ffcc;
 }
 
-/* Botón "Ver más" */
+/* ==================== GALERÍA DE SISTEMAS ==================== */
+.gallery-sistemas {
+    width: 90%;
+    max-width: 1300px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px;
+    padding: 15px 0;
+    justify-items: center;
+}
+
+.tarjeta-sistema {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    aspect-ratio: 2 / 3;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-sistema:hover {
+    transform: scale(1.03) translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.3);
+    border-color: #00ffcc;
+}
+
+.tarjeta-sistema img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.tarjeta-sistema .info {
+    padding: 10px;
+    background: #141d33;
+    font-size: 13px;
+    color: #ccc;
+    text-align: center;
+}
+
+.tarjeta-sistema .nombre {
+    font-weight: 600;
+    color: #00ffcc;
+    margin-bottom: 5px;
+}
+
+.tarjeta-sistema .tarjeta {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* ==================== BOTÓN "VER MÁS" ==================== */
 .load-more-container {
     text-align: center;
     margin: 30px 0;
 }
 
-.btn-load-more, .boton, #addCommentBtn, .contact-section button, #ask-ia-btn {
+.btn-load-more,
+.boton,
+#addCommentBtn,
+.contact-section button,
+#ask-ia-btn {
     padding: 12px 25px;
     background: #1e2a47;
     color: #00ffcc;
@@ -112,14 +208,18 @@ h1 {
     font-size: 14px;
 }
 
-.btn-load-more:hover, .boton:hover, #addCommentBtn:hover, .contact-section button:hover, #ask-ia-btn:hover {
+.btn-load-more:hover,
+.boton:hover,
+#addCommentBtn:hover,
+.contact-section button:hover,
+#ask-ia-btn:hover {
     background: #00ffcc;
     color: #003333;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Modal */
+/* ==================== MODAL ==================== */
 .modal {
     display: none;
     position: fixed;
@@ -204,7 +304,7 @@ h1 {
     font-family: 'Space Grotesk', sans-serif;
 }
 
-/* Rating y descargas */
+/* ==================== RATING Y DESCARGAS ==================== */
 .rating-downloads {
     display: flex;
     flex-wrap: wrap;
@@ -224,7 +324,7 @@ h1 {
     font-weight: 500;
 }
 
-/* Requisitos */
+/* ==================== REQUISITOS ==================== */
 .requirements h3,
 .download-options h3,
 .comments-section h3 {
@@ -246,7 +346,7 @@ h1 {
     white-space: pre-line;
 }
 
-/* Descargas con íconos */
+/* ==================== DESCARGAS ==================== */
 .download-options .links {
     display: flex;
     flex-direction: column;
@@ -277,7 +377,7 @@ h1 {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Comentarios */
+/* ==================== COMENTARIOS ==================== */
 .comments-section {
     margin-top: 15px;
 }
@@ -314,7 +414,7 @@ h1 {
     font-size: 13px;
 }
 
-/* Contacto */
+/* ==================== CONTACTO ==================== */
 .contact-section {
     max-width: 550px;
     margin: 50px auto;
@@ -342,7 +442,7 @@ h1 {
     color: white;
 }
 
-/* Scroll personalizado */
+/* ==================== SCROLL PERSONALIZADO ==================== */
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -356,94 +456,13 @@ h1 {
     border-radius: 8px;
 }
 
+/* ==================== ANIMACIONES ==================== */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* ==================== SECCIÓN: SISTEMAS OPERATIVOS ==================== */
-.os-section {
-    margin: 40px 0;
-    padding: 30px;
-    background: linear-gradient(135deg, #1e2a47, #141d33);
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    color: #fff;
-}
-
-.os-section h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #00ffcc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.os-section p {
-    font-size: 16px;
-    color: #ccc;
-    margin-bottom: 25px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.os-icons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.os-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0.8;
-    transition: all 0.3s ease;
-}
-
-.os-icon:hover {
-    opacity: 1;
-    transform: translateY(-5px);
-}
-
-.os-icon i {
-    font-size: 50px;
-    margin-bottom: 8px;
-}
-
-.os-icon span {
-    font-size: 14px;
-    font-weight: 500;
-}
-
-/* Colores específicos por SO */
-.os-windows i { color: #0078d7; }
-.os-mac i { color: #a2a9b6; }
-.os-linux i { color: #f05732; }
-.os-android i { color: #3ddc84; }
-.os-ios i { color: #000000; }
-
-@media (max-width: 600px) {
-    .os-icons {
-        gap: 20px;
-    }
-    .os-icon i {
-        font-size: 40px;
-    }
-    .os-section h2 {
-        font-size: 24px;
-    }
-}
-
-/* ==================== COMPONENTES ADICIONALES ==================== */
-
-/* --- Botón de Telegram --- */
+/* ==================== BOTÓN DE TELEGRAM ==================== */
 .boton-telegram {
     background-color: #2AABEE;
     color: white;
@@ -470,7 +489,7 @@ h1 {
     margin-right: 5px;
 }
 
-/* --- Botón de Modo Novato --- */
+/* ==================== MODO NOVATO ==================== */
 .btn-novato {
     position: fixed;
     bottom: 20px;
@@ -495,7 +514,6 @@ h1 {
     box-shadow: 0 4px 12px rgba(0, 200, 200, 0.4);
 }
 
-/* --- Tutorial Modal --- */
 .tutorial-modal {
     display: none;
     position: fixed;
@@ -532,7 +550,6 @@ h1 {
     width: 26px;
     height: 26px;
     border-radius: 50%;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -572,7 +589,7 @@ h1 {
     margin-right: 6px;
 }
 
-/* --- Recomendaciones de Hardware --- */
+/* ==================== RECOMENDACIONES DE HARDWARE ==================== */
 .recomendacion-box {
     position: fixed;
     bottom: 80px;
@@ -721,7 +738,8 @@ body[data-theme="pixel"] .contact-section button {
     text-shadow: 0.5px 0.5px 0 #000;
 }
 
-body[data-theme="pixel"] .gallery__container img:hover {
+body[data-theme="pixel"] .gallery__container img:hover,
+body[data-theme="pixel"] .tarjeta-sistema:hover {
     box-shadow: 0 5px 15px rgba(255, 0, 255, 0.2);
     border-color: #ffff00;
 }
@@ -764,7 +782,7 @@ body[data-theme="pixel"] .tutorial-close:hover {
     color: white;
 }
 
-/* Selector de tema */
+/* ==================== SELECTOR DE TEMA ==================== */
 select#theme-selector {
     padding: 6px 10px;
     border: 1px solid #334466;
@@ -781,56 +799,61 @@ select#theme-selector:focus {
     border-color: #00ffcc;
 }
 
-/* ==================== ANIMACIONES Y EFECTOS ==================== */
-@keyframes puntos {
-    0% { content: ''; }
-    25% { content: '.'; }
-    50% { content: '..'; }
-    75% { content: '...'; }
-    100% { content: ''; }
-}
-
-.loader::after {
-    content: '';
-    animation: puntos 1s steps(4, end) infinite;
-}
-
-/* Responsive */
+/* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
+        align-items: flex-start;
         gap: 10px;
         padding: 12px;
     }
+
     .search-container {
         width: 100%;
+        order: 3;
+        margin: 15px 0 0 0;
     }
+
+    .boton-telegram {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
     h1 {
         font-size: 24px;
     }
-    .gallery__container {
+
+    .gallery__container,
+    .gallery-sistemas {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: 15px;
     }
-    .gallery__container img {
+
+    .gallery__container img,
+    .tarjeta-sistema {
         height: 200px;
     }
+
     .modal-content {
         width: 95%;
         margin: 8% auto;
     }
+
     .modal-body {
         padding: 20px;
         flex-direction: column;
     }
+
     .modal-body img {
         max-width: 100%;
         margin-bottom: 15px;
     }
+
     .tutorial-content {
         width: 95%;
         padding: 20px;
     }
+
     select#theme-selector {
         margin: 10px auto;
         display: block;
