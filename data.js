@@ -325,4 +325,5 @@ const recursos = [
     imagen: "Images/call_of_juarez_gunslinger-2242897.jpg",  // ← Debe estar en la carpeta Images/
     password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
    },
+    
 ];
