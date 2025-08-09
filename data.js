@@ -325,5 +325,23 @@ const recursos = [
     imagen: "Images/call_of_juarez_gunslinger-2242897.jpg",  // ← Debe estar en la carpeta Images/
     password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
    },
-    
+    {
+    id: 20,
+    nombre: "Far Cry 3",
+    tipo: "juego",
+    descripcion: "mundo abierto donde un turista debe sobrevivir en una isla tropical llena de piratas y peligros",
+    requisitos: "<br>SO: Windows Vista SP2 / 7 / 8<br>Procesador: Intel Core 2 Duo E6700 2.6 GHz / AMD Phenom X3 8750 2.4 GHz<br>RAM: 4 GB<br>Gráficos: NVIDIA GeForce 8800 GT / ATI Radeon HD 3850<br>Almacenamiento: 15 GB",
+    downloads: 0,  // Número de descargas
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Uno de los mejores far cry",
+        "gracias"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/k2o4z2jheijin5q/Far+Cry+3+Optimized.torrent/file",
+        mediafire: "https://www.mediafire.com/file/k2o4z2jheijin5q/Far+Cry+3+Optimized.torrent/file"
+    },
+    imagen: "Images/13147.jpg"
+    password: "123"
+    },
 ];
