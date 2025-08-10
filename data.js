@@ -361,4 +361,22 @@ const recursos = [
     },
     imagen: "Images/Call_of_Duty_Modern_Warfare_2_(2009)_cover.png"
    },
+    {
+    id: 22,
+    nombre: "Lego Batman 2 DC",
+    tipo: "juego",
+    descripcion: "Aventura con más personajes y mundo abierto donde Batman y Superman unen fuerzas contra villanos de DC",
+    requisitos: "Windows XP/Vista/7, Intel Pentium 4 3.0 GHz, 1 GB RAM, GeForce 6600, 2 GB espacio.",
+    downloads: 0,  // Número de descargas
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "juegenlo Gente,goty",
+        "juegazo de batman"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/6w6nngrobirihvl/LEGO-Batman-2-DC.torrent/file",
+        mediafire: "https://www.mediafire.com/file/6w6nngrobirihvl/LEGO-Batman-2-DC.torrent/file"
+    },
+    imagen: "Images/batman_1200x1600-d388972fd0a20881901f3946cb1c97f9.png"
+   },
 ];
