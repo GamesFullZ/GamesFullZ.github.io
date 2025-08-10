@@ -379,4 +379,22 @@ const recursos = [
     },
     imagen: "Images/batman_1200x1600-d388972fd0a20881901f3946cb1c97f9.png"
    },
+    {
+    id: 23,
+    nombre: "Assassins Creed 2 ",
+    tipo: "juego",
+    descripcion: "Aventura y sigilo en el Renacimiento italiano siguiendo a Ezio Auditore en su búsqueda de venganza.",
+    requisitos: "Windows XP/Vista, Intel Core 2 Duo 1.8 GHz, 1.5 GB RAM, GeForce 7900 GS, 8 GB espacio.",
+    downloads: 0,  // Número de descargas
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "el mejor de la saga",
+        "siganme en tiktok xd"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/gt7cklm07ifvkfz/Assassins+Creed+Il+Deluxe+Edition.torrent/file",
+        mediafire: "https://www.mediafire.com/file/gt7cklm07ifvkfz/Assassins+Creed+Il+Deluxe+Edition.torrent/file"
+    },
+    imagen: "Images/AC2_GameName_Store_Portrait_1200x1600_1200x1600-2c5e000213988c5dde375bb2602e9986.jpg"
+   },
 ];
