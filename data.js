@@ -397,4 +397,22 @@ const recursos = [
     },
     imagen: "Images/AC2_GameName_Store_Portrait_1200x1600_1200x1600-2c5e000213988c5dde375bb2602e9986.jpg"
    },
+    {
+    id: 24,
+    nombre: "Jurassic World Evolution 2",
+    tipo: "juego",
+    descripcion: "Simulación y gestión de parques de dinosaurios con nuevas especies, mapas y comportamientos realistas.",
+    requisitos: "Windows 10 64-bit, Intel i5-4590 / AMD FX-8370, 8 GB RAM, GeForce GTX 960 / Radeon R9 270X, 14 GB espacio.",
+    downloads: 0,  // Número de descargas
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "ta bueno",
+        "siganme en tiktok xd"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/d8q331qkl5527mn/Jurassic+World+Evolution+2+v1.3.1.36069.torrent/file",
+        mediafire: "https://www.mediafire.com/file/d8q331qkl5527mn/Jurassic+World+Evolution+2+v1.3.1.36069.torrent/file"
+    },
+    imagen: "Images/Jurassic_World_Evolution_box_art.jpg"
+   },
 ];
