@@ -374,8 +374,8 @@ const recursos = [
         "juegazo de batman"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/6w6nngrobirihvl/LEGO-Batman-2-DC.torrent/file",
-        mediafire: "https://www.mediafire.com/file/6w6nngrobirihvl/LEGO-Batman-2-DC.torrent/file"
+        direct: "https://www.mediafire.com/file/n1juuplitqdaj57/LEGO-Batman-2-DC-SH-SteamRIP.com.torrent/file",
+        mediafire: "https://www.mediafire.com/file/n1juuplitqdaj57/LEGO-Batman-2-DC-SH-SteamRIP.com.torrent/file"
     },
     imagen: "Images/batman_1200x1600-d388972fd0a20881901f3946cb1c97f9.png"
    },
