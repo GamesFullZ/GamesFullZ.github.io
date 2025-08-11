@@ -1,3 +1,4 @@
+```javascript
 document.addEventListener('DOMContentLoaded', function () {
     const gallery = document.getElementById('gallery');
     const searchInput = document.getElementById('searchInput');
@@ -323,3 +324,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // Esta función se ejecuta desde el HTML cuando se carga sistemas.js
     // No necesitamos hacer nada aquí ya que el HTML se encarga de llamar a cargarSistemas()
 });
+```
