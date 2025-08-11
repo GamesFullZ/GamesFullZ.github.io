@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Cargar juegos
     function loadGames() {
+        // Solo cargar juegos si estamos en la sección de juegos
+        const gamesSection = document.getElementById('games-section');
+        if (!gamesSection || !gamesSection.classList.contains('active')) {
+            return;
+        }
+        
         const fragment = document.createDocumentFragment();
         const toLoad = recursos.slice(displayedGames, displayedGames + gamesPerLoad);
 
@@ -145,9 +151,6 @@ document.addEventListener('DOMContentLoaded', function () {
             contactForm.reset();
         });
     }
-
-    // Cargar primeros juegos
-    loadGames();
 
     // ================================================
     // NUEVAS FUNCIONES AGREGADAS Y SIMPLIFICADAS
@@ -289,13 +292,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 section.classList.remove('active');
                 if (section.id === `${targetSection}-section`) {
                     section.classList.add('active');
+                    
+                    // Si es la sección de juegos, cargar juegos si es necesario
+                    if (targetSection === 'games' && displayedGames === 0) {
+                        // Limpiar galería antes de cargar
+                        gallery.innerHTML = '';
+                        displayedGames = 0;
+                        loadGames();
+                    }
+                    
+                    // Si es la sección de sistemas, cargar los sistemas
+                    if (targetSection === 'systems') {
+                        cargarSistemas();
+                    }
                 }
             });
-            
-            // Si es la sección de sistemas, cargar los sistemas
-            if (targetSection === 'systems') {
-                cargarSistemas();
-            }
         });
     });
     
@@ -303,14 +314,26 @@ document.addEventListener('DOMContentLoaded', function () {
     function cargarSistemas() {
         const container = document.getElementById('systemsContainer');
         
+        // Limpiar contenedor
+        container.innerHTML = '';
+        
         // Verificar si los sistemas están disponibles
-        if (typeof sistemas !== 'undefined' && Array.isArray(sistemas)) {
+        if (typeof sistemas !== 'undefined' && Array.isArray(sistemas) && sistemas.length > 0) {
             sistemas.forEach(sistema => {
                 const card = document.createElement('div');
                 card.className = 'system-card';
+                
+                // Verificar si se usa imagen o ícono
+                let iconHTML = '';
+                if (sistema.imagen) {
+                    iconHTML = `<img src="${sistema.imagen}" alt="${sistema.nombre}" class="system-image" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\\'fas fa-desktop system-icon-fallback\\'></i>'">`;
+                } else {
+                    iconHTML = `<i class="${sistema.icono || 'fas fa-desktop'}"></i>`;
+                }
+                
                 card.innerHTML = `
-                    <div class="system-icon">
-                        <i class="${sistema.icono || 'fas fa-desktop'}"></i>
+                    <div class="system-icon-container">
+                        ${iconHTML}
                     </div>
                     <div class="system-name">${sistema.nombre}</div>
                     <div class="system-details">${sistema.descripcion}</div>
@@ -321,14 +344,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 container.appendChild(card);
             });
         } else {
-            container.innerHTML = '<p style="color:#aaa; grid-column: 1 / -1;">No se encontraron sistemas operativos. Verifica el archivo sistemas.js</p>';
+            container.innerHTML = '<p style="color:#aaa; grid-column: 1 / -1; text-align: center; padding: 20px;">No se encontraron sistemas operativos. Verifica el archivo sistemas.js</p>';
         }
     }
 
+    // Inicializar notificaciones y tema
     initNotifications();
     loadSavedTheme();
 
+    // Exponer funciones globales
     window.randomGame = randomGame;
     window.enableLowResourceMode = enableLowResourceMode;
     window.changeTheme = changeTheme;
+    
+    // Cargar juegos iniciales si estamos en la sección de juegos
+    const gamesSection = document.getElementById('games-section');
+    if (gamesSection && gamesSection.classList.contains('active')) {
+        loadGames();
+    }
 });
