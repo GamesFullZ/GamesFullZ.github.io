@@ -2,7 +2,7 @@ const sistemas = [
     {
         nombre: "Windows 10 Spectre",
         descripcion: "Versión personalizada de Windows 10 con mejoras de rendimiento",
-        enlace: "https://www.microsoft.com/windows/get-windows-11",
+        enlace: "https://www.mediafire.com/file/plsk66eadgzwenh/WIN10.PRO.AIO.SUPERLITE+SE+COMPACT.U10.X64.(WPE+).ISO.torrent/file",
         imagen: "Images/windows-spectre.png"  // Ruta a tu imagen local
     },
     {
