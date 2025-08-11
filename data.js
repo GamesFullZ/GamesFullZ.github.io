@@ -451,4 +451,22 @@ const recursos = [
     },
     imagen: "Images/fnaf 1 al 4.jpg"
     },
+    {
+    id: 27,
+    nombre: "Resident Evil 7: Biohazard",
+    tipo: "juego",
+    descripcion: "Survival horror en primera persona donde Ethan Winters busca a su esposa en una terrorífica mansión en Luisiana.<br>",
+    requisitos: "Windows 7/8/8.1/10 64-bit, Intel Core i5-4460 / AMD FX-6300, 8 GB RAM, GeForce GTX 760 / Radeon R7 260x, 24 GB espacio.",
+    downloads: 0,  // Número de descargas
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "joya del terror xd",
+        "re pesado para mi compu"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/uqduzvrhkb01kth/Resident.Evil.7.Biohazard.v20220613-Repack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/uqduzvrhkb01kth/Resident.Evil.7.Biohazard.v20220613-Repack.torrent/file"
+    },
+    imagen: "Images/Resident_Evil_7_cover_art.jpg"
+   },
 ];
