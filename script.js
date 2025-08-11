@@ -315,4 +315,11 @@ document.addEventListener('DOMContentLoaded', function () {
     window.randomGame = randomGame;
     window.enableLowResourceMode = enableLowResourceMode;
     window.changeTheme = changeTheme; // Exponer changeTheme
+    
+    // ================================================
+    // FUNCIONES PARA SISTEMAS OPERATIVOS
+    // ================================================
+    
+    // Esta función se ejecuta desde el HTML cuando se carga sistemas.js
+    // No necesitamos hacer nada aquí ya que el HTML se encarga de llamar a cargarSistemas()
 });
