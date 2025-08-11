@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Botón "Ver más" - Asegurarse de que el evento se asigne correctamente
+    // Botón "Ver más"
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener('click', loadGames);
     }
@@ -269,6 +269,59 @@ document.addEventListener('DOMContentLoaded', function () {
         if (savedTheme !== null) {
             document.getElementById("theme-selector").value = savedTheme;
             document.body.setAttribute("data-theme", savedTheme);
+        }
+    }
+
+    // Navegación entre secciones
+    const navButtons = document.querySelectorAll('.nav-button');
+    const sections = document.querySelectorAll('.section');
+    
+    navButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetSection = button.dataset.section;
+            
+            // Actualizar botones activos
+            navButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Mostrar sección correspondiente
+            sections.forEach(section => {
+                section.classList.remove('active');
+                if (section.id === `${targetSection}-section`) {
+                    section.classList.add('active');
+                }
+            });
+            
+            // Si es la sección de sistemas, cargar los sistemas
+            if (targetSection === 'systems') {
+                cargarSistemas();
+            }
+        });
+    });
+    
+    // Cargar sistemas operativos
+    function cargarSistemas() {
+        const container = document.getElementById('systemsContainer');
+        
+        // Verificar si los sistemas están disponibles
+        if (typeof sistemas !== 'undefined' && Array.isArray(sistemas)) {
+            sistemas.forEach(sistema => {
+                const card = document.createElement('div');
+                card.className = 'system-card';
+                card.innerHTML = `
+                    <div class="system-icon">
+                        <i class="${sistema.icono || 'fas fa-desktop'}"></i>
+                    </div>
+                    <div class="system-name">${sistema.nombre}</div>
+                    <div class="system-details">${sistema.descripcion}</div>
+                    <a href="${sistema.enlace}" target="_blank" class="system-link">
+                        <i class="fas fa-download"></i> Descargar
+                    </a>
+                `;
+                container.appendChild(card);
+            });
+        } else {
+            container.innerHTML = '<p style="color:#aaa; grid-column: 1 / -1;">No se encontraron sistemas operativos. Verifica el archivo sistemas.js</p>';
         }
     }
 
