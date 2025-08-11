@@ -1,9 +1,9 @@
 const sistemas = [
     {
-        nombre: "Windows 11 Spectre",
-        descripcion: "Versión personalizada de Windows 11 con mejoras de rendimiento",
+        nombre: "Windows Ghost Spectre 10",
+        descripcion: "Versión personalizada de Windows 10 con mejoras de rendimiento",
         enlace: "https://www.microsoft.com/windows/get-windows-11",
-        imagen: "Images/windows-spectre.png"  // Ruta a tu imagen local
+        imagen: "Images/spectre.jpg"  // Ruta a tu imagen local
     },
     {
         nombre: "Ubuntu 22.04 LTS",
