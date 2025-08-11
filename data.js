@@ -433,4 +433,22 @@ const recursos = [
     },
     imagen: "Images/FCZ_StorePortrait_1200x1600_1200x1600-a254f505d277fe3dc17beb12416bf11a.jpg"
     },
+    {
+    id: 26,
+    nombre: "Fnaf Collection",
+    tipo: "juego",
+    descripcion: "todos los clásicos de terror de Scott Cawthon en un solo pack, desde el primer susto en la pizzería hasta el cierre de la saga clásica",
+    requisitos: "Windows XP/Vista/7/8/10, Procesador 2 GHz Dual-Core, 2 GB RAM, Gráficos con 1 GB VRAM compatibles con DirectX 9.0, 2 GB espacio.",
+    downloads: 0,  // Número de descargas
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "joya del terror xd",
+        "joyisima"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/sbws8mnvrtkjno0/Todos+Los+Fnaf+del+1+al+4.torrent/file",
+        mediafire: "https://www.mediafire.com/file/sbws8mnvrtkjno0/Todos+Los+Fnaf+del+1+al+4.torrent/file"
+    },
+    imagen: "Images/fnaf 1 al 4.jpg"
+    },
 ];
