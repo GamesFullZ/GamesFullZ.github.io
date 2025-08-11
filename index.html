@@ -92,6 +92,9 @@
             cursor: pointer;
             font-size: 16px;
             transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
         .nav-button:hover {
@@ -211,8 +214,12 @@
     
     <!-- Navegación entre secciones -->
     <div class="section-navigation">
-        <button class="nav-button active" data-section="games">🎮 Juegos</button>
-        <button class="nav-button" data-section="systems">💻 Sistemas</button>
+        <button class="nav-button active" data-section="games">
+            <i class="fas fa-gamepad"></i> 🎮 Juegos
+        </button>
+        <button class="nav-button" data-section="systems">
+            <i class="fas fa-desktop"></i> 💻 Sistemas
+        </button>
     </div>
     
     <main>
@@ -561,9 +568,74 @@
             }
             
             // ================================
+            // 5. CARGAR JUEGOS AL INICIAR
+            // ================================
+            // Cargar los primeros juegos cuando se muestra la sección de juegos
+            function cargarJuegosIniciales() {
+                if (typeof recursos !== 'undefined' && Array.isArray(recursos)) {
+                    const gallery = document.getElementById('gallery');
+                    const fragment = document.createDocumentFragment();
+                    const toLoad = recursos.slice(0, 2); // Cargar los primeros 2 juegos
+                    
+                    toLoad.forEach(game => {
+                        const img = document.createElement('img');
+                        img.src = game.imagen;
+                        img.alt = game.nombre;
+                        img.classList.add('game-item');
+                        img.dataset.gameId = game.id;
+                        img.addEventListener('click', () => openModal(game));
+                        fragment.appendChild(img);
+                    });
+                    
+                    gallery.appendChild(fragment);
+                }
+            }
+            
+            // Cargar juegos iniciales
+            cargarJuegosIniciales();
+            
+            // ================================
             // Cargar script.js después
             // ================================
         });
+        
+        // Función para abrir el modal (necesaria aquí porque se usa antes de cargar script.js)
+        function openModal(game) {
+            document.getElementById('modalImage').src = game.imagen;
+            document.getElementById('modalTitle').textContent = game.nombre;
+            document.getElementById('modalInfo').textContent = game.descripcion;
+            document.getElementById('modalRequirements').innerHTML = game.requisitos;
+            document.getElementById('modalRating').textContent = game.rating;
+            document.getElementById('modalDownloads').textContent = `Descargado por +${game.downloads.toLocaleString()} usuarios`;
+            
+            const linkGofile = document.getElementById('linkGofile');
+            if (linkGofile) {
+                linkGofile.href = game.links.direct || "#";
+            }
+            
+            const commentsContainer = document.getElementById('commentsContainer');
+            commentsContainer.innerHTML = '';
+            
+            game.comments.forEach(text => {
+                const div = document.createElement('div');
+                div.className = 'comment';
+                div.textContent = text;
+                commentsContainer.appendChild(div);
+            });
+            
+            const userComments = JSON.parse(localStorage.getItem(`comments_${game.id}`) || '[]');
+            userComments.forEach(text => {
+                const div = document.createElement('div');
+                div.className = 'comment';
+                div.textContent = text;
+                commentsContainer.appendChild(div);
+            });
+            
+            const modal = document.getElementById('gameModal');
+            modal.dataset.gameId = game.id;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
     </script>
     <script src="script.js"></script>
 </body>
