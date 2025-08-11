@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
     <!-- Iconos con Font Awesome (sin espacios) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  ">
     <style>
         /* Estilos para el botón de Telegram */
         .boton-telegram {
@@ -72,6 +72,73 @@
                 margin-left: 0;
             }
         }
+        
+        /* Estilos para la sección de sistemas operativos */
+        .systems-section {
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(26, 36, 58, 0.5);
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .systems-section h2 {
+            margin-bottom: 20px;
+            color: #00ffcc;
+        }
+        
+        .systems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .system-card {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .system-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 255, 204, 0.2);
+        }
+        
+        .system-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #00ffcc;
+        }
+        
+        .system-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .system-details {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+        
+        .system-link {
+            display: inline-block;
+            background: #2AABEE;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .system-link:hover {
+            background: #1c9bd9;
+        }
     </style>
 </head>
 <body>
@@ -102,11 +169,21 @@
         <div class="load-more-container">
             <button id="loadMoreBtn" class="btn-load-more">Ver más juegos ↓</button>
         </div>
+        
+        <!-- Sección de sistemas operativos -->
+        <section class="systems-section">
+            <h2><i class="fas fa-desktop"></i> Sistemas Operativos</h2>
+            <p>Descarga los sistemas operativos más recientes y compatibles con tus juegos</p>
+            <div class="systems-grid" id="systemsContainer">
+                <!-- Los sistemas se cargarán dinámicamente desde sistemas.js -->
+            </div>
+        </section>
+        
         <!-- Sección de contacto -->
         <section class="contact-section">
             <h2>¿Necesitas ayuda?</h2>
             <p>Contáctanos si tienes problemas con una descarga o reportar un error.</p>
-            <form action="https://formspree.io/f/mpwlozqz" method="POST">
+            <form action="  https://formspree.io/f/mpwlozqz  " method="POST">
                 <div class="form-group">
                     <label for="email">Tu Correo</label>
                     <input type="email" name="Correo" id="email" placeholder="tu@correo.com" required>
@@ -224,6 +301,7 @@
     
     <!-- Carga de datos y scripts -->
     <script src="data.js"></script>
+    <script src="sistemas.js"></script>
     <script>
         // ================================
         // 1. DETECTOR DE HARDWARE Y RECOMENDACIONES
@@ -364,6 +442,38 @@
                     tutorialSteps.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
                 }
             });
+            
+            // ================================
+            // 3. CARGAR SISTEMAS OPERATIVOS
+            // ================================
+            function cargarSistemas() {
+                const container = document.getElementById('systemsContainer');
+                
+                // Verificar si los sistemas están disponibles
+                if (typeof sistemas !== 'undefined' && Array.isArray(sistemas)) {
+                    sistemas.forEach(sistema => {
+                        const card = document.createElement('div');
+                        card.className = 'system-card';
+                        card.innerHTML = `
+                            <div class="system-icon">
+                                <i class="${sistema.icono || 'fas fa-desktop'}"></i>
+                            </div>
+                            <div class="system-name">${sistema.nombre}</div>
+                            <div class="system-details">${sistema.descripcion}</div>
+                            <a href="${sistema.enlace}" target="_blank" class="system-link">
+                                <i class="fas fa-download"></i> Descargar
+                            </a>
+                        `;
+                        container.appendChild(card);
+                    });
+                } else {
+                    container.innerHTML = '<p style="color:#aaa; grid-column: 1 / -1;">No se encontraron sistemas operativos. Verifica el archivo sistemas.js</p>';
+                }
+            }
+            
+            // Cargar sistemas cuando el DOM esté listo
+            cargarSistemas();
+            
             // ================================
             // Cargar script.js después
             // ================================
