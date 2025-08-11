@@ -14,7 +14,7 @@ const sistemas = [
     {
         nombre: "Windows 10 LTSB Optios",
         descripcion: "Sistema operativo oficial de Apple para Mac",
-        enlace: "https://www.apple.com/macos/ventura/",
+        enlace: "https://www.mediafire.com/file/f8k9a2ntc09rgzs/OptiOS+10+LTSB+x64+V2.3.iso.torrent/file",
         imagen: "Images/macos.png"  // Ruta a tu imagen local
     }
 ];
