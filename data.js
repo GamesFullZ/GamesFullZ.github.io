@@ -415,4 +415,22 @@ const recursos = [
     },
     imagen: "Images/Jurassic_World_Evolution_box_art.jpg"
    },
+    {
+    id: 25,
+    nombre: "Far Cry 5",
+    tipo: "juego",
+    descripcion: "Shooter en mundo abierto donde enfrentas a una secta fanática en el condado ficticio de Hope, Montana",
+    requisitos: "Windows 7 SP1/8.1/10 64-bit, Intel Core i5-2400 / AMD FX-6300, 8 GB RAM, GeForce GTX 670 / Radeon R9 270, 40 GB espacio",
+    downloads: 0,  // Número de descargas
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "pesa un huevo",
+        "no me corre xd"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/lg6fpmp3f2uhuho/Far_Cry_5.torrent/file",
+        mediafire: "hhttps://www.mediafire.com/file/lg6fpmp3f2uhuho/Far_Cry_5.torrent/file"
+    },
+    imagen: "Images/FCZ_StorePortrait_1200x1600_1200x1600-a254f505d277fe3dc17beb12416bf11a.jpg"
+    },
 ];
