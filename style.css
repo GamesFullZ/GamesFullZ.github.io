@@ -846,3 +846,185 @@ header {
         margin-left: 0;
     }
 }
+
+/* ==================== ESTILOS PARA LA SECCIÓN DE SISTEMAS OPERATIVOS ==================== */
+.systems-section {
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(26, 36, 58, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #2a3a5a;
+}
+
+.systems-section h2 {
+    margin-bottom: 20px;
+    color: #00ffcc;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.systems-section p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #aaffff;
+}
+
+.systems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.system-card {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #00ffcc33;
+}
+
+.system-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.2);
+    border-color: #00ffcc;
+}
+
+.system-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #00ffcc;
+}
+
+.system-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #00ffcc;
+}
+
+.system-details {
+    font-size: 0.95rem;
+    color: #aaa;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.system-link {
+    display: inline-block;
+    background: #2AABEE;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-size: 14px;
+    border: 1px solid #2AABEE;
+}
+
+.system-link:hover {
+    background: #1c9bd9;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.system-link i {
+    margin-right: 8px;
+}
+
+/* Estilos para temas */
+body[data-theme="light"] .systems-section {
+    background: rgba(240, 240, 245, 0.5);
+    border: 1px solid #ddd;
+}
+
+body[data-theme="light"] .system-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+body[data-theme="light"] .system-details {
+    color: #666;
+}
+
+body[data-theme="light"] .system-name {
+    color: #2AABEE;
+}
+
+body[data-theme="pixel"] .systems-section {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ff00ff;
+}
+
+body[data-theme="pixel"] .system-card {
+    background: #000;
+    border: 2px solid #ff00ff;
+    color: #ffff00;
+}
+
+body[data-theme="pixel"] .system-details {
+    color: #ffff00;
+}
+
+body[data-theme="pixel"] .system-name {
+    color: #ffff00;
+    text-shadow: 1px 1px 0 #ff00ff;
+}
+
+body[data-theme="pixel"] .system-link {
+    background: #ff00ff;
+    color: #000;
+    border: 2px solid #ffff00;
+    text-shadow: 0.5px 0.5px 0 #000;
+}
+
+/* Responsive para sistemas */
+@media (max-width: 768px) {
+    .systems-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .system-card {
+        padding: 15px;
+    }
+    
+    .system-icon {
+        font-size: 2rem;
+    }
+    
+    .system-name {
+        font-size: 1.1rem;
+    }
+    
+    .system-details {
+        font-size: 0.9rem;
+    }
+    
+    .system-link {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .systems-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .systems-section {
+        padding: 15px;
+    }
+    
+    .systems-section h2 {
+        font-size: 20px;
+    }
+    
+    .systems-section p {
+        font-size: 14px;
+    }
+}
