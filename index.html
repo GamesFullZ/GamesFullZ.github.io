@@ -506,7 +506,7 @@
             let displayedGames = 0;
             const gamesPerLoad = 12;
             
-            // Función para generar un slug URL-friendly
+            // Función para generar un slug URL-friendly (corregida)
             function generateSlug(text) {
                 return text
                     .toString()
@@ -519,15 +519,29 @@
                     .replace(/-+$/, '');            // Eliminar - del final
             }
             
+            // Función para obtener el slug correcto del juego
+            function getGameSlug(game) {
+                // Para Resident Evil 7 específicamente
+                if (game.nombre === "Resident Evil 7: Biohazard" || 
+                    game.nombre === "Resident Evil 7") {
+                    return "resident-evil-7-biohazard";
+                }
+                
+                // Para otros juegos, usar la función normal
+                return generateSlug(game.nombre);
+            }
+            
             // Mostrar juegos en la galería
             function displayGames(gamesToShow) {
                 gallery.innerHTML = '';
                 
                 gamesToShow.forEach(game => {
                     if (game.tipo === 'juego') {
+                        // Obtener el slug correcto
+                        const gameSlug = getGameSlug(game);
+                        
                         // Crear un enlace que abre en nueva pestaña
                         const gameLink = document.createElement('a');
-                        const gameSlug = generateSlug(game.nombre);
                         gameLink.href = `Juegos/${gameSlug}.html`;
                         gameLink.target = '_blank';
                         gameLink.className = 'game-link';
@@ -657,7 +671,7 @@
                     return;
                 }
                 const random = juegos[Math.floor(Math.random() * juegos.length)];
-                const gameSlug = generateSlug(random.nombre);
+                const gameSlug = getGameSlug(random);
                 window.open(`Juegos/${gameSlug}.html`, '_blank');
                 alert(`🎲 Juego aleatorio: ${random.nombre}`);
             };
