@@ -190,15 +190,15 @@ header {
 }
 
 /* Fallback si la imagen no carga */
-/* Corrección: Reemplazar el selector no estándar */
 .game-image.image-error {
-    background-color: #1e2a47;
+    background-color: #1e2a47; /* O el color que prefieras */
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
     text-align: center;
+    object-fit: contain;
 }
 
 .game-image.image-error::after {
@@ -736,3 +736,4 @@ body[data-theme="pixel"] .requirements p {
     color: #ffff00;
     border: 1px solid #ff00ff;
 }
+
