@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamesZFL - Descarga Juegos y Sistemas</title>
     <!-- Fuentes modernas y legibles -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
     <!-- Iconos con Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google AdSense -->
@@ -23,12 +23,35 @@
             
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="🔍 Buscar...">
+                <!-- Botón de Búsqueda por Voz (Placeholder) -->
+                <button id="voiceSearchBtn" class="voice-search-btn" aria-label="Buscar por voz">
+                    <i class="fas fa-microphone"></i>
+                </button>
             </div>
             
             <div class="header-actions">
+                <!-- Botón para Modo Game Room -->
+                <button id="toggleGameRoom" class="btn-game-room">
+                    <i class="fas fa-dice"></i> Game Room
+                </button>
+
+                <!-- Placeholder para Login/Perfil (Frontend preparado) -->
+                <div class="user-profile-placeholder">
+                    <button id="loginBtn" class="btn-login">
+                        <i class="fas fa-user"></i> Entrar
+                    </button>
+                    <!-- Área de perfil (inicialmente oculta) -->
+                    <div id="userProfileArea" class="user-profile-area" style="display: none;">
+                        <span id="usernameDisplay">Usuario</span>
+                        <button id="logoutBtn" class="btn-logout">Salir</button>
+                    </div>
+                </div>
+
                 <select id="theme-selector">
                     <option value="dark">Oscuro</option>
                     <option value="light">Claro</option>
+                    <!-- Opción para el modo neón del Game Room -->
+                    <option value="neon">Neón</option> 
                 </select>
                 <a href="https://web.telegram.org/k/#-4959297719" target="_blank" rel="noopener noreferrer" class="boton-telegram">
                     <i class="fab fa-telegram-plane"></i> Telegram
@@ -49,6 +72,10 @@
             <button class="nav-button" data-target="polls">
                 <i class="fas fa-poll"></i> Encuesta
             </button>
+            <!-- Botón para Comparador de Juegos -->
+            <button class="nav-button" data-target="comparator">
+                <i class="fas fa-balance-scale"></i> Comparar
+            </button>
         </div>
     </nav>
 
@@ -57,7 +84,7 @@
         <!-- Sección de Juegos (Activa por defecto) -->
         <section id="games-section" class="content-section active">
             
-            <!-- Filtros Avanzados (Ocultables para no saturar) -->
+            <!-- Filtros Avanzados -->
             <details class="filters-section">
                 <summary class="filters-summary"><i class="fas fa-sliders-h"></i> Filtros Avanzados</summary>
                 <div class="filter-options">
@@ -71,7 +98,7 @@
                         </select>
                     </div>
                     <div class="filter-group">
-                        <label for="minRamFilter">RAM Mínima (GB)</label>
+                        <label for="minRamFilter">RAM (GB)</label>
                         <select id="minRamFilter">
                             <option value="">Cualquiera</option>
                             <option value="2">2 GB</option>
@@ -81,7 +108,7 @@
                         </select>
                     </div>
                     <div class="filter-group">
-                        <label for="processorFilter">Procesador</label>
+                        <label for="processorFilter">CPU</label>
                         <select id="processorFilter">
                             <option value="">Cualquiera</option>
                             <option value="intel">Intel</option>
@@ -89,7 +116,7 @@
                         </select>
                     </div>
                     <div class="filter-group">
-                        <label for="graphicsFilter">Gráficos</label>
+                        <label for="graphicsFilter">GPU</label>
                         <select id="graphicsFilter">
                             <option value="">Cualquiera</option>
                             <option value="nvidia">NVIDIA</option>
@@ -97,8 +124,12 @@
                             <option value="intel">Intel</option>
                         </select>
                     </div>
+                    <!-- Botones para juegos aleatorios -->
                     <button id="randomGameBtn" class="btn-random-game">
-                        <i class="fas fa-dice"></i> Juego Aleatorio
+                        <i class="fas fa-dice"></i> Aleatorio
+                    </button>
+                    <button id="surpriseMeBtn" class="btn-surprise-me">
+                        <i class="fas fa-surprise"></i> Sorpréndeme
                     </button>
                 </div>
             </details>
@@ -176,9 +207,56 @@
             </div>
         </section>
 
+        <!-- Sección del Comparador de Juegos (Oculta por defecto) -->
+        <section id="comparator-section" class="content-section">
+            <div class="comparator-container">
+                <h2><i class="fas fa-balance-scale"></i> Comparador de Juegos</h2>
+                <p>Selecciona dos juegos para compararlos lado a lado.</p>
+                
+                <div class="comparator-controls">
+                    <div class="game-slot" id="slot1">
+                        <h3>Juego 1</h3>
+                        <div class="slot-content">
+                            <p>Arrastra un juego aquí o haz clic para seleccionar.</p>
+                            <img id="slot1Image" src="" alt="Seleccionar Juego 1" style="display:none;">
+                            <button id="selectGame1Btn" class="select-game-btn">Seleccionar Juego</button>
+                        </div>
+                    </div>
+                    
+                    <div class="vs">VS</div>
+                    
+                    <div class="game-slot" id="slot2">
+                        <h3>Juego 2</h3>
+                        <div class="slot-content">
+                            <p>Arrastra un juego aquí o haz clic para seleccionar.</p>
+                            <img id="slot2Image" src="" alt="Seleccionar Juego 2" style="display:none;">
+                            <button id="selectGame2Btn" class="select-game-btn">Seleccionar Juego</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Área de Resultados de Comparación (inicialmente vacía/oculta) -->
+                <div id="comparisonResults" class="comparison-results" style="display: none;">
+                    <h3>Comparativa: <span id="compareTitle1"></span> vs <span id="compareTitle2"></span></h3>
+                    <div class="comparison-content">
+                        <div class="comparison-side">
+                            <h4>Requisitos (<span id="compareName1"></span>)</h4>
+                            <pre id="compareReq1"></pre>
+                        </div>
+                        <div class="comparison-side">
+                            <h4>Requisitos (<span id="compareName2"></span>)</h4>
+                            <pre id="compareReq2"></pre>
+                        </div>
+                    </div>
+                    <!-- Se pueden añadir más secciones aquí: Capturas, Pros/Contras, etc. -->
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
-    <!-- Sección de Contacto (Siempre visible al final) -->
+    <!-- Sección de Contacto -->
     <section class="contact-section">
         <div class="container">
             <h2>¿Necesitas ayuda?</h2>
@@ -262,9 +340,20 @@
         </div>
     </div>
 
+    <!-- Overlay para selección de juegos en el comparador -->
+    <div id="gameSelectionOverlay" class="overlay selection-overlay">
+        <div class="overlay-content selection-content">
+            <span class="close-btn" id="closeSelection">&times;</span>
+            <h2>Selecciona un Juego</h2>
+            <div class="gallery selection-gallery" id="selectionGallery">
+                <!-- Las tarjetas de juegos para seleccionar se generarán aquí -->
+            </div>
+        </div>
+    </div>
+
     <!-- Archivos de datos y scripts -->
     <script src="data.js"></script>
     <script src="sistemas.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- El script.js actualizado irá aquí -->
 </body>
 </html>
