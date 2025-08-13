@@ -242,8 +242,23 @@
             display: block;
         }
         /* Fallback si la imagen no carga */
-        .game-image:image(unloaded) {
-             background-color: var(--primary-blue); /* Corregido: eliminado punto y coma extra */
+/* Fallback si la imagen no carga */
+.game-image.image-error {
+    background-color: var(--primary-blue);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: center;
+    min-height: 250px; /* Para mantener la altura */
+}
+
+.game-image.image-error::after {
+    content: "Imagen no disponible";
+    display: block;
+    padding: 10px;
+}
         }
         .game-info {
             padding: 15px;
@@ -1179,4 +1194,5 @@ gameCard.innerHTML = `
     <script src="data.js"></script>
 </body>
 </html>
+
 
