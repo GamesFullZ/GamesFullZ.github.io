@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('searchInput');
     const contactForm = document.querySelector('.contact-section form');
     const gameDetailsOverlay = document.getElementById('gameDetailsOverlay');
-    const closeDetailsBtn = document.querySelector('#gameDetailsOverlay .close'); // Selector más específico
+    const closeDetailsBtn = document.querySelector('#gameDetailsOverlay .close');
     const detailsImage = document.getElementById('detailsImage');
     const detailsTitle = document.getElementById('detailsTitle');
     const detailsRating = document.getElementById('detailsRating');
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // --- VARIABLES DE ESTADO ---
     let displayedGames = 0;
-    const gamesPerLoad = 6; // Mostrar 6 juegos inicialmente
+    const gamesPerLoad = 6;
 
     // --- FUNCIONES DE UTILIDAD ---
     function formatNumber(num) {
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' };
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function getTrailerId(gameName) {
@@ -72,9 +72,9 @@ document.addEventListener('DOMContentLoaded', function () {
             "Far Cry 5": "lg6fpmp3f2uhuho",
             "Fnaf Collection": "sbws8mnvrtkjno0",
             "Resident Evil 7: Biohazard": "uqduzvrhkb01kth"
-            // ... añade más mappings según necesites
+            // ... añade más mappings ...
         };
-        return trailerMap[gameName] || "dQw4w9WgXcQ"; // Fallback a un video por defecto
+        return trailerMap[gameName] || "dQw4w9WgXcQ"; // Fallback
     }
 
     // --- FUNCIONES PARA MOSTRAR DATOS ---
@@ -82,27 +82,25 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!gallery) return;
 
         gallery.innerHTML = '';
-        if (gamesToShow.length === 0) {
-            gallery.innerHTML = '<p style="text-align:center; grid-column: 1 / -1; color: #aaa;">No se encontraron juegos que coincidan con los filtros.</p>';
-            return;
-        }
-
         const fragment = document.createDocumentFragment();
+
         gamesToShow.forEach(game => {
             if (game.tipo === 'juego') {
                 const gameCard = document.createElement('div');
                 gameCard.className = 'game-card';
-                // Creamos la imagen sin onerror inline
+                gameCard.dataset.gameId = game.id;
+
                 const img = document.createElement('img');
                 img.src = game.imagen;
                 img.alt = game.nombre;
                 img.className = 'game-image';
                 img.loading = 'lazy';
-                
-                // Añadimos el event listener para manejar errores
-                img.addEventListener('error', function handleError() {
-                    console.warn(`⚠️ Imagen no encontrada: ${game.imagen}`);
-                    // Creamos un div de fallback
+
+                // Manejo de error de imagen con event listener
+                img.addEventListener('error', function() {
+                    if (this.dataset.errorHandled) return; // Evitar bucle
+                    this.dataset.errorHandled = 'true';
+                    
                     const fallbackDiv = document.createElement('div');
                     fallbackDiv.className = 'game-image image-error';
                     fallbackDiv.innerHTML = `
@@ -112,7 +110,6 @@ document.addEventListener('DOMContentLoaded', function () {
                             <span style="font-size:0.7rem; margin-top:5px;">${game.nombre}</span>
                         </div>
                     `;
-                    // Reemplazamos la imagen por el div de fallback
                     this.parentNode.replaceChild(fallbackDiv, this);
                 });
 
@@ -133,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 fragment.appendChild(gameCard);
             }
         });
+
         gallery.appendChild(fragment);
     }
 
@@ -147,7 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (detailsDescription) detailsDescription.textContent = game.descripcion;
 
         if (detailsRequirements) {
-            // Asumimos que game.requisitos es un string HTML
             detailsRequirements.innerHTML = game.requisitos || 'Información no disponible.';
         }
 
@@ -162,14 +159,14 @@ document.addEventListener('DOMContentLoaded', function () {
         if (detailsComments) {
             detailsComments.innerHTML = '';
             if (game.comments && game.comments.length > 0) {
-                game.comments.forEach(comment => {
-                    const commentElement = document.createElement('div');
-                    commentElement.className = 'comment';
-                    commentElement.innerHTML = `
+                game.comments.forEach(text => {
+                    const div = document.createElement('div');
+                    div.className = 'comment';
+                    div.innerHTML = `
                         <div class="comment-author">Usuario Anónimo</div>
-                        <div class="comment-text">${comment}</div>
+                        <div class="comment-text">${text}</div>
                     `;
-                    detailsComments.appendChild(commentElement);
+                    detailsComments.appendChild(div);
                 });
             } else {
                 detailsComments.innerHTML = '<p>No hay comentarios aún. ¡Sé el primero en comentar!</p>';
@@ -194,15 +191,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- FUNCIONES DE FILTRO Y BÚSQUEDA ---
     function applyFiltersAndSearch() {
         const term = searchInput ? searchInput.value.toLowerCase() : '';
-        
         const filteredGames = recursos.filter(game => {
             if (game.tipo !== 'juego') return false;
-
-            const matchesSearch = game.nombre.toLowerCase().includes(term) ||
-                                   game.descripcion.toLowerCase().includes(term);
-            return matchesSearch;
+            return game.nombre.toLowerCase().includes(term) ||
+                   game.descripcion.toLowerCase().includes(term);
         });
-
         displayGames(filteredGames);
     }
 
@@ -219,15 +212,18 @@ document.addEventListener('DOMContentLoaded', function () {
             if (game.tipo === 'juego') {
                 const gameCard = document.createElement('div');
                 gameCard.className = 'game-card';
-                
+                gameCard.dataset.gameId = game.id;
+
                 const img = document.createElement('img');
                 img.src = game.imagen;
                 img.alt = game.nombre;
                 img.className = 'game-image';
                 img.loading = 'lazy';
-                
-                img.addEventListener('error', function handleError() {
-                    console.warn(`⚠️ Imagen no encontrada: ${game.imagen}`);
+
+                img.addEventListener('error', function() {
+                    if (this.dataset.errorHandled) return;
+                    this.dataset.errorHandled = 'true';
+                    
                     const fallbackDiv = document.createElement('div');
                     fallbackDiv.className = 'game-image image-error';
                     fallbackDiv.innerHTML = `
@@ -307,6 +303,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     detailsComments.children[0].tagName === 'P') {
                     detailsComments.innerHTML = '';
                 }
+
                 detailsComments.appendChild(div);
                 commentInput.value = '';
             }
@@ -334,16 +331,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // --- INICIALIZACIÓN FINAL ---
-    // Cargar primeros juegos
-    const initialGames = recursos.filter(g => g.tipo === 'juego').slice(0, gamesPerLoad);
-    displayGames(initialGames);
-    displayedGames = initialGames.length;
-
-    if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
-        if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+    function loadSavedTheme() {
+        const savedTheme = localStorage.getItem("selectedTheme");
+        if (savedTheme !== null) {
+            document.getElementById("theme-selector").value = savedTheme;
+            document.body.setAttribute("data-theme", savedTheme);
+        }
     }
 
-    // Manejo del cambio de tema (si se usa)
     window.changeTheme = function() {
         const themeSelector = document.getElementById("theme-selector");
         if (themeSelector) {
@@ -353,13 +348,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
 
-    (function loadSavedTheme() {
-        const savedTheme = localStorage.getItem("selectedTheme");
-        const themeSelector = document.getElementById("theme-selector");
-        if (savedTheme !== null && themeSelector) {
-            themeSelector.value = savedTheme;
-            document.body.setAttribute("data-theme", savedTheme);
-        }
-    })();
+    loadSavedTheme();
+    displayGames(recursos.filter(g => g.tipo === 'juego').slice(0, gamesPerLoad));
+    displayedGames = gamesPerLoad;
 
+    if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
+        if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+    }
 });
