@@ -176,6 +176,7 @@
             text-decoration: none;
             color: inherit;
             display: block;
+            cursor: pointer;
         }
 
         .game-card {
@@ -385,19 +386,6 @@
             border-radius: 10px;
         }
 
-        /* Función para generar un slug URL-friendly */
-        function generateSlug(text) {
-            return text
-                .toString()
-                .toLowerCase()
-                .trim()
-                .replace(/\s+/g, '-')           // Reemplazar espacios con -
-                .replace(/[^\w\-]+/g, '')       // Eliminar caracteres no válidos
-                .replace(/\-\-+/g, '-')         // Reemplazar múltiples - con uno solo
-                .replace(/^-+/, '')             // Eliminar - del inicio
-                .replace(/-+$/, '');            // Eliminar - del final
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .header-content {
@@ -540,7 +528,7 @@
                         // Crear un enlace que abre en nueva pestaña
                         const gameLink = document.createElement('a');
                         const gameSlug = generateSlug(game.nombre);
-                        gameLink.href = `Juegos/${gameSlug}.html`; // Ruta corregida a "Juegos"
+                        gameLink.href = `Juegos/${gameSlug}.html`;
                         gameLink.target = '_blank';
                         gameLink.className = 'game-link';
                         
