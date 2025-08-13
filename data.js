@@ -250,13 +250,13 @@ const recursos = [
         password: "123"
     },
     {
-    id: 16,  // ← Cambia al siguiente número disponible
+    id: 16,
     nombre: "The Quarry",
     tipo: "juego",
     descripcion: "Aventura interactiva de terror donde nueve adolescentes deben sobrevivir una noche en un campamento lleno de misterios y criaturas letales.",
     requisitos: "SO: Windows 10 64-bit<br>Procesador: Intel Core i5-3570 / AMD FX-8350<br>RAM: 8 GB<br>Gráficos: NVIDIA GTX 780 / AMD Radeon RX 470<br>Almacenamiento: 50 GB",
-    downloads: 0,  // Número de descargas (puedes dejarlo en 0)
-    rating: "⭐⭐⭐⭐☆",  // De 1 a 5 estrellas (usa ⭐)
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
     comments: [
         "Juego muy bueno",
         "Se traba un poco"
@@ -265,17 +265,17 @@ const recursos = [
         direct: "https://www.mediafire.com/file/84w2ozjtilvi6s6/The-Quarry-SteamRIP.com.torrent/file",
         mediafire: "https://www.mediafire.com/file/84w2ozjtilvi6s6/The-Quarry-SteamRIP.com.torrent/file"
     },
-    imagen: "Images/The_Quarry_cover_art.png",  // ← Debe estar en la carpeta Images/
-    password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
+    imagen: "Images/The_Quarry_cover_art.png",
+    password: "123"
   },
   {
-    id: 17,  // ← Cambia al siguiente número disponible
+    id: 17,
     nombre: "Bendy and the Ink Machine",
     tipo: "juego",
     descripcion: " Aventura de terror y puzles en primera persona donde exploras un viejo estudio de animación abandonado lleno de criaturas de tinta.",
     requisitos: "SO: Windows 7<br>Procesador: Intel Core 2 Duo E5200<br>RAM: 4 GB<br>Gráficos: GeForce 9800 GTX / AMD Radeon HD 5670<br>Almacenamiento: 2 GB",
-    downloads: 0,  // Número de descargas (puedes dejarlo en 0)
-    rating: "⭐⭐⭐⭐☆",  // De 1 a 5 estrellas (usa ⭐)
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
     comments: [
         "Juego muy bueno",
         "Se traba un poco pero es mi pc xd"
@@ -284,17 +284,17 @@ const recursos = [
         direct: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file",
         mediafire: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file"
     },
-    imagen: "Images/7288998-bendy-and-the-ink-machine-playstation-4-front-cover.png",  // ← Debe estar en la carpeta Images/
-    password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
+    imagen: "Images/7288998-bendy-and-the-ink-machine-playstation-4-front-cover.png",
+    password: "123"
     },
     {
-    id: 18,  // ← Cambia al siguiente número disponible
+    id: 18,
     nombre: "Bendy and the Dark Revivalo",
     tipo: "juego",
     descripcion: "Secuela de terror en primera persona donde Audrey explora un retorcido estudio de animación plagado de criaturas de tinta, resolviendo puzles y luchando por escapar.",
     requisitos: "SO: Windows 10 64-bit<br>RAM: 8 GB<br>Gráficos: GeForce GTX 1030 / AMD RX 550 (2 GB VRAM)<br>DirectX: 11<br>Almacenamiento: 15 GB",
-    downloads: 0,  // Número de descargas (puedes dejarlo en 0)
-    rating: "⭐⭐⭐⭐☆",  // De 1 a 5 estrellas (usa ⭐)
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
     comments: [
         "no esta tan buena",
         "xd casi no da miedo"
@@ -303,17 +303,17 @@ const recursos = [
         direct: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file",
         mediafire: "https://www.mediafire.com/file/ovozn6o9d8tyw7y/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file"
     },
-    imagen: "Images/618lYWO7raL._UF894,1000_QL80_.jpg",  // ← Debe estar en la carpeta Images/
-    password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
+    imagen: "Images/618lYWO7raL._UF894,1000_QL80_.jpg",
+    password: "123"
     },
     {
-    id: 19,  // ← Cambia al siguiente número disponible
+    id: 19,
     nombre: "Call of Juarez: Gunslinger",
     tipo: "juego",
     descripcion: "Shooter en primera persona ambientado en el Salvaje Oeste, donde un cazarrecompensas narra sus hazañas mientras enfrentas duelos y tiroteos intensos.",
     requisitos: "SO: Windows XP/Vista/7<br>Procesador: Intel Core 2 Duo 2.0 GHz / AMD Athlon 64 X2 2.0 GHz<br>RAM: 2 GB<br>Gráficos: 256 MB DirectX 9.0c compatible (GeForce 8800 GT / Radeon HD 3870)<br>Almacenamiento: 4 GB",
-    downloads: 0,  // Número de descargas (puedes dejarlo en 0)
-    rating: "⭐⭐⭐⭐☆",  // De 1 a 5 estrellas (usa ⭐)
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
     comments: [
         "Juego chido",
         "un clasico"
@@ -322,8 +322,8 @@ const recursos = [
         direct: "https://www.mediafire.com/file/jy6gzcnydlolmpa/Call-of-Juarez-Gunslinger-SteamRIP.com.rar.torrent/file",
         mediafire: "https://www.mediafire.com/file/jy6gzcnydlolmpa/Call-of-Juarez-Gunslinger-SteamRIP.com.rar.torrent/file"
     },
-    imagen: "Images/call_of_juarez_gunslinger-2242897.jpg",  // ← Debe estar en la carpeta Images/
-    password: "123"  // Contraseña del .zip (si no tiene, pon "123" o "ninguna")
+    imagen: "Images/call_of_juarez_gunslinger-2242897.jpg",
+    password: "123"
    },
     {
     id: 20,
@@ -331,7 +331,7 @@ const recursos = [
     tipo: "juego",
     descripcion: "mundo abierto donde un turista debe sobrevivir en una isla tropical llena de piratas y peligros",
     requisitos: "<br>SO: Windows Vista SP2 / 7 / 8<br>Procesador: Intel Core 2 Duo E6700 2.6 GHz / AMD Phenom X3 8750 2.4 GHz<br>RAM: 4 GB<br>Gráficos: NVIDIA GeForce 8800 GT / ATI Radeon HD 3850<br>Almacenamiento: 15 GB",
-    downloads: 0,  // Número de descargas
+    downloads: 0,
     rating: "⭐⭐⭐⭐☆",
     comments: [
         "Uno de los mejores far cry",
@@ -349,7 +349,7 @@ const recursos = [
     tipo: "juego",
     descripcion: "Shooter en primera persona con campañas intensas y multijugador competitivo.",
     requisitos: "SO Windows XP/Vista/7, Intel Core 2 Duo 2.66 GHz, 2 GB RAM, GeForce 8800 GT, 16 GB almacenamiento.",
-    downloads: 0,  // Número de descargas
+    downloads: 0,
     rating: "⭐⭐⭐⭐☆",
     comments: [
         "juegenlo esta chido",
@@ -367,7 +367,7 @@ const recursos = [
     tipo: "juego",
     descripcion: "Aventura con más personajes y mundo abierto donde Batman y Superman unen fuerzas contra villanos de DC",
     requisitos: "Windows XP/Vista/7, Intel Pentium 4 3.0 GHz, 1 GB RAM, GeForce 6600, 2 GB espacio.",
-    downloads: 0,  // Número de descargas
+    downloads: 0,
     rating: "⭐⭐⭐⭐☆",
     comments: [
         "juegenlo Gente,goty",
@@ -385,7 +385,7 @@ const recursos = [
     tipo: "juego",
     descripcion: "Aventura y sigilo en el Renacimiento italiano siguiendo a Ezio Auditore en su búsqueda de venganza.",
     requisitos: "Windows XP/Vista, Intel Core 2 Duo 1.8 GHz, 1.5 GB RAM, GeForce 7900 GS, 8 GB espacio.",
-    downloads: 0,  // Número de descargas
+    downloads: 0,
     rating: "⭐⭐⭐⭐☆",
     comments: [
         "el mejor de la saga",
@@ -403,7 +403,7 @@ const recursos = [
     tipo: "juego",
     descripcion: "Simulación y gestión de parques de dinosaurios con nuevas especies, mapas y comportamientos realistas.",
     requisitos: "Windows 10 64-bit, Intel i5-4590 / AMD FX-8370, 8 GB RAM, GeForce GTX 960 / Radeon R9 270X, 14 GB espacio.",
-    downloads: 0,  // Número de descargas
+    downloads: 0,
     rating: "⭐⭐⭐⭐☆",
     comments: [
         "ta bueno",
@@ -421,7 +421,7 @@ const recursos = [
     tipo: "juego",
     descripcion: "Shooter en mundo abierto donde enfrentas a una secta fanática en el condado ficticio de Hope, Montana",
     requisitos: "Windows 7 SP1/8.1/10 64-bit, Intel Core i5-2400 / AMD FX-6300, 8 GB RAM, GeForce GTX 670 / Radeon R9 270, 40 GB espacio",
-    downloads: 0,  // Número de descargas
+    downloads: 0,
     rating: "⭐⭐⭐⭐☆",
     comments: [
         "pesa un huevo",
@@ -429,7 +429,7 @@ const recursos = [
     ],
     links: {
         direct: "https://www.mediafire.com/file/lg6fpmp3f2uhuho/Far_Cry_5.torrent/file",
-        mediafire: "hhttps://www.mediafire.com/file/lg6fpmp3f2uhuho/Far_Cry_5.torrent/file"
+        mediafire: "https://www.mediafire.com/file/lg6fpmp3f2uhuho/Far_Cry_5.torrent/file"
     },
     imagen: "Images/FCZ_StorePortrait_1200x1600_1200x1600-a254f505d277fe3dc17beb12416bf11a.jpg"
     },
@@ -439,7 +439,7 @@ const recursos = [
     tipo: "juego",
     descripcion: "todos los clásicos de terror de Scott Cawthon en un solo pack, desde el primer susto en la pizzería hasta el cierre de la saga clásica",
     requisitos: "Windows XP/Vista/7/8/10, Procesador 2 GHz Dual-Core, 2 GB RAM, Gráficos con 1 GB VRAM compatibles con DirectX 9.0, 2 GB espacio.",
-    downloads: 0,  // Número de descargas
+    downloads: 0,
     rating: "⭐⭐⭐⭐☆",
     comments: [
         "joya del terror xd",
@@ -457,7 +457,7 @@ const recursos = [
     tipo: "juego",
     descripcion: "Survival horror en primera persona donde Ethan Winters busca a su esposa en una terrorífica mansión en Luisiana.<br>",
     requisitos: "Windows 7/8/8.1/10 64-bit, Intel Core i5-4460 / AMD FX-6300, 8 GB RAM, GeForce GTX 760 / Radeon R7 260x, 24 GB espacio.",
-    downloads: 0,  // Número de descargas
+    downloads: 0,
     rating: "⭐⭐⭐⭐☆",
     comments: [
         "joya del terror xd",
