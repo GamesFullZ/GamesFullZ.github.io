@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const gallery = document.getElementById('gallery');
     const searchInput = document.getElementById('searchInput');
     const loadMoreBtn = document.getElementById('loadMoreBtn');
-    const modal = document.getElementById('gameModal');
     const contactForm = document.querySelector('form');
 
     let displayedGames = 0;
@@ -26,6 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         toLoad.forEach(game => {
             if (game.tipo === 'juego') {
+                // Crear un enlace que abre en nueva pestaña
+                const gameLink = document.createElement('a');
+                gameLink.href = `juegos/${game.nombre.replace(/\s+/g, '-').toLowerCase().replace(/:/g, '')}.html`;
+                gameLink.target = '_blank';
+                gameLink.className = 'game-link';
+                gameLink.style.textDecoration = 'none';
+                gameLink.style.color = 'inherit';
+                
                 const gameCard = document.createElement('div');
                 gameCard.className = 'game-card';
                 gameCard.innerHTML = `
@@ -40,8 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                 `;
                 
-                gameCard.addEventListener('click', () => openModal(game));
-                fragment.appendChild(gameCard);
+                gameLink.appendChild(gameCard);
+                fragment.appendChild(gameLink);
             }
         });
 
@@ -67,6 +74,14 @@ document.addEventListener('DOMContentLoaded', function () {
         // Mostrar juegos filtrados
         const fragment = document.createDocumentFragment();
         filteredGames.forEach(game => {
+            // Crear un enlace que abre en nueva pestaña
+            const gameLink = document.createElement('a');
+            gameLink.href = `juegos/${game.nombre.replace(/\s+/g, '-').toLowerCase().replace(/:/g, '')}.html`;
+            gameLink.target = '_blank';
+            gameLink.className = 'game-link';
+            gameLink.style.textDecoration = 'none';
+            gameLink.style.color = 'inherit';
+            
             const gameCard = document.createElement('div');
             gameCard.className = 'game-card';
             gameCard.innerHTML = `
@@ -81,8 +96,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             `;
             
-            gameCard.addEventListener('click', () => openModal(game));
-            fragment.appendChild(gameCard);
+            gameLink.appendChild(gameCard);
+            fragment.appendChild(gameLink);
         });
         
         gallery.appendChild(fragment);
@@ -95,95 +110,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener('click', loadGames);
     }
-
-    // Modal
-    function openModal(game) {
-        document.getElementById('modalImage').src = game.imagen;
-        document.getElementById('modalTitle').textContent = game.nombre;
-        document.getElementById('modalInfo').innerHTML = game.descripcion;
-        document.getElementById('modalRequirements').innerHTML = game.requisitos;
-        document.getElementById('modalRating').textContent = game.rating;
-        document.getElementById('modalDownloads').textContent = `Descargado por +${formatNumber(game.downloads)} usuarios`;
-
-        const linkGofile = document.getElementById('linkGofile');
-        if (linkGofile) {
-            linkGofile.href = game.links.direct || "#";
-        }
-        
-        const linkMediafire = document.getElementById('linkMediafire');
-        if (linkMediafire) {
-            linkMediafire.href = game.links.mediafire || "#";
-        }
-
-        const commentsContainer = document.getElementById('commentsContainer');
-        commentsContainer.innerHTML = '';
-
-        if (game.comments && game.comments.length > 0) {
-            game.comments.forEach(text => {
-                const div = document.createElement('div');
-                div.className = 'comment';
-                div.innerHTML = `
-                    <div class="comment-author">Usuario Anónimo</div>
-                    <div class="comment-text">${text}</div>
-                `;
-                commentsContainer.appendChild(div);
-            });
-        } else {
-            commentsContainer.innerHTML = '<p>No hay comentarios aún. ¡Sé el primero en comentar!</p>';
-        }
-
-        modal.dataset.gameId = game.id;
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    }
-
-    const closeBtn = document.querySelector('.close');
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
-    }
-
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
-
-    function saveComments(gameId, comments) {
-        localStorage.setItem(`comments_${gameId}`, JSON.stringify(comments));
-    }
-
-    function loadComments(gameId) {
-        const saved = localStorage.getItem(`comments_${gameId}`);
-        return saved ? JSON.parse(saved) : [];
-    }
-
-    document.getElementById('addCommentBtn').addEventListener('click', function () {
-        const input = document.getElementById('commentInput');
-        const commentsContainer = document.getElementById('commentsContainer');
-        const currentGameId = modal.dataset.gameId;
-
-        if (input && input.value.trim() && currentGameId) {
-            const commentText = input.value.trim();
-
-            const div = document.createElement('div');
-            div.className = 'comment';
-            div.innerHTML = `
-                <div class="comment-author">Tú</div>
-                <div class="comment-text">${commentText}</div>
-            `;
-            commentsContainer.appendChild(div);
-
-            const savedComments = loadComments(currentGameId);
-            savedComments.push(commentText);
-            saveComments(currentGameId, savedComments);
-
-            input.value = '';
-        }
-    });
 
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -299,7 +225,8 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         const random = juegos[Math.floor(Math.random() * juegos.length)];
-        openModal(random);
+        // En lugar de abrir modal, abrir en nueva pestaña
+        window.open(`juegos/${random.nombre.replace(/\s+/g, '-').toLowerCase().replace(/:/g, '')}.html`, '_blank');
         showNotification(`🎲 Juego aleatorio: ${random.nombre}`);
     }
 
