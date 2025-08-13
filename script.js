@@ -12,6 +12,19 @@ document.addEventListener('DOMContentLoaded', function () {
         return num.toLocaleString();
     }
 
+    // Función para generar un slug URL-friendly
+    function generateSlug(text) {
+        return text
+            .toString()
+            .toLowerCase()
+            .trim()
+            .replace(/\s+/g, '-')           // Reemplazar espacios con -
+            .replace(/[^\w\-]+/g, '')       // Eliminar caracteres no válidos
+            .replace(/\-\-+/g, '-')         // Reemplazar múltiples - con uno solo
+            .replace(/^-+/, '')             // Eliminar - del inicio
+            .replace(/-+$/, '');            // Eliminar - del final
+    }
+
     // Cargar juegos
     function loadGames() {
         // Solo cargar juegos si estamos en la sección de juegos
@@ -27,11 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
             if (game.tipo === 'juego') {
                 // Crear un enlace que abre en nueva pestaña
                 const gameLink = document.createElement('a');
-                gameLink.href = `juegos/${game.nombre.replace(/\s+/g, '-').toLowerCase().replace(/:/g, '')}.html`;
+                const gameSlug = generateSlug(game.nombre);
+                gameLink.href = `juegos/${gameSlug}.html`;
                 gameLink.target = '_blank';
                 gameLink.className = 'game-link';
                 gameLink.style.textDecoration = 'none';
                 gameLink.style.color = 'inherit';
+                gameLink.style.display = 'block';
                 
                 const gameCard = document.createElement('div');
                 gameCard.className = 'game-card';
@@ -76,11 +91,13 @@ document.addEventListener('DOMContentLoaded', function () {
         filteredGames.forEach(game => {
             // Crear un enlace que abre en nueva pestaña
             const gameLink = document.createElement('a');
-            gameLink.href = `juegos/${game.nombre.replace(/\s+/g, '-').toLowerCase().replace(/:/g, '')}.html`;
+            const gameSlug = generateSlug(game.nombre);
+            gameLink.href = `juegos/${gameSlug}.html`;
             gameLink.target = '_blank';
             gameLink.className = 'game-link';
             gameLink.style.textDecoration = 'none';
             gameLink.style.color = 'inherit';
+            gameLink.style.display = 'block';
             
             const gameCard = document.createElement('div');
             gameCard.className = 'game-card';
@@ -225,8 +242,9 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         const random = juegos[Math.floor(Math.random() * juegos.length)];
+        const gameSlug = generateSlug(random.nombre);
         // En lugar de abrir modal, abrir en nueva pestaña
-        window.open(`juegos/${random.nombre.replace(/\s+/g, '-').toLowerCase().replace(/:/g, '')}.html`, '_blank');
+        window.open(`juegos/${gameSlug}.html`, '_blank');
         showNotification(`🎲 Juego aleatorio: ${random.nombre}`);
     }
 
