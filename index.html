@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamesFullZ - Descarga Juegos Gratis</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
-    <!-- Iconos con Font Awesome -->
+    <!-- Iconos con Font Awesome (sin espacios) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795479991735761"
@@ -565,7 +565,7 @@
         <section class="contact-section">
             <h2>¿Necesitas ayuda?</h2>
             <p>Contáctanos si tienes problemas con una descarga o reportar un error.</p>
-            <form action="https://formspree.io/f/mpwlozqz" method="POST">
+            <form action="https://formspree.io/f/mpwlozqz" method="POST"> <!-- Eliminado espacios -->
                 <div class="form-group">
                     <label for="email">Tu Correo</label>
                     <input type="email" name="Correo" id="email" placeholder="tu@correo.com" required>
@@ -595,7 +595,7 @@
             }
             
             const gallery = document.getElementById('gallery');
-            let displayedGames = 12; // Iniciar con 12 juegos
+            let displayedGames = 12; // Iniciar con 12 juegos mostrados
             
             // Función para generar un slug URL-friendly
             function generateSlug(text) {
@@ -624,18 +624,28 @@
             
             // Mostrar juegos iniciales
             function displayInitialGames() {
-                gallery.innerHTML = '';
+                // Solo limpiar y reiniciar si no hay juegos cargados
+                if (gallery.children.length === 0) {
+                    gallery.innerHTML = '';
+                    displayedGames = 12; // Resetear el contador
+                }
+                
                 const initialGames = recursos.slice(0, 12);
+                
+                // Crear fragmento para mejor rendimiento
+                const fragment = document.createDocumentFragment();
                 
                 initialGames.forEach(game => {
                     if (game.tipo === 'juego') {
-                        createGameCard(game);
+                        createGameCard(game, fragment);
                     }
                 });
+                
+                gallery.appendChild(fragment);
             }
             
             // Crear tarjeta de juego
-            function createGameCard(game) {
+            function createGameCard(game, container = null) {
                 // Obtener el slug correcto
                 const gameSlug = getGameSlug(game);
                 
@@ -644,6 +654,7 @@
                 gameLink.href = `Juegos/${gameSlug}.html`;
                 gameLink.target = '_blank';
                 gameLink.className = 'game-link';
+                // Se eliminan los estilos inline redundantes ya que están en CSS
                 
                 const gameCard = document.createElement('div');
                 gameCard.className = 'game-card';
@@ -660,19 +671,30 @@
                 `;
                 
                 gameLink.appendChild(gameCard);
-                gallery.appendChild(gameLink);
+                
+                if (container) {
+                    // Si se proporciona un contenedor (fragmento), añadirlo allí
+                    container.appendChild(gameLink);
+                } else {
+                    // Si no, añadirlo directamente al gallery
+                    gallery.appendChild(gameLink);
+                }
             }
             
-            // Cargar más juegos (corregido)
+            // Cargar más juegos (corregido para AGREGAR, no reemplazar)
             function loadMoreGames() {
                 const nextGames = recursos.slice(displayedGames, displayedGames + 12);
                 
+                // Crear fragmento para mejor rendimiento
+                const fragment = document.createDocumentFragment();
+                
                 nextGames.forEach(game => {
                     if (game.tipo === 'juego') {
-                        createGameCard(game);
+                        createGameCard(game, fragment);
                     }
                 });
                 
+                gallery.appendChild(fragment);
                 displayedGames += nextGames.length;
                 
                 // Ocultar botón si no hay más juegos
@@ -704,6 +726,7 @@
                     document.getElementById(sectionId).classList.add('active');
                     
                     // Si es la sección de juegos, cargar juegos si es necesario
+                    // Solo cargar si la galería está completamente vacía
                     if (button.getAttribute('data-section') === 'games' && gallery.children.length === 0) {
                         displayInitialGames();
                     }
@@ -726,16 +749,23 @@
                 
                 // Limpiar galería
                 gallery.innerHTML = '';
+                displayedGames = filteredGames.length; // Ajustar el contador para evitar problemas con "Ver más"
                 
                 // Mostrar juegos filtrados
+                // Crear fragmento para mejor rendimiento
+                const fragment = document.createDocumentFragment();
+                
                 filteredGames.forEach(game => {
                     if (game.tipo === 'juego') {
-                        createGameCard(game);
+                        createGameCard(game, fragment);
                     }
                 });
                 
-                // Ocultar botón "Ver más" si hay resultados filtrados
-                document.getElementById('loadMoreBtn').style.display = filteredGames.length > 0 ? 'none' : 'block';
+                gallery.appendChild(fragment);
+                
+                // Ocultar botón "Ver más" si hay resultados filtrados o si se muestran todos
+                document.getElementById('loadMoreBtn').style.display = 
+                    (filteredGames.length > 0 && filteredGames.length < recursos.filter(g => g.tipo === 'juego').length) ? 'block' : 'none';
             });
             
             // Cargar sistemas operativos
