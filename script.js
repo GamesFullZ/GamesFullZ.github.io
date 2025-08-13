@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     const contactForm = document.querySelector('form');
 
-    let displayedGames = 0;
+    let displayedGames = 12; // Iniciar con 12 juegos mostrados
     const gamesPerLoad = 12;
 
     // Formatear números
@@ -25,14 +25,76 @@ document.addEventListener('DOMContentLoaded', function () {
             .replace(/-+$/, '');            // Eliminar - del final
     }
 
-    // Cargar juegos
-    function loadGames() {
+    // Función para obtener el slug correcto del juego
+    function getGameSlug(game) {
+        // Para Resident Evil 7 específicamente
+        if (game.nombre === "Resident Evil 7: Biohazard" || 
+            game.nombre === "Resident Evil 7") {
+            return "resident-evil-7-biohazard";
+        }
+        
+        // Para otros juegos, usar la función normal
+        return generateSlug(game.nombre);
+    }
+
+    // Cargar juegos iniciales
+    function loadInitialGames() {
         // Solo cargar juegos si estamos en la sección de juegos
         const gamesSection = document.getElementById('games-section');
         if (!gamesSection || !gamesSection.classList.contains('active')) {
             return;
         }
         
+        // Limpiar galería
+        gallery.innerHTML = '';
+        
+        const fragment = document.createDocumentFragment();
+        const toLoad = recursos.slice(0, 12); // Siempre cargar los primeros 12
+
+        toLoad.forEach(game => {
+            if (game.tipo === 'juego') {
+                // Crear un enlace que abre en nueva pestaña
+                const gameLink = document.createElement('a');
+                const gameSlug = getGameSlug(game);
+                gameLink.href = `Juegos/${gameSlug}.html`;
+                gameLink.target = '_blank';
+                gameLink.className = 'game-link';
+                gameLink.style.textDecoration = 'none';
+                gameLink.style.color = 'inherit';
+                gameLink.style.display = 'block';
+                
+                const gameCard = document.createElement('div');
+                gameCard.className = 'game-card';
+                gameCard.innerHTML = `
+                    <img src="${game.imagen}" alt="${game.nombre}" class="game-image">
+                    <div class="game-info">
+                        <h3 class="game-title">${game.nombre}</h3>
+                        <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
+                        <div class="game-meta">
+                            <span class="rating">${game.rating}</span>
+                            <span class="downloads">${game.downloads} descargas</span>
+                        </div>
+                    </div>
+                `;
+                
+                gameLink.appendChild(gameCard);
+                fragment.appendChild(gameLink);
+            }
+        });
+
+        gallery.appendChild(fragment);
+        displayedGames = 12; // Resetear contador a 12
+
+        // Mostrar botón "Ver más" si hay más juegos
+        if (recursos.filter(g => g.tipo === 'juego').length > 12) {
+            loadMoreBtn.style.display = 'block';
+        } else {
+            loadMoreBtn.style.display = 'none';
+        }
+    }
+
+    // Cargar más juegos (corregido)
+    function loadMoreGames() {
         const fragment = document.createDocumentFragment();
         const toLoad = recursos.slice(displayedGames, displayedGames + gamesPerLoad);
 
@@ -40,8 +102,8 @@ document.addEventListener('DOMContentLoaded', function () {
             if (game.tipo === 'juego') {
                 // Crear un enlace que abre en nueva pestaña
                 const gameLink = document.createElement('a');
-                const gameSlug = generateSlug(game.nombre);
-                gameLink.href = `juegos/${gameSlug}.html`;
+                const gameSlug = getGameSlug(game);
+                gameLink.href = `Juegos/${gameSlug}.html`;
                 gameLink.target = '_blank';
                 gameLink.className = 'game-link';
                 gameLink.style.textDecoration = 'none';
@@ -70,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
         gallery.appendChild(fragment);
         displayedGames += toLoad.length;
 
+        // Ocultar botón si no hay más juegos
         if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
             loadMoreBtn.style.display = 'none';
         }
@@ -91,8 +154,8 @@ document.addEventListener('DOMContentLoaded', function () {
         filteredGames.forEach(game => {
             // Crear un enlace que abre en nueva pestaña
             const gameLink = document.createElement('a');
-            const gameSlug = generateSlug(game.nombre);
-            gameLink.href = `juegos/${gameSlug}.html`;
+            const gameSlug = getGameSlug(game);
+            gameLink.href = `Juegos/${gameSlug}.html`;
             gameLink.target = '_blank';
             gameLink.className = 'game-link';
             gameLink.style.textDecoration = 'none';
@@ -125,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Botón "Ver más"
     if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', loadGames);
+        loadMoreBtn.addEventListener('click', loadMoreGames);
     }
 
     if (contactForm) {
@@ -242,9 +305,9 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         const random = juegos[Math.floor(Math.random() * juegos.length)];
-        const gameSlug = generateSlug(random.nombre);
+        const gameSlug = getGameSlug(random);
         // En lugar de abrir modal, abrir en nueva pestaña
-        window.open(`juegos/${gameSlug}.html`, '_blank');
+        window.open(`Juegos/${gameSlug}.html`, '_blank');
         showNotification(`🎲 Juego aleatorio: ${random.nombre}`);
     }
 
@@ -281,11 +344,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     section.classList.add('active');
                     
                     // Si es la sección de juegos, cargar juegos si es necesario
-                    if (targetSection === 'games' && displayedGames === 0) {
-                        // Limpiar galería antes de cargar
-                        gallery.innerHTML = '';
-                        displayedGames = 0;
-                        loadGames();
+                    if (targetSection === 'games') {
+                        // Solo cargar si la galería está vacía
+                        if (gallery.children.length === 0) {
+                            loadInitialGames();
+                        }
                     }
                     
                     // Si es la sección de sistemas, cargar los sistemas
@@ -347,6 +410,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Cargar juegos iniciales si estamos en la sección de juegos
     const gamesSection = document.getElementById('games-section');
     if (gamesSection && gamesSection.classList.contains('active')) {
-        loadGames();
+        loadInitialGames();
     }
 });
