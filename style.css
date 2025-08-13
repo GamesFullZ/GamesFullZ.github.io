@@ -11,8 +11,6 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
 }
 
 .container {
@@ -162,12 +160,17 @@ header {
     margin: 30px 0;
 }
 
+.game-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .game-card {
     background: rgba(26, 36, 58, 0.5);
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
     border: 1px solid #1e3a5f;
     display: flex;
     flex-direction: column;
@@ -370,81 +373,37 @@ header {
     border-radius: 10px;
 }
 
-/* Modal mejorado */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1001;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(5px);
+/* Estilos para páginas de juegos individuales */
+.game-detail-page {
+    margin: 30px 0;
 }
 
-.modal-content {
-    background-color: #121a2a;
-    margin: 5% auto;
-    padding: 0;
-    border: 1px solid #2a4060;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 900px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    position: relative;
-    overflow: hidden;
-}
-
-.close {
-    color: #aaa;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    z-index: 10;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #00ffcc;
-}
-
-.modal-body {
+.game-detail-header {
     display: flex;
-    flex-direction: column;
-}
-
-.modal-header {
-    position: relative;
-}
-
-.modal-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.modal-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(18, 26, 42, 0.9), transparent);
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px 0;
+    background: rgba(26, 36, 58, 0.5);
+    border-radius: 10px;
     padding: 20px;
 }
 
-.modal-title {
+.game-detail-image {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.game-detail-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.game-detail-info h1 {
+    color: #00ffcc;
     font-size: 2rem;
-    margin: 0;
-    color: white;
-}
-
-.modal-content-body {
-    padding: 20px;
+    margin-bottom: 15px;
 }
 
 .rating-downloads {
@@ -466,26 +425,52 @@ header {
     font-weight: 500;
 }
 
-.modal-info {
-    margin: 15px 0;
-    line-height: 1.6;
-    color: #ddd;
+.game-description {
+    margin: 20px 0;
+    line-height: 1.7;
 }
 
-.requirements {
+.section {
     background: rgba(26, 36, 58, 0.5);
-    padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
+    padding: 20px;
     margin: 20px 0;
 }
 
-.requirements h3 {
+.section h2 {
     color: #00ffcc;
     margin-top: 0;
 }
 
-.download-options {
-    margin: 20px 0;
+.requirements p {
+    background: #142030;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    white-space: pre-line;
+    color: #aaffff;
+}
+
+.trailer-section {
+    text-align: center;
+}
+
+.trailer-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.trailer-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .download-options h3 {
@@ -525,10 +510,6 @@ header {
 
 .mediafire {
     background: #0077b5;
-}
-
-.comments-section {
-    margin-top: 30px;
 }
 
 .comments-section h3 {
@@ -610,12 +591,7 @@ header {
         height: 200px;
     }
     
-    .modal-content {
-        width: 95%;
-        margin: 10% auto;
-    }
-    
-    .modal-body {
+    .game-detail-header {
         flex-direction: column;
     }
     
@@ -672,6 +648,16 @@ body[data-theme="light"] .nav-button.active {
     color: white;
 }
 
+body[data-theme="light"] .section {
+    background: rgba(240, 240, 240, 0.5);
+    color: #333;
+}
+
+body[data-theme="light"] .requirements p {
+    background: #f0f0f0;
+    color: #333;
+}
+
 /* Tema pixel */
 body[data-theme="pixel"] {
     background: #000;
@@ -717,4 +703,16 @@ body[data-theme="pixel"] .nav-button.active {
     background: #ffff00;
     color: #000;
     text-shadow: 0.5px 0.5px 0 #000;
+}
+
+body[data-theme="pixel"] .section {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00ff00;
+    color: #00ff00;
+}
+
+body[data-theme="pixel"] .requirements p {
+    background: #000;
+    color: #ffff00;
+    border: 1px solid #ff00ff;
 }
