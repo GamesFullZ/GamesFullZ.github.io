@@ -8,7 +8,17 @@
     scroll-behavior: smooth; /* Desplazamiento suave */
 }
 
-/* --- VARIABLES DE COLORES --- */
+/* --- CURSOR PERSONALIZADO --- */
+/* Body por defecto */
+body {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="%2300ff99" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="%2300ff99"/></svg>') 12 12, auto;
+}
+/* Cursor para enlaces y botones */
+a, button, .game-card, .nav-button, .download-link, .system-link, .btn-load-more, .add-comment button {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="none" stroke="%23bf00ff" stroke-width="1.5"/></svg>') 12 12, pointer;
+}
+
+/* --- VARIABLES DE COLORES & ANIMACIONES --- */
 :root {
     /* Colores principales */
     --color-primary: #000000; /* Negro Profundo */
@@ -24,6 +34,12 @@
     --color-gradient-main: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-blue), var(--color-accent-green));
     --color-gradient-alt: linear-gradient(135deg, var(--color-accent-green), var(--color-accent-blue));
 
+    /* Animación del fondo */
+    --animated-bg-1: radial-gradient(circle at 10% 20%, rgba(0, 102, 255, 0.15) 0%, rgba(0, 0, 0, 0) 20%);
+    --animated-bg-2: radial-gradient(circle at 90% 80%, rgba(191, 0, 255, 0.15) 0%, rgba(0, 0, 0, 0) 20%);
+    --animated-bg-3: radial-gradient(circle at 30% 40%, rgba(0, 255, 153, 0.15) 0%, rgba(0, 0, 0, 0) 20%);
+    --animated-bg-4: radial-gradient(circle at 70% 30%, rgba(191, 0, 255, 0.15) 0%, rgba(0, 0, 0, 0) 20%);
+
     /* Tipografía */
     --font-main: 'Montserrat', sans-serif;
     --font-heading: 'Rajdhani', sans-serif;
@@ -32,8 +48,45 @@
     --border-radius-sm: 8px;
     --border-radius-md: 12px;
     --border-radius-lg: 16px;
-    --transition-speed: 0.3s;
+    --transition-speed: 0.4s; /* Aumentado ligeramente para suavidad */
     --transition-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* --- FONDO ANIMADO CON GRADIENTE --- */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+    background: var(--animated-bg-1), var(--animated-bg-2);
+    animation: animateBackground 30s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes animateBackground {
+    0% {
+        background: var(--animated-bg-1), var(--animated-bg-2);
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        background: var(--animated-bg-3), var(--animated-bg-1);
+        transform: translate(-25%, -25%) rotate(0.5deg);
+    }
+    50% {
+        background: var(--animated-bg-2), var(--animated-bg-4);
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    75% {
+        background: var(--animated-bg-4), var(--animated-bg-3);
+        transform: translate(-25%, -25%) rotate(-0.5deg);
+    }
+    100% {
+        background: var(--animated-bg-1), var(--animated-bg-2);
+        transform: translate(0, 0) rotate(0deg);
+    }
 }
 
 /* --- BODY & CONTAINER --- */
@@ -43,9 +96,8 @@ body {
     font-family: var(--font-main);
     line-height: 1.6;
     min-height: 100vh;
-    background-image: radial-gradient(circle at 10% 20%, rgba(0, 102, 255, 0.05) 0%, rgba(0, 0, 0, 0) 20%),
-                      radial-gradient(circle at 90% 80%, rgba(191, 0, 255, 0.05) 0%, rgba(0, 0, 0, 0) 20%);
-    background-attachment: fixed; /* Fondo fijo para efecto parallax ligero */
+    /* transition para cambios globales suaves */
+    transition: background-color var(--transition-speed) var(--transition-ease), color var(--transition-speed) var(--transition-ease);
 }
 
 .container {
@@ -53,6 +105,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    position: relative; /* Para que el contenido esté por encima del fondo */
+    z-index: 1;
 }
 
 /* --- HEADER --- */
@@ -64,6 +118,8 @@ header {
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px); /* Efecto vidrio esmerilado */
+    /* Transición para el fondo del header */
+    transition: background-color var(--transition-speed) var(--transition-ease), border-color var(--transition-speed) var(--transition-ease);
 }
 
 .header-content {
@@ -174,6 +230,7 @@ header {
     top: 60px; /* Debajo del header principal */
     z-index: 999;
     backdrop-filter: blur(5px);
+    transition: background-color var(--transition-speed) var(--transition-ease), border-color var(--transition-speed) var(--transition-ease);
 }
 
 .nav-buttons {
@@ -256,6 +313,7 @@ header {
     margin-bottom: 35px;
     border: 1px solid var(--color-border);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: background-color var(--transition-speed) var(--transition-ease), border-color var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease);
 }
 
 .filters-header {
@@ -273,6 +331,7 @@ header {
     font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 700;
+    transition: color var(--transition-speed) var(--transition-ease);
 }
 
 #randomGameBtn {
@@ -313,6 +372,7 @@ header {
     color: var(--color-text-light);
     font-size: 0.95rem;
     font-weight: 500;
+    transition: color var(--transition-speed) var(--transition-ease);
 }
 
 .filter-group select, .filter-group input {
@@ -331,54 +391,58 @@ header {
     box-shadow: 0 0 0 2px rgba(0, 102, 255, 0.2);
 }
 
-/* --- GALERÍA DE JUEGOS --- */
+/* --- GALERÍA DE JUEGOS CON EFECTO FLIP --- */
 .gallery__container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 30px;
     margin: 35px 0;
+    perspective: 1000px; /* Necesario para el efecto 3D */
 }
 
-.game-card {
-    background: var(--color-card-bg);
+/* Contenedor de la tarjeta para el flip */
+.game-card-container {
+    width: 100%;
+    height: 320px; /* Altura fija para consistencia */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform var(--transition-speed) ease-in-out;
+}
+
+/* Al hacer hover, girar la tarjeta */
+.game-card-container:hover {
+    transform: rotateY(180deg);
+}
+
+/* Estilos comunes para Frente y Dorso */
+.game-card, .game-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
     border-radius: var(--border-radius-md);
     overflow: hidden;
-    transition: all var(--transition-speed) var(--transition-ease);
-    border: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
-    height: 100%;
+    border: 1px solid var(--color-border);
+    background: var(--color-card-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow var(--transition-speed) var(--transition-ease), border-color var(--transition-speed) var(--transition-ease);
+}
+
+/* Frente de la tarjeta (imagen y metadatos básicos) */
+.game-card {
     cursor: pointer;
-    position: relative;
-    isolation: isolate; /* Crea un nuevo stacking context para z-index */
-}
-
-.game-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--color-gradient-main);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: -1;
-}
-
-.game-card:hover::before {
-    opacity: 0.1;
 }
 
 .game-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--color-hover-shadow), 0 15px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--color-hover-shadow), 0 8px 16px rgba(0, 0, 0, 0.5);
     border-color: var(--color-accent-green);
 }
 
 .game-image {
     width: 100%;
-    height: 260px;
+    height: 220px;
     object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
@@ -402,39 +466,100 @@ header {
 }
 
 .game-info {
-    padding: 18px;
+    padding: 15px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
 .game-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: var(--color-accent-green);
     font-family: var(--font-heading);
+    transition: color var(--transition-speed) var(--transition-ease);
 }
 
 .game-description {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #bbb;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
     flex-grow: 1;
-    line-height: 1.5;
+    line-height: 1.4;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .game-meta {
     display: flex;
     justify-content: space-between;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #aaa;
     border-top: 1px dashed var(--color-border);
-    padding-top: 12px;
+    padding-top: 10px;
 }
 
 .rating {
     color: #FFD700; /* Amarillo oro para las estrellas */
+}
+
+/* Dorso de la tarjeta (información adicional) */
+.game-card-back {
+    transform: rotateY(180deg);
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(30, 30, 40, 0.9);
+}
+
+.back-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--color-accent-blue);
+    font-family: var(--font-heading);
+}
+
+.back-meta {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.back-description {
+    font-size: 0.8rem;
+    color: #aaa;
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Mostrar hasta 4 líneas */
+    -webkit-box-orient: vertical;
+}
+
+.view-details-btn {
+    margin-top: auto;
+    padding: 8px 16px;
+    background: transparent;
+    color: var(--color-accent-green);
+    border: 1px solid var(--color-accent-green);
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all var(--transition-speed) var(--transition-ease);
+    font-family: var(--font-main);
+}
+
+.view-details-btn:hover {
+    background: var(--color-gradient-alt);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+    border-color: transparent;
 }
 
 /* --- BOTÓN CARGAR MÁS --- */
@@ -473,6 +598,7 @@ header {
     text-align: center;
     border: 1px solid var(--color-border);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: background-color var(--transition-speed) var(--transition-ease), border-color var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease);
 }
 
 .systems-section h2 {
@@ -480,6 +606,7 @@ header {
     color: var(--color-accent-purple);
     font-family: var(--font-heading);
     font-size: 1.8rem;
+    transition: color var(--transition-speed) var(--transition-ease);
 }
 
 .systems-grid {
@@ -508,6 +635,7 @@ header {
     font-size: 2.8rem;
     margin-bottom: 15px;
     color: var(--color-accent-purple);
+    transition: color var(--transition-speed) var(--transition-ease);
 }
 
 .system-name {
@@ -516,6 +644,7 @@ header {
     margin-bottom: 12px;
     color: var(--color-accent-green);
     font-family: var(--font-heading);
+    transition: color var(--transition-speed) var(--transition-ease);
 }
 
 .system-details {
@@ -555,6 +684,7 @@ header {
     text-align: center;
     border: 1px solid var(--color-border);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: background-color var(--transition-speed) var(--transition-ease), border-color var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease);
 }
 
 .contact-section h2 {
@@ -562,6 +692,7 @@ header {
     margin-bottom: 15px;
     font-family: var(--font-heading);
     font-size: 1.8rem;
+    transition: color var(--transition-speed) var(--transition-ease);
 }
 
 .form-group {
@@ -574,6 +705,7 @@ header {
     margin-bottom: 8px;
     color: #ddd;
     font-weight: 500;
+    transition: color var(--transition-speed) var(--transition-ease);
 }
 
 .form-group input,
@@ -630,6 +762,7 @@ header {
     font-family: var(--font-heading);
     font-weight: 600;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: background-color var(--transition-speed) var(--transition-ease), border-color var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease), color var(--transition-speed) var(--transition-ease);
 }
 
 /* --- DETALLES DEL JUEGO (Overlay) --- */
@@ -694,7 +827,6 @@ header {
 
 .details-header {
     position: relative;
-    overflow: hidden;
 }
 
 .details-image {
@@ -720,6 +852,7 @@ header {
     color: white;
     font-family: var(--font-heading);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: color var(--transition-speed) var(--transition-ease);
 }
 
 .details-body {
@@ -747,6 +880,7 @@ header {
     padding: 25px;
     margin: 25px 0;
     border: 1px solid var(--color-border);
+    transition: background-color var(--transition-speed) var(--transition-ease), border-color var(--transition-speed) var(--transition-ease);
 }
 
 .section h3 {
@@ -755,6 +889,7 @@ header {
     margin-bottom: 15px;
     font-family: var(--font-heading);
     font-size: 1.5rem;
+    transition: color var(--transition-speed) var(--transition-ease);
 }
 
 .requirements p {
@@ -766,6 +901,7 @@ header {
     color: #aaffee;
     border: 1px solid var(--color-border);
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: color var(--transition-speed) var(--transition-ease), border-color var(--transition-speed) var(--transition-ease);
 }
 
 .trailer-section {
@@ -781,6 +917,7 @@ header {
     margin-top: 15px;
     background: #000;
     border: 1px solid var(--color-border);
+    transition: border-color var(--transition-speed) var(--transition-ease);
 }
 
 .trailer-container iframe {
@@ -795,6 +932,7 @@ header {
 .download-options h3 {
     color: var(--color-accent-blue);
     margin-bottom: 20px;
+    transition: color var(--transition-speed) var(--transition-ease);
 }
 
 .links {
@@ -838,6 +976,7 @@ header {
 .comments-section h3 {
     color: var(--color-accent-purple);
     margin-bottom: 20px;
+    transition: color var(--transition-speed) var(--transition-ease);
 }
 
 .comments-list {
@@ -853,6 +992,7 @@ header {
     border-radius: var(--border-radius-sm);
     margin-bottom: 18px;
     border-left: 4px solid var(--color-accent-green);
+    transition: border-color var(--transition-speed) var(--transition-ease);
 }
 
 .comment-author {
@@ -860,6 +1000,7 @@ header {
     color: var(--color-accent-green);
     margin-bottom: 8px;
     font-size: 1rem;
+    transition: color var(--transition-speed) var(--transition-ease);
 }
 
 .add-comment {
@@ -917,6 +1058,7 @@ header {
 ::-webkit-scrollbar-thumb {
     background: var(--color-gradient-main);
     border-radius: 5px;
+    transition: background var(--transition-speed) var(--transition-ease);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -954,8 +1096,13 @@ header {
         gap: 20px;
     }
 
+    /* Ajustar altura del contenedor flip en móvil */
+    .game-card-container {
+        height: 280px;
+    }
+
     .game-image {
-        height: 220px;
+        height: 180px;
     }
 
     .details-content {
