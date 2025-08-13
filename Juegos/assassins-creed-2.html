@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assassins Creed 2 - GamesFullZ</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             background: #0f0f15;
             color: #e0e0ff;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -114,10 +117,12 @@
                      alt="Assassins Creed 2" class="game-detail-image">
                 <div class="game-detail-info">
                     <h1>Assassins Creed 2</h1>
-                    <div class="rating">⭐⭐⭐⭐☆</div>
-                    <p>
-                        Aventura y sigilo en el Renacimiento italiano siguiendo a Ezio Auditore 
-                        en su búsqueda de venganza.
+                    <div class="rating-downloads">
+                        <div class="rating">⭐⭐⭐⭐☆</div>
+                        <div class="downloads">Descargado por +0 usuarios</div>
+                    </div>
+                    <p class="game-description">
+                        Aventura y sigilo en el Renacimiento italiano siguiendo a Ezio Auditore en su búsqueda de venganza.
                     </p>
                 </div>
             </div>
@@ -125,39 +130,80 @@
             <div class="game-content">
                 <div class="section requirements">
                     <h2>Requisitos mínimos</h2>
-                    <p>
-                        Sistema Operativo: Windows XP/Vista
-                        Procesador: Intel Core 2 Duo 1.8 GHz
-                        Memoria RAM: 1.5 GB
-                        Tarjeta Gráfica: GeForce 7900 GS
-                        Almacenamiento: 8 GB disponibles
-                    </p>
+                    <p>Sistema Operativo: Windows XP/Vista<br>
+                       Procesador: Intel Core 2 Duo 1.8 GHz<br>
+                       Memoria RAM: 1.5 GB<br>
+                       Tarjeta Gráfica: GeForce 7900 GS<br>
+                       Almacenamiento: 8 GB disponibles</p>
                 </div>
                 
-                <div class="section">
+                <div class="section trailer-section">
                     <h2>Trailer del juego</h2>
                     <div class="trailer-container">
+                        <!-- Reemplaza con el ID real del video de YouTube si lo tienes -->
                         <iframe src="https://www.youtube.com/embed/XQxXyq56m9Y" 
                                 title="Assassins Creed 2 Trailer" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowfullscreen></iframe>
                     </div>
                 </div>
                 
-                <div class="section">
+                <div class="section download-options">
                     <h2>Descargar desde:</h2>
                     <div class="links">
-                        <a href="https://www.mediafire.com/file/gt7cklm07ifvkfz/Assassins+Creed+Il+Deluxe+Edition.torrent/file" 
-                           target="_blank" class="download-link">
+                        <a href="https://www.mediafire.com/file/gt7cklm07ifvkfz/Assassins+Creed+Il+Deluxe+Edition.torrent/file" target="_blank" class="download-link mediafire">
                             <i class="fas fa-file-download"></i> Mediafire
                         </a>
-                        <a href="https://gofile.io/d/bYr0O4" 
-                           target="_blank" class="download-link">
+                        <a href="https://gofile.io/d/bYr0O4" target="_blank" class="download-link gofile">
                             <i class="fas fa-cloud"></i> Gofile
                         </a>
+                    </div>
+                </div>
+                
+                <div class="section comments-section">
+                    <h2>Reseñas de usuarios</h2>
+                    <div class="comments-list" id="commentsContainer">
+                        
+                            <div class="comment">
+                                <div class="comment-author">Usuario Anónimo</div>
+                                <div class="comment-text">el mejor de la saga</div>
+                            </div>
+                        
+                            <div class="comment">
+                                <div class="comment-author">Usuario Anónimo</div>
+                                <div class="comment-text">siganme en tiktok xd</div>
+                            </div>
+                        
+                    </div>
+                    <div class="add-comment">
+                        <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput"></textarea>
+                        <button id="addCommentBtn">Publicar</button>
                     </div>
                 </div>
             </div>
         </main>
     </div>
+    
+    <script>
+        // Lógica para comentarios
+        document.getElementById('addCommentBtn').addEventListener('click', function () {
+            const input = document.getElementById('commentInput');
+            const commentsContainer = document.getElementById('commentsContainer');
+            
+            if (input && input.value.trim()) {
+                const commentText = input.value.trim();
+                
+                const div = document.createElement('div');
+                div.className = 'comment';
+                div.innerHTML = `
+                    <div class="comment-author">Tú</div>
+                    <div class="comment-text">${commentText}</div>
+                `;
+                
+                commentsContainer.appendChild(div);
+                input.value = '';
+            }
+        });
+    </script>
 </body>
 </html>
