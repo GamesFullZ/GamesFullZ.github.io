@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamesFullZ - Descarga Juegos Gratis</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fuentes modernas -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
     <!-- Iconos con Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google AdSense -->
@@ -13,11 +14,12 @@
     <style>
         /* --- ESTILOS BASE --- */
         :root {
+            /* Paleta de colores principal */
             --primary-dark: #0a0a0f;
-            --primary-blue: #1e3a8a; /* Azul oscuro */
-            --primary-red: #b91c1c;  /* Rojo oscuro */
-            --accent-blue: #3b82f6;  /* Azul brillante */
-            --accent-red: #ef4444;   /* Rojo brillante */
+            --primary-blue: #1e3a8a; /* Azul marino */
+            --primary-red: #b91c1c;   /* Rojo sangre */
+            --accent-blue: #3b82f6;   /* Azul brillante */
+            --accent-red: #ef4444;    /* Rojo coral */
             --text-light: #f0f0f5;
             --text-dark: #111827;
             --card-bg: rgba(30, 58, 138, 0.2); /* Azul con transparencia */
@@ -32,75 +34,12 @@
         }
 
         body {
-            font-family: 'Exo 2', sans-serif;
+            font-family: 'Exo 2', sans-serif; /* Fuente principal más moderna */
             background: var(--primary-dark);
             color: var(--text-light);
             line-height: 1.6;
+            min-height: 100vh;
             transition: background-color 0.3s, color 0.3s; /* Transición suave para temas */
-        }
-
-        body[data-theme="light"] {
-            background: #f0f2f5;
-            color: var(--text-dark);
-        }
-
-        body[data-theme="light"] header {
-            background: #ffffff;
-            border-bottom: 1px solid #ddd;
-        }
-
-        body[data-theme="light"] .search-container input,
-        body[data-theme="light"] #theme-selector,
-        body[data-theme="light"] .form-group input,
-        body[data-theme="light"] .form-group textarea,
-        body[data-theme="light"] .add-comment textarea {
-            background: #ffffff;
-            color: var(--text-dark);
-            border: 1px solid #ddd;
-        }
-
-        body[data-theme="light"] .game-card,
-        body[data-theme="light"] .section,
-        body[data-theme="light"] .contact-section,
-        body[data-theme="light"] .thank-you,
-        body[data-theme="light"] .poll-section,
-        body[data-theme="light"] .filters-section {
-            background: rgba(255, 255, 255, 0.7);
-            color: var(--text-dark);
-        }
-
-        body[data-theme="light"] .game-title {
-            color: var(--primary-blue);
-        }
-
-        body[data-theme="light"] .btn-load-more,
-        body[data-theme="light"] .nav-button,
-        body[data-theme="light"] .boton-telegram,
-        body[data-theme="light"] .system-link,
-        body[data-theme="light"] .download-link,
-        body[data-theme="light"] .add-comment button,
-        body[data-theme="light"] .contact-section button,
-        body[data-theme="light"] .vote-btn {
-            background: #e5e7eb;
-            color: var(--text-dark);
-            border: 1px solid #ccc;
-        }
-
-        body[data-theme="light"] .nav-button.active,
-        body[data-theme="light"] .btn-load-more:hover,
-        body[data-theme="light"] .add-comment button:hover,
-        body[data-theme="light"] .contact-section button:hover,
-        body[data-theme="light"] .vote-btn:hover {
-            background: var(--accent-blue);
-            color: white;
-            border-color: var(--accent-blue);
-        }
-
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
         }
 
         /* --- HEADER --- */
@@ -122,7 +61,7 @@
         }
 
         .logo {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Orbitron', sans-serif; /* Fuente tecnológica para el logo */
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--accent-blue);
@@ -241,11 +180,11 @@
         .content-section {
             display: none;
             padding: 20px 0;
+            animation: fadeIn 0.4s ease-out; /* Animación más corta */
         }
 
         .content-section.active {
             display: block;
-            animation: fadeIn 0.4s ease-out; /* Animación más corta */
         }
 
         @keyframes fadeIn {
@@ -301,32 +240,6 @@
             color: white;
             font-family: 'Exo 2', sans-serif;
         }
-
-        body[data-theme="light"] .filter-group select,
-        body[data-theme="light"] .filter-group input {
-             background: #ffffff;
-             color: var(--text-dark);
-        }
-
-        .random-btn {
-             background: linear-gradient(45deg, var(--primary-red), var(--accent-red));
-             color: white;
-             border: none;
-             padding: 10px 15px;
-             border-radius: 5px;
-             font-weight: 600;
-             cursor: pointer;
-             display: flex;
-             align-items: center;
-             gap: 8px;
-             transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-         .random-btn:hover {
-             transform: translateY(-2px);
-             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-         }
-
 
         /* --- GALERÍA DE JUEGOS --- */
         .gallery__container {
@@ -395,28 +308,6 @@
 
         .rating {
             color: #FFD700; /* Amarillo oro para las estrellas */
-        }
-
-        /* --- BOTÓN DE CARGA MÁS --- */
-        .load-more-container {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .btn-load-more {
-            padding: 12px 30px;
-            background: var(--card-bg);
-            color: var(--accent-blue);
-            border: 1px solid var(--border-color);
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease; /* Transición más rápida */
-            font-size: 1rem;
-        }
-
-        .btn-load-more:hover {
-            background: rgba(59, 130, 246, 0.3);
         }
 
         /* --- ENCUESTAS --- */
@@ -522,8 +413,8 @@
             background: rgba(26, 26, 35, 0.95);
             border-radius: 15px;
             overflow: hidden;
-            max-width: 1000px;
-            margin: 40px auto;
+            max-width: 900px; /* Ancho máximo reducido */
+            margin: 40px auto; /* Centrado vertical con margen */
             border: 1px solid var(--border-color);
             box-shadow: var(--hover-shadow);
         }
@@ -556,7 +447,7 @@
 
         .details-image {
             width: 100%;
-            height: 300px;
+            height: 250px; /* Altura reducida */
             object-fit: cover;
             display: block;
         }
@@ -571,10 +462,14 @@
         }
 
         .details-title {
-            font-size: 2rem;
+            font-size: 1.8rem; /* Tamaño reducido */
             margin: 0;
             color: white;
             font-family: 'Orbitron', sans-serif;
+        }
+
+        .details-body {
+            padding: 20px;
         }
 
         .details-rating-downloads {
@@ -584,10 +479,6 @@
             padding: 10px 0;
             border-bottom: 1px solid var(--border-color);
             border-top: 1px solid var(--border-color);
-        }
-
-        .details-body {
-            padding: 20px;
         }
 
         .details-description {
@@ -839,7 +730,15 @@
             }
 
             .details-image {
-                height: 200px;
+                height: 200px; /* Altura aún menor en móviles */
+            }
+
+            .details-title {
+                font-size: 1.5rem; /* Tamaño aún menor en móviles */
+            }
+
+            .details-content {
+                margin: 20px auto; /* Menos margen en móviles */
             }
         }
     </style>
@@ -869,10 +768,10 @@
     <nav class="main-nav">
         <div class="container">
             <div class="nav-buttons">
-                <button class="nav-button active" data-target="games">
+                <button class="nav-button active" data-section="games">
                     <i class="fas fa-gamepad"></i> 🎮 Juegos
                 </button>
-                <button class="nav-button" data-target="polls">
+                <button class="nav-button" data-section="polls">
                     <i class="fas fa-poll"></i> 📊 Encuestas
                 </button>
             </div>
@@ -888,9 +787,7 @@
              <div class="filters-section">
                  <div class="filters-header">
                      <h2><i class="fas fa-filter"></i> Filtros Avanzados</h2>
-                     <button class="random-btn" id="randomGameBtn">
-                         <i class="fas fa-random"></i> Juego Aleatorio
-                     </button>
+                     <button class="random-btn" id="randomGameBtn">🎲 Juego Aleatorio</button>
                  </div>
                  <div class="filter-options">
                      <div class="filter-group">
@@ -901,6 +798,7 @@
                              <option value="aventura">Aventura</option>
                              <option value="terror">Terror</option>
                              <option value="estrategia">Estrategia</option>
+                             <option value="rpg">RPG</option>
                          </select>
                      </div>
                      <div class="filter-group">
@@ -922,7 +820,7 @@
                          </select>
                      </div>
                      <div class="filter-group">
-                         <label for="graphicsFilter">Gráficos</label>
+                         <label for="graphicsFilter">Tarjeta Gráfica</label>
                          <select id="graphicsFilter">
                              <option value="">Cualquiera</option>
                              <option value="nvidia">NVIDIA</option>
@@ -936,11 +834,6 @@
             <!-- Galería de juegos -->
             <div class="gallery__container" id="gallery">
                 <!-- Los juegos se cargarán dinámicamente -->
-            </div>
-
-            <!-- Botón para ver más juegos - Oculto por defecto si se cargan todos -->
-            <div class="load-more-container" id="loadMoreContainer" style="display: none;">
-                <button id="loadMoreBtn" class="btn-load-more">Ver más juegos ↓</button>
             </div>
         </section>
 
@@ -1123,7 +1016,7 @@
                  "God of War: Ragnarök": "2btlPD2N2IU", // Ejemplo real
                  "Peak": "2uRoh0", // Ejemplo, reemplaza con ID real
                  "Sons of the Forest": "c2B4Cd", // Ejemplo, reemplaza con ID real
-                 "Deltarune": "x9dhme", // Ejemplo, reemplaza con ID real
+                 "Deltarune": "dQw4w9WgXcQ", // Ejemplo, reemplaza con ID real
                  "LEGO Marvel Super Heroes": "78ptPe", // Ejemplo, reemplaza con ID real
                  "Call of Duty: Black Ops 2": "Js6Zsk", // Ejemplo, reemplaza con ID real
                  "The Quarry": "bYr0O4", // Ejemplo, reemplaza con ID real
@@ -1131,12 +1024,13 @@
                  "Bendy and the Dark Revivalo": "Qax9uu", // Ejemplo, reemplaza con ID real
                  "Call of Juarez: Gunslinger": "DDlRTY", // Ejemplo, reemplaza con ID real
                  "Far Cry 3": "2uRoh0", // Ejemplo, reemplaza con ID real
-                 "Call of Duty: Modern Warfare 3": "c2B4Cd", // Ejemplo, reemplaza con ID real
-                 "Lego Batman 2 DC": "78ptPe", // Ejemplo, reemplaza con ID real
-                 "Jurassic World Evolution 2": "Js6Zsk", // Ejemplo, reemplaza con ID real
-                 "Far Cry 5": "bYr0O4", // Ejemplo, reemplaza con ID real
-                 "Fnaf Collection": "avMKZl", // Ejemplo, reemplaza con ID real
-
+                 "Call of Duty: Modern Warfare 3": "ioxs8mh1bgafbxl", // Ejemplo real
+                 "Lego Batman 2 DC": "n1juuplitqdaj57", // Ejemplo real
+                 "Jurassic World Evolution 2": "d8q331qkl5527mn", // Ejemplo real
+                 "Far Cry 5": "lg6fpmp3f2uhuho", // Ejemplo real
+                 "Fnaf Collection": "sbws8mnvrtkjno0", // Ejemplo real
+                 "Resident Evil 7: Biohazard": "uqduzvrhkb01kth", // Ejemplo real
+                 // ... añade más juegos y sus IDs de YouTube ...
              };
              return trailerMap[gameName] || "dQw4w9WgXcQ"; // Video por defecto si no se encuentra
         }
@@ -1158,38 +1052,6 @@
              if (requisitosText.toLowerCase().includes('amd') || requisitosText.toLowerCase().includes('radeon')) return 'amd';
              if (requisitosText.toLowerCase().includes('intel')) return 'intel';
              return '';
-        }
-
-
-        // --- FUNCIONES DE DOM ---
-        function showNotification(message) {
-             // Crear un elemento de notificación simple
-             const notification = document.createElement('div');
-             notification.textContent = message;
-             notification.style.position = 'fixed';
-             notification.style.bottom = '20px';
-             notification.style.right = '20px';
-             notification.style.backgroundColor = 'rgba(50, 50, 50, 0.9)';
-             notification.style.color = 'white';
-             notification.style.padding = '12px 20px';
-             notification.style.borderRadius = '8px';
-             notification.style.zIndex = '9999';
-             notification.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
-             notification.style.fontSize = '14px';
-             document.body.appendChild(notification);
-
-             // Eliminar la notificación después de 3 segundos
-             setTimeout(() => {
-                 if (notification.parentNode) {
-                     notification.style.opacity = '0';
-                     notification.style.transition = 'opacity 0.5s ease';
-                     setTimeout(() => {
-                         if (notification.parentNode) {
-                             notification.parentNode.removeChild(notification);
-                         }
-                     }, 500);
-                 }
-             }, 3000);
         }
 
         function scrollToTop() {
@@ -1317,6 +1179,8 @@
                          } else if (category === 'estrategia') {
                              // Puedes añadir más condiciones aquí
                              matchesCategory = lowerDesc.includes('estrategia') || lowerDesc.includes('strategy');
+                         } else if (category === 'rpg') {
+                             matchesCategory = lowerName.includes('elderscrolls') || lowerName.includes('skyrim') || lowerName.includes('witcher') || lowerDesc.includes('rpg') || lowerDesc.includes('role-playing');
                          }
                      }
 
@@ -1342,8 +1206,6 @@
                  });
 
                  displayGames(filteredGames);
-                 // Ocultar el botón "Ver más" si se está filtrando
-                 document.getElementById('loadMoreContainer').style.display = (searchTerm || category || minRam || processor || graphics) ? 'none' : 'block';
             }
 
 
@@ -1351,7 +1213,7 @@
             const navButtons = document.querySelectorAll('.nav-button');
             navButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    const targetSection = button.getAttribute('data-target');
+                    const targetSection = button.getAttribute('data-section');
 
                     // Actualizar botones activos
                     navButtons.forEach(btn => btn.classList.remove('active'));
@@ -1392,7 +1254,7 @@
             document.getElementById('voteBtn').addEventListener('click', function() {
                  const selectedOption = document.querySelector('input[name="poll"]:checked');
                  if (!selectedOption) {
-                     showNotification("❌ Por favor, selecciona una opción.");
+                     alert("❌ Por favor, selecciona una opción.");
                      return;
                  }
 
@@ -1410,7 +1272,7 @@
                  document.getElementById('pollResults').style.display = 'block';
                  updatePollResults();
 
-                 showNotification("✅ ¡Gracias por tu voto!");
+                 alert("✅ ¡Gracias por tu voto!");
             });
 
 
@@ -1425,12 +1287,12 @@
             document.getElementById('randomGameBtn').addEventListener('click', function() {
                  const juegos = recursos.filter(g => g.tipo === 'juego');
                  if (juegos.length === 0) {
-                     showNotification("❌ No hay juegos disponibles.");
+                     alert("❌ No hay juegos disponibles.");
                      return;
                  }
                  const random = juegos[Math.floor(Math.random() * juegos.length)];
                  showGameDetails(random);
-                 showNotification(`🎲 Juego aleatorio: ${random.nombre}`);
+                 alert(`🎲 Juego aleatorio: ${random.nombre}`);
             });
 
             // --- CAMBIO DE TEMA ---
@@ -1463,7 +1325,7 @@
                  const input = document.getElementById('commentInput');
                  const commentsContainer = document.getElementById('detailsComments');
 
-                 if (input && input.value.trim()) {
+                 if (input && input.value.trim() && commentsContainer) {
                      const commentText = input.value.trim();
 
                      const div = document.createElement('div');
@@ -1481,7 +1343,6 @@
 
                      commentsContainer.appendChild(div);
                      input.value = '';
-                     showNotification("✅ Comentario añadido.");
                  }
             });
 
@@ -1489,8 +1350,6 @@
             // --- INICIALIZACIÓN ---
             // Cargar todos los juegos al inicio
             displayGames(recursos.filter(g => g.tipo === 'juego'));
-            // Ocultar el botón "Ver más" porque se cargan todos
-            document.getElementById('loadMoreContainer').style.display = 'none';
 
         });
     </script>
