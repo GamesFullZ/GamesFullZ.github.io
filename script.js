@@ -1,4 +1,4 @@
-// script.js
+// script.js - Corregido y mejorado
 
 document.addEventListener('DOMContentLoaded', function () {
     // --- REFERENCIAS A ELEMENTOS DEL DOM ---
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('searchInput');
     const contactForm = document.querySelector('.contact-section form');
     const gameDetailsOverlay = document.getElementById('gameDetailsOverlay');
-    const closeDetailsBtn = document.getElementById('closeDetails');
+    const closeDetailsBtn = document.querySelector('#gameDetailsOverlay .close'); // Selector más específico
     const detailsImage = document.getElementById('detailsImage');
     const detailsTitle = document.getElementById('detailsTitle');
     const detailsRating = document.getElementById('detailsRating');
@@ -20,33 +20,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const commentInput = document.getElementById('commentInput');
     const addCommentBtn = document.getElementById('addCommentBtn');
     const randomGameBtn = document.getElementById('randomGameBtn');
-    const categoryFilter = document.getElementById('categoryFilter');
-    const minRamFilter = document.getElementById('minRamFilter');
-    const processorFilter = document.getElementById('processorFilter');
-    const graphicsFilter = document.getElementById('graphicsFilter');
-    const navButtons = document.querySelectorAll('.nav-button');
-    const sections = document.querySelectorAll('.content-section');
-    const voteBtn = document.getElementById('voteBtn');
-    const pollOptionsContainer = document.getElementById('pollOptions');
-    const pollResultsContainer = document.getElementById('pollResults');
-    const totalVotesSpan = document.getElementById('totalVotes');
-
-    // --- VARIABLES DE ESTADO ---
-    let pollData = {
-        assassins: 45,
-        resident: 30,
-        call: 15,
-        god: 10
-    };
-    let totalVotes = 100;
-    const VOTE_KEY = 'gamesfullz_poll_vote';
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
 
     // --- VERIFICACIÓN DE DATOS ---
     if (typeof recursos === 'undefined' || !Array.isArray(recursos)) {
-        console.error('❌ Error: No se encontraron los datos de juegos (recursos) o no es un array. Asegúrate de incluir data.js correctamente antes de este script.');
+        console.error('❌ Error: No se encontraron los datos de juegos (recursos) o no es un array.');
         if (gallery) gallery.innerHTML = '<p style="color:red; text-align:center; grid-column: 1 / -1;">Error crítico: Datos de juegos no disponibles.</p>';
         return;
     }
+
+    // --- VARIABLES DE ESTADO ---
+    let displayedGames = 0;
+    const gamesPerLoad = 6; // Mostrar 6 juegos inicialmente
 
     // --- FUNCIONES DE UTILIDAD ---
     function formatNumber(num) {
@@ -54,25 +39,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: 'smooth' };
     }
 
     function getTrailerId(gameName) {
+        // Mapa de nombres de juegos a IDs de YouTube
         const trailerMap = {
             "Resident Evil 4": "RgYqQsbKn6w",
-            "Resident Evil 7: Biohazard": "Nwl3RkEHK4c",
             "Dead Island": "qBmHIX5Xrk4",
             "Postal 2": "u8D5rkcX78M",
             "Left 4 Dead 2": "ZR3OX5uJN8",
             "Call of Duty: Black Ops 1": "IRgJgpLwT4w",
-            "Assassins Creed 2": "XQxXyq56m9Y",
             "Red Dead Redemption 1": "EjKiSr6v2R8",
             "Payday 2": "x9dhme",
             "Battlefield 2": "DDlRTY",
             "God of War (2018)": "K0OO5w8Q0MI",
             "God of War: Ragnarök": "2btlPD2N2IU",
-            "Deltarune": "dQw4w9WgXcQ",
+            "Peak": "2uRoh0",
             "Sons of the Forest": "c2B4Cd",
+            "Deltarune": "dQw4w9WgXcQ",
+            "LEGO Marvel Super Heroes": "bzh8jle3p3i7eil",
+            "Call of Duty: Black Ops 2": "cwdumqbqjz3j3nb",
             "The Quarry": "bYr0O4",
             "Bendy and the Ink Machine": "avMKZl",
             "Bendy and the Dark Revivalo": "Qax9uu",
@@ -80,33 +67,14 @@ document.addEventListener('DOMContentLoaded', function () {
             "Far Cry 3": "2uRoh0",
             "Call of Duty: Modern Warfare 3": "ioxs8mh1bgafbxl",
             "Lego Batman 2 DC": "n1juuplitqdaj57",
+            "Assassins Creed 2 ": "gt7cklm07ifvkfz",
             "Jurassic World Evolution 2": "d8q331qkl5527mn",
             "Far Cry 5": "lg6fpmp3f2uhuho",
             "Fnaf Collection": "sbws8mnvrtkjno0",
-            "Peak": "2uRoh0",
-            "LEGO Marvel Super Heroes": "bzh8jle3p3i7eil",
-            "Call of Duty: Black Ops 2": "cwdumqbqjz3j3nb",
-            // ... añade más mappings ...
+            "Resident Evil 7: Biohazard": "uqduzvrhkb01kth"
+            // ... añade más mappings según necesites
         };
-        return trailerMap[gameName] || "dQw4w9WgXcQ"; // Fallback
-    }
-
-    function extractRam(requisitosText) {
-        const ramMatch = requisitosText.match(/(\d+)\s*GB/i) || requisitosText.match(/(\d+(?:\.\d+)?)\s*GB/i);
-        return ramMatch ? parseInt(ramMatch[1], 10) : 0;
-    }
-
-    function extractProcessor(requisitosText) {
-        if (requisitosText.toLowerCase().includes('intel')) return 'intel';
-        if (requisitosText.toLowerCase().includes('amd')) return 'amd';
-        return '';
-    }
-
-    function extractGraphics(requisitosText) {
-        if (requisitosText.toLowerCase().includes('nvidia') || requisitosText.toLowerCase().includes('geforce')) return 'nvidia';
-        if (requisitosText.toLowerCase().includes('amd') || requisitosText.toLowerCase().includes('radeon')) return 'amd';
-        if (requisitosText.toLowerCase().includes('intel')) return 'intel';
-        return '';
+        return trailerMap[gameName] || "dQw4w9WgXcQ"; // Fallback a un video por defecto
     }
 
     // --- FUNCIONES PARA MOSTRAR DATOS ---
@@ -124,48 +92,44 @@ document.addEventListener('DOMContentLoaded', function () {
             if (game.tipo === 'juego') {
                 const gameCard = document.createElement('div');
                 gameCard.className = 'game-card';
-                gameCard.innerHTML = `
-                    <img src="${game.imagen}" alt="${game.nombre}" class="game-image" loading="lazy">
-                    <div class="game-info">
-                        <h3 class="game-title">${game.nombre}</h3>
-                        <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
-                        <div class="game-meta">
-                            <span class="rating">${game.rating}</span>
-                            <span class="downloads">${formatNumber(game.downloads)} descargas</span>
+                // Creamos la imagen sin onerror inline
+                const img = document.createElement('img');
+                img.src = game.imagen;
+                img.alt = game.nombre;
+                img.className = 'game-image';
+                img.loading = 'lazy';
+                
+                // Añadimos el event listener para manejar errores
+                img.addEventListener('error', function handleError() {
+                    console.warn(`⚠️ Imagen no encontrada: ${game.imagen}`);
+                    // Creamos un div de fallback
+                    const fallbackDiv = document.createElement('div');
+                    fallbackDiv.className = 'game-image image-error';
+                    fallbackDiv.innerHTML = `
+                        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; padding:10px; text-align:center;">
+                            <i class="fas fa-image" style="font-size:2rem; margin-bottom:10px; color:var(--color-accent-purple);"></i>
+                            <span style="font-size:0.8rem;">Imagen no disponible</span>
+                            <span style="font-size:0.7rem; margin-top:5px;">${game.nombre}</span>
                         </div>
+                    `;
+                    // Reemplazamos la imagen por el div de fallback
+                    this.parentNode.replaceChild(fallbackDiv, this);
+                });
+
+                const gameInfo = document.createElement('div');
+                gameInfo.className = 'game-info';
+                gameInfo.innerHTML = `
+                    <h3 class="game-title">${game.nombre}</h3>
+                    <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
+                    <div class="game-meta">
+                        <span class="rating">${game.rating}</span>
+                        <span class="downloads">${formatNumber(game.downloads)} descargas</span>
                     </div>
                 `;
-                // Añadir evento de clic a la tarjeta
+
+                gameCard.appendChild(img);
+                gameCard.appendChild(gameInfo);
                 gameCard.addEventListener('click', () => showGameDetails(game));
-                
-                // Añadir manejador de error de imagen DESPUÉS de insertar en el DOM
-                const imgElement = gameCard.querySelector('.game-image');
-                if (imgElement) {
-                    imgElement.addEventListener('error', function() {
-                        // Evita ejecutar el manejador de error de nuevo si ya se ejecutó
-                        if (this.dataset.errorHandled) return;
-                        this.dataset.errorHandled = 'true';
-
-                        // Crea el contenido de fallback
-                        const fallbackHTML = `
-                            <div class="game-image image-error">
-                                <i class="fas fa-image" style="font-size: 2rem; margin-bottom: 10px;"></i>
-                                <span>Imagen no disponible</span>
-                            </div>
-                            <div class="game-info">
-                                <h3 class="game-title">${game.nombre}</h3>
-                                <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
-                                <div class="game-meta">
-                                    <span class="rating">${game.rating}</span>
-                                    <span class="downloads">${formatNumber(game.downloads)} descargas</span>
-                                </div>
-                            </div>
-                        `;
-                        // Reemplaza el contenido de la tarjeta
-                        this.closest('.game-card').innerHTML = fallbackHTML;
-                    });
-                }
-
                 fragment.appendChild(gameCard);
             }
         });
@@ -175,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function showGameDetails(game) {
         if (!gameDetailsOverlay) return;
 
-        // Llenar datos del juego
         if (detailsImage) detailsImage.src = game.imagen;
         if (detailsImage) detailsImage.alt = game.nombre;
         if (detailsTitle) detailsTitle.textContent = game.nombre;
@@ -183,22 +146,19 @@ document.addEventListener('DOMContentLoaded', function () {
         if (detailsDownloads) detailsDownloads.textContent = `Descargado por +${formatNumber(game.downloads)} usuarios`;
         if (detailsDescription) detailsDescription.textContent = game.descripcion;
 
-        // Formatear y mostrar requisitos
         if (detailsRequirements) {
+            // Asumimos que game.requisitos es un string HTML
             detailsRequirements.innerHTML = game.requisitos || 'Información no disponible.';
         }
 
-        // Configurar trailer (CORREGIDO: Eliminado espacio extra)
         if (trailerFrame) {
             const trailerId = getTrailerId(game.nombre);
-            trailerFrame.src = `https://www.youtube.com/embed/${trailerId}`; 
+            trailerFrame.src = `https://www.youtube.com/embed/${trailerId}`;
         }
 
-        // Configurar enlaces de descarga
         if (linkGofile) linkGofile.href = (game.links.direct || "#").trim();
         if (linkMediafire) linkMediafire.href = (game.links.mediafire || "#").trim();
 
-        // Mostrar comentarios
         if (detailsComments) {
             detailsComments.innerHTML = '';
             if (game.comments && game.comments.length > 0) {
@@ -216,131 +176,106 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        // Mostrar overlay
         gameDetailsOverlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
         scrollToTop();
     }
 
     function closeGameDetails() {
         if (gameDetailsOverlay) {
             gameDetailsOverlay.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
-        // Pausar el vídeo del trailer al cerrar
         if (trailerFrame) {
-            trailerFrame.src = '';
+            trailerFrame.src = ''; // Pausa el video
         }
     }
 
     // --- FUNCIONES DE FILTRO Y BÚSQUEDA ---
     function applyFiltersAndSearch() {
         const term = searchInput ? searchInput.value.toLowerCase() : '';
-        const category = categoryFilter ? categoryFilter.value.toLowerCase() : '';
-        const minRam = minRamFilter ? minRamFilter.value : '';
-        const processor = processorFilter ? processorFilter.value.toLowerCase() : '';
-        const graphics = graphicsFilter ? graphicsFilter.value.toLowerCase() : '';
-
+        
         const filteredGames = recursos.filter(game => {
             if (game.tipo !== 'juego') return false;
 
             const matchesSearch = game.nombre.toLowerCase().includes(term) ||
                                    game.descripcion.toLowerCase().includes(term);
-
-            let matchesCategory = true;
-            if (category) {
-                const lowerName = game.nombre.toLowerCase();
-                const lowerDesc = game.descripcion.toLowerCase();
-                if (category === 'accion') {
-                    matchesCategory = lowerName.includes('cod') || lowerName.includes('call of duty') || lowerName.includes('battlefield') || lowerDesc.includes('acción') || lowerDesc.includes('action');
-                } else if (category === 'aventura') {
-                    matchesCategory = lowerName.includes('assassins') || lowerName.includes('ac') || lowerName.includes('god of war') || lowerDesc.includes('aventura') || lowerDesc.includes('adventure');
-                } else if (category === 'terror') {
-                    matchesCategory = lowerName.includes('resident evil') || lowerName.includes('dead island') || lowerName.includes('bendy') || lowerDesc.includes('terror') || lowerDesc.includes('horror');
-                } else if (category === 'estrategia') {
-                    matchesCategory = lowerDesc.includes('estrategia') || lowerDesc.includes('strategy');
-                } else if (category === 'rpg') {
-                    matchesCategory = lowerName.includes('elderscrolls') || lowerName.includes('skyrim') || lowerName.includes('witcher') || lowerDesc.includes('rpg') || lowerDesc.includes('role-playing');
-                }
-            }
-
-            let matchesRam = true;
-            if (minRam) {
-                const gameRam = extractRam(game.requisitos);
-                matchesRam = gameRam >= parseInt(minRam);
-            }
-
-            let matchesProcessor = true;
-            if (processor) {
-                const gameProc = extractProcessor(game.requisitos);
-                matchesProcessor = gameProc.includes(processor);
-            }
-
-            let matchesGraphics = true;
-            if (graphics) {
-                const gameGraph = extractGraphics(game.requisitos);
-                matchesGraphics = gameGraph.includes(graphics);
-            }
-
-            return matchesSearch && matchesCategory && matchesRam && matchesProcessor && matchesGraphics;
+            return matchesSearch;
         });
 
         displayGames(filteredGames);
     }
 
-    // --- FUNCIONES PARA ENCUESTAS ---
-    function updatePollResults() {
-        for (const [key, value] of Object.entries(pollData)) {
-            const percent = Math.round((value / totalVotes) * 100);
-            const percentSpan = document.getElementById(`${key}Percent`);
-            const barFill = document.getElementById(`${key}Bar`);
-            if (percentSpan) percentSpan.textContent = `${percent}%`;
-            if (barFill) barFill.style.width = `${percent}%`;
-        }
-        if (totalVotesSpan) totalVotesSpan.textContent = totalVotes;
-    }
-
-    function handleVote() {
-        const selectedOption = document.querySelector('input[name="poll"]:checked');
-        if (!selectedOption) {
-            alert("❌ Por favor, selecciona una opción.");
+    // --- FUNCIONES PARA CARGAR MÁS JUEGOS ---
+    function loadMoreGames() {
+        const nextGames = recursos.slice(displayedGames, displayedGames + gamesPerLoad);
+        if (nextGames.length === 0) {
+            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
             return;
         }
-        const voteValue = selectedOption.value;
 
-        pollData[voteValue]++;
-        totalVotes++;
+        const fragment = document.createDocumentFragment();
+        nextGames.forEach(game => {
+            if (game.tipo === 'juego') {
+                const gameCard = document.createElement('div');
+                gameCard.className = 'game-card';
+                
+                const img = document.createElement('img');
+                img.src = game.imagen;
+                img.alt = game.nombre;
+                img.className = 'game-image';
+                img.loading = 'lazy';
+                
+                img.addEventListener('error', function handleError() {
+                    console.warn(`⚠️ Imagen no encontrada: ${game.imagen}`);
+                    const fallbackDiv = document.createElement('div');
+                    fallbackDiv.className = 'game-image image-error';
+                    fallbackDiv.innerHTML = `
+                        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; padding:10px; text-align:center;">
+                            <i class="fas fa-image" style="font-size:2rem; margin-bottom:10px; color:var(--color-accent-purple);"></i>
+                            <span style="font-size:0.8rem;">Imagen no disponible</span>
+                            <span style="font-size:0.7rem; margin-top:5px;">${game.nombre}</span>
+                        </div>
+                    `;
+                    this.parentNode.replaceChild(fallbackDiv, this);
+                });
 
-        localStorage.setItem(VOTE_KEY, voteValue);
+                const gameInfo = document.createElement('div');
+                gameInfo.className = 'game-info';
+                gameInfo.innerHTML = `
+                    <h3 class="game-title">${game.nombre}</h3>
+                    <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
+                    <div class="game-meta">
+                        <span class="rating">${game.rating}</span>
+                        <span class="downloads">${formatNumber(game.downloads)} descargas</span>
+                    </div>
+                `;
 
-        if (pollOptionsContainer) pollOptionsContainer.style.display = 'none';
-        if (voteBtn) voteBtn.style.display = 'none';
-        if (pollResultsContainer) pollResultsContainer.style.display = 'block';
-
-        updatePollResults();
-        alert("✅ ¡Gracias por tu voto!");
-    }
-
-    function loadPollState() {
-        const savedVote = localStorage.getItem(VOTE_KEY);
-        if (savedVote) {
-            const radioToCheck = document.querySelector(`input[name="poll"][value="${savedVote}"]`);
-            if (radioToCheck) radioToCheck.checked = true;
-            if (pollOptionsContainer) pollOptionsContainer.style.display = 'none';
-            if (voteBtn) voteBtn.style.display = 'none';
-            if (pollResultsContainer) pollResultsContainer.style.display = 'block';
-            updatePollResults();
-        }
-    }
-
-    // --- NAVEGACIÓN ENTRE SECCIONES ---
-    function switchSection(targetSectionId) {
-        sections.forEach(section => {
-            section.classList.remove('active');
+                gameCard.appendChild(img);
+                gameCard.appendChild(gameInfo);
+                gameCard.addEventListener('click', () => showGameDetails(game));
+                fragment.appendChild(gameCard);
+            }
         });
-        const targetSection = document.getElementById(targetSectionId);
-        if (targetSection) {
-            targetSection.classList.add('active');
+
+        if (gallery) gallery.appendChild(fragment);
+        displayedGames += nextGames.length;
+
+        if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
+            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
         }
-        scrollToTop();
+    }
+
+    // --- FUNCIONES PARA JUEGO ALEATORIO ---
+    function randomGame() {
+        const juegos = recursos.filter(g => g.tipo === 'juego');
+        if (juegos.length === 0) {
+            alert("❌ No hay juegos disponibles.");
+            return;
+        }
+        const randomGame = juegos[Math.floor(Math.random() * juegos.length)];
+        showGameDetails(randomGame);
+        // alert(`🎲 Juego aleatorio: ${randomGame.nombre}`); // Opcional
     }
 
     // --- INICIALIZACIÓN DE EVENTOS ---
@@ -372,7 +307,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     detailsComments.children[0].tagName === 'P') {
                     detailsComments.innerHTML = '';
                 }
-
                 detailsComments.appendChild(div);
                 commentInput.value = '';
             }
@@ -383,37 +317,12 @@ document.addEventListener('DOMContentLoaded', function () {
         searchInput.addEventListener('input', applyFiltersAndSearch);
     }
 
-    const filterElements = [categoryFilter, minRamFilter, processorFilter, graphicsFilter];
-    filterElements.forEach(filter => {
-        if (filter) {
-            filter.addEventListener('change', applyFiltersAndSearch);
-        }
-    });
-
-    if (randomGameBtn) {
-        randomGameBtn.addEventListener('click', function() {
-            const juegos = recursos.filter(g => g.tipo === 'juego');
-            if (juegos.length === 0) {
-                alert("❌ No hay juegos disponibles.");
-                return;
-            }
-            const randomGame = juegos[Math.floor(Math.random() * juegos.length)];
-            showGameDetails(randomGame);
-            // alert(`🎲 Juego aleatorio: ${randomGame.nombre}`); // Opcional
-        });
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', loadMoreGames);
     }
 
-    navButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const targetSection = button.getAttribute('data-section');
-            navButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            switchSection(`${targetSection}-section`);
-        });
-    });
-
-    if (voteBtn) {
-        voteBtn.addEventListener('click', handleVote);
+    if (randomGameBtn) {
+        randomGameBtn.addEventListener('click', randomGame);
     }
 
     if (contactForm) {
@@ -425,8 +334,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // --- INICIALIZACIÓN FINAL ---
-    loadPollState();
-    displayGames(recursos.filter(g => g.tipo === 'juego')); // Mostrar juegos iniciales
+    // Cargar primeros juegos
+    const initialGames = recursos.filter(g => g.tipo === 'juego').slice(0, gamesPerLoad);
+    displayGames(initialGames);
+    displayedGames = initialGames.length;
+
+    if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
+        if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+    }
 
     // Manejo del cambio de tema (si se usa)
     window.changeTheme = function() {
