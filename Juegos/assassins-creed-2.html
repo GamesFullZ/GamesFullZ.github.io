@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assassins Creed 2  - GamesFullZ</title>
+    <title>Assassins Creed 2 - GamesFullZ</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -49,6 +48,8 @@
             min-width: 300px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            max-width: 100%;
+            height: auto;
         }
         .game-detail-info {
             flex: 2;
@@ -96,6 +97,7 @@
             font-family: 'Courier New', monospace;
             white-space: pre-line;
             color: #aaffff;
+            line-height: 1.6;
         }
         .trailer-section {
             text-align: center;
@@ -124,6 +126,7 @@
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
+            justify-content: center;
         }
         .download-link {
             display: flex;
@@ -216,9 +219,9 @@
         
         <main class="game-detail-page">
             <div class="game-detail-header">
-                <img src="../Images/AC2_GameName_Store_Portrait_1200x1600_1200x1600-2c5e000213988c5dde375bb2602e9986.jpg" alt="Assassins Creed 2 " class="game-detail-image">
+                <img src="../Images/AC2_GameName_Store_Portrait_1200x1600_1200x1600-2c5e000213988c5dde375bb2602e9986.jpg" alt="Assassins Creed 2" class="game-detail-image">
                 <div class="game-detail-info">
-                    <h1>Assassins Creed 2 </h1>
+                    <h1>Assassins Creed 2</h1>
                     <div class="rating-downloads">
                         <div class="rating">⭐⭐⭐⭐☆</div>
                         <div class="downloads">Descargado por +0 usuarios</div>
@@ -232,15 +235,15 @@
             <div class="game-content">
                 <div class="section requirements">
                     <h2>Requisitos mínimos</h2>
-                    <p>Windows XP/Vista, Intel Core 2 Duo 1.8 GHz, 1.5 GB RAM, GeForce 7900 GS, 8 GB espacio.</p>
+                    <p>Windows XP/Vista<br>Intel Core 2 Duo 1.8 GHz<br>1.5 GB RAM<br>GeForce 7900 GS<br>8 GB espacio disponible</p>
                 </div>
                 
                 <div class="section trailer-section">
                     <h2>Trailer del juego</h2>
                     <div class="trailer-container">
-                        <!-- Reemplaza con el ID real del video de YouTube si lo tienes -->
-                        <iframe src="https://www.youtube.com/embed/?controls=1" 
-                            title="Assassins Creed 2  Trailer" 
+                        <!-- Trailer oficial de Assassin's Creed 2 -->
+                        <iframe src="https://www.youtube.com/embed/XQxXyq56m9Y" 
+                            title="Assassins Creed 2 Trailer" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen></iframe>
                     </div>
@@ -249,11 +252,11 @@
                 <div class="section download-options">
                     <h2>Descargar desde:</h2>
                     <div class="links">
-                        <a href="https://www.mediafire.com/file/gt7cklm07ifvkfz/Assassins+Creed+Il+Deluxe+Edition.torrent/file" target="_blank" class="download-link gofile">
-                            <i class="fas fa-cloud"></i> Gofile
-                        </a>
                         <a href="https://www.mediafire.com/file/gt7cklm07ifvkfz/Assassins+Creed+Il+Deluxe+Edition.torrent/file" target="_blank" class="download-link mediafire">
                             <i class="fas fa-file-download"></i> Mediafire
+                        </a>
+                        <a href="https://gofile.io/d/bYr0O4" target="_blank" class="download-link gofile">
+                            <i class="fas fa-cloud"></i> Gofile
                         </a>
                     </div>
                 </div>
@@ -261,17 +264,14 @@
                 <div class="section comments-section">
                     <h2>Reseñas de usuarios</h2>
                     <div class="comments-list" id="commentsContainer">
-                        
-                            <div class="comment">
-                                <div class="comment-author">Usuario Anónimo</div>
-                                <div class="comment-text">el mejor de la saga</div>
-                            </div>
-                        
-                            <div class="comment">
-                                <div class="comment-author">Usuario Anónimo</div>
-                                <div class="comment-text">siganme en tiktok xd</div>
-                            </div>
-                        
+                        <div class="comment">
+                            <div class="comment-author">Usuario Anónimo</div>
+                            <div class="comment-text">el mejor de la saga</div>
+                        </div>
+                        <div class="comment">
+                            <div class="comment-author">Usuario Anónimo</div>
+                            <div class="comment-text">siganme en tiktok xd</div>
+                        </div>
                     </div>
                     <div class="add-comment">
                         <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput"></textarea>
@@ -297,12 +297,6 @@
                     <div class="comment-author">Tú</div>
                     <div class="comment-text">${commentText}</div>
                 `;
-                
-                // Si solo hay el mensaje de "no hay comentarios", reemplazarlo
-                if (commentsContainer.children.length === 1 && 
-                    commentsContainer.children[0].tagName === 'P') {
-                    commentsContainer.innerHTML = '';
-                }
                 
                 commentsContainer.appendChild(div);
                 input.value = '';
