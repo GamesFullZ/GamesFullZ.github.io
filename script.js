@@ -133,18 +133,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const gameCard = document.createElement('div');
         gameCard.className = 'game-card';
         // Corrección: Simplificamos el onerror para solo añadir una clase
-        gameCard.innerHTML = `
-            <img src="${game.imagen}" alt="${game.nombre}" class="game-image" onerror="this.classList.add('image-error');">
-            <div class="game-info">
-                <h3 class="game-title">${game.nombre}</h3>
-                <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
-                <div class="game-meta">
-                    <span class="rating">${game.rating}</span>
-                    <span class="downloads">${game.downloads} descargas</span>
-                </div>
-            </div>
-        `;
-
+gameCard.innerHTML = `
+    <img src="${game.imagen}" alt="${game.nombre}" class="game-image" onerror="this.classList.add('image-error');">
+    <div class="game-info">
+        <h3 class="game-title">${game.nombre}</h3>
+        <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
+        <div class="game-meta">
+            <span class="rating">${game.rating}</span>
+            <span class="downloads">${game.downloads} descargas</span>
+        </div>
+    </div>
+`;
         // Añadir evento de clic para mostrar detalles en el overlay
         gameCard.addEventListener('click', () => showGameDetails(game));
 
@@ -397,3 +396,4 @@ document.addEventListener('DOMContentLoaded', function () {
     loadInitialGames(); // Cargar todos los juegos al inicio
 
 });
+
