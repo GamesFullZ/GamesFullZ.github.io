@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamesFullZ - Descarga Juegos Gratis</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Iconos con Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795479991735761"
      crossorigin="anonymous"></script>
     <style>
-        /* Estilos base */
+        /* --- ESTILOS BASE --- */
+        :root {
+            --primary-dark: #0a0a0f;
+            --primary-blue: #1e3a8a; /* Azul oscuro */
+            --primary-red: #b91c1c;  /* Rojo oscuro */
+            --accent-blue: #3b82f6;  /* Azul brillante */
+            --accent-red: #ef4444;   /* Rojo brillante */
+            --text-light: #f0f0f5;
+            --text-dark: #111827;
+            --card-bg: rgba(30, 58, 138, 0.2); /* Azul con transparencia */
+            --border-color: rgba(59, 130, 246, 0.3);
+            --hover-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -19,54 +32,70 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0f1923 0%, #1a1a2e 100%);
-            color: #e0e0ff;
+            font-family: 'Exo 2', sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-light);
             line-height: 1.6;
-            transition: all 0.3s ease;
-            overflow-x: hidden;
+            transition: background-color 0.3s, color 0.3s; /* Transición suave para temas */
         }
 
-        /* Animaciones */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes slideInUp {
-            from { transform: translateY(100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        .animated {
-            animation-duration: 0.5s;
-            animation-fill-mode: both;
-        }
-
-        .fadeIn {
-            animation-name: fadeIn;
-        }
-
-        .slideInUp {
-            animation-name: slideInUp;
-        }
-
-        /* Temas */
         body[data-theme="light"] {
-            background: linear-gradient(135deg, #f0f2f5 0%, #e6e9f0 100%);
-            color: #333;
+            background: #f0f2f5;
+            color: var(--text-dark);
         }
 
-        body[data-theme="neon"] {
-            background: linear-gradient(135deg, #000428 0%, #004e92 100%);
-            color: #00ffcc;
+        body[data-theme="light"] header {
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
         }
+
+        body[data-theme="light"] .search-container input,
+        body[data-theme="light"] #theme-selector,
+        body[data-theme="light"] .form-group input,
+        body[data-theme="light"] .form-group textarea,
+        body[data-theme="light"] .add-comment textarea {
+            background: #ffffff;
+            color: var(--text-dark);
+            border: 1px solid #ddd;
+        }
+
+        body[data-theme="light"] .game-card,
+        body[data-theme="light"] .section,
+        body[data-theme="light"] .contact-section,
+        body[data-theme="light"] .thank-you,
+        body[data-theme="light"] .poll-section,
+        body[data-theme="light"] .filters-section {
+            background: rgba(255, 255, 255, 0.7);
+            color: var(--text-dark);
+        }
+
+        body[data-theme="light"] .game-title {
+            color: var(--primary-blue);
+        }
+
+        body[data-theme="light"] .btn-load-more,
+        body[data-theme="light"] .nav-button,
+        body[data-theme="light"] .boton-telegram,
+        body[data-theme="light"] .system-link,
+        body[data-theme="light"] .download-link,
+        body[data-theme="light"] .add-comment button,
+        body[data-theme="light"] .contact-section button,
+        body[data-theme="light"] .vote-btn {
+            background: #e5e7eb;
+            color: var(--text-dark);
+            border: 1px solid #ccc;
+        }
+
+        body[data-theme="light"] .nav-button.active,
+        body[data-theme="light"] .btn-load-more:hover,
+        body[data-theme="light"] .add-comment button:hover,
+        body[data-theme="light"] .contact-section button:hover,
+        body[data-theme="light"] .vote-btn:hover {
+            background: var(--accent-blue);
+            color: white;
+            border-color: var(--accent-blue);
+        }
+
 
         .container {
             max-width: 1200px;
@@ -74,16 +103,15 @@
             padding: 0 15px;
         }
 
-        /* Header con logo animado */
+        /* --- HEADER --- */
         header {
-            background: rgba(10, 18, 28, 0.9);
-            backdrop-filter: blur(10px);
+            background: rgba(10, 10, 15, 0.95);
             padding: 15px 0;
-            border-bottom: 1px solid rgba(30, 58, 95, 0.5);
+            border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px); /* Efecto vidrio esmerilado */
         }
 
         .header-content {
@@ -97,49 +125,32 @@
             font-family: 'Orbitron', sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
-            color: #00ffcc;
+            color: var(--accent-blue);
             text-decoration: none;
             flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            animation: pulse 2s infinite;
-        }
-
-        .logo-icon {
-            color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+            text-shadow: 0 0 8px rgba(59, 130, 246, 0.7); /* Brillo sutil */
         }
 
         .search-container {
             flex-grow: 1;
             max-width: 500px;
-            position: relative;
         }
 
         .search-container input {
             width: 100%;
-            padding: 12px 20px 12px 40px;
+            padding: 10px 15px;
             border-radius: 30px;
-            border: 1px solid rgba(51, 68, 102, 0.5);
-            background: rgba(30, 42, 71, 0.7);
+            border: 1px solid var(--border-color);
+            background: rgba(30, 30, 40, 0.7);
             color: white;
             font-size: 1rem;
-            transition: all 0.3s ease;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Transición más rápida */
         }
 
         .search-container input:focus {
             outline: none;
-            border-color: #00ffcc;
-            box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
-        }
-
-        .search-icon {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #aaa;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
         }
 
         .header-actions {
@@ -150,53 +161,46 @@
         }
 
         #theme-selector {
-            padding: 10px 15px;
-            border-radius: 20px;
-            background: rgba(30, 42, 71, 0.7);
+            padding: 8px 12px;
+            border-radius: 5px;
+            background: rgba(30, 30, 40, 0.7);
             color: white;
-            border: 1px solid rgba(51, 68, 102, 0.5);
-            font-family: 'Inter', sans-serif;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        #theme-selector:hover {
-            background: rgba(0, 255, 204, 0.2);
-            border-color: #00ffcc;
+            border: 1px solid var(--border-color);
+            font-family: 'Exo 2', sans-serif;
         }
 
         .boton-telegram {
-            background: linear-gradient(45deg, #2AABEE, #1c9bd9);
+            background: linear-gradient(45deg, var(--primary-blue), var(--accent-blue));
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 8px 15px;
             text-align: center;
             text-decoration: none;
-            display: inline-flex;
+            display: inline-flex; /* Usar flex para alinear ícono y texto */
             align-items: center;
-            border-radius: 20px;
+            border-radius: 5px;
             cursor: pointer;
             font-weight: 600;
             font-size: 14px;
-            box-shadow: 0 4px 15px rgba(42, 171, 238, 0.3);
-            transition: all 0.3s ease;
-            gap: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición más rápida */
+            gap: 5px;
         }
 
         .boton-telegram:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(42, 171, 238, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        /* Navegación principal */
+        /* --- NAVEGACIÓN PRINCIPAL --- */
         .main-nav {
-            background: rgba(26, 36, 58, 0.7);
-            backdrop-filter: blur(5px);
+            background: rgba(26, 26, 35, 0.8);
             padding: 10px 0;
-            border-bottom: 1px solid rgba(30, 58, 95, 0.3);
+            border-bottom: 1px solid var(--border-color);
             position: sticky;
-            top: 70px;
+            top: 60px; /* Debajo del header principal */
             z-index: 999;
+            backdrop-filter: blur(3px);
         }
 
         .nav-buttons {
@@ -206,40 +210,56 @@
             flex-wrap: wrap;
         }
 
-        .nav-btn {
+        .nav-button {
             padding: 12px 25px;
-            background: rgba(30, 42, 71, 0.5);
-            color: #00ffcc;
-            border: 1px solid rgba(0, 255, 204, 0.3);
+            background: var(--card-bg);
+            color: var(--accent-blue);
+            border: 1px solid var(--border-color);
             border-radius: 8px;
             font-weight: 600;
             cursor: pointer;
             font-size: 16px;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease; /* Transición más rápida */
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
-        .nav-btn:hover {
-            background: rgba(0, 255, 204, 0.2);
+        .nav-button:hover {
+            background: rgba(59, 130, 246, 0.3);
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
-        .nav-btn.active {
-            background: linear-gradient(45deg, #00ffcc, #00cc99);
-            color: #003333;
-            border-color: #00ffcc;
+        .nav-button.active {
+            background: linear-gradient(45deg, var(--primary-blue), var(--accent-blue));
+            color: white;
+            border-color: var(--accent-blue);
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
         }
 
-        /* Filtros y búsqueda avanzada */
+        /* --- SECCIONES --- */
+        .content-section {
+            display: none;
+            padding: 20px 0;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.4s ease-out; /* Animación más corta */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- FILTROS AVANZADOS --- */
         .filters-section {
-            background: rgba(26, 36, 58, 0.5);
+            background: var(--card-bg);
             border-radius: 10px;
             padding: 20px;
-            margin: 20px 0;
-            animation: fadeIn 0.5s ease;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
         }
 
         .filters-header {
@@ -249,9 +269,11 @@
             margin-bottom: 15px;
         }
 
-        .filters-header h3 {
-            color: #00ffcc;
+        .filters-header h2 {
+            color: var(--accent-blue);
             margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
         }
 
         .filter-options {
@@ -267,56 +289,46 @@
 
         .filter-group label {
             margin-bottom: 5px;
-            color: #aaa;
+            color: var(--text-light);
             font-size: 0.9rem;
         }
 
         .filter-group select, .filter-group input {
             padding: 8px 12px;
             border-radius: 5px;
-            border: 1px solid rgba(51, 68, 102, 0.5);
-            background: rgba(30, 42, 71, 0.7);
+            border: 1px solid var(--border-color);
+            background: rgba(20, 20, 30, 0.5);
             color: white;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Exo 2', sans-serif;
         }
 
-        /* Galería de juegos */
-        .gallery-section {
-            margin: 30px 0;
-        }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .section-header h2 {
-            color: #00ffcc;
-            font-family: 'Orbitron', sans-serif;
-            margin: 0;
+        body[data-theme="light"] .filter-group select,
+        body[data-theme="light"] .filter-group input {
+             background: #ffffff;
+             color: var(--text-dark);
         }
 
         .random-btn {
-            background: linear-gradient(45deg, #9c27b0, #6a1b9a);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
+             background: linear-gradient(45deg, var(--primary-red), var(--accent-red));
+             color: white;
+             border: none;
+             padding: 10px 15px;
+             border-radius: 5px;
+             font-weight: 600;
+             cursor: pointer;
+             display: flex;
+             align-items: center;
+             gap: 8px;
+             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .random-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.4);
-        }
+         .random-btn:hover {
+             transform: translateY(-2px);
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+         }
 
+
+        /* --- GALERÍA DE JUEGOS --- */
         .gallery__container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -325,52 +337,32 @@
         }
 
         .game-card {
-            background: rgba(26, 36, 58, 0.5);
+            background: var(--card-bg);
             border-radius: 10px;
             overflow: hidden;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: 1px solid rgba(30, 58, 95, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición más rápida */
+            border: 1px solid var(--border-color);
             display: flex;
             flex-direction: column;
             height: 100%;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
         }
 
         .game-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .game-image-container {
-            position: relative;
-            overflow: hidden;
+            box-shadow: var(--hover-shadow);
         }
 
         .game-image {
             width: 100%;
             height: 250px;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            display: block;
         }
 
-        .game-card:hover .game-image {
-            transform: scale(1.05);
-        }
-
-        .game-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-            padding: 20px 15px 15px;
-            color: white;
-        }
-
-        .game-overlay h3 {
-            font-size: 1.1rem;
-            margin: 0 0 5px;
+        /* Fallback si la imagen no carga */
+        .game-image:image(unloaded) {
+             background-color: var(--primary-blue);
         }
 
         .game-info {
@@ -378,6 +370,13 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
+        }
+
+        .game-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--accent-blue);
         }
 
         .game-description {
@@ -395,47 +394,138 @@
         }
 
         .rating {
-            color: #FFD700;
+            color: #FFD700; /* Amarillo oro para las estrellas */
         }
 
-        /* Detalles del juego (overlay) */
+        /* --- BOTÓN DE CARGA MÁS --- */
+        .load-more-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .btn-load-more {
+            padding: 12px 30px;
+            background: var(--card-bg);
+            color: var(--accent-blue);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease; /* Transición más rápida */
+            font-size: 1rem;
+        }
+
+        .btn-load-more:hover {
+            background: rgba(59, 130, 246, 0.3);
+        }
+
+        /* --- ENCUESTAS --- */
+        .poll-section {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .poll-section h2 {
+            color: var(--accent-blue);
+            margin-bottom: 15px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .poll-question {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .poll-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .poll-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: rgba(20, 20, 30, 0.3);
+            border-radius: 5px;
+        }
+
+        .poll-option input {
+            margin: 0;
+        }
+
+        .vote-btn {
+            padding: 10px 20px;
+            background: var(--card-bg);
+            color: var(--accent-blue);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .vote-btn:hover {
+            background: rgba(59, 130, 246, 0.3);
+        }
+
+        .poll-results {
+            margin-top: 15px;
+        }
+
+        .result-item {
+            margin-bottom: 10px;
+        }
+
+        .result-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        .result-bar {
+            height: 10px;
+            background: rgba(20, 20, 30, 0.5);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .result-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--accent-blue));
+            border-radius: 5px;
+            width: 0;
+            transition: width 0.5s ease; /* Transición para la barra */
+        }
+
+        /* --- DETALLES DEL JUEGO (Overlay) --- */
         .game-details-overlay {
+            display: none; /* Oculto por defecto */
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(5px);
             z-index: 2000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .game-details-overlay.active {
-            opacity: 1;
-            visibility: visible;
+            overflow-y: auto;
+            padding: 20px;
         }
 
         .details-content {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            width: 90%;
-            max-width: 1000px;
-            max-height: 90vh;
+            background: rgba(26, 26, 35, 0.95);
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            position: relative;
-            transform: translateY(50px);
-            transition: transform 0.3s ease;
-        }
-
-        .game-details-overlay.active .details-content {
-            transform: translateY(0);
+            max-width: 1000px;
+            margin: 40px auto;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--hover-shadow);
         }
 
         .close-details {
@@ -456,8 +546,8 @@
         }
 
         .close-details:hover {
-            color: #00ffcc;
-            background: rgba(0, 255, 204, 0.2);
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .details-header {
@@ -468,6 +558,7 @@
             width: 100%;
             height: 300px;
             object-fit: cover;
+            display: block;
         }
 
         .details-overlay {
@@ -475,13 +566,13 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(26, 26, 46, 0.9), transparent);
-            padding: 30px 20px 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            padding: 20px;
         }
 
         .details-title {
             font-size: 2rem;
-            margin: 0 0 10px;
+            margin: 0;
             color: white;
             font-family: 'Orbitron', sans-serif;
         }
@@ -491,42 +582,45 @@
             justify-content: space-between;
             margin: 15px 0;
             padding: 10px 0;
-            border-bottom: 1px solid rgba(30, 58, 95, 0.5);
-            border-top: 1px solid rgba(30, 58, 95, 0.5);
+            border-bottom: 1px solid var(--border-color);
+            border-top: 1px solid var(--border-color);
         }
 
         .details-body {
             padding: 20px;
-            max-height: 50vh;
-            overflow-y: auto;
         }
 
         .details-description {
-            margin: 20px 0;
+            margin: 15px 0;
             line-height: 1.7;
         }
 
         .section {
-            background: rgba(26, 36, 58, 0.3);
+            background: var(--card-bg);
             border-radius: 10px;
             padding: 20px;
             margin: 20px 0;
+            border: 1px solid var(--border-color);
         }
 
         .section h3 {
-            color: #00ffcc;
+            color: var(--accent-blue);
             margin-top: 0;
             font-family: 'Orbitron', sans-serif;
         }
 
         .requirements p {
-            background: rgba(20, 32, 48, 0.5);
+            background: rgba(20, 25, 40, 0.7);
             padding: 15px;
             border-radius: 8px;
             font-family: 'Courier New', monospace;
             white-space: pre-line;
             color: #aaffff;
-            border: 1px solid rgba(0, 255, 204, 0.1);
+            border: 1px solid var(--border-color);
+        }
+
+        .trailer-section {
+            text-align: center;
         }
 
         .trailer-container {
@@ -536,6 +630,7 @@
             overflow: hidden;
             border-radius: 10px;
             margin-top: 15px;
+            background: #000; /* Fondo negro mientras carga */
         }
 
         .trailer-container iframe {
@@ -548,7 +643,7 @@
         }
 
         .download-options h3 {
-            color: #00ffcc;
+            color: var(--accent-blue);
             margin-bottom: 15px;
         }
 
@@ -563,33 +658,30 @@
             align-items: center;
             gap: 8px;
             padding: 12px 20px;
-            background: rgba(30, 42, 71, 0.7);
+            background: var(--card-bg);
             color: white;
             text-decoration: none;
             border-radius: 5px;
             font-weight: 500;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(51, 68, 102, 0.5);
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-color);
         }
 
         .download-link:hover {
-            background: rgba(42, 171, 238, 0.3);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .gofile {
-            background: rgba(247, 148, 29, 0.2);
-            border-color: rgba(247, 148, 29, 0.5);
+            background: linear-gradient(45deg, #f7941d, #ff6b00); /* Naranja para Gofile */
         }
 
         .mediafire {
-            background: rgba(0, 119, 181, 0.2);
-            border-color: rgba(0, 119, 181, 0.5);
+            background: linear-gradient(45deg, #0077b5, #00aaff); /* Azul para Mediafire */
         }
 
         .comments-section h3 {
-            color: #00ffcc;
+            color: var(--accent-blue);
             margin-bottom: 15px;
         }
 
@@ -598,7 +690,7 @@
         }
 
         .comment {
-            background: rgba(26, 36, 58, 0.5);
+            background: rgba(20, 20, 30, 0.5);
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
@@ -606,7 +698,7 @@
 
         .comment-author {
             font-weight: 600;
-            color: #00ffcc;
+            color: var(--accent-blue);
             margin-bottom: 5px;
         }
 
@@ -619,128 +711,41 @@
         .add-comment textarea {
             padding: 10px;
             border-radius: 5px;
-            border: 1px solid rgba(51, 68, 102, 0.5);
-            background: rgba(30, 42, 71, 0.7);
+            border: 1px solid var(--border-color);
+            background: rgba(20, 20, 30, 0.5);
             color: white;
             resize: vertical;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Exo 2', sans-serif;
         }
 
         .add-comment button {
             align-self: flex-end;
             padding: 10px 20px;
-            background: linear-gradient(45deg, #2AABEE, #1c9bd9);
-            color: white;
-            border: none;
+            background: var(--card-bg);
+            color: var(--accent-blue);
+            border: 1px solid var(--border-color);
             border-radius: 5px;
             font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .add-comment button:hover {
-            background: linear-gradient(45deg, #1c9bd9, #2AABEE);
-        }
-
-        /* Encuestas */
-        .poll-section {
-            background: rgba(26, 36, 58, 0.5);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 30px 0;
-        }
-
-        .poll-section h2 {
-            color: #00ffcc;
-            margin-bottom: 15px;
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        .poll-question {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-
-        .poll-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .poll-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px;
-            background: rgba(30, 42, 71, 0.5);
-            border-radius: 5px;
             cursor: pointer;
             transition: all 0.2s ease;
         }
 
-        .poll-option:hover {
-            background: rgba(0, 255, 204, 0.2);
+        .add-comment button:hover {
+            background: rgba(59, 130, 246, 0.3);
         }
 
-        .poll-option input {
-            margin: 0;
-        }
-
-        .poll-results {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(30, 58, 95, 0.3);
-        }
-
-        .result-bar {
-            height: 20px;
-            background: rgba(0, 255, 204, 0.2);
-            border-radius: 10px;
-            margin: 5px 0;
-            overflow: hidden;
-        }
-
-        .result-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #00ffcc, #00cc99);
-            border-radius: 10px;
-            transition: width 0.5s ease;
-        }
-
-        .result-label {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9rem;
-        }
-
-        .vote-btn {
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: linear-gradient(45deg, #9c27b0, #6a1b9a);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .vote-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.4);
-        }
-
-        /* Sección de contacto */
+        /* --- SECCIÓN DE CONTACTO --- */
         .contact-section {
-            background: rgba(26, 36, 58, 0.5);
+            background: var(--card-bg);
             padding: 30px;
             border-radius: 10px;
             margin: 40px 0;
             text-align: center;
+            border: 1px solid var(--border-color);
         }
 
         .contact-section h2 {
-            color: #00ffcc;
+            color: var(--accent-blue);
             margin-bottom: 10px;
             font-family: 'Orbitron', sans-serif;
         }
@@ -761,41 +766,42 @@
             width: 100%;
             padding: 12px;
             border-radius: 5px;
-            border: 1px solid rgba(51, 68, 102, 0.5);
-            background: rgba(30, 42, 71, 0.7);
+            border: 1px solid var(--border-color);
+            background: rgba(20, 20, 30, 0.5);
             color: white;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Exo 2', sans-serif;
         }
 
         .contact-section button {
             padding: 12px 30px;
-            background: linear-gradient(45deg, #2AABEE, #1c9bd9);
-            color: white;
-            border: none;
+            background: var(--card-bg);
+            color: var(--accent-blue);
+            border: 1px solid var(--border-color);
             border-radius: 5px;
             font-weight: 600;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: all 0.2s ease;
             font-size: 1rem;
         }
 
         .contact-section button:hover {
-            background: linear-gradient(45deg, #1c9bd9, #2AABEE);
+            background: rgba(59, 130, 246, 0.3);
         }
 
-        /* Nota de agradecimiento */
+        /* --- NOTA DE AGRADECIMIENTO --- */
         .thank-you {
             text-align: center;
             margin: 40px 0;
             padding: 20px;
             font-size: 18px;
-            color: #00ffcc;
-            background: rgba(26, 36, 58, 0.5);
+            color: var(--accent-blue);
+            background: var(--card-bg);
             border-radius: 10px;
+            border: 1px solid var(--border-color);
             font-family: 'Orbitron', sans-serif;
         }
 
-        /* Responsive */
+        /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -820,15 +826,6 @@
                 height: 200px;
             }
 
-            .details-content {
-                width: 95%;
-                max-height: 95vh;
-            }
-
-            .filter-options {
-                grid-template-columns: 1fr;
-            }
-
             .links {
                 flex-direction: column;
             }
@@ -836,71 +833,29 @@
             .download-link {
                 justify-content: center;
             }
-        }
 
-        /* Efectos de paralaje */
-        .parallax-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 10% 20%, rgba(255, 0, 255, 0.1) 0%, rgba(0, 0, 0, 0) 20%),
-                        radial-gradient(circle at 90% 80%, rgba(0, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 20%);
-            z-index: -1;
-            pointer-events: none;
-        }
+            .filter-options {
+                grid-template-columns: 1fr;
+            }
 
-        /* Loading spinner */
-        .loading-spinner {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 3000;
-        }
-
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid rgba(0, 255, 204, 0.3);
-            border-top: 5px solid #00ffcc;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            .details-image {
+                height: 200px;
+            }
         }
     </style>
 </head>
 <body data-theme="">
-    <!-- Fondo con efecto de paralaje -->
-    <div class="parallax-bg" id="parallaxBg"></div>
-    
-    <!-- Spinner de carga -->
-    <div class="loading-spinner" id="loadingSpinner">
-        <div class="spinner"></div>
-    </div>
-
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">
-                    <i class="fas fa-gamepad logo-icon"></i>
-                    <span>Games<span style="color: #ff00ff;">Full</span>Z</span>
-                </a>
+                <a href="#" class="logo">GamesFullZ</a>
                 <div class="search-container">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" id="searchInput" placeholder="Buscar juegos...">
+                    <input type="text" id="searchInput" placeholder="🔍 Buscar juegos...">
                 </div>
                 <div class="header-actions">
                     <select id="theme-selector" onchange="changeTheme()">
                         <option value="">Oscuro</option>
                         <option value="light">Claro</option>
-                        <option value="neon">Neón</option>
                     </select>
                     <a href="https://web.telegram.org/k/#-4959297719" target="_blank" rel="noopener noreferrer" class="boton-telegram">
                         <i class="fab fa-telegram-plane"></i> Telegram
@@ -909,97 +864,94 @@
             </div>
         </div>
     </header>
-    
+
     <!-- Navegación principal -->
     <nav class="main-nav">
         <div class="container">
             <div class="nav-buttons">
-                <button class="nav-btn active" data-section="games">
-                    <i class="fas fa-gamepad"></i> Juegos
+                <button class="nav-button active" data-target="games">
+                    <i class="fas fa-gamepad"></i> 🎮 Juegos
                 </button>
-                <button class="nav-btn" data-section="polls">
-                    <i class="fas fa-poll"></i> Encuestas
+                <button class="nav-button" data-target="polls">
+                    <i class="fas fa-poll"></i> 📊 Encuestas
                 </button>
             </div>
         </div>
     </nav>
-    
+
     <main class="container">
-        <!-- Sección de filtros -->
-        <section class="filters-section">
-            <div class="filters-header">
-                <h3><i class="fas fa-filter"></i> Filtros Avanzados</h3>
-                <button id="resetFilters" class="random-btn">
-                    <i class="fas fa-redo"></i> Reiniciar
-                </button>
+
+        <!-- Sección de Juegos -->
+        <section id="games-section" class="content-section active">
+
+             <!-- Filtros Avanzados -->
+             <div class="filters-section">
+                 <div class="filters-header">
+                     <h2><i class="fas fa-filter"></i> Filtros Avanzados</h2>
+                     <button class="random-btn" id="randomGameBtn">
+                         <i class="fas fa-random"></i> Juego Aleatorio
+                     </button>
+                 </div>
+                 <div class="filter-options">
+                     <div class="filter-group">
+                         <label for="categoryFilter">Categoría</label>
+                         <select id="categoryFilter">
+                             <option value="">Todas</option>
+                             <option value="accion">Acción</option>
+                             <option value="aventura">Aventura</option>
+                             <option value="terror">Terror</option>
+                             <option value="estrategia">Estrategia</option>
+                         </select>
+                     </div>
+                     <div class="filter-group">
+                         <label for="minRamFilter">RAM Mínima (GB)</label>
+                         <select id="minRamFilter">
+                             <option value="">Cualquiera</option>
+                             <option value="2">2 GB</option>
+                             <option value="4">4 GB</option>
+                             <option value="8">8 GB</option>
+                             <option value="16">16 GB</option>
+                         </select>
+                     </div>
+                     <div class="filter-group">
+                         <label for="processorFilter">Procesador</label>
+                         <select id="processorFilter">
+                             <option value="">Cualquiera</option>
+                             <option value="intel">Intel</option>
+                             <option value="amd">AMD</option>
+                         </select>
+                     </div>
+                     <div class="filter-group">
+                         <label for="graphicsFilter">Gráficos</label>
+                         <select id="graphicsFilter">
+                             <option value="">Cualquiera</option>
+                             <option value="nvidia">NVIDIA</option>
+                             <option value="amd">AMD</option>
+                             <option value="intel">Intel</option>
+                         </select>
+                     </div>
+                 </div>
+             </div>
+
+            <!-- Galería de juegos -->
+            <div class="gallery__container" id="gallery">
+                <!-- Los juegos se cargarán dinámicamente -->
             </div>
-            <div class="filter-options">
-                <div class="filter-group">
-                    <label for="categoryFilter">Categoría</label>
-                    <select id="categoryFilter">
-                        <option value="">Todas</option>
-                        <option value="acción">Acción</option>
-                        <option value="aventura">Aventura</option>
-                        <option value="terror">Terror</option>
-                        <option value="estrategia">Estrategia</option>
-                        <option value="rpg">RPG</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="ramFilter">RAM Mínima</label>
-                    <select id="ramFilter">
-                        <option value="">Cualquiera</option>
-                        <option value="2">2 GB</option>
-                        <option value="4">4 GB</option>
-                        <option value="8">8 GB</option>
-                        <option value="16">16 GB</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="cpuFilter">Procesador</label>
-                    <select id="cpuFilter">
-                        <option value="">Cualquiera</option>
-                        <option value="intel">Intel</option>
-                        <option value="amd">AMD</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="gpuFilter">Tarjeta Gráfica</label>
-                    <select id="gpuFilter">
-                        <option value="">Cualquiera</option>
-                        <option value="nvidia">NVIDIA</option>
-                        <option value="amd">AMD</option>
-                        <option value="intel">Intel</option>
-                    </select>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Sección de juegos -->
-        <section id="games-section" class="section active">
-            <div class="gallery-section">
-                <div class="section-header">
-                    <h2><i class="fas fa-fire"></i> Juegos Populares</h2>
-                    <button class="random-btn" onclick="showRandomGame()">
-                        <i class="fas fa-random"></i> Explorar Aleatorio
-                    </button>
-                </div>
-                
-                <!-- Galería de juegos -->
-                <div class="gallery__container" id="gallery">
-                    <!-- Los juegos se cargarán dinámicamente -->
-                </div>
+
+            <!-- Botón para ver más juegos - Oculto por defecto si se cargan todos -->
+            <div class="load-more-container" id="loadMoreContainer" style="display: none;">
+                <button id="loadMoreBtn" class="btn-load-more">Ver más juegos ↓</button>
             </div>
         </section>
-        
-        <!-- Sección de encuestas -->
-        <section id="polls-section" class="section">
+
+        <!-- Sección de Encuestas -->
+        <section id="polls-section" class="content-section">
             <div class="poll-section">
                 <h2><i class="fas fa-poll"></i> Encuesta de la Semana</h2>
-                <div class="poll-question">
-                    ¿Cuál es tu franquicia de juegos favorita?
+                <div class="poll-question" id="pollQuestion">
+                    ¿Cuál es tu saga de juegos favorita?
                 </div>
-                <div class="poll-options">
+                <div class="poll-options" id="pollOptions">
                     <div class="poll-option">
                         <input type="radio" name="poll" id="option1" value="assassins">
                         <label for="option1">Assassin's Creed</label>
@@ -1017,8 +969,8 @@
                         <label for="option4">God of War</label>
                     </div>
                 </div>
-                <button class="vote-btn" onclick="submitVote()">Votar</button>
-                
+                <button class="vote-btn" id="voteBtn">Votar</button>
+
                 <div class="poll-results" id="pollResults" style="display: none;">
                     <div class="result-item">
                         <div class="result-label">
@@ -1056,71 +1008,13 @@
                             <div class="result-fill" id="godBar" style="width: 0%"></div>
                         </div>
                     </div>
-                    <div style="margin-top: 15px; text-align: center; color: #00ffcc;">
+                    <div style="margin-top: 15px; text-align: center; color: var(--accent-blue);">
                         Total de votos: <span id="totalVotes">0</span>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Overlay para detalles del juego -->
-        <div class="game-details-overlay" id="gameDetailsOverlay">
-            <div class="details-content">
-                <span class="close-details" id="closeDetails">&times;</span>
-                <div class="details-header">
-                    <img src="" alt="" class="details-image" id="detailsImage">
-                    <div class="details-overlay">
-                        <h2 class="details-title" id="detailsTitle">Título del Juego</h2>
-                        <div class="details-rating-downloads">
-                            <div class="rating" id="detailsRating">⭐⭐⭐⭐☆</div>
-                            <div class="downloads" id="detailsDownloads">Descargado por +5,300 usuarios</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="details-body">
-                    <p class="details-description" id="detailsDescription">Descripción del juego.</p>
-                    
-                    <div class="section requirements">
-                        <h3>Requisitos mínimos</h3>
-                        <p id="detailsRequirements">Procesador: ...</p>
-                    </div>
-                    
-                    <div class="section trailer-section">
-                        <h3>Trailer del juego</h3>
-                        <div class="trailer-container">
-                            <iframe id="trailerFrame" src="" 
-                                title="Trailer del juego" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    
-                    <div class="section download-options">
-                        <h3>Descargar desde:</h3>
-                        <div class="links">
-                            <a href="#" id="linkGofile" target="_blank" class="download-link gofile">
-                                <i class="fas fa-cloud"></i> Gofile
-                            </a>
-                            <a href="#" id="linkMediafire" target="_blank" class="download-link mediafire">
-                                <i class="fas fa-file-download"></i> Mediafire
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="section comments-section">
-                        <h3>Reseñas de usuarios</h3>
-                        <div class="comments-list" id="detailsComments">
-                            <!-- Comentarios se cargarán aquí -->
-                        </div>
-                        <div class="add-comment">
-                            <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput"></textarea>
-                            <button id="addCommentBtn">Publicar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+
         <!-- Sección de contacto (siempre visible) -->
         <section class="contact-section">
             <h2>¿Necesitas ayuda?</h2>
@@ -1137,280 +1031,470 @@
                 <button type="submit">Enviar mensaje ✉️</button>
             </form>
         </section>
-        
+
         <!-- ==================== NOTA DE AGRADECIMIENTO ==================== -->
         <div class="thank-you">
             <p>🎮 ¡Gracias por apoyar la web, amigo! La Contraseña ES 123🎮</p>
-        </div>     
+        </div>
+
+         <!-- Overlay para detalles del juego -->
+         <div class="game-details-overlay" id="gameDetailsOverlay">
+             <div class="details-content">
+                 <span class="close-details" id="closeDetails">&times;</span>
+                 <div class="details-header">
+                     <img src="" alt="" class="details-image" id="detailsImage">
+                     <div class="details-overlay">
+                         <h2 class="details-title" id="detailsTitle">Título del juego</h2>
+                     </div>
+                 </div>
+                 <div class="details-body">
+                     <div class="details-rating-downloads">
+                         <div class="rating" id="detailsRating">⭐⭐⭐⭐☆</div>
+                         <div class="downloads" id="detailsDownloads">Descargado por +5,300 usuarios</div>
+                     </div>
+                     <p class="details-description" id="detailsDescription">Descripción del juego.</p>
+
+                     <div class="section requirements">
+                         <h3>Requisitos mínimos</h3>
+                         <p id="detailsRequirements">Procesador: ...</p>
+                     </div>
+
+                     <div class="section trailer-section">
+                         <h3>Trailer del juego</h3>
+                         <div class="trailer-container">
+                             <iframe id="trailerFrame" src="" title="Trailer del juego" allowfullscreen></iframe>
+                         </div>
+                     </div>
+
+                     <div class="section download-options">
+                         <h3>Descargar desde:</h3>
+                         <div class="links">
+                             <a href="#" id="linkGofile" target="_blank" class="download-link gofile">
+                                 <i class="fas fa-cloud"></i> Gofile
+                             </a>
+                             <a href="#" id="linkMediafire" target="_blank" class="download-link mediafire">
+                                 <i class="fas fa-file-download"></i> Mediafire
+                             </a>
+                         </div>
+                     </div>
+
+                     <div class="section comments-section">
+                         <h3>Reseñas de usuarios</h3>
+                         <div class="comments-list" id="detailsComments">
+                             <!-- Comentarios se cargarán aquí -->
+                         </div>
+                         <div class="add-comment">
+                             <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput"></textarea>
+                             <button id="addCommentBtn">Publicar</button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
     </main>
-    
+
     <!-- Scripts -->
     <script>
-        // Datos de encuestas (simulados)
-        const pollData = {
+        // --- VARIABLES GLOBALES ---
+        let pollData = {
             assassins: 45,
             resident: 30,
             call: 15,
             god: 10
         };
         let totalVotes = 100;
+        const VOTE_KEY = 'gamesfullz_poll_vote'; // Clave para localStorage
 
-        // Cargar juegos desde data.js
-        document.addEventListener('DOMContentLoaded', function() {
+        // --- FUNCIONES DE UTILIDAD ---
+        function getTrailerId(gameName) {
+             // Mapa básico de nombres de juegos a IDs de YouTube. Amplía según necesites.
+             const trailerMap = {
+                 "Resident Evil 7: Biohazard": "Nwl3RkEHK4c",
+                 "Dead Island": "qBmHIX5Xrk4",
+                 "Postal 2": "u8D5rkcX78M",
+                 "Left 4 Dead 2": "ZR3OX5uJN8",
+                 "Call of Duty: Black Ops 1": "IRgJgpLwT4w",
+                 "Assassins Creed 2": "XQxXyq56m9Y",
+                 "Red Dead Redemption 1": "EjKiSr6v2R8",
+                 "Payday 2": "x9dhme", // Ejemplo, reemplaza con ID real
+                 "Battlefield 2": "DDlRTY", // Ejemplo, reemplaza con ID real
+                 "God of War (2018)": "K0OO5w8Q0MI", // Ejemplo real
+                 "God of War: Ragnarök": "2btlPD2N2IU", // Ejemplo real
+                 "Peak": "2uRoh0", // Ejemplo, reemplaza con ID real
+                 "Sons of the Forest": "c2B4Cd", // Ejemplo, reemplaza con ID real
+                 "Deltarune": "x9dhme", // Ejemplo, reemplaza con ID real
+                 "LEGO Marvel Super Heroes": "78ptPe", // Ejemplo, reemplaza con ID real
+                 "Call of Duty: Black Ops 2": "Js6Zsk", // Ejemplo, reemplaza con ID real
+                 "The Quarry": "bYr0O4", // Ejemplo, reemplaza con ID real
+                 "Bendy and the Ink Machine": "avMKZl", // Ejemplo, reemplaza con ID real
+                 "Bendy and the Dark Revivalo": "Qax9uu", // Ejemplo, reemplaza con ID real
+                 "Call of Juarez: Gunslinger": "DDlRTY", // Ejemplo, reemplaza con ID real
+                 "Far Cry 3": "2uRoh0", // Ejemplo, reemplaza con ID real
+                 "Call of Duty: Modern Warfare 3": "c2B4Cd", // Ejemplo, reemplaza con ID real
+                 "Lego Batman 2 DC": "78ptPe", // Ejemplo, reemplaza con ID real
+                 "Jurassic World Evolution 2": "Js6Zsk", // Ejemplo, reemplaza con ID real
+                 "Far Cry 5": "bYr0O4", // Ejemplo, reemplaza con ID real
+                 "Fnaf Collection": "avMKZl", // Ejemplo, reemplaza con ID real
+
+             };
+             return trailerMap[gameName] || "dQw4w9WgXcQ"; // Video por defecto si no se encuentra
+        }
+
+        function extractRam(requisitosText) {
+             // Expresa regular para encontrar RAM en GB
+             const ramMatch = requisitosText.match(/(\d+)\s*GB/i) || requisitosText.match(/(\d+(?:\.\d+)?)\s*GB/i);
+             return ramMatch ? parseInt(ramMatch[1], 10) : 0;
+        }
+
+        function extractProcessor(requisitosText) {
+             if (requisitosText.toLowerCase().includes('intel')) return 'intel';
+             if (requisitosText.toLowerCase().includes('amd')) return 'amd';
+             return '';
+        }
+
+        function extractGraphics(requisitosText) {
+             if (requisitosText.toLowerCase().includes('nvidia') || requisitosText.toLowerCase().includes('geforce')) return 'nvidia';
+             if (requisitosText.toLowerCase().includes('amd') || requisitosText.toLowerCase().includes('radeon')) return 'amd';
+             if (requisitosText.toLowerCase().includes('intel')) return 'intel';
+             return '';
+        }
+
+
+        // --- FUNCIONES DE DOM ---
+        function showNotification(message) {
+             // Crear un elemento de notificación simple
+             const notification = document.createElement('div');
+             notification.textContent = message;
+             notification.style.position = 'fixed';
+             notification.style.bottom = '20px';
+             notification.style.right = '20px';
+             notification.style.backgroundColor = 'rgba(50, 50, 50, 0.9)';
+             notification.style.color = 'white';
+             notification.style.padding = '12px 20px';
+             notification.style.borderRadius = '8px';
+             notification.style.zIndex = '9999';
+             notification.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
+             notification.style.fontSize = '14px';
+             document.body.appendChild(notification);
+
+             // Eliminar la notificación después de 3 segundos
+             setTimeout(() => {
+                 if (notification.parentNode) {
+                     notification.style.opacity = '0';
+                     notification.style.transition = 'opacity 0.5s ease';
+                     setTimeout(() => {
+                         if (notification.parentNode) {
+                             notification.parentNode.removeChild(notification);
+                         }
+                     }, 500);
+                 }
+             }, 3000);
+        }
+
+        function scrollToTop() {
+             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // --- FUNCIONES DE NEGOCIO ---
+
+        // Mostrar detalles del juego en el overlay
+        function showGameDetails(game) {
+             document.getElementById('detailsImage').src = game.imagen;
+             document.getElementById('detailsImage').alt = game.nombre;
+             document.getElementById('detailsTitle').textContent = game.nombre;
+             document.getElementById('detailsRating').textContent = game.rating;
+             document.getElementById('detailsDownloads').textContent = `Descargado por +${game.downloads.toLocaleString()} usuarios`;
+             document.getElementById('detailsDescription').textContent = game.descripcion;
+
+             // Formatear requisitos (puedes mejorar esto si `game.requisitos` es un objeto)
+             document.getElementById('detailsRequirements').innerHTML = game.requisitos;
+
+             // Configurar trailer
+             const trailerId = getTrailerId(game.nombre);
+             document.getElementById('trailerFrame').src = `https://www.youtube.com/embed/${trailerId}`;
+
+             // Configurar enlaces de descarga
+             document.getElementById('linkGofile').href = game.links.direct.trim();
+             document.getElementById('linkMediafire').href = game.links.mediafire.trim();
+
+             // Mostrar comentarios
+             const commentsContainer = document.getElementById('detailsComments');
+             commentsContainer.innerHTML = '';
+             if (game.comments && game.comments.length > 0) {
+                 game.comments.forEach(comment => {
+                     const commentElement = document.createElement('div');
+                     commentElement.className = 'comment';
+                     commentElement.innerHTML = `
+                         <div class="comment-author">Usuario Anónimo</div>
+                         <div class="comment-text">${comment}</div>
+                     `;
+                     commentsContainer.appendChild(commentElement);
+                 });
+             } else {
+                 commentsContainer.innerHTML = '<p>No hay comentarios aún. ¡Sé el primero en comentar!</p>';
+             }
+
+             // Mostrar el overlay
+             document.getElementById('gameDetailsOverlay').style.display = 'block';
+             // Hacer scroll hacia arriba suavemente
+             scrollToTop();
+        }
+
+         // Cerrar detalles del juego
+         function closeGameDetails() {
+             document.getElementById('gameDetailsOverlay').style.display = 'none';
+             // Pausar el vídeo del trailer al cerrar (buena práctica)
+             document.getElementById('trailerFrame').src = '';
+         }
+
+
+        // --- EVENT LISTENERS ---
+        document.addEventListener('DOMContentLoaded', function () {
             // Verificar que los datos estén disponibles
             if (typeof recursos === 'undefined') {
                 console.error('No se encontraron los datos de juegos. Asegúrate de incluir data.js');
                 return;
             }
-            
+
             const gallery = document.getElementById('gallery');
-            const gameDetailsOverlay = document.getElementById('gameDetailsOverlay');
-            const closeDetails = document.getElementById('closeDetails');
-            const loadingSpinner = document.getElementById('loadingSpinner');
-            
-            // Mostrar juegos iniciales
+            const searchInput = document.getElementById('searchInput');
+
+            // --- FUNCIONES PARA RENDERIZAR ---
             function displayGames(gamesToShow) {
-                gallery.innerHTML = '';
-                
-                gamesToShow.forEach(game => {
-                    if (game.tipo === 'juego') {
-                        const gameCard = document.createElement('div');
-                        gameCard.className = 'game-card animated fadeIn';
-                        gameCard.innerHTML = `
-                            <div class="game-image-container">
-                                <img src="${game.imagen}" alt="${game.nombre}" class="game-image">
-                                <div class="game-overlay">
-                                    <h3>${game.nombre}</h3>
-                                    <div class="rating">${game.rating}</div>
-                                </div>
-                            </div>
-                            <div class="game-info">
-                                <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
-                                <div class="game-meta">
-                                    <span class="rating">${game.rating}</span>
-                                    <span class="downloads">${game.downloads} descargas</span>
-                                </div>
-                            </div>
-                        `;
-                        
-                        gameCard.addEventListener('click', () => showGameDetails(game));
-                        gallery.appendChild(gameCard);
-                    }
-                });
+                 gallery.innerHTML = '';
+                 const fragment = document.createDocumentFragment();
+
+                 gamesToShow.forEach(game => {
+                     if (game.tipo === 'juego') {
+                         const gameCard = document.createElement('div');
+                         gameCard.className = 'game-card';
+                         gameCard.innerHTML = `
+                             <img src="${game.imagen}" alt="${game.nombre}" class="game-image" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\"game-image fallback\">Imagen no disponible<br>${game.nombre}</div><div class=\"game-info\"><h3 class=\"game-title\">${game.nombre}</h3><p class=\"game-description\">${game.descripcion.substring(0, 100)}...</p><div class=\"game-meta\"><span class=\"rating\">${game.rating}</span><span class=\"downloads\">${game.downloads} descargas</span></div></div>'; this.parentElement.querySelector('.game-card').removeChild(this);">
+                             <div class="game-info">
+                                 <h3 class="game-title">${game.nombre}</h3>
+                                 <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
+                                 <div class="game-meta">
+                                     <span class="rating">${game.rating}</span>
+                                     <span class="downloads">${game.downloads} descargas</span>
+                                 </div>
+                             </div>
+                         `;
+                         // Añadir evento de clic a la tarjeta
+                         gameCard.addEventListener('click', () => showGameDetails(game));
+                         fragment.appendChild(gameCard);
+                     }
+                 });
+
+                 gallery.appendChild(fragment);
             }
-            
-            // Mostrar detalles del juego en overlay
-            function showGameDetails(game) {
-                // Mostrar spinner de carga
-                loadingSpinner.style.display = 'block';
-                
-                // Llenar datos del juego
-                document.getElementById('detailsImage').src = game.imagen;
-                document.getElementById('detailsImage').alt = game.nombre;
-                document.getElementById('detailsTitle').textContent = game.nombre;
-                document.getElementById('detailsRating').textContent = game.rating;
-                document.getElementById('detailsDownloads').textContent = `Descargado por +${game.downloads.toLocaleString()} usuarios`;
-                document.getElementById('detailsDescription').innerHTML = game.descripcion;
-                document.getElementById('detailsRequirements').innerHTML = game.requisitos;
-                
-                // Configurar trailer (usando un ID de ejemplo)
-                const trailerId = getTrailerId(game.nombre);
-                document.getElementById('trailerFrame').src = `https://www.youtube.com/embed/${trailerId}`;
-                
-                // Configurar enlaces de descarga
-                document.getElementById('linkGofile').href = game.links.direct.trim();
-                document.getElementById('linkMediafire').href = game.links.mediafire.trim();
-                
-                // Mostrar comentarios
-                const commentsContainer = document.getElementById('detailsComments');
-                commentsContainer.innerHTML = '';
-                
-                if (game.comments && game.comments.length > 0) {
-                    game.comments.forEach(comment => {
-                        const commentElement = document.createElement('div');
-                        commentElement.className = 'comment';
-                        commentElement.innerHTML = `
-                            <div class="comment-author">Usuario Anónimo</div>
-                            <div class="comment-text">${comment}</div>
-                        `;
-                        commentsContainer.appendChild(commentElement);
-                    });
-                } else {
-                    commentsContainer.innerHTML = '<p>No hay comentarios aún. ¡Sé el primero en comentar!</p>';
-                }
-                
-                // Ocultar spinner y mostrar overlay
-                setTimeout(() => {
-                    loadingSpinner.style.display = 'none';
-                    gameDetailsOverlay.classList.add('active');
-                }, 500);
+
+            // --- FILTRADO ---
+            function applyFiltersAndSearch() {
+                 const searchTerm = searchInput.value.toLowerCase();
+                 const category = document.getElementById('categoryFilter').value.toLowerCase();
+                 const minRam = document.getElementById('minRamFilter').value;
+                 const processor = document.getElementById('processorFilter').value.toLowerCase();
+                 const graphics = document.getElementById('graphicsFilter').value.toLowerCase();
+
+                 const filteredGames = recursos.filter(game => {
+                     if (game.tipo !== 'juego') return false;
+
+                     const matchesSearch = game.nombre.toLowerCase().includes(searchTerm) ||
+                                           game.descripcion.toLowerCase().includes(searchTerm);
+
+                     let matchesCategory = true;
+                     // Mapeo simple de categorías basado en el nombre o descripción
+                     if (category) {
+                         const lowerName = game.nombre.toLowerCase();
+                         const lowerDesc = game.descripcion.toLowerCase();
+                         if (category === 'accion') {
+                             matchesCategory = lowerName.includes('cod') || lowerName.includes('call of duty') || lowerName.includes('battlefield') || lowerDesc.includes('acción') || lowerDesc.includes('action');
+                         } else if (category === 'aventura') {
+                             matchesCategory = lowerName.includes('assassins') || lowerName.includes('ac') || lowerName.includes('god of war') || lowerDesc.includes('aventura') || lowerDesc.includes('adventure');
+                         } else if (category === 'terror') {
+                             matchesCategory = lowerName.includes('resident evil') || lowerName.includes('dead island') || lowerName.includes('bendy') || lowerDesc.includes('terror') || lowerDesc.includes('horror');
+                         } else if (category === 'estrategia') {
+                             // Puedes añadir más condiciones aquí
+                             matchesCategory = lowerDesc.includes('estrategia') || lowerDesc.includes('strategy');
+                         }
+                     }
+
+                     let matchesRam = true;
+                     if (minRam) {
+                         const gameRam = extractRam(game.requisitos);
+                         matchesRam = gameRam >= parseInt(minRam);
+                     }
+
+                     let matchesProcessor = true;
+                     if (processor) {
+                         const gameProc = extractProcessor(game.requisitos);
+                         matchesProcessor = gameProc.includes(processor);
+                     }
+
+                     let matchesGraphics = true;
+                     if (graphics) {
+                         const gameGraph = extractGraphics(game.requisitos);
+                         matchesGraphics = gameGraph.includes(graphics);
+                     }
+
+                     return matchesSearch && matchesCategory && matchesRam && matchesProcessor && matchesGraphics;
+                 });
+
+                 displayGames(filteredGames);
+                 // Ocultar el botón "Ver más" si se está filtrando
+                 document.getElementById('loadMoreContainer').style.display = (searchTerm || category || minRam || processor || graphics) ? 'none' : 'block';
             }
-            
-            // Cerrar detalles del juego
-            closeDetails.addEventListener('click', () => {
-                gameDetailsOverlay.classList.remove('active');
-            });
-            
-            // Cerrar al hacer clic fuera del contenido
-            gameDetailsOverlay.addEventListener('click', (e) => {
-                if (e.target === gameDetailsOverlay) {
-                    gameDetailsOverlay.classList.remove('active');
-                }
-            });
-            
-            // Función para obtener ID de trailer de YouTube
-            function getTrailerId(gameName) {
-                // Mapeo de juegos a trailers reales (puedes ampliar esta lista)
-                const trailerMap = {
-                    "Resident Evil 7: Biohazard": "Nwl3RkEHK4c",
-                    "Dead Island": "qBmHIX5Xrk4",
-                    "Postal 2": "u8D5rkcX78M",
-                    "Left 4 Dead 2": "ZR3OX5uJN8",
-                    "Call of Duty: Black Ops 1": "IRgJgpLwT4w",
-                    "Assassins Creed 2": "XQxXyq56m9Y",
-                    "Payday 2": "bYr0O4",
-                    "Red Dead Redemption 1": "EjKiSr6v2R8"
-                };
-                
-                return trailerMap[gameName] || "dQw4w9WgXcQ"; // Video por defecto
-            }
-            
-            // Función para juego aleatorio
-            window.showRandomGame = function() {
-                const juegos = recursos.filter(g => g.tipo === 'juego');
-                if (juegos.length === 0) {
-                    alert("❌ No hay juegos disponibles.");
-                    return;
-                }
-                const random = juegos[Math.floor(Math.random() * juegos.length)];
-                showGameDetails(random);
-            };
-            
-            // Función para cambiar tema
-            window.changeTheme = function() {
-                const theme = document.getElementById("theme-selector").value;
-                document.body.setAttribute("data-theme", theme);
-                localStorage.setItem("selectedTheme", theme);
-            };
-            
-            // Cargar tema guardado
-            function loadSavedTheme() {
-                const savedTheme = localStorage.getItem("selectedTheme");
-                if (savedTheme !== null) {
-                    document.getElementById("theme-selector").value = savedTheme;
-                    document.body.setAttribute("data-theme", savedTheme);
-                }
-            }
-            
-            // Navegación entre secciones
+
+
+            // --- NAVEGACIÓN ENTRE SECCIONES ---
             const navButtons = document.querySelectorAll('.nav-button');
             navButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    // Remover clase activa de todos los botones
+                    const targetSection = button.getAttribute('data-target');
+
+                    // Actualizar botones activos
                     navButtons.forEach(btn => btn.classList.remove('active'));
-                    // Agregar clase activa al botón clickeado
                     button.classList.add('active');
-                    
+
                     // Mostrar sección correspondiente
-                    const sectionId = button.getAttribute('data-section') + '-section';
-                    document.querySelectorAll('.section').forEach(section => {
+                    document.querySelectorAll('.content-section').forEach(section => {
                         section.classList.remove('active');
                     });
-                    document.getElementById(sectionId).classList.add('active');
+                    document.getElementById(`${targetSection}-section`).classList.add('active');
+
+                    // Scroll suave hacia arriba al cambiar de sección
+                    scrollToTop();
                 });
             });
-            
-            // Filtrado de juegos
-            function applyFilters() {
-                const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-                const category = document.getElementById('categoryFilter').value;
-                const ram = document.getElementById('ramFilter').value;
-                const cpu = document.getElementById('cpuFilter').value;
-                const gpu = document.getElementById('gpuFilter').value;
-                
-                const filteredGames = recursos.filter(game => {
-                    if (game.tipo !== 'juego') return false;
-                    
-                    // Búsqueda por nombre
-                    if (searchTerm && !game.nombre.toLowerCase().includes(searchTerm)) {
-                        return false;
-                    }
-                    
-                    // Filtros adicionales pueden implementarse aquí
-                    // basados en los requisitos del juego
-                    
-                    return true;
-                });
-                
-                displayGames(filteredGames);
-            }
-            
-            // Event listeners para filtros
-            document.getElementById('searchInput').addEventListener('input', applyFilters);
-            document.getElementById('categoryFilter').addEventListener('change', applyFilters);
-            document.getElementById('ramFilter').addEventListener('change', applyFilters);
-            document.getElementById('cpuFilter').addEventListener('change', applyFilters);
-            document.getElementById('gpuFilter').addEventListener('change', applyFilters);
-            document.getElementById('resetFilters').addEventListener('click', () => {
-                document.getElementById('searchInput').value = '';
-                document.getElementById('categoryFilter').value = '';
-                document.getElementById('ramFilter').value = '';
-                document.getElementById('cpuFilter').value = '';
-                document.getElementById('gpuFilter').value = '';
-                displayGames(recursos.filter(g => g.tipo === 'juego'));
-            });
-            
-            // Sistema de votación
-            window.submitVote = function() {
-                const selectedOption = document.querySelector('input[name="poll"]:checked');
-                if (!selectedOption) {
-                    alert('Por favor selecciona una opción');
-                    return;
-                }
-                
-                // Simular voto
-                pollData[selectedOption.value]++;
-                totalVotes++;
-                
-                // Mostrar resultados
-                document.getElementById('pollResults').style.display = 'block';
-                updatePollResults();
-            };
-            
+
+
+            // --- ENCUESTAS ---
             function updatePollResults() {
-                for (const [key, value] of Object.entries(pollData)) {
-                    const percent = Math.round((value / totalVotes) * 100);
-                    document.getElementById(`${key}Percent`).textContent = `${percent}%`;
-                    document.getElementById(`${key}Bar`).style.width = `${percent}%`;
-                }
-                document.getElementById('totalVotes').textContent = totalVotes;
+                 for (const [key, value] of Object.entries(pollData)) {
+                     const percent = Math.round((value / totalVotes) * 100);
+                     document.getElementById(`${key}Percent`).textContent = `${percent}%`;
+                     document.getElementById(`${key}Bar`).style.width = `${percent}%`;
+                 }
+                 document.getElementById('totalVotes').textContent = totalVotes;
             }
-            
-            // Inicializar encuesta
-            updatePollResults();
-            
-            // Efecto de paralaje
-            function handleParallax() {
-                const parallaxBg = document.getElementById('parallaxBg');
-                window.addEventListener('mousemove', (e) => {
-                    const x = (window.innerWidth - e.pageX * 2) / 100;
-                    const y = (window.innerHeight - e.pageY * 2) / 100;
-                    parallaxBg.style.transform = `translate(${x}px, ${y}px)`;
-                });
+
+            // Cargar votos del localStorage si existen
+            const savedVote = localStorage.getItem(VOTE_KEY);
+            if (savedVote) {
+                 document.querySelector(`input[name="poll"][value="${savedVote}"]`).checked = true;
+                 document.getElementById('pollOptions').style.display = 'none';
+                 document.getElementById('voteBtn').style.display = 'none';
+                 document.getElementById('pollResults').style.display = 'block';
+                 updatePollResults();
             }
-            
-            // Inicializar
+
+            document.getElementById('voteBtn').addEventListener('click', function() {
+                 const selectedOption = document.querySelector('input[name="poll"]:checked');
+                 if (!selectedOption) {
+                     showNotification("❌ Por favor, selecciona una opción.");
+                     return;
+                 }
+
+                 const voteValue = selectedOption.value;
+                 // Actualizar datos de la encuesta
+                 pollData[voteValue]++;
+                 totalVotes++;
+
+                 // Guardar voto en localStorage
+                 localStorage.setItem(VOTE_KEY, voteValue);
+
+                 // Mostrar resultados
+                 document.getElementById('pollOptions').style.display = 'none';
+                 document.getElementById('voteBtn').style.display = 'none';
+                 document.getElementById('pollResults').style.display = 'block';
+                 updatePollResults();
+
+                 showNotification("✅ ¡Gracias por tu voto!");
+            });
+
+
+            // --- EVENTOS DE FILTRO ---
+            searchInput.addEventListener('input', applyFiltersAndSearch);
+            document.getElementById('categoryFilter').addEventListener('change', applyFiltersAndSearch);
+            document.getElementById('minRamFilter').addEventListener('change', applyFiltersAndSearch);
+            document.getElementById('processorFilter').addEventListener('change', applyFiltersAndSearch);
+            document.getElementById('graphicsFilter').addEventListener('change', applyFiltersAndSearch);
+
+            // --- JUEGO ALEATORIO ---
+            document.getElementById('randomGameBtn').addEventListener('click', function() {
+                 const juegos = recursos.filter(g => g.tipo === 'juego');
+                 if (juegos.length === 0) {
+                     showNotification("❌ No hay juegos disponibles.");
+                     return;
+                 }
+                 const random = juegos[Math.floor(Math.random() * juegos.length)];
+                 showGameDetails(random);
+                 showNotification(`🎲 Juego aleatorio: ${random.nombre}`);
+            });
+
+            // --- CAMBIO DE TEMA ---
+            window.changeTheme = function() {
+                 const theme = document.getElementById("theme-selector").value;
+                 document.body.setAttribute("data-theme", theme);
+                 localStorage.setItem("selectedTheme", theme);
+            };
+
+            function loadSavedTheme() {
+                 const savedTheme = localStorage.getItem("selectedTheme");
+                 if (savedTheme !== null) {
+                     document.getElementById("theme-selector").value = savedTheme;
+                     document.body.setAttribute("data-theme", savedTheme);
+                 }
+            }
             loadSavedTheme();
-            displayGames(recursos.filter(g => g.tipo === 'juego').slice(0, 12));
-            handleParallax();
-            
-            // Exponer funciones globales
-            window.showRandomGame = showRandomGame;
-            window.changeTheme = changeTheme;
-            window.submitVote = submitVote;
+
+
+            // --- CERRAR OVERLAY ---
+            document.getElementById('closeDetails').addEventListener('click', closeGameDetails);
+            document.getElementById('gameDetailsOverlay').addEventListener('click', function(event) {
+                 if (event.target === this) {
+                     closeGameDetails();
+                 }
+            });
+
+            // --- AGREGAR COMENTARIO (Simulado) ---
+            document.getElementById('addCommentBtn').addEventListener('click', function () {
+                 const input = document.getElementById('commentInput');
+                 const commentsContainer = document.getElementById('detailsComments');
+
+                 if (input && input.value.trim()) {
+                     const commentText = input.value.trim();
+
+                     const div = document.createElement('div');
+                     div.className = 'comment';
+                     div.innerHTML = `
+                         <div class="comment-author">Tú</div>
+                         <div class="comment-text">${commentText}</div>
+                     `;
+
+                     // Si solo hay el mensaje de "no hay comentarios", reemplazarlo
+                     if (commentsContainer.children.length === 1 &&
+                         commentsContainer.children[0].tagName === 'P') {
+                         commentsContainer.innerHTML = '';
+                     }
+
+                     commentsContainer.appendChild(div);
+                     input.value = '';
+                     showNotification("✅ Comentario añadido.");
+                 }
+            });
+
+
+            // --- INICIALIZACIÓN ---
+            // Cargar todos los juegos al inicio
+            displayGames(recursos.filter(g => g.tipo === 'juego'));
+            // Ocultar el botón "Ver más" porque se cargan todos
+            document.getElementById('loadMoreContainer').style.display = 'none';
+
         });
     </script>
-    
+
     <!-- Incluir data.js -->
     <script src="data.js"></script>
 </body>
