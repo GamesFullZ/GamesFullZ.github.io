@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamesFullZ - Descarga Juegos Gratis</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
     <!-- Iconos con Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,6 +11,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795479991735761"
      crossorigin="anonymous"></script>
     <style>
+        /* Estilos base */
         * {
             margin: 0;
             padding: 0;
@@ -23,6 +23,98 @@
             background: #0f1923;
             color: #e0e0e0;
             line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Tema claro */
+        body[data-theme="light"] {
+            background: #f0f2f5;
+            color: #333;
+        }
+
+        body[data-theme="light"] header {
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        body[data-theme="light"] .search-container input {
+            background: #ffffff;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+
+        body[data-theme="light"] .game-card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            color: #333;
+        }
+
+        body[data-theme="light"] .game-title {
+            color: #2AABEE;
+        }
+
+        body[data-theme="light"] .btn-load-more {
+            background: #f0f0f0;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        body[data-theme="light"] .nav-button {
+            background: #f0f0f0;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        body[data-theme="light"] .nav-button.active {
+            background: #2AABEE;
+            color: white;
+        }
+
+        /* Tema pixel */
+        body[data-theme="pixel"] {
+            background: #000;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+        }
+
+        body[data-theme="pixel"] header {
+            background: #000;
+            border-bottom: 2px solid #00ff00;
+        }
+
+        body[data-theme="pixel"] .logo {
+            color: #ffff00;
+            text-shadow: 2px 2px 0 #ff00ff;
+        }
+
+        body[data-theme="pixel"] .game-card {
+            background: #000;
+            border: 2px solid #00ff00;
+            color: #00ff00;
+        }
+
+        body[data-theme="pixel"] .game-title {
+            color: #ffff00;
+            text-shadow: 1px 1px 0 #ff00ff;
+        }
+
+        body[data-theme="pixel"] .btn-load-more {
+            background: #ff00ff;
+            color: #000;
+            border: 2px solid #ffff00;
+            text-shadow: 0.5px 0.5px 0 #000;
+        }
+
+        body[data-theme="pixel"] .nav-button {
+            background: #000;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+        }
+
+        body[data-theme="pixel"] .nav-button.active {
+            background: #ffff00;
+            color: #000;
+            text-shadow: 0.5px 0.5px 0 #000;
         }
 
         .container {
@@ -413,7 +505,7 @@
         }
     </style>
 </head>
-<body>
+<body data-theme="">
     <header>
         <div class="container">
             <div class="header-content">
@@ -503,10 +595,9 @@
             }
             
             const gallery = document.getElementById('gallery');
-            let displayedGames = 0;
-            const gamesPerLoad = 12;
+            let displayedGames = 12; // Iniciar con 12 juegos
             
-            // Función para generar un slug URL-friendly (corregida)
+            // Función para generar un slug URL-friendly
             function generateSlug(text) {
                 return text
                     .toString()
@@ -531,57 +622,70 @@
                 return generateSlug(game.nombre);
             }
             
-            // Mostrar juegos en la galería
-            function displayGames(gamesToShow) {
+            // Mostrar juegos iniciales
+            function displayInitialGames() {
                 gallery.innerHTML = '';
+                const initialGames = recursos.slice(0, 12);
                 
-                gamesToShow.forEach(game => {
+                initialGames.forEach(game => {
                     if (game.tipo === 'juego') {
-                        // Obtener el slug correcto
-                        const gameSlug = getGameSlug(game);
-                        
-                        // Crear un enlace que abre en nueva pestaña
-                        const gameLink = document.createElement('a');
-                        gameLink.href = `Juegos/${gameSlug}.html`;
-                        gameLink.target = '_blank';
-                        gameLink.className = 'game-link';
-                        
-                        const gameCard = document.createElement('div');
-                        gameCard.className = 'game-card';
-                        gameCard.innerHTML = `
-                            <img src="${game.imagen}" alt="${game.nombre}" class="game-image">
-                            <div class="game-info">
-                                <h3 class="game-title">${game.nombre}</h3>
-                                <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
-                                <div class="game-meta">
-                                    <span class="rating">${game.rating}</span>
-                                    <span class="downloads">${game.downloads} descargas</span>
-                                </div>
-                            </div>
-                        `;
-                        
-                        gameLink.appendChild(gameCard);
-                        gallery.appendChild(gameLink);
+                        createGameCard(game);
                     }
                 });
             }
             
-            // Cargar más juegos
-            function loadGames() {
-                const toLoad = recursos.slice(displayedGames, displayedGames + gamesPerLoad);
-                displayGames(toLoad);
-                displayedGames += toLoad.length;
+            // Crear tarjeta de juego
+            function createGameCard(game) {
+                // Obtener el slug correcto
+                const gameSlug = getGameSlug(game);
                 
+                // Crear un enlace que abre en nueva pestaña
+                const gameLink = document.createElement('a');
+                gameLink.href = `Juegos/${gameSlug}.html`;
+                gameLink.target = '_blank';
+                gameLink.className = 'game-link';
+                
+                const gameCard = document.createElement('div');
+                gameCard.className = 'game-card';
+                gameCard.innerHTML = `
+                    <img src="${game.imagen}" alt="${game.nombre}" class="game-image">
+                    <div class="game-info">
+                        <h3 class="game-title">${game.nombre}</h3>
+                        <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
+                        <div class="game-meta">
+                            <span class="rating">${game.rating}</span>
+                            <span class="downloads">${game.downloads} descargas</span>
+                        </div>
+                    </div>
+                `;
+                
+                gameLink.appendChild(gameCard);
+                gallery.appendChild(gameLink);
+            }
+            
+            // Cargar más juegos (corregido)
+            function loadMoreGames() {
+                const nextGames = recursos.slice(displayedGames, displayedGames + 12);
+                
+                nextGames.forEach(game => {
+                    if (game.tipo === 'juego') {
+                        createGameCard(game);
+                    }
+                });
+                
+                displayedGames += nextGames.length;
+                
+                // Ocultar botón si no hay más juegos
                 if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
                     document.getElementById('loadMoreBtn').style.display = 'none';
                 }
             }
             
             // Inicializar la galería con los primeros juegos
-            loadGames();
+            displayInitialGames();
             
             // Botón "Ver más juegos"
-            document.getElementById('loadMoreBtn').addEventListener('click', loadGames);
+            document.getElementById('loadMoreBtn').addEventListener('click', loadMoreGames);
             
             // Navegación entre secciones
             const navButtons = document.querySelectorAll('.nav-button');
@@ -600,8 +704,8 @@
                     document.getElementById(sectionId).classList.add('active');
                     
                     // Si es la sección de juegos, cargar juegos si es necesario
-                    if (button.getAttribute('data-section') === 'games' && displayedGames === 0) {
-                        loadGames();
+                    if (button.getAttribute('data-section') === 'games' && gallery.children.length === 0) {
+                        displayInitialGames();
                     }
                     
                     // Si es la sección de sistemas, cargar los sistemas
@@ -619,7 +723,16 @@
                     game.tipo === 'juego' && 
                     game.nombre.toLowerCase().includes(searchTerm)
                 );
-                displayGames(filteredGames);
+                
+                // Limpiar galería
+                gallery.innerHTML = '';
+                
+                // Mostrar juegos filtrados
+                filteredGames.forEach(game => {
+                    if (game.tipo === 'juego') {
+                        createGameCard(game);
+                    }
+                });
                 
                 // Ocultar botón "Ver más" si hay resultados filtrados
                 document.getElementById('loadMoreBtn').style.display = filteredGames.length > 0 ? 'none' : 'block';
@@ -676,7 +789,7 @@
                 alert(`🎲 Juego aleatorio: ${random.nombre}`);
             };
             
-            // Función para cambiar tema
+            // Función para cambiar tema (corregida)
             window.changeTheme = function() {
                 const theme = document.getElementById("theme-selector").value;
                 document.body.setAttribute("data-theme", theme);
