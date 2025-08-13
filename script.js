@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.querySelector('form');
 
     let displayedGames = 0;
-    const gamesPerLoad = 2;
+    const gamesPerLoad = 12;
 
     // Formatear números
     function formatNumber(num) {
@@ -25,19 +25,30 @@ document.addEventListener('DOMContentLoaded', function () {
         const toLoad = recursos.slice(displayedGames, displayedGames + gamesPerLoad);
 
         toLoad.forEach(game => {
-            const img = document.createElement('img');
-            img.src = game.imagen;
-            img.alt = game.nombre;
-            img.classList.add('game-item');
-            img.dataset.gameId = game.id;
-            img.addEventListener('click', () => openModal(game));
-            fragment.appendChild(img);
+            if (game.tipo === 'juego') {
+                const gameCard = document.createElement('div');
+                gameCard.className = 'game-card';
+                gameCard.innerHTML = `
+                    <img src="${game.imagen}" alt="${game.nombre}" class="game-image">
+                    <div class="game-info">
+                        <h3 class="game-title">${game.nombre}</h3>
+                        <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
+                        <div class="game-meta">
+                            <span class="rating">${game.rating}</span>
+                            <span class="downloads">${game.downloads} descargas</span>
+                        </div>
+                    </div>
+                `;
+                
+                gameCard.addEventListener('click', () => openModal(game));
+                fragment.appendChild(gameCard);
+            }
         });
 
         gallery.appendChild(fragment);
         displayedGames += toLoad.length;
 
-        if (displayedGames >= recursos.length) {
+        if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
             loadMoreBtn.style.display = 'none';
         }
     }
@@ -45,15 +56,39 @@ document.addEventListener('DOMContentLoaded', function () {
     // Buscador
     searchInput.addEventListener('input', () => {
         const term = searchInput.value.toLowerCase();
-        document.querySelectorAll('.game-item').forEach(img => {
-            const gameId = img.dataset.gameId;
-            const game = recursos.find(g => g.id == gameId);
-            if (game) {
-                const matches = game.nombre.toLowerCase().includes(term) ||
-                    game.tipo.toLowerCase().includes(term);
-                img.style.display = matches ? 'block' : 'none';
-            }
+        const filteredGames = recursos.filter(game => 
+            game.tipo === 'juego' && 
+            game.nombre.toLowerCase().includes(term)
+        );
+        
+        // Limpiar galería
+        gallery.innerHTML = '';
+        
+        // Mostrar juegos filtrados
+        const fragment = document.createDocumentFragment();
+        filteredGames.forEach(game => {
+            const gameCard = document.createElement('div');
+            gameCard.className = 'game-card';
+            gameCard.innerHTML = `
+                <img src="${game.imagen}" alt="${game.nombre}" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">${game.nombre}</h3>
+                    <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
+                    <div class="game-meta">
+                        <span class="rating">${game.rating}</span>
+                        <span class="downloads">${game.downloads} descargas</span>
+                    </div>
+                </div>
+            `;
+            
+            gameCard.addEventListener('click', () => openModal(game));
+            fragment.appendChild(gameCard);
         });
+        
+        gallery.appendChild(fragment);
+        
+        // Ocultar botón "Ver más" si hay resultados filtrados
+        loadMoreBtn.style.display = filteredGames.length > 0 ? 'none' : 'block';
     });
 
     // Botón "Ver más"
@@ -65,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function openModal(game) {
         document.getElementById('modalImage').src = game.imagen;
         document.getElementById('modalTitle').textContent = game.nombre;
-        document.getElementById('modalInfo').textContent = game.descripcion;
+        document.getElementById('modalInfo').innerHTML = game.descripcion;
         document.getElementById('modalRequirements').innerHTML = game.requisitos;
         document.getElementById('modalRating').textContent = game.rating;
         document.getElementById('modalDownloads').textContent = `Descargado por +${formatNumber(game.downloads)} usuarios`;
@@ -74,29 +109,32 @@ document.addEventListener('DOMContentLoaded', function () {
         if (linkGofile) {
             linkGofile.href = game.links.direct || "#";
         }
+        
+        const linkMediafire = document.getElementById('linkMediafire');
+        if (linkMediafire) {
+            linkMediafire.href = game.links.mediafire || "#";
+        }
 
         const commentsContainer = document.getElementById('commentsContainer');
         commentsContainer.innerHTML = '';
 
-        game.comments.forEach(text => {
-            const div = document.createElement('div');
-            div.className = 'comment';
-            div.textContent = text;
-            commentsContainer.appendChild(div);
-        });
-
-        const userComments = loadComments(game.id);
-        userComments.forEach(text => {
-            const div = document.createElement('div');
-            div.className = 'comment';
-            div.textContent = text;
-            commentsContainer.appendChild(div);
-        });
+        if (game.comments && game.comments.length > 0) {
+            game.comments.forEach(text => {
+                const div = document.createElement('div');
+                div.className = 'comment';
+                div.innerHTML = `
+                    <div class="comment-author">Usuario Anónimo</div>
+                    <div class="comment-text">${text}</div>
+                `;
+                commentsContainer.appendChild(div);
+            });
+        } else {
+            commentsContainer.innerHTML = '<p>No hay comentarios aún. ¡Sé el primero en comentar!</p>';
+        }
 
         modal.dataset.gameId = game.id;
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
-        showGameRecommendations(game.nombre);
     }
 
     const closeBtn = document.querySelector('.close');
@@ -133,7 +171,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const div = document.createElement('div');
             div.className = 'comment';
-            div.textContent = commentText;
+            div.innerHTML = `
+                <div class="comment-author">Tú</div>
+                <div class="comment-text">${commentText}</div>
+            `;
             commentsContainer.appendChild(div);
 
             const savedComments = loadComments(currentGameId);
@@ -252,11 +293,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function randomGame() {
-        if (recursos.length === 0) {
+        const juegos = recursos.filter(g => g.tipo === 'juego');
+        if (juegos.length === 0) {
             showNotification("❌ No hay juegos disponibles.");
             return;
         }
-        const random = recursos[Math.floor(Math.random() * recursos.length)];
+        const random = juegos[Math.floor(Math.random() * juegos.length)];
         openModal(random);
         showNotification(`🎲 Juego aleatorio: ${random.nombre}`);
     }
@@ -328,7 +370,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (sistema.imagen) {
                     iconHTML = `<img src="${sistema.imagen}" alt="${sistema.nombre}" class="system-image" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\\'fas fa-desktop system-icon-fallback\\'></i>'">`;
                 } else {
-                    iconHTML = `<i class="${sistema.icono || 'fas fa-desktop'}"></i>`;
+                    iconHTML = `<i class="${sistema.icono || 'fas fa-desktop'} system-icon"></i>`;
                 }
                 
                 card.innerHTML = `
