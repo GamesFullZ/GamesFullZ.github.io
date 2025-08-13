@@ -264,11 +264,11 @@
             margin: 30px 0;
         }
 
+        /* Estilos del enlace del juego - Simplificados */
         .game-link {
-            text-decoration: none;
+            text-decoration: none; /* Eliminado cursor:pointer redundante */
             color: inherit;
-            display: block;
-            cursor: pointer;
+            display: block; /* Mantiene el bloque para el efecto hover */
         }
 
         .game-card {
@@ -644,17 +644,19 @@
                 gallery.appendChild(fragment);
             }
             
-            // Crear tarjeta de juego
+            // Crear tarjeta de juego - MODIFICADO
             function createGameCard(game, container = null) {
                 // Obtener el slug correcto
                 const gameSlug = getGameSlug(game);
                 
-                // Crear un enlace que abre en nueva pestaña
+                // Crear un enlace que abre en nueva pestaña - MODIFICADO
                 const gameLink = document.createElement('a');
                 gameLink.href = `Juegos/${gameSlug}.html`;
                 gameLink.target = '_blank';
+                gameLink.rel = 'noopener noreferrer'; // Buena práctica para seguridad
                 gameLink.className = 'game-link';
                 // Se eliminan los estilos inline redundantes ya que están en CSS
+                // NO añadimos eventListener ni stopPropagation
                 
                 const gameCard = document.createElement('div');
                 gameCard.className = 'game-card';
