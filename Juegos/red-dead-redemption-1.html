@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Dead Redemption 1 - GamesFullZ</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos específicos para páginas de juegos */
+        body {
+            background: #0f0f15;
+            color: #e0e0ff;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: #141423;
+            padding: 15px 0;
+            border-bottom: 1px solid #2a3a5a;
+            text-align: center;
+        }
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #00ffcc;
+            text-decoration: none;
+        }
+        .game-detail-page {
+            margin: 30px 0;
+        }
+        .game-detail-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+            background: rgba(26, 36, 58, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .game-detail-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .game-detail-info {
+            flex: 2;
+            min-width: 300px;
+        }
+        .game-detail-info h1 {
+            color: #00ffcc;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .rating-downloads {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #1e3a5f;
+            border-top: 1px solid #1e3a5f;
+        }
+        .rating {
+            color: #FFD700;
+            font-size: 1.2rem;
+        }
+        .downloads {
+            color: #00ffcc;
+            font-weight: 500;
+        }
+        .game-description {
+            margin: 20px 0;
+            line-height: 1.7;
+        }
+        .section {
+            background: rgba(26, 36, 58, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .section h2 {
+            color: #00ffcc;
+            margin-top: 0;
+        }
+        .requirements p {
+            background: #142030;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-line;
+            color: #aaffff;
+        }
+        .trailer-section {
+            text-align: center;
+        }
+        .trailer-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .trailer-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .download-options h3 {
+            color: #00ffcc;
+            margin-bottom: 15px;
+        }
+        .links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .download-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: #1e2a47;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid #334466;
+        }
+        .download-link:hover {
+            background: #2AABEE;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .gofile {
+            background: #f7941d;
+        }
+        .mediafire {
+            background: #0077b5;
+        }
+        .comments-section h3 {
+            color: #00ffcc;
+            margin-bottom: 15px;
+        }
+        .comments-list {
+            margin-bottom: 20px;
+        }
+        .comment {
+            background: rgba(26, 36, 58, 0.5);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .comment-author {
+            font-weight: 600;
+            color: #00ffcc;
+            margin-bottom: 5px;
+        }
+        .add-comment {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .add-comment textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #334466;
+            background: #1e2a47;
+            color: white;
+            resize: vertical;
+            font-family: 'Inter', sans-serif;
+        }
+        .add-comment button {
+            align-self: flex-end;
+            padding: 10px 20px;
+            background: #2AABEE;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .add-comment button:hover {
+            background: #1c9bd9;
+        }
+        @media (max-width: 768px) {
+            .game-detail-header {
+                flex-direction: column;
+            }
+            .links {
+                flex-direction: column;
+            }
+            .download-link {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="../index.html" class="logo">GamesFullZ</a>
+        </header>
+        
+        <main class="game-detail-page">
+            <div class="game-detail-header">
+                <img src="../Images/Red_Dead_Redemption.jpg" alt="Red Dead Redemption 1" class="game-detail-image">
+                <div class="game-detail-info">
+                    <h1>Red Dead Redemption 1</h1>
+                    <div class="rating-downloads">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="downloads">Descargado por +0 usuarios</div>
+                    </div>
+                    <p class="game-description">
+                        Un exforajido obligado por el gobierno a cazar a su antigua banda para recuperar a su familia en el viejo oeste de 1911.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="game-content">
+                <div class="section requirements">
+                    <h2>Requisitos mínimos</h2>
+                    <p>SO: Windows 10 64‑bit<br>Procesador: Intel Core i5‑4670 / AMD FX‑9590<br>Memoria: 8 GB RAM<br>Gráficos: NVIDIA GeForce GTX 960 / AMD Radeon R7 360<br>Almacenamiento: 12 GB<br>DirectX: 12<br>SSD recomendado</p>
+                </div>
+                
+                <div class="section trailer-section">
+                    <h2>Trailer del juego</h2>
+                    <div class="trailer-container">
+                        <!-- Reemplaza con el ID real del video de YouTube si lo tienes -->
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Red Dead Redemption 1 Trailer" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <div class="section download-options">
+                    <h2>Descargar desde:</h2>
+                    <div class="links">
+                        <a href="https://gofile.io/d/c2B4Cd" target="_blank" class="download-link gofile">
+                            <i class="fas fa-cloud"></i> Gofile
+                        </a>
+                        <a href="https://gofile.io/d/c2B4Cd" target="_blank" class="download-link mediafire">
+                            <i class="fas fa-file-download"></i> Mediafire
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="section comments-section">
+                    <h2>Reseñas de usuarios</h2>
+                    <div class="comments-list" id="commentsContainer">
+                        
+                            <div class="comment">
+                                <div class="comment-author">Usuario Anónimo</div>
+                                <div class="comment-text">Divertido</div>
+                            </div>
+                        
+                            <div class="comment">
+                                <div class="comment-author">Usuario Anónimo</div>
+                                <div class="comment-text">Me encanta Los caballos</div>
+                            </div>
+                        
+                            <div class="comment">
+                                <div class="comment-author">Usuario Anónimo</div>
+                                <div class="comment-text">Recomendado para fans de vaqueros</div>
+                            </div>
+                        
+                    </div>
+                    <div class="add-comment">
+                        <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput"></textarea>
+                        <button id="addCommentBtn">Publicar</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Lógica para comentarios
+        document.getElementById('addCommentBtn').addEventListener('click', function () {
+            const input = document.getElementById('commentInput');
+            const commentsContainer = document.getElementById('commentsContainer');
+            
+            if (input && input.value.trim()) {
+                const commentText = input.value.trim();
+                
+                const div = document.createElement('div');
+                div.className = 'comment';
+                div.innerHTML = `
+                    <div class="comment-author">Tú</div>
+                    <div class="comment-text">${commentText}</div>
+                `;
+                
+                // Si solo hay el mensaje de "no hay comentarios", reemplazarlo
+                if (commentsContainer.children.length === 1 && 
+                    commentsContainer.children[0].tagName === 'P') {
+                    commentsContainer.innerHTML = '';
+                }
+                
+                commentsContainer.appendChild(div);
+                input.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
