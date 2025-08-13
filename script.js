@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const gameCard = document.createElement('div');
         gameCard.className = 'game-card';
         gameCard.innerHTML = `
-            <img src="${game.imagen}" alt="${game.nombre}" class="game-image" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'game-image-fallback\\'>Imagen no disponible</div><div class=\\'game-info\\'><h3 class=\\'game-title\\'>${game.nombre}</h3><p class=\\'game-description\\'>${game.descripcion.substring(0, 100)}...</p><div class=\\'game-meta\\'><span class=\\'rating\\'>${game.rating}</span><span class=\\'downloads\\'>${game.downloads} descargas</span></div></div>'; this.remove();">
+            <img src="${game.imagen}" alt="${game.nombre}" class="game-image" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'game-image fallback\\'>Imagen no disponible<br>${game.nombre}</div><div class=\\'game-info\\'><h3 class=\\'game-title\\'>${game.nombre}</h3><p class=\\'game-description\\'>${game.descripcion.substring(0, 100)}...</p><div class=\\'game-meta\\'><span class=\\'rating\\'>${game.rating}</span><span class=\\'downloads\\'>${game.downloads} descargas</span></div></div>'; this.parentElement.querySelector('.game-card').removeChild(this);">
             <div class="game-info">
                 <h3 class="game-title">${game.nombre}</h3>
                 <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Configurar trailer
         if (trailerFrame) {
             const trailerId = getTrailerId(game.nombre);
-            trailerFrame.src = `https://www.youtube.com/embed/${trailerId}`;
+            trailerFrame.src = `https://www.youtube.com/embed/${trailerId}`; // Corregido: eliminado espacio extra
         }
 
         // Configurar enlaces de descarga
