@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- REFERENCIAS A ELEMENTOS DEL DOM ---
     const gallery = document.getElementById('gallery');
     const searchInput = document.getElementById('searchInput');
-    const contactForm = document.querySelector('.contact-section form'); // Selector más específico
+    const contactForm = document.querySelector('.contact-section form');
     const gameDetailsOverlay = document.getElementById('gameDetailsOverlay');
     const closeDetailsBtn = document.getElementById('closeDetails');
     const detailsImage = document.getElementById('detailsImage');
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "Call of Duty: Black Ops 2": "cwdumqbqjz3j3nb",
             // ... añade más mappings ...
         };
-        return trailerMap[gameName] || "dQw4w9WgXcQ"; // Fallback a un video por defecto
+        return trailerMap[gameName] || "dQw4w9WgXcQ"; // Fallback
     }
 
     function extractRam(requisitosText) {
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const gameCard = document.createElement('div');
                 gameCard.className = 'game-card';
                 gameCard.innerHTML = `
-                    <img src="${game.imagen}" alt="${game.nombre}" class="game-image" loading="lazy" onerror="this.onerror=null;this.classList.add('image-error');">
+                    <img src="${game.imagen}" alt="${game.nombre}" class="game-image" loading="lazy">
                     <div class="game-info">
                         <h3 class="game-title">${game.nombre}</h3>
                         <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
@@ -135,7 +135,37 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                     </div>
                 `;
+                // Añadir evento de clic a la tarjeta
                 gameCard.addEventListener('click', () => showGameDetails(game));
+                
+                // Añadir manejador de error de imagen DESPUÉS de insertar en el DOM
+                const imgElement = gameCard.querySelector('.game-image');
+                if (imgElement) {
+                    imgElement.addEventListener('error', function() {
+                        // Evita ejecutar el manejador de error de nuevo si ya se ejecutó
+                        if (this.dataset.errorHandled) return;
+                        this.dataset.errorHandled = 'true';
+
+                        // Crea el contenido de fallback
+                        const fallbackHTML = `
+                            <div class="game-image image-error">
+                                <i class="fas fa-image" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                                <span>Imagen no disponible</span>
+                            </div>
+                            <div class="game-info">
+                                <h3 class="game-title">${game.nombre}</h3>
+                                <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
+                                <div class="game-meta">
+                                    <span class="rating">${game.rating}</span>
+                                    <span class="downloads">${formatNumber(game.downloads)} descargas</span>
+                                </div>
+                            </div>
+                        `;
+                        // Reemplaza el contenido de la tarjeta
+                        this.closest('.game-card').innerHTML = fallbackHTML;
+                    });
+                }
+
                 fragment.appendChild(gameCard);
             }
         });
@@ -145,6 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function showGameDetails(game) {
         if (!gameDetailsOverlay) return;
 
+        // Llenar datos del juego
         if (detailsImage) detailsImage.src = game.imagen;
         if (detailsImage) detailsImage.alt = game.nombre;
         if (detailsTitle) detailsTitle.textContent = game.nombre;
@@ -152,19 +183,22 @@ document.addEventListener('DOMContentLoaded', function () {
         if (detailsDownloads) detailsDownloads.textContent = `Descargado por +${formatNumber(game.downloads)} usuarios`;
         if (detailsDescription) detailsDescription.textContent = game.descripcion;
 
+        // Formatear y mostrar requisitos
         if (detailsRequirements) {
-            // Asumimos que game.requisitos es un string HTML
             detailsRequirements.innerHTML = game.requisitos || 'Información no disponible.';
         }
 
+        // Configurar trailer (CORREGIDO: Eliminado espacio extra)
         if (trailerFrame) {
             const trailerId = getTrailerId(game.nombre);
-            trailerFrame.src = `https://www.youtube.com/embed/${trailerId}`;
+            trailerFrame.src = `https://www.youtube.com/embed/${trailerId}`; 
         }
 
+        // Configurar enlaces de descarga
         if (linkGofile) linkGofile.href = (game.links.direct || "#").trim();
         if (linkMediafire) linkMediafire.href = (game.links.mediafire || "#").trim();
 
+        // Mostrar comentarios
         if (detailsComments) {
             detailsComments.innerHTML = '';
             if (game.comments && game.comments.length > 0) {
@@ -182,6 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
+        // Mostrar overlay
         gameDetailsOverlay.style.display = 'block';
         scrollToTop();
     }
@@ -190,8 +225,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (gameDetailsOverlay) {
             gameDetailsOverlay.style.display = 'none';
         }
+        // Pausar el vídeo del trailer al cerrar
         if (trailerFrame) {
-            trailerFrame.src = ''; // Pausa el video
+            trailerFrame.src = '';
         }
     }
 
@@ -324,16 +360,19 @@ document.addEventListener('DOMContentLoaded', function () {
         addCommentBtn.addEventListener('click', function () {
             if (commentInput && commentInput.value.trim() && detailsComments) {
                 const commentText = commentInput.value.trim();
+
                 const div = document.createElement('div');
                 div.className = 'comment';
                 div.innerHTML = `
                     <div class="comment-author">Tú</div>
                     <div class="comment-text">${commentText}</div>
                 `;
+
                 if (detailsComments.children.length === 1 &&
                     detailsComments.children[0].tagName === 'P') {
                     detailsComments.innerHTML = '';
                 }
+
                 detailsComments.appendChild(div);
                 commentInput.value = '';
             }
