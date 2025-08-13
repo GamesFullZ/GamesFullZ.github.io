@@ -190,8 +190,21 @@ header {
 }
 
 /* Fallback si la imagen no carga */
-.game-image:image(unloaded) {
-    background-color: #1e2a47; /* Corregido: eliminado punto y coma extra */
+/* Corrección: Reemplazar el selector no estándar */
+.game-image.image-error {
+    background-color: #1e2a47;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.game-image.image-error::after {
+    content: "Imagen no disponible";
+    display: block;
+    padding: 10px;
 }
 
 .game-info {
