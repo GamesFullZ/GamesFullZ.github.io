@@ -1,4 +1,4 @@
-// script.js - Corregido y simplificado
+// script.js - Corregido y mejorado para mostrar juegos correctamente
 
 document.addEventListener('DOMContentLoaded', function () {
     // --- REFERENCIAS A ELEMENTOS DEL DOM ---
@@ -7,21 +7,23 @@ document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.querySelector('.contact-section form');
     const gameDetailsOverlay = document.getElementById('gameModal');
     const closeDetailsBtn = document.querySelector('#gameModal .close-btn');
-    const modalImage = document.getElementById('modalImage');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalRating = document.getElementById('modalRating');
-    const modalDownloads = document.getElementById('modalDownloads');
-    const modalInfo = document.getElementById('modalInfo');
-    const modalRequirements = document.getElementById('modalRequirements');
+    const detailsImage = document.getElementById('modalImage');
+    const detailsTitle = document.getElementById('modalTitle');
+    const detailsRating = document.getElementById('modalRating');
+    const detailsDownloads = document.getElementById('modalDownloads');
+    const detailsDescription = document.getElementById('modalInfo');
+    const detailsRequirements = document.getElementById('modalRequirements');
+    const trailerFrame = document.getElementById('trailerFrame');
     const linkGofile = document.getElementById('linkGofile');
     const linkMediafire = document.getElementById('linkMediafire');
-    const commentsContainer = document.getElementById('commentsContainer');
+    const detailsComments = document.getElementById('commentsContainer');
     const commentInput = document.getElementById('commentInput');
     const addCommentBtn = document.getElementById('addCommentBtn');
+    const randomGameBtn = document.getElementById('randomGameBtn');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const viewToggleBtn = document.getElementById('viewToggle');
+    const themeSelector = document.getElementById('themeSelector');
     const backToTopBtn = document.getElementById('backToTop');
-    const prevPageBtn = document.getElementById('prevPage');
-    const nextPageBtn = document.getElementById('nextPage');
-    const pageInfo = document.getElementById('pageInfo');
 
     // --- VERIFICACIÓN DE DATOS ---
     if (typeof recursos === 'undefined' || !Array.isArray(recursos)) {
@@ -33,8 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- VARIABLES DE ESTADO ---
     let displayedGames = 0;
     const gamesPerLoad = 6;
-    let currentPage = 1;
-    const gamesPerPage = 6;
+    let currentView = 'grid'; // 'grid' o 'list'
 
     // --- FUNCIONES DE UTILIDAD ---
     function formatNumber(num) {
@@ -45,6 +46,41 @@ document.addEventListener('DOMContentLoaded', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    function getTrailerId(gameName) {
+        // Mapa de nombres de juegos a IDs de YouTube
+        const trailerMap = {
+            "Resident Evil 4": "RgYqQsbKn6w",
+            "Dead Island": "qBmHIX5Xrk4",
+            "Postal 2": "u8D5rkcX78M",
+            "Left 4 Dead 2": "ZR3OX5uJN8",
+            "Call of Duty: Black Ops 1": "IRgJgpLwT4w",
+            "Red Dead Redemption 1": "EjKiSr6v2R8",
+            "Payday 2": "x9dhme",
+            "Battlefield 2": "DDlRTY",
+            "God of War (2018)": "K0OO5w8Q0MI",
+            "God of War: Ragnarök": "2btlPD2N2IU",
+            "Peak": "2uRoh0",
+            "Sons of the Forest": "c2B4Cd",
+            "Deltarune": "dQw4w9WgXcQ",
+            "LEGO Marvel Super Heroes": "bzh8jle3p3i7eil",
+            "Call of Duty: Black Ops 2": "cwdumqbqjz3j3nb",
+            "The Quarry": "bYr0O4",
+            "Bendy and the Ink Machine": "avMKZl",
+            "Bendy and the Dark Revivalo": "Qax9uu",
+            "Call of Juarez: Gunslinger": "DDlRTY",
+            "Far Cry 3": "2uRoh0",
+            "Call of Duty: Modern Warfare 3": "ioxs8mh1bgafbxl",
+            "Lego Batman 2 DC": "n1juuplitqdaj57",
+            "Assassins Creed 2 ": "gt7cklm07ifvkfz",
+            "Jurassic World Evolution 2": "d8q331qkl5527mn",
+            "Far Cry 5": "lg6fpmp3f2uhuho",
+            "Fnaf Collection": "sbws8mnvrtkjno0",
+            "Resident Evil 7: Biohazard": "uqduzvrhkb01kth"
+            // ... añade más mappings según necesites
+        };
+        return trailerMap[gameName] || "dQw4w9WgXcQ"; // Fallback
+    }
+
     // --- FUNCIONES PARA MOSTRAR DATOS ---
     function displayGames(gamesToShow) {
         if (!gallery) return;
@@ -52,11 +88,136 @@ document.addEventListener('DOMContentLoaded', function () {
         gallery.innerHTML = '';
         const fragment = document.createDocumentFragment();
 
-        const startIndex = (currentPage - 1) * gamesPerPage;
-        const endIndex = startIndex + gamesPerPage;
-        const paginatedGames = gamesToShow.slice(startIndex, endIndex);
+        gamesToShow.forEach(game => {
+            if (game.tipo === 'juego') {
+                const gameCard = document.createElement('div');
+                gameCard.className = 'game-card';
+                gameCard.dataset.gameId = game.id;
+                
+                // Crear imagen con fallback mejorado
+                const img = document.createElement('img');
+                img.src = game.imagen;
+                img.alt = game.nombre;
+                img.className = 'game-image';
+                img.loading = 'lazy';
+                
+                // Manejo de error de imagen con event listener (MUCHO MÁS SEGURO)
+                img.addEventListener('error', function() {
+                    // Evita ejecutar el manejador de error de nuevo si ya se ejecutó
+                    if (this.dataset.errorHandled) return;
+                    this.dataset.errorHandled = 'true';
+                    
+                    // Crea el contenido de fallback
+                    const fallbackDiv = document.createElement('div');
+                    fallbackDiv.className = 'game-image image-error';
+                    fallbackDiv.innerHTML = `
+                        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; padding:10px; text-align:center;">
+                            <i class="fas fa-image" style="font-size:2rem; margin-bottom:10px; color:var(--color-accent-purple);"></i>
+                            <span style="font-size:0.8rem;">Imagen no disponible</span>
+                            <span style="font-size:0.7rem; margin-top:5px;">${game.nombre}</span>
+                        </div>
+                    `;
+                    // Reemplaza la imagen por el div de fallback
+                    this.parentNode.replaceChild(fallbackDiv, this);
+                });
 
-        paginatedGames.forEach(game => {
+                const gameInfo = document.createElement('div');
+                gameInfo.className = 'game-info';
+                gameInfo.innerHTML = `
+                    <h3 class="game-title">${game.nombre}</h3>
+                    <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
+                    <div class="game-meta">
+                        <span class="rating">${game.rating}</span>
+                        <span class="downloads">${formatNumber(game.downloads)} descargas</span>
+                    </div>
+                `;
+
+                gameCard.appendChild(img);
+                gameCard.appendChild(gameInfo);
+                gameCard.addEventListener('click', () => showGameDetails(game));
+                fragment.appendChild(gameCard);
+            }
+        });
+
+        gallery.appendChild(fragment);
+    }
+
+    function showGameDetails(game) {
+        if (!gameDetailsOverlay) return;
+
+        if (detailsImage) detailsImage.src = game.imagen;
+        if (detailsImage) detailsImage.alt = game.nombre;
+        if (detailsTitle) detailsTitle.textContent = game.nombre;
+        if (detailsRating) detailsRating.textContent = game.rating;
+        if (detailsDownloads) detailsDownloads.textContent = `Descargado por +${formatNumber(game.downloads)} usuarios`;
+        if (detailsDescription) detailsDescription.textContent = game.descripcion;
+
+        if (detailsRequirements) {
+            // Asumimos que game.requisitos es un string HTML
+            detailsRequirements.innerHTML = game.requisitos || 'Información no disponible.';
+        }
+
+        if (trailerFrame) {
+            const trailerId = getTrailerId(game.nombre);
+            trailerFrame.src = `https://www.youtube.com/embed/${trailerId}`;
+        }
+
+        if (linkGofile) linkGofile.href = (game.links.direct || "#").trim();
+        if (linkMediafire) linkMediafire.href = (game.links.mediafire || "#").trim();
+
+        if (detailsComments) {
+            detailsComments.innerHTML = '';
+            if (game.comments && game.comments.length > 0) {
+                game.comments.forEach(text => {
+                    const commentElement = document.createElement('div');
+                    commentElement.className = 'comment';
+                    commentElement.innerHTML = `
+                        <div class="comment-author">Usuario Anónimo</div>
+                        <div class="comment-text">${text}</div>
+                    `;
+                    detailsComments.appendChild(commentElement);
+                });
+            } else {
+                detailsComments.innerHTML = '<p>No hay comentarios aún. ¡Sé el primero en comentar!</p>';
+            }
+        }
+
+        gameDetailsOverlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        scrollToTop();
+    }
+
+    function closeGameDetails() {
+        if (gameDetailsOverlay) {
+            gameDetailsOverlay.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        if (trailerFrame) {
+            trailerFrame.src = ''; // Pausa el video
+        }
+    }
+
+    // --- FUNCIONES DE FILTRO Y BÚSQUEDA ---
+    function applyFiltersAndSearch() {
+        const term = searchInput ? searchInput.value.toLowerCase() : '';
+        const filteredGames = recursos.filter(game => {
+            if (game.tipo !== 'juego') return false;
+            return game.nombre.toLowerCase().includes(term) ||
+                   game.descripcion.toLowerCase().includes(term);
+        });
+        displayGames(filteredGames);
+    }
+
+    // --- FUNCIONES PARA CARGAR MÁS JUEGOS ---
+    function loadMoreGames() {
+        const nextGames = recursos.slice(displayedGames, displayedGames + gamesPerLoad);
+        if (nextGames.length === 0) {
+            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+            return;
+        }
+
+        const fragment = document.createDocumentFragment();
+        nextGames.forEach(game => {
             if (game.tipo === 'juego') {
                 const gameCard = document.createElement('div');
                 gameCard.className = 'game-card';
@@ -103,91 +264,70 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        gallery.appendChild(fragment);
-        updatePagination(gamesToShow.length);
+        if (gallery) gallery.appendChild(fragment);
+        displayedGames += nextGames.length;
+
+        if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
+            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+        }
     }
 
-    function showGameDetails(game) {
-        if (!gameDetailsOverlay) return;
-
-        if (modalImage) modalImage.src = game.imagen;
-        if (modalImage) modalImage.alt = game.nombre;
-        if (modalTitle) modalTitle.textContent = game.nombre;
-        if (modalRating) modalRating.textContent = game.rating;
-        if (modalDownloads) modalDownloads.textContent = `Descargado por +${formatNumber(game.downloads)} usuarios`;
-        if (modalInfo) modalInfo.textContent = game.descripcion;
-
-        if (modalRequirements) {
-            modalRequirements.innerHTML = game.requisitos || 'Información no disponible.';
+    // --- FUNCIONES PARA JUEGO ALEATORIO ---
+    function randomGame() {
+        const juegos = recursos.filter(g => g.tipo === 'juego');
+        if (juegos.length === 0) {
+            alert("❌ No hay juegos disponibles.");
+            return;
         }
+        const randomGame = juegos[Math.floor(Math.random() * juegos.length)];
+        showGameDetails(randomGame);
+        // alert(`🎲 Juego aleatorio: ${randomGame.nombre}`); // Opcional
+    }
 
-        if (linkGofile) linkGofile.href = (game.links.direct || "#").trim();
-        if (linkMediafire) linkMediafire.href = (game.links.mediafire || "#").trim();
+    // --- FUNCIONES PARA CAMBIO DE VISTA ---
+    function toggleView() {
+        if (!gallery) return;
+        currentView = currentView === 'grid' ? 'list' : 'grid';
+        gallery.className = `gallery__container ${currentView}`;
+        
+        if (viewToggleBtn) {
+            viewToggleBtn.innerHTML = currentView === 'grid' ? 
+                '<i class="fas fa-th-large"></i>' : 
+                '<i class="fas fa-list"></i>';
+        }
+    }
 
-        if (commentsContainer) {
-            commentsContainer.innerHTML = '';
-            if (game.comments && game.comments.length > 0) {
-                game.comments.forEach(text => {
-                    const commentElement = document.createElement('div');
-                    commentElement.className = 'comment';
-                    commentElement.innerHTML = `
-                        <div class="comment-author">Usuario Anónimo</div>
-                        <div class="comment-text">${text}</div>
-                    `;
-                    commentsContainer.appendChild(commentElement);
-                });
-            } else {
-                commentsContainer.innerHTML = '<p>No hay comentarios aún. ¡Sé el primero en comentar!</p>';
+    // --- FUNCIONES PARA CAMBIO DE TEMA ---
+    function changeTheme() {
+        const theme = themeSelector ? themeSelector.value : '';
+        document.body.setAttribute("data-theme", theme);
+        localStorage.setItem("selectedTheme", theme);
+        
+        // Cambiar ícono del botón de tema
+        if (themeSelector) {
+            const icon = themeSelector.options[themeSelector.selectedIndex].getAttribute('data-icon');
+            if (icon && themeSelector.previousElementSibling) {
+                themeSelector.previousElementSibling.innerHTML = icon;
             }
         }
-
-        gameDetailsOverlay.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-        scrollToTop();
     }
 
-    function closeGameDetails() {
-        if (gameDetailsOverlay) {
-            gameDetailsOverlay.style.display = 'none';
-            document.body.style.overflow = 'auto';
+    function loadSavedTheme() {
+        const savedTheme = localStorage.getItem("selectedTheme");
+        if (savedTheme !== null && themeSelector) {
+            themeSelector.value = savedTheme;
+            document.body.setAttribute("data-theme", savedTheme);
         }
     }
 
-    function updatePagination(totalGames) {
-        const totalPages = Math.ceil(totalGames / gamesPerPage);
-        if (pageInfo) pageInfo.textContent = `Página ${currentPage} de ${totalPages || 1}`;
-        
-        if (prevPageBtn) prevPageBtn.disabled = currentPage === 1;
-        if (nextPageBtn) nextPageBtn.disabled = currentPage === totalPages || totalPages === 0;
-    }
-
-    function goToPrevPage() {
-        if (currentPage > 1) {
-            currentPage--;
-            applyFiltersAndSearch();
-            scrollToTop();
+    // --- FUNCIONES PARA BOTÓN VOLVER ARRIBA ---
+    function toggleBackToTopButton() {
+        if (!backToTopBtn) return;
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
         }
-    }
-
-    function goToNextPage() {
-        const totalGames = recursos.filter(g => g.tipo === 'juego').length;
-        const totalPages = Math.ceil(totalGames / gamesPerPage);
-        if (currentPage < totalPages) {
-            currentPage++;
-            applyFiltersAndSearch();
-            scrollToTop();
-        }
-    }
-
-    // --- FUNCIONES DE FILTRO Y BÚSQUEDA ---
-    function applyFiltersAndSearch() {
-        const term = searchInput ? searchInput.value.toLowerCase() : '';
-        const filteredGames = recursos.filter(game => {
-            if (game.tipo !== 'juego') return false;
-            return game.nombre.toLowerCase().includes(term) ||
-                   game.descripcion.toLowerCase().includes(term);
-        });
-        displayGames(filteredGames);
     }
 
     // --- INICIALIZACIÓN DE EVENTOS ---
@@ -205,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (addCommentBtn) {
         addCommentBtn.addEventListener('click', function () {
-            if (commentInput && commentInput.value.trim() && commentsContainer) {
+            if (commentInput && commentInput.value.trim() && detailsComments) {
                 const commentText = commentInput.value.trim();
 
                 const div = document.createElement('div');
@@ -215,12 +355,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="comment-text">${commentText}</div>
                 `;
 
-                if (commentsContainer.children.length === 1 &&
-                    commentsContainer.children[0].tagName === 'P') {
-                    commentsContainer.innerHTML = '';
+                // Si solo hay el mensaje de "no hay comentarios", reemplazarlo
+                if (detailsComments.children.length === 1 &&
+                    detailsComments.children[0].tagName === 'P') {
+                    detailsComments.innerHTML = '';
                 }
 
-                commentsContainer.appendChild(div);
+                detailsComments.appendChild(div);
                 commentInput.value = '';
             }
         });
@@ -230,12 +371,25 @@ document.addEventListener('DOMContentLoaded', function () {
         searchInput.addEventListener('input', applyFiltersAndSearch);
     }
 
-    if (prevPageBtn) {
-        prevPageBtn.addEventListener('click', goToPrevPage);
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', loadMoreGames);
     }
 
-    if (nextPageBtn) {
-        nextPageBtn.addEventListener('click', goToNextPage);
+    if (randomGameBtn) {
+        randomGameBtn.addEventListener('click', randomGame);
+    }
+
+    if (viewToggleBtn) {
+        viewToggleBtn.addEventListener('click', toggleView);
+    }
+
+    if (themeSelector) {
+        themeSelector.addEventListener('change', changeTheme);
+    }
+
+    if (backToTopBtn) {
+        window.addEventListener('scroll', toggleBackToTopButton);
+        backToTopBtn.addEventListener('click', scrollToTop);
     }
 
     if (contactForm) {
@@ -246,39 +400,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Botón volver arriba
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        });
-
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
-
     // --- INICIALIZACIÓN FINAL ---
-    function loadSavedTheme() {
-        const savedTheme = localStorage.getItem("selectedTheme");
-        if (savedTheme !== null) {
-            document.getElementById("theme-selector").value = savedTheme;
-            document.body.setAttribute("data-theme", savedTheme);
-        }
-    }
-
-    window.changeTheme = function() {
-        const themeSelector = document.getElementById("theme-selector");
-        if (themeSelector) {
-            const theme = themeSelector.value;
-            document.body.setAttribute("data-theme", theme);
-            localStorage.setItem("selectedTheme", theme);
-        }
-    };
-
     loadSavedTheme();
-    applyFiltersAndSearch(); // Cargar todos los juegos al inicio
+    displayGames(recursos.filter(g => g.tipo === 'juego').slice(0, gamesPerLoad));
+    displayedGames = gamesPerLoad;
+
+    if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
+        if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+    }
 });
