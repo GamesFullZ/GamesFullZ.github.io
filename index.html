@@ -18,6 +18,27 @@
 </head>
 <body data-theme="dark">
 
+    <!-- Pantalla de bienvenida animada -->
+    <div id="welcomeScreen" class="welcome-screen">
+        <div class="welcome-content">
+            <div class="logo-animation">
+                <span class="logo-letter">G</span>
+                <span class="logo-letter">a</span>
+                <span class="logo-letter">m</span>
+                <span class="logo-letter">e</span>
+                <span class="logo-letter">s</span>
+                <span class="logo-letter">F</span>
+                <span class="logo-letter">u</span>
+                <span class="logo-letter">l</span>
+                <span class="logo-letter">l</span>
+                <span class="logo-letter">Z</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Cabecera fija -->
     <header id="mainHeader" class="site-header">
         <div class="container header-content">
@@ -131,6 +152,18 @@
     <button id="backToTop" class="back-to-top-btn">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Botón soy nuevo -->
+    <button id="btnNovato" class="btn-novato">🎮 Soy nuevo</button>
+
+    <!-- Botón juego aleatorio -->
+    <button onclick="randomGame()" class="btn-random-game">🎲 Juego aleatorio</button>
+
+    <!-- Botón modo bajo recursos -->
+    <button onclick="enableLowResourceMode()" class="btn-low-resource">📱 Modo bajo recursos</button>
+
+    <!-- Canvas para partículas -->
+    <canvas id="particlesCanvas"></canvas>
 
     <!-- Carga de datos y scripts -->
     <script src="data.js"></script>
