@@ -1,4 +1,4 @@
-// script.js - Corregido y mejorado con todas las funciones
+// script.js - Corregido y mejorado
 
 document.addEventListener('DOMContentLoaded', function () {
     // --- REFERENCIAS A ELEMENTOS DEL DOM ---
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const detailsImage = document.getElementById('modalImage');
     const detailsTitle = document.getElementById('modalTitle');
     const detailsRating = document.getElementById('modalRating');
-    const detailsDownloads = document.getElementById('detailsDownloads');
+    const detailsDownloads = document.getElementById('modalDownloads');
     const detailsDescription = document.getElementById('modalInfo');
     const detailsRequirements = document.getElementById('modalRequirements');
     const trailerFrame = document.getElementById('trailerFrame');
@@ -20,20 +20,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const commentInput = document.getElementById('commentInput');
     const addCommentBtn = document.getElementById('addCommentBtn');
     const randomGameBtn = document.getElementById('randomGameBtn');
-    
-    // --- NUEVAS REFERENCIAS ---
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const prevPageBtn = document.getElementById('prevPage');
+    const nextPageBtn = document.getElementById('nextPage');
+    const pageInfo = document.getElementById('pageInfo');
+    const backToTopBtn = document.getElementById('backToTop');
     const btnNovato = document.getElementById('btnNovato');
     const tutorialModal = document.getElementById('tutorialModal');
     const tutorialClose = document.querySelector('.tutorial-close');
     const tutorialSteps = document.getElementById('tutorialSteps');
     const lowResourceModeBtn = document.getElementById('lowResourceModeBtn');
-    const backToTopBtn = document.getElementById('backToTop');
-
-    // --- REFERENCIAS PARA PAGINACIÓN ---
-    const prevPageBtn = document.getElementById('prevPage');
-    const nextPageBtn = document.getElementById('nextPage');
-    const pageInfo = document.getElementById('pageInfo');
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
 
     // --- VERIFICACIÓN DE DATOS ---
     if (typeof recursos === 'undefined' || !Array.isArray(recursos)) {
@@ -43,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // --- VARIABLES DE ESTADO ---
+    let displayedGames = 0;
+    const gamesPerLoad = 6;
     let currentPage = 1;
     const gamesPerPage = 6;
     let filteredGames = recursos.filter(g => g.tipo === 'juego');
@@ -110,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 img.className = 'game-image';
                 img.loading = 'lazy';
                 
-                // Manejo de error de imagen con event listener
+                // Manejo de error de imagen con event listener (SIN onerror inline)
                 img.addEventListener('error', function() {
                     if (this.dataset.errorHandled) return;
                     this.dataset.errorHandled = 'true';
@@ -255,6 +253,71 @@ document.addEventListener('DOMContentLoaded', function () {
         if (currentPage < totalPages) {
             currentPage++;
             displayCurrentPage();
+        }
+    }
+
+    // --- FUNCIONES PARA CARGAR MÁS JUEGOS ---
+    function loadMoreGames() {
+        const nextGames = recursos.slice(displayedGames, displayedGames + gamesPerLoad);
+
+        if (nextGames.length === 0) {
+            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+            return;
+        }
+
+        const fragment = document.createDocumentFragment();
+        nextGames.forEach(game => {
+            if (game.tipo === 'juego') {
+                const gameCard = document.createElement('div');
+                gameCard.className = 'game-card';
+                gameCard.dataset.gameId = game.id;
+
+                const img = document.createElement('img');
+                img.src = game.imagen;
+                img.alt = game.nombre;
+                img.className = 'game-image';
+                img.loading = 'lazy';
+
+                // Manejo de error de imagen con event listener
+                img.addEventListener('error', function() {
+                    if (this.dataset.errorHandled) return;
+                    this.dataset.errorHandled = 'true';
+                    
+                    const fallbackDiv = document.createElement('div');
+                    fallbackDiv.className = 'game-image image-error';
+                    fallbackDiv.innerHTML = `
+                        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; padding:10px; text-align:center;">
+                            <i class="fas fa-image" style="font-size:2rem; margin-bottom:10px; color:var(--color-accent-purple);"></i>
+                            <span style="font-size:0.8rem;">Imagen no disponible</span>
+                            <span style="font-size:0.7rem; margin-top:5px;">${game.nombre}</span>
+                        </div>
+                    `;
+                    this.parentNode.replaceChild(fallbackDiv, this);
+                });
+
+                const gameInfo = document.createElement('div');
+                gameInfo.className = 'game-info';
+                gameInfo.innerHTML = `
+                    <h3 class="game-title">${game.nombre}</h3>
+                    <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
+                    <div class="game-meta">
+                        <span class="rating">${game.rating}</span>
+                        <span class="downloads">${formatNumber(game.downloads)} descargas</span>
+                    </div>
+                `;
+
+                gameCard.appendChild(img);
+                gameCard.appendChild(gameInfo);
+                gameCard.addEventListener('click', () => showGameDetails(game));
+                fragment.appendChild(gameCard);
+            }
+        });
+
+        if (gallery) gallery.appendChild(fragment);
+        displayedGames += nextGames.length;
+
+        if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
+            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
         }
     }
 
@@ -416,6 +479,10 @@ document.addEventListener('DOMContentLoaded', function () {
         nextPageBtn.addEventListener('click', goToNextPage);
     }
 
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', loadMoreGames);
+    }
+
     if (randomGameBtn) {
         randomGameBtn.addEventListener('click', randomGame);
     }
@@ -474,6 +541,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     loadSavedTheme();
     
-    // Mostrar primera página al cargar
-    displayCurrentPage();
+    // Mostrar primeros juegos al cargar
+    displayGames(recursos.filter(g => g.tipo === 'juego').slice(0, gamesPerLoad));
+    displayedGames = gamesPerLoad;
+
+    if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
+        if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+    }
 });
