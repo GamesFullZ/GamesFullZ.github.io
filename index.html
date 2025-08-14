@@ -42,8 +42,11 @@
     <!-- Cabecera fija -->
     <header id="mainHeader" class="site-header">
         <div class="container header-content">
-            <!-- Logo que ahora lleva a la sección de juegos -->
-            <a href="#games-section" class="logo">Games<span>FullZ</span></a>
+            <!-- Logo que ahora recarga la página con animación -->
+            <a href="/" class="logo" id="logoLink">
+                <span class="logo-text">Games<span>FullZ</span></span>
+                <span class="logo-loader"></span>
+            </a>
             
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="🔍 Buscar juegos...">
@@ -66,13 +69,13 @@
                 <!-- Los juegos se cargarán dinámicamente -->
             </div>
             
-            <!-- Paginación -->
+            <!-- Paginación con estilo mejorado -->
             <div class="pagination-container">
-                <button id="prevPage" class="pagination-btn" disabled>
+                <button id="prevPage" class="pagination-btn enhanced-pagination" disabled>
                     <i class="fas fa-chevron-left"></i> Anterior
                 </button>
                 <span id="pageInfo" class="page-info">Página 1 de 1</span>
-                <button id="nextPage" class="pagination-btn">
+                <button id="nextPage" class="pagination-btn enhanced-pagination">
                     Siguiente <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
@@ -283,5 +286,20 @@
     <!-- Carga de datos y scripts -->
     <script src="data.js"></script>
     <script src="script.js"></script>
+    
+    <!-- Script para la animación del logo -->
+    <script>
+        document.getElementById('logoLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Añadir clase de animación al logo
+            this.classList.add('logo-clicked');
+            
+            // Recargar la página después de la animación
+            setTimeout(function() {
+                window.location.href = '/';
+            }, 600);
+        });
+    </script>
 </body>
 </html>
