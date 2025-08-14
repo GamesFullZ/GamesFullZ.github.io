@@ -1,4 +1,4 @@
-// script.js - Corregido y mejorado
+// script.js - Corregido y mejorado con nuevas funciones
 
 document.addEventListener('DOMContentLoaded', function () {
     // --- REFERENCIAS A ELEMENTOS DEL DOM ---
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('searchInput');
     const contactForm = document.querySelector('.contact-section form');
     const gameDetailsOverlay = document.getElementById('gameModal');
-    const closeDetailsBtn = document.querySelector('#gameModal .close');
+    const closeDetailsBtn = document.getElementById('closeDetails');
     const detailsImage = document.getElementById('modalImage');
     const detailsTitle = document.getElementById('modalTitle');
     const detailsRating = document.getElementById('modalRating');
@@ -27,6 +27,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const backToTopBtn = document.getElementById('backToTop');
     const viewToggleBtn = document.getElementById('viewToggle');
     const themeSelector = document.getElementById('themeSelector');
+    
+    // Nuevos elementos
+    const previewModal = document.getElementById('previewModal');
+    const previewImage = document.getElementById('previewImage');
+    const previewTitle = document.getElementById('previewTitle');
+    const previewRating = document.getElementById('previewRating');
+    const previewDownloads = document.getElementById('previewDownloads');
+    const previewDescription = document.getElementById('previewDescription');
+    const closePreviewBtn = document.querySelector('.preview-modal .close-btn');
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const faqItems = document.querySelectorAll('.faq-item');
+    const aboutSection = document.getElementById('about');
+    const faqSection = document.getElementById('faq');
+    const privacySection = document.getElementById('privacy');
 
     // --- VERIFICACIÓN DE DATOS ---
     if (typeof recursos === 'undefined' || !Array.isArray(recursos)) {
@@ -43,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let filteredGames = recursos.filter(g => g.tipo === 'juego');
     let currentView = 'grid'; // 'grid' o 'list'
     let currentTheme = 'dark'; // 'dark', 'light', 'neon'
+    let previewTimeout;
 
     // --- FUNCIONES DE UTILIDAD ---
     function formatNumber(num) {
@@ -137,6 +152,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 gameCard.appendChild(img);
                 gameCard.appendChild(gameInfo);
                 gameCard.addEventListener('click', () => showGameDetails(game));
+                
+                // Eventos para vista previa al pasar el cursor
+                gameCard.addEventListener('mouseenter', (e) => showGamePreview(e, game));
+                gameCard.addEventListener('mouseleave', hideGamePreview);
+                
                 fragment.appendChild(gameCard);
             }
         });
@@ -196,6 +216,33 @@ document.addEventListener('DOMContentLoaded', function () {
         if (trailerFrame) {
             trailerFrame.src = ''; // Pausa el video
         }
+    }
+    
+    // Funciones para vista previa al pasar el cursor
+    function showGamePreview(event, game) {
+        clearTimeout(previewTimeout);
+        
+        const cardRect = event.currentTarget.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        previewTimeout = setTimeout(() => {
+            if (previewImage) previewImage.src = game.imagen;
+            if (previewTitle) previewTitle.textContent = game.nombre;
+            if (previewRating) previewRating.textContent = game.rating;
+            if (previewDownloads) previewDownloads.textContent = `${formatNumber(game.downloads)} descargas`;
+            if (previewDescription) previewDescription.textContent = game.descripcion.substring(0, 150) + '...';
+            
+            if (previewModal) {
+                previewModal.style.display = 'block';
+                previewModal.style.top = `${cardRect.top + scrollTop - 10}px`;
+                previewModal.style.left = `${cardRect.right + 15}px`;
+            }
+        }, 500); // Mostrar después de 500ms
+    }
+    
+    function hideGamePreview() {
+        clearTimeout(previewTimeout);
+        if (previewModal) previewModal.style.display = 'none';
     }
 
     // --- FUNCIONES DE FILTRO Y BÚSQUEDA ---
@@ -314,6 +361,22 @@ document.addEventListener('DOMContentLoaded', function () {
     function scrollToTopSmooth() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+    
+    // --- FUNCIONES PARA NAVEGACIÓN ENTRE SECCIONES ---
+    function navigateToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            // Ocultar todas las secciones excepto la seleccionada
+            document.querySelectorAll('.content-section').forEach(sec => {
+                if (sec.id !== sectionId) {
+                    sec.classList.remove('active');
+                } else {
+                    sec.classList.add('active');
+                }
+            });
+        }
+    }
 
     // --- INICIALIZACIÓN DE EVENTOS ---
     if (closeDetailsBtn) {
@@ -416,6 +479,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     gameCard.appendChild(img);
                     gameCard.appendChild(gameInfo);
                     gameCard.addEventListener('click', () => showGameDetails(game));
+                    
+                    // Eventos para vista previa al pasar el cursor
+                    gameCard.addEventListener('mouseenter', (e) => showGamePreview(e, game));
+                    gameCard.addEventListener('mouseleave', hideGamePreview);
+                    
                     fragment.appendChild(gameCard);
                 }
             });
@@ -424,7 +492,7 @@ document.addEventListener('DOMContentLoaded', function () {
             displayedGames += nextGames.length;
 
             if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
-                loadMoreBtn.style.display = 'none';
+                if (loadMoreBtn) loadMoreBtn.style.display = 'none';
             }
         });
     }
@@ -454,6 +522,40 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('scroll', toggleBackToTopButton);
         backToTopBtn.addEventListener('click', scrollToTopSmooth);
     }
+    
+    // Eventos para vista previa
+    if (previewModal) {
+        previewModal.addEventListener('click', function(event) {
+            if (event.target === previewModal) {
+                hideGamePreview();
+            }
+        });
+    }
+    
+    // Eventos para navegación entre secciones
+    navButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            navigateToSection(targetId);
+        });
+    });
+    
+    // Eventos para FAQ
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
+    
+    // Evento para cerrar vista previa con Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeGameDetails();
+            hideGamePreview();
+        }
+    });
 
     // --- INICIALIZACIÓN FINAL ---
     loadSavedTheme();
@@ -465,4 +567,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
         if (loadMoreBtn) loadMoreBtn.style.display = 'none';
     }
+    
+    // Simular carga de fondo animado (en una implementación real, esto sería más complejo)
+    console.log("Fondo animado cargado");
 });
