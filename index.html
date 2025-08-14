@@ -51,7 +51,7 @@
             <div class="header-actions">
                 <!-- Selector de tema -->
                 <select id="theme-selector" onchange="changeTheme()">
-                    <option value="">Oscuro</option>
+                    <option value="dark">Oscuro</option>
                     <option value="light">Claro</option>
                     <option value="neon">Neón</option>
                 </select>
@@ -153,17 +153,10 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Botón soy nuevo -->
-    <button id="btnNovato" class="btn-novato">🎮 Soy nuevo</button>
-
     <!-- Botón juego aleatorio -->
-    <button onclick="randomGame()" class="btn-random-game">🎲 Juego aleatorio</button>
-
-    <!-- Botón modo bajo recursos -->
-    <button onclick="enableLowResourceMode()" class="btn-low-resource">📱 Modo bajo recursos</button>
-
-    <!-- Canvas para partículas -->
-    <canvas id="particlesCanvas"></canvas>
+    <button id="randomGameBtn" class="btn-random-game">
+        <i class="fas fa-dice"></i> 🎲 Juego aleatorio
+    </button>
 
     <!-- Carga de datos y scripts -->
     <script src="data.js"></script>
