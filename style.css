@@ -838,4 +838,81 @@ body {
     #randomGameBtn {
         align-self: center;
     }
+    /* --- PAGINACIÓN MEJORADA --- */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
+    flex-wrap: wrap;
 }
+
+.pagination-btn {
+    padding: 12px 25px;
+    background: transparent;
+    color: var(--color-accent-green);
+    border: 2px solid var(--color-accent-green);
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed) var(--transition-ease);
+    font-size: 1rem;
+    font-family: var(--font-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: var(--color-gradient-alt);
+    color: var(--color-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.4);
+    border-color: transparent;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: var(--color-secondary);
+    border-color: var(--color-border);
+    color: #aaa;
+}
+
+.page-info {
+    font-size: 1rem;
+    color: var(--color-accent-green);
+    font-weight: 600;
+    font-family: var(--font-heading);
+}
+
+/* --- BOTÓN CARGAR MÁS (Oculto si usas paginación) --- */
+.load-more-container {
+    display: none; /* Oculto por defecto si usas paginación */
+    text-align: center;
+    margin: 40px 0;
+}
+
+.btn-load-more {
+    padding: 14px 35px;
+    background: transparent;
+    color: var(--color-accent-green);
+    border: 2px solid var(--color-accent-green);
+    border-radius: var(--border-radius-md);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-speed) var(--transition-ease);
+    font-size: 1.1rem;
+    font-family: var(--font-heading);
+}
+
+.btn-load-more:hover {
+    background: var(--color-gradient-alt);
+    color: var(--color-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.4);
+    border-color: transparent;
+}
+}
+
