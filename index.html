@@ -141,10 +141,148 @@
         </div>
     </div>
 
+    <!-- Modal de vista previa al pasar el cursor -->
+    <div id="previewModal" class="preview-modal">
+        <div class="preview-content">
+            <img id="previewImage" src="" alt="Vista previa del juego">
+            <div class="preview-info">
+                <h3 id="previewTitle"></h3>
+                <div class="preview-meta">
+                    <span class="preview-rating" id="previewRating"></span>
+                    <span class="preview-downloads" id="previewDownloads"></span>
+                </div>
+                <p id="previewDescription"></p>
+            </div>
+        </div>
+    </div>
+
     <!-- Botón volver arriba -->
     <button id="backToTop" class="back-to-top-btn">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Botones de navegación adicionales -->
+    <div class="navigation-buttons">
+        <a href="#about" class="nav-btn about-btn">
+            <i class="fas fa-info-circle"></i> Sobre Nosotros
+        </a>
+        <a href="#faq" class="nav-btn faq-btn">
+            <i class="fas fa-question-circle"></i> FAQ
+        </a>
+        <a href="#privacy" class="nav-btn privacy-btn">
+            <i class="fas fa-lock"></i> Privacidad
+        </a>
+    </div>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="about" class="content-section about-section">
+        <div class="about-content">
+            <h2>Sobre GamesFullZ</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>GamesFullZ es una plataforma dedicada a ofrecer los mejores juegos de forma gratuita y segura. Nuestra misión es proporcionar acceso a títulos de alta calidad sin complicaciones.</p>
+                    <p>Fundada en 2020, hemos crecido para convertirnos en una de las comunidades más confiables de descarga de juegos. Nuestro equipo está formado por apasionados de los videojuegos que entienden la importancia de una experiencia de usuario excelente.</p>
+                    <p>Trabajamos constantemente para mejorar nuestra plataforma, agregar nuevos títulos y mantener la seguridad de nuestras descargas. ¡Únete a nuestra comunidad en Telegram para estar al tanto de las últimas novedades!</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <i class="fas fa-gamepad"></i>
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Juegos</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Usuarios</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-download"></i>
+                        <span class="stat-number">2M+</span>
+                        <span class="stat-label">Descargas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección FAQ -->
+    <section id="faq" class="content-section faq-section">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cómo descargo un juego?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Para descargar un juego, simplemente haz clic en la tarjeta del juego que te interesa. En la ventana emergente, encontrarás los enlaces de descarga. Haz clic en uno de los enlaces y sigue las instrucciones en el sitio externo.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Son seguros los juegos?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Sí, todos nuestros juegos son escaneados regularmente con múltiples antivirus y verificados por nuestro equipo antes de ser publicados. Además, utilizamos solo servicios de descarga confiables como Mediafire y Gofile.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Por qué necesito una contraseña para extraer los archivos?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>La contraseña es una medida de seguridad para evitar que los antivirus marquen los archivos como maliciosos. La contraseña para todos nuestros juegos es: <strong>123</strong></p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Puedo solicitar un juego específico?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>¡Por supuesto! Puedes solicitarnos juegos a través de nuestro formulario de contacto o directamente en nuestro grupo de Telegram. Hacemos nuestro mejor esfuerzo para agregar los títulos más solicitados.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Qué hago si un enlace no funciona?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Si un enlace no funciona, por favor contáctanos a través de nuestro formulario de contacto o en Telegram. Nuestro equipo se encargará de resolver el problema lo antes posible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Política de Privacidad -->
+    <section id="privacy" class="content-section privacy-section">
+        <div class="privacy-content">
+            <h2>Política de Privacidad</h2>
+            <div class="privacy-text">
+                <p>En GamesFullZ, respetamos tu privacidad y nos comprometemos a proteger tus datos personales. Esta política de privacidad explica cómo recopilamos, usamos y protegemos tu información.</p>
+                
+                <h3>Información que recopilamos</h3>
+                <p>Cuando utilizas nuestro sitio, podemos recopilar información como tu dirección IP, tipo de navegador, páginas visitadas y tiempo de navegación. Esta información se utiliza únicamente con fines estadísticos y para mejorar tu experiencia en nuestro sitio.</p>
+                
+                <h3>Uso de cookies</h3>
+                <p>Nuestro sitio utiliza cookies para mejorar la funcionalidad y personalizar tu experiencia. Las cookies nos ayudan a recordar tus preferencias y a analizar el tráfico del sitio.</p>
+                
+                <h3>Protección de datos</h3>
+                <p>Implementamos medidas de seguridad técnicas y organizativas para proteger tu información contra acceso no autorizado, alteración, divulgación o destrucción.</p>
+                
+                <h3>Enlaces a terceros</h3>
+                <p>Nuestro sitio puede contener enlaces a sitios de terceros. No somos responsables por las prácticas de privacidad de estos sitios y te recomendamos revisar sus políticas de privacidad.</p>
+                
+                <h3>Cambios en esta política</h3>
+                <p>Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento. Te notificaremos sobre cambios importantes a través de nuestro sitio web.</p>
+                
+                <p>Si tienes alguna pregunta sobre nuestra política de privacidad, no dudes en contactarnos a través de nuestro formulario de contacto.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Carga de datos y scripts -->
     <script src="data.js"></script>
