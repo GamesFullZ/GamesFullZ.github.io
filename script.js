@@ -25,11 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextPageBtn = document.getElementById('nextPage');
     const pageInfo = document.getElementById('pageInfo');
     const backToTopBtn = document.getElementById('backToTop');
-    const btnNovato = document.getElementById('btnNovato');
-    const tutorialModal = document.getElementById('tutorialModal');
-    const tutorialClose = document.querySelector('.tutorial-close');
-    const tutorialSteps = document.getElementById('tutorialSteps');
-    const lowResourceModeBtn = document.getElementById('lowResourceModeBtn');
+    const viewToggleBtn = document.getElementById('viewToggle');
+    const themeSelector = document.getElementById('themeSelector');
 
     // --- VERIFICACIÓN DE DATOS ---
     if (typeof recursos === 'undefined' || !Array.isArray(recursos)) {
@@ -44,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentPage = 1;
     const gamesPerPage = 6;
     let filteredGames = recursos.filter(g => g.tipo === 'juego');
-    let isLowResourceMode = false;
+    let currentView = 'grid'; // 'grid' o 'list'
+    let currentTheme = 'dark'; // 'dark', 'light', 'neon'
 
     // --- FUNCIONES DE UTILIDAD ---
     function formatNumber(num) {
@@ -99,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
         gamesToShow.forEach(game => {
             if (game.tipo === 'juego') {
                 const gameCard = document.createElement('div');
-                gameCard.className = 'game-card';
+                gameCard.className = `game-card ${currentView}`;
                 gameCard.dataset.gameId = game.id;
                 
                 const img = document.createElement('img');
@@ -162,7 +160,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (trailerFrame) {
             const trailerId = getTrailerId(game.nombre);
-            // CORREGIDO: Eliminado espacio extra en la URL
             trailerFrame.src = `https://www.youtube.com/embed/${trailerId}`;
         }
 
@@ -256,71 +253,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // --- FUNCIONES PARA CARGAR MÁS JUEGOS ---
-    function loadMoreGames() {
-        const nextGames = recursos.slice(displayedGames, displayedGames + gamesPerLoad);
-
-        if (nextGames.length === 0) {
-            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-            return;
-        }
-
-        const fragment = document.createDocumentFragment();
-        nextGames.forEach(game => {
-            if (game.tipo === 'juego') {
-                const gameCard = document.createElement('div');
-                gameCard.className = 'game-card';
-                gameCard.dataset.gameId = game.id;
-
-                const img = document.createElement('img');
-                img.src = game.imagen;
-                img.alt = game.nombre;
-                img.className = 'game-image';
-                img.loading = 'lazy';
-
-                // Manejo de error de imagen con event listener
-                img.addEventListener('error', function() {
-                    if (this.dataset.errorHandled) return;
-                    this.dataset.errorHandled = 'true';
-                    
-                    const fallbackDiv = document.createElement('div');
-                    fallbackDiv.className = 'game-image image-error';
-                    fallbackDiv.innerHTML = `
-                        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; padding:10px; text-align:center;">
-                            <i class="fas fa-image" style="font-size:2rem; margin-bottom:10px; color:var(--color-accent-purple);"></i>
-                            <span style="font-size:0.8rem;">Imagen no disponible</span>
-                            <span style="font-size:0.7rem; margin-top:5px;">${game.nombre}</span>
-                        </div>
-                    `;
-                    this.parentNode.replaceChild(fallbackDiv, this);
-                });
-
-                const gameInfo = document.createElement('div');
-                gameInfo.className = 'game-info';
-                gameInfo.innerHTML = `
-                    <h3 class="game-title">${game.nombre}</h3>
-                    <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
-                    <div class="game-meta">
-                        <span class="rating">${game.rating}</span>
-                        <span class="downloads">${formatNumber(game.downloads)} descargas</span>
-                    </div>
-                `;
-
-                gameCard.appendChild(img);
-                gameCard.appendChild(gameInfo);
-                gameCard.addEventListener('click', () => showGameDetails(game));
-                fragment.appendChild(gameCard);
-            }
-        });
-
-        if (gallery) gallery.appendChild(fragment);
-        displayedGames += nextGames.length;
-
-        if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
-            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-        }
-    }
-
     // --- FUNCIONES PARA JUEGO ALEATORIO ---
     function randomGame() {
         const juegos = recursos.filter(g => g.tipo === 'juego');
@@ -333,90 +265,43 @@ document.addEventListener('DOMContentLoaded', function () {
         // alert(`🎲 Juego aleatorio: ${randomGame.nombre}`); // Opcional
     }
 
-    // --- MODO BAJO RECURSOS ---
-    function enableLowResourceMode() {
-        isLowResourceMode = !isLowResourceMode;
+    // --- FUNCIONES PARA CAMBIO DE VISTA ---
+    function toggleView() {
+        currentView = currentView === 'grid' ? 'list' : 'grid';
+        if (viewToggleBtn) {
+            viewToggleBtn.innerHTML = currentView === 'grid' ? 
+                '<i class="fas fa-th-large"></i>' : 
+                '<i class="fas fa-list"></i>';
+        }
+        displayGames(filteredGames.slice((currentPage - 1) * gamesPerPage, currentPage * gamesPerPage));
+    }
+
+    // --- FUNCIONES PARA CAMBIO DE TEMA ---
+    function changeTheme() {
+        const theme = themeSelector ? themeSelector.value : 'dark';
+        currentTheme = theme;
+        document.body.setAttribute('data-theme', theme);
+        localStorage.setItem('selectedTheme', theme);
         
-        if (isLowResourceMode) {
-            document.body.classList.add('low-resource-mode');
-            if (lowResourceModeBtn) {
-                lowResourceModeBtn.innerHTML = '<i class="fas fa-mobile-alt"></i> Modo Normal';
-                lowResourceModeBtn.style.background = '#ffcc00';
-                lowResourceModeBtn.style.color = '#000';
-            }
-            alert('📱 Modo bajo recursos activado. Se han desactivado animaciones y efectos pesados.');
-        } else {
-            document.body.classList.remove('low-resource-mode');
-            if (lowResourceModeBtn) {
-                lowResourceModeBtn.innerHTML = '<i class="fas fa-mobile"></i> Modo Bajo Recursos';
-                lowResourceModeBtn.style.background = '#2196F3';
-                lowResourceModeBtn.style.color = 'white';
-            }
-            alert('恢复正常模式。所有动画和效果已重新启用。');
-        }
-    }
-
-    // --- MODO NOVATO - TUTORIAL PASO A PASO ---
-    function showTutorial() {
-        if (!tutorialModal) return;
-
-        // Definir pasos del tutorial
-        const pasos = [
-            {
-                icon: 'fas fa-download',
-                title: '1. Cómo descargar',
-                text: 'Haz clic en "Gofile" y luego en "Download" en la página que se abre.'
-            },
-            {
-                icon: 'fas fa-file-archive',
-                title: '2. Descomprimir archivos',
-                text: 'Usa WinRAR o 7-Zip para extraer el archivo .zip o .rar al escritorio.'
-            },
-            {
-                icon: 'fas fa-cog',
-                title: '3. Instalar el juego',
-                text: 'Entra a la carpeta descomprimida y ejecuta El juego y listo'
-            }
-        ];
-
-        // Limpiar pasos anteriores
-        if (tutorialSteps) tutorialSteps.innerHTML = '';
-
-        // Crear pasos en el modal
-        if (tutorialSteps) {
-            pasos.forEach((paso, index) => {
-                const step = document.createElement('div');
-                step.className = 'step';
-                step.innerHTML = `
-                    <h3><i class="${paso.icon}"></i> ${paso.title}</h3>
-                    <p>${paso.text}</p>
-                `;
-                tutorialSteps.appendChild(step);
-            });
-        }
-
-        // Mostrar tutorial con animación
-        tutorialModal.style.display = 'block';
-        const steps = tutorialSteps ? tutorialSteps.querySelectorAll('.step') : [];
-        if (steps.length > 0) {
-            steps.forEach((step, i) => {
-                setTimeout(() => {
-                    step.classList.add('active');
-                }, i * 300);
-            });
-        }
-    }
-
-    function closeTutorial() {
-        if (tutorialModal) {
-            tutorialModal.style.display = 'none';
-            if (tutorialSteps) {
-                tutorialSteps.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+        // Cambiar ícono del botón de tema
+        if (themeSelector) {
+            const icon = themeSelector.options[themeSelector.selectedIndex].getAttribute('data-icon');
+            if (icon && themeSelector.previousElementSibling) {
+                themeSelector.previousElementSibling.innerHTML = icon;
             }
         }
     }
 
-    // --- BOTÓN VOLVER ARRIBA ---
+    function loadSavedTheme() {
+        const savedTheme = localStorage.getItem('selectedTheme');
+        if (savedTheme !== null && themeSelector) {
+            themeSelector.value = savedTheme;
+            document.body.setAttribute('data-theme', savedTheme);
+            currentTheme = savedTheme;
+        }
+    }
+
+    // --- FUNCIONES PARA BOTÓN VOLVER ARRIBA ---
     function toggleBackToTopButton() {
         if (!backToTopBtn) return;
         if (window.scrollY > 300) {
@@ -480,7 +365,68 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', loadMoreGames);
+        loadMoreBtn.addEventListener('click', function() {
+            const nextGames = recursos.slice(displayedGames, displayedGames + gamesPerLoad);
+            if (nextGames.length === 0) {
+                loadMoreBtn.style.display = 'none';
+                return;
+            }
+
+            const fragment = document.createDocumentFragment();
+            nextGames.forEach(game => {
+                if (game.tipo === 'juego') {
+                    const gameCard = document.createElement('div');
+                    gameCard.className = 'game-card';
+                    gameCard.dataset.gameId = game.id;
+
+                    const img = document.createElement('img');
+                    img.src = game.imagen;
+                    img.alt = game.nombre;
+                    img.className = 'game-image';
+                    img.loading = 'lazy';
+
+                    // Manejo de error de imagen con event listener
+                    img.addEventListener('error', function() {
+                        if (this.dataset.errorHandled) return;
+                        this.dataset.errorHandled = 'true';
+                        
+                        const fallbackDiv = document.createElement('div');
+                        fallbackDiv.className = 'game-image image-error';
+                        fallbackDiv.innerHTML = `
+                            <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; padding:10px; text-align:center;">
+                                <i class="fas fa-image" style="font-size:2rem; margin-bottom:10px; color:var(--color-accent-purple);"></i>
+                                <span style="font-size:0.8rem;">Imagen no disponible</span>
+                                <span style="font-size:0.7rem; margin-top:5px;">${game.nombre}</span>
+                            </div>
+                        `;
+                        this.parentNode.replaceChild(fallbackDiv, this);
+                    });
+
+                    const gameInfo = document.createElement('div');
+                    gameInfo.className = 'game-info';
+                    gameInfo.innerHTML = `
+                        <h3 class="game-title">${game.nombre}</h3>
+                        <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
+                        <div class="game-meta">
+                            <span class="rating">${game.rating}</span>
+                            <span class="downloads">${formatNumber(game.downloads)} descargas</span>
+                        </div>
+                    `;
+
+                    gameCard.appendChild(img);
+                    gameCard.appendChild(gameInfo);
+                    gameCard.addEventListener('click', () => showGameDetails(game));
+                    fragment.appendChild(gameCard);
+                }
+            });
+
+            if (gallery) gallery.appendChild(fragment);
+            displayedGames += nextGames.length;
+
+            if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        });
     }
 
     if (randomGameBtn) {
@@ -496,24 +442,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // --- NUEVOS EVENTOS ---
-    if (btnNovato) {
-        btnNovato.addEventListener('click', showTutorial);
+    if (viewToggleBtn) {
+        viewToggleBtn.addEventListener('click', toggleView);
     }
 
-    if (tutorialClose) {
-        tutorialClose.addEventListener('click', closeTutorial);
-    }
-
-    if (tutorialModal) {
-        tutorialModal.addEventListener('click', function(event) {
-            if (event.target === tutorialModal) {
-                closeTutorial();
-            }
-        });
-    }
-
-    if (lowResourceModeBtn) {
-        lowResourceModeBtn.addEventListener('click', enableLowResourceMode);
+    if (themeSelector) {
+        themeSelector.addEventListener('change', changeTheme);
     }
 
     if (backToTopBtn) {
@@ -522,23 +456,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // --- INICIALIZACIÓN FINAL ---
-    function loadSavedTheme() {
-        const savedTheme = localStorage.getItem("selectedTheme");
-        if (savedTheme !== null) {
-            document.getElementById("theme-selector").value = savedTheme;
-            document.body.setAttribute("data-theme", savedTheme);
-        }
-    }
-
-    window.changeTheme = function() {
-        const themeSelector = document.getElementById("theme-selector");
-        if (themeSelector) {
-            const theme = themeSelector.value;
-            document.body.setAttribute("data-theme", theme);
-            localStorage.setItem("selectedTheme", theme);
-        }
-    };
-
     loadSavedTheme();
     
     // Mostrar primeros juegos al cargar
