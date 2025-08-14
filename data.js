@@ -469,4 +469,22 @@ const recursos = [
     },
     imagen: "Images/Resident_Evil_7_cover_art.jpg"
    },
+    {
+    id: 28,
+    nombre: "Far Cry Primal",
+    tipo: "juego",
+    descripcion: "Shooter y aventura en mundo abierto ambientado en la Edad de Piedra, donde cazas, sobrevives y domas bestias salvajes.",
+    requisitos: "Windows 7/8.1/10 64-bit, Intel Core i3-550 / AMD Phenom II X4 955, 4 GB RAM, GeForce GTX 460 / Radeon HD 5770, 20 GB espacio.",
+    downloads: 0,  // Número de descargas
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "se ve chido",
+        "hola"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/2croqvw1tozk6oo/Far+Cry+Primal.torrent/file",
+        mediafire: "https://www.mediafire.com/file/2croqvw1tozk6oo/Far+Cry+Primal.torrent/file"
+    },
+    imagen: "Images/FCP_UCS17665_Store_Portrait_1200x1600-1200x1600-1069539bdf73f4ca48f7f64027a6e921.jpg"
+   },
 ];
