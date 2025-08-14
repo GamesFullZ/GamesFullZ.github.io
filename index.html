@@ -7,7 +7,7 @@
     
     <!-- Fuentes modernas -->
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
-    <!-- Iconos con Font Awesome -->
+    <!-- Iconos con Font Awesome (SIN ESPACIOS) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795479991735761"
@@ -17,27 +17,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="dark">
-
-    <!-- Pantalla de bienvenida animada -->
-    <div id="welcomeScreen" class="welcome-screen">
-        <div class="welcome-content">
-            <div class="logo-animation">
-                <span class="logo-letter">G</span>
-                <span class="logo-letter">a</span>
-                <span class="logo-letter">m</span>
-                <span class="logo-letter">e</span>
-                <span class="logo-letter">s</span>
-                <span class="logo-letter">F</span>
-                <span class="logo-letter">u</span>
-                <span class="logo-letter">l</span>
-                <span class="logo-letter">l</span>
-                <span class="logo-letter">Z</span>
-            </div>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
-            </div>
-        </div>
-    </div>
 
     <!-- Cabecera fija -->
     <header id="mainHeader" class="site-header">
@@ -49,14 +28,9 @@
             </div>
             
             <div class="header-actions">
-                <!-- Botón de cambio de vista -->
-                <button id="viewToggle" class="view-toggle-btn" title="Cambiar vista">
-                    <i class="fas fa-th-large"></i>
-                </button>
-                
-                <!-- Selector de tema ESTILIZADO -->
-                <select id="themeSelector" class="theme-selector">
-                    <option value="dark">Oscuro</option>
+                <!-- Selector de tema -->
+                <select id="theme-selector" onchange="changeTheme()">
+                    <option value="">Oscuro</option>
                     <option value="light">Claro</option>
                     <option value="neon">Neón</option>
                 </select>
@@ -77,16 +51,16 @@
                 <!-- Los juegos se cargarán dinámicamente -->
             </div>
             
-           <!-- Paginación -->
-<div class="pagination-container">
-    <button id="prevPage" class="pagination-btn" disabled>
-        <i class="fas fa-chevron-left"></i> Anterior
-    </button>
-    <span id="pageInfo" class="page-info">Página 1 de 1</span>
-    <button id="nextPage" class="pagination-btn">
-        Siguiente <i class="fas fa-chevron-right"></i>
-    </button>
-</div>
+            <!-- Paginación -->
+            <div class="pagination-container">
+                <button id="prevPage" class="pagination-btn" disabled>
+                    <i class="fas fa-chevron-left"></i> Anterior
+                </button>
+                <span id="pageInfo" class="page-info">Página 1 de 1</span>
+                <button id="nextPage" class="pagination-btn">
+                    Siguiente <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
         </section>
 
         <!-- Sección de contacto -->
@@ -157,11 +131,6 @@
     <button id="backToTop" class="back-to-top-btn">
         <i class="fas fa-arrow-up"></i>
     </button>
-
-    <!-- Audio para la animación de bienvenida -->
-    <audio id="welcomeSound" preload="auto">
-        <source src="https://www.soundjay.com/button/sounds/button-09.mp3" type="audio/mpeg">
-    </audio>
 
     <!-- Carga de datos y scripts -->
     <script src="data.js"></script>
