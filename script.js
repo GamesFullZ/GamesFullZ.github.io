@@ -1,4 +1,4 @@
-// script.js - Corregido y mejorado con paginación
+// script.js - Corregido y mejorado
 
 document.addEventListener('DOMContentLoaded', function () {
     // --- REFERENCIAS A ELEMENTOS DEL DOM ---
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const detailsImage = document.getElementById('modalImage');
     const detailsTitle = document.getElementById('modalTitle');
     const detailsRating = document.getElementById('modalRating');
-    const detailsDownloads = document.getElementById('detailsDownloads');
+    const detailsDownloads = document.getElementById('modalDownloads');
     const detailsDescription = document.getElementById('modalInfo');
     const detailsRequirements = document.getElementById('modalRequirements');
     const trailerFrame = document.getElementById('trailerFrame');
@@ -20,12 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const commentInput = document.getElementById('commentInput');
     const addCommentBtn = document.getElementById('addCommentBtn');
     const randomGameBtn = document.getElementById('randomGameBtn');
-    
-    // --- NUEVAS REFERENCIAS PARA PAGINACIÓN ---
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
     const prevPageBtn = document.getElementById('prevPage');
     const nextPageBtn = document.getElementById('nextPage');
     const pageInfo = document.getElementById('pageInfo');
-    const loadMoreBtn = document.getElementById('loadMoreBtn'); // Por si decides volver a usarlo
 
     // --- VERIFICACIÓN DE DATOS ---
     if (typeof recursos === 'undefined' || !Array.isArray(recursos)) {
@@ -100,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 img.className = 'game-image';
                 img.loading = 'lazy';
                 
-                // Manejo de error de imagen con event listener
                 img.addEventListener('error', function() {
                     if (this.dataset.errorHandled) return;
                     this.dataset.errorHandled = 'true';
@@ -188,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.style.overflow = 'auto';
         }
         if (trailerFrame) {
-            trailerFrame.src = ''; // Pausa el video
+            trailerFrame.src = '';
         }
     }
 
@@ -200,7 +197,6 @@ document.addEventListener('DOMContentLoaded', function () {
             return game.nombre.toLowerCase().includes(term) ||
                    game.descripcion.toLowerCase().includes(term);
         });
-        
         currentPage = 1; // Reiniciar a la primera página al filtrar
         updatePagination();
         displayCurrentPage();
@@ -299,7 +295,6 @@ document.addEventListener('DOMContentLoaded', function () {
         searchInput.addEventListener('input', applyFiltersAndSearch);
     }
 
-    // --- NUEVOS EVENTOS PARA PAGINACIÓN ---
     if (prevPageBtn) {
         prevPageBtn.addEventListener('click', goToPrevPage);
     }
@@ -321,25 +316,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // --- INICIALIZACIÓN FINAL ---
-    function loadSavedTheme() {
-        const savedTheme = localStorage.getItem("selectedTheme");
-        if (savedTheme !== null) {
-            document.getElementById("theme-selector").value = savedTheme;
-            document.body.setAttribute("data-theme", savedTheme);
-        }
-    }
-
-    window.changeTheme = function() {
-        const themeSelector = document.getElementById("theme-selector");
-        if (themeSelector) {
-            const theme = themeSelector.value;
-            document.body.setAttribute("data-theme", theme);
-            localStorage.setItem("selectedTheme", theme);
-        }
-    };
-
-    loadSavedTheme();
-    
-    // Mostrar primera página
+    // Mostrar la primera página al cargar
     displayCurrentPage();
 });
