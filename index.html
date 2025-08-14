@@ -16,7 +16,7 @@
     <!-- Enlace al CSS externo -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="dark">
+<body data-theme="dark" id="top">
 
     <!-- Pantalla de bienvenida animada -->
     <div id="welcomeScreen" class="welcome-screen">
@@ -42,7 +42,8 @@
     <!-- Cabecera fija -->
     <header id="mainHeader" class="site-header">
         <div class="container header-content">
-            <a href="#" class="logo">Games<span>FullZ</span></a>
+            <!-- Logo que ahora lleva a la sección de juegos -->
+            <a href="#games-section" class="logo">Games<span>FullZ</span></a>
             
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="🔍 Buscar juegos...">
@@ -263,16 +264,6 @@
             <h2>Política de Privacidad</h2>
             <div class="privacy-text">
                 <p>En GamesFullZ, respetamos tu privacidad y nos comprometemos a proteger tus datos personales. Esta política de privacidad explica cómo recopilamos, usamos y protegemos tu información.</p>
-                
-                <h3>Información que recopilamos</h3>
-                <p>Cuando utilizas nuestro sitio, podemos recopilar información como tu dirección IP, tipo de navegador, páginas visitadas y tiempo de navegación. Esta información se utiliza únicamente con fines estadísticos y para mejorar tu experiencia en nuestro sitio.</p>
-                
-                <h3>Uso de cookies</h3>
-                <p>Nuestro sitio utiliza cookies para mejorar la funcionalidad y personalizar tu experiencia. Las cookies nos ayudan a recordar tus preferencias y a analizar el tráfico del sitio.</p>
-                
-                <h3>Protección de datos</h3>
-                <p>Implementamos medidas de seguridad técnicas y organizativas para proteger tu información contra acceso no autorizado, alteración, divulgación o destrucción.</p>
-                
                 <h3>Enlaces a terceros</h3>
                 <p>Nuestro sitio puede contener enlaces a sitios de terceros. No somos responsables por las prácticas de privacidad de estos sitios y te recomendamos revisar sus políticas de privacidad.</p>
                 
@@ -284,9 +275,13 @@
         </div>
     </section>
 
+    <!-- Botón para volver al inicio -->
+    <a href="#top" class="back-to-top-mobile">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
     <!-- Carga de datos y scripts -->
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-
