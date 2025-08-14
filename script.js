@@ -1,4 +1,4 @@
-// script.js - Corregido y mejorado con paginación
+// script.js - Corregido y mejorado con todas las funciones
 
 document.addEventListener('DOMContentLoaded', function () {
     // --- REFERENCIAS A ELEMENTOS DEL DOM ---
@@ -21,11 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const addCommentBtn = document.getElementById('addCommentBtn');
     const randomGameBtn = document.getElementById('randomGameBtn');
     
-    // --- NUEVAS REFERENCIAS PARA PAGINACIÓN ---
+    // --- REFERENCIAS PARA PAGINACIÓN ---
     const prevPageBtn = document.getElementById('prevPage');
     const nextPageBtn = document.getElementById('nextPage');
     const pageInfo = document.getElementById('pageInfo');
-    const loadMoreBtn = document.getElementById('loadMoreBtn'); // Por si decides volver a usarlo
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
 
     // --- VERIFICACIÓN DE DATOS ---
     if (typeof recursos === 'undefined' || !Array.isArray(recursos)) {
@@ -77,8 +77,9 @@ document.addEventListener('DOMContentLoaded', function () {
             "Far Cry 5": "lg6fpmp3f2uhuho",
             "Fnaf Collection": "sbws8mnvrtkjno0",
             "Resident Evil 7: Biohazard": "uqduzvrhkb01kth"
+            // ... añade más mappings según necesites
         };
-        return trailerMap[gameName] || "dQw4w9WgXcQ";
+        return trailerMap[gameName] || "dQw4w9WgXcQ"; // Fallback
     }
 
     // --- FUNCIONES PARA MOSTRAR DATOS ---
@@ -100,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 img.className = 'game-image';
                 img.loading = 'lazy';
                 
-                // Manejo de error de imagen con event listener
+                // Manejo de error de imagen con event listener (SIN onerror inline)
                 img.addEventListener('error', function() {
                     if (this.dataset.errorHandled) return;
                     this.dataset.errorHandled = 'true';
@@ -154,6 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (trailerFrame) {
             const trailerId = getTrailerId(game.nombre);
+            // CORREGIDO: Eliminado espacio extra en la URL
             trailerFrame.src = `https://www.youtube.com/embed/${trailerId}`;
         }
 
@@ -299,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function () {
         searchInput.addEventListener('input', applyFiltersAndSearch);
     }
 
-    // --- NUEVOS EVENTOS PARA PAGINACIÓN ---
+    // --- EVENTOS DE PAGINACIÓN ---
     if (prevPageBtn) {
         prevPageBtn.addEventListener('click', goToPrevPage);
     }
@@ -340,6 +342,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     loadSavedTheme();
     
-    // Mostrar primera página
+    // Mostrar primera página al cargar
     displayCurrentPage();
 });
