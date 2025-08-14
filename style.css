@@ -329,6 +329,7 @@ header {
     transform: translateY(20px);
     opacity: 0;
     animation: cardAppear var(--animation-duration-medium) ease-out forwards;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes cardAppear {
@@ -409,6 +410,23 @@ header {
     color: var(--color-accent-green);
     font-family: var(--font-heading);
     transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.game-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-accent-green);
+    transition: width 0.3s ease;
+}
+
+.game-card:hover .game-title::after {
+    width: 100%;
 }
 
 .game-card:hover .game-title {
@@ -472,6 +490,8 @@ header {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .btn-load-more::before {
@@ -497,6 +517,95 @@ header {
     border-color: transparent;
 }
 
+/* --- BOTÓN SIGUIENTE PÁGINA - ESTILO BUENÍSIMO --- */
+.btn-next-page {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    background: transparent;
+    color: var(--color-accent-purple);
+    border: 2px solid var(--color-accent-purple);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: var(--font-heading);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 20px auto;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(191, 0, 255, 0.2);
+}
+
+.btn-next-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--color-gradient-main);
+    transition: width 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: -1;
+}
+
+.btn-next-page:hover::before {
+    width: 100%;
+}
+
+.btn-next-page:hover {
+    color: white;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(191, 0, 255, 0.4), 0 0 20px rgba(0, 102, 255, 0.3);
+    letter-spacing: 2px;
+}
+
+.btn-next-page:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.btn-next-page span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-next-page i {
+    transition: transform 0.3s ease;
+}
+
+.btn-next-page:hover i {
+    transform: translateX(5px);
+}
+
+/* Efecto de partículas alrededor del botón */
+.btn-next-page::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(191, 0, 255, 0.4) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.btn-next-page:hover::after {
+    opacity: 1;
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 /* --- SECCIÓN DE CONTACTO --- */
 .contact-section {
     background: var(--color-card-bg);
@@ -516,6 +625,21 @@ header {
     margin-bottom: 15px;
     font-family: var(--font-heading);
     font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.contact-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--color-gradient-main);
+    border-radius: 3px;
 }
 
 .form-group {
@@ -572,6 +696,8 @@ header {
     z-index: 1;
     opacity: 0;
     animation: fadeIn 0.5s ease-out 2.5s forwards;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .contact-section button::before {
@@ -720,6 +846,19 @@ header {
     color: var(--color-accent-green);
     font-weight: 600;
     font-family: var(--font-heading);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.modal-info h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--color-gradient-main);
+    border-radius: 3px;
 }
 
 /* Rating y descargas */
@@ -750,6 +889,22 @@ header {
     color: var(--color-accent-green);
     margin: 20px 0 10px;
     font-weight: 600;
+    position: relative;
+    padding-left: 15px;
+}
+
+.requirements h3::before,
+.download-options h3::before,
+.comments-section h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--color-accent-green);
+    border-radius: 50%;
 }
 
 .requirements p {
@@ -1202,5 +1357,10 @@ header {
 
     #randomGameBtn {
         align-self: center;
+    }
+    
+    .btn-next-page {
+        padding: 12px 25px;
+        font-size: 1rem;
     }
 }
