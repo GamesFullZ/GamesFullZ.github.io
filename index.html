@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <!-- Cabecera fija con navegación -->
+    <!-- Cabecera fija -->
     <header id="mainHeader" class="site-header">
         <div class="container header-content">
             <a href="#" class="logo">Games<span>FullZ</span></a>
@@ -49,14 +49,25 @@
                     <button class="nav-button active" data-section="games">
                         <i class="fas fa-gamepad"></i> 🎮 Juegos
                     </button>
-                    <button class="nav-button" data-section="systems">
-                        <i class="fas fa-desktop"></i> 💻 Sistemas
-                    </button>
                 </div>
             </nav>
             
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="🔍 Buscar juegos...">
+            </div>
+            
+            <div class="header-actions">
+                <!-- Selector de tema -->
+                <select id="theme-selector" onchange="changeTheme()">
+                    <option value="">Oscuro</option>
+                    <option value="light">Claro</option>
+                    <option value="neon">Neón</option>
+                </select>
+                
+                <!-- Botón hacia el grupo de Telegram -->
+                <a href="https://web.telegram.org/k/#-4959297719" target="_blank" rel="noopener noreferrer" class="boton-telegram">
+                    <i class="fab fa-telegram-plane"></i> Telegram
+                </a>
             </div>
         </div>
         
@@ -87,17 +98,6 @@
                 <button id="nextPage" class="pagination-btn">
                     Siguiente <i class="fas fa-chevron-right"></i>
                 </button>
-            </div>
-        </section>
-
-        <!-- Sección de sistemas operativos -->
-        <section id="systems-section" class="content-section">
-            <div class="systems-section">
-                <h2><i class="fas fa-desktop"></i> Sistemas Operativos</h2>
-                <p>Descarga los sistemas operativos más recientes y compatibles con tus juegos</p>
-                <div class="systems-grid" id="systemsContainer">
-                    <!-- Los sistemas se cargarán dinámicamente desde sistemas.js -->
-                </div>
             </div>
         </section>
 
@@ -207,7 +207,6 @@
 
     <!-- Carga de datos y scripts -->
     <script src="data.js"></script>
-    <script src="sistemas.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
