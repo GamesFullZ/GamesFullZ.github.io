@@ -1,4 +1,4 @@
-// script.js - Corregido y mejorado con todas las funciones
+// script.js - Corregido y mejorado
 
 document.addEventListener('DOMContentLoaded', function () {
     // --- REFERENCIAS A ELEMENTOS DEL DOM ---
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const detailsImage = document.getElementById('modalImage');
     const detailsTitle = document.getElementById('modalTitle');
     const detailsRating = document.getElementById('modalRating');
-    const detailsDownloads = document.getElementById('detailsDownloads');
+    const detailsDownloads = document.getElementById('modalDownloads');
     const detailsDescription = document.getElementById('modalInfo');
     const detailsRequirements = document.getElementById('modalRequirements');
     const trailerFrame = document.getElementById('trailerFrame');
@@ -20,20 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const commentInput = document.getElementById('commentInput');
     const addCommentBtn = document.getElementById('addCommentBtn');
     const randomGameBtn = document.getElementById('randomGameBtn');
-    
-    // --- NUEVAS REFERENCIAS ---
-    const btnNovato = document.getElementById('btnNovato');
-    const tutorialModal = document.getElementById('tutorialModal');
-    const tutorialClose = document.querySelector('.tutorial-close');
-    const tutorialSteps = document.getElementById('tutorialSteps');
-    const lowResourceModeBtn = document.getElementById('lowResourceModeBtn');
-    const backToTopBtn = document.getElementById('backToTop');
-
-    // --- REFERENCIAS PARA PAGINACIÓN ---
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
     const prevPageBtn = document.getElementById('prevPage');
     const nextPageBtn = document.getElementById('nextPage');
     const pageInfo = document.getElementById('pageInfo');
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const backToTopBtn = document.getElementById('backToTop');
 
     // --- VERIFICACIÓN DE DATOS ---
     if (typeof recursos === 'undefined' || !Array.isArray(recursos)) {
@@ -43,10 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // --- VARIABLES DE ESTADO ---
+    let displayedGames = 0;
+    const gamesPerLoad = 6;
     let currentPage = 1;
     const gamesPerPage = 6;
-    let filteredGames = recursos.filter(g => g.tipo === 'juego');
-    let isLowResourceMode = false;
+    let allGames = recursos.filter(g => g.tipo === 'juego');
 
     // --- FUNCIONES DE UTILIDAD ---
     function formatNumber(num) {
@@ -86,9 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
             "Far Cry 5": "lg6fpmp3f2uhuho",
             "Fnaf Collection": "sbws8mnvrtkjno0",
             "Resident Evil 7: Biohazard": "uqduzvrhkb01kth"
-            // ... añade más mappings según necesites
         };
-        return trailerMap[gameName] || "dQw4w9WgXcQ"; // Fallback
+        return trailerMap[gameName] || "dQw4w9WgXcQ";
     }
 
     // --- FUNCIONES PARA MOSTRAR DATOS ---
@@ -110,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 img.className = 'game-image';
                 img.loading = 'lazy';
                 
-                // Manejo de error de imagen con event listener
+                // Manejo de error de imagen con event listener (SIN onerror inline)
                 img.addEventListener('error', function() {
                     if (this.dataset.errorHandled) return;
                     this.dataset.errorHandled = 'true';
@@ -164,7 +155,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (trailerFrame) {
             const trailerId = getTrailerId(game.nombre);
-            // CORREGIDO: Eliminado espacio extra en la URL
             trailerFrame.src = `https://www.youtube.com/embed/${trailerId}`;
         }
 
@@ -206,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- FUNCIONES DE FILTRO Y BÚSQUEDA ---
     function applyFiltersAndSearch() {
         const term = searchInput ? searchInput.value.toLowerCase() : '';
-        filteredGames = recursos.filter(game => {
+        const filteredGames = recursos.filter(game => {
             if (game.tipo !== 'juego') return false;
             return game.nombre.toLowerCase().includes(term) ||
                    game.descripcion.toLowerCase().includes(term);
@@ -270,103 +260,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // alert(`🎲 Juego aleatorio: ${randomGame.nombre}`); // Opcional
     }
 
-    // --- MODO BAJO RECURSOS ---
-    function enableLowResourceMode() {
-        isLowResourceMode = !isLowResourceMode;
-        
-        if (isLowResourceMode) {
-            document.body.classList.add('low-resource-mode');
-            if (lowResourceModeBtn) {
-                lowResourceModeBtn.innerHTML = '<i class="fas fa-mobile-alt"></i> Modo Normal';
-                lowResourceModeBtn.style.background = '#ffcc00';
-                lowResourceModeBtn.style.color = '#000';
-            }
-            alert('📱 Modo bajo recursos activado. Se han desactivado animaciones y efectos pesados.');
-        } else {
-            document.body.classList.remove('low-resource-mode');
-            if (lowResourceModeBtn) {
-                lowResourceModeBtn.innerHTML = '<i class="fas fa-mobile"></i> Modo Bajo Recursos';
-                lowResourceModeBtn.style.background = '#2196F3';
-                lowResourceModeBtn.style.color = 'white';
-            }
-            alert('恢复正常模式。所有动画和效果已重新启用。');
-        }
-    }
-
-    // --- MODO NOVATO - TUTORIAL PASO A PASO ---
-    function showTutorial() {
-        if (!tutorialModal) return;
-
-        // Definir pasos del tutorial
-        const pasos = [
-            {
-                icon: 'fas fa-download',
-                title: '1. Cómo descargar',
-                text: 'Haz clic en "Gofile" y luego en "Download" en la página que se abre.'
-            },
-            {
-                icon: 'fas fa-file-archive',
-                title: '2. Descomprimir archivos',
-                text: 'Usa WinRAR o 7-Zip para extraer el archivo .zip o .rar al escritorio.'
-            },
-            {
-                icon: 'fas fa-cog',
-                title: '3. Instalar el juego',
-                text: 'Entra a la carpeta descomprimida y ejecuta El juego y listo'
-            }
-        ];
-
-        // Limpiar pasos anteriores
-        if (tutorialSteps) tutorialSteps.innerHTML = '';
-
-        // Crear pasos en el modal
-        if (tutorialSteps) {
-            pasos.forEach((paso, index) => {
-                const step = document.createElement('div');
-                step.className = 'step';
-                step.innerHTML = `
-                    <h3><i class="${paso.icon}"></i> ${paso.title}</h3>
-                    <p>${paso.text}</p>
-                `;
-                tutorialSteps.appendChild(step);
-            });
-        }
-
-        // Mostrar tutorial con animación
-        tutorialModal.style.display = 'block';
-        const steps = tutorialSteps ? tutorialSteps.querySelectorAll('.step') : [];
-        if (steps.length > 0) {
-            steps.forEach((step, i) => {
-                setTimeout(() => {
-                    step.classList.add('active');
-                }, i * 300);
-            });
-        }
-    }
-
-    function closeTutorial() {
-        if (tutorialModal) {
-            tutorialModal.style.display = 'none';
-            if (tutorialSteps) {
-                tutorialSteps.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
-            }
-        }
-    }
-
-    // --- BOTÓN VOLVER ARRIBA ---
-    function toggleBackToTopButton() {
-        if (!backToTopBtn) return;
-        if (window.scrollY > 300) {
-            backToTopBtn.classList.add('show');
-        } else {
-            backToTopBtn.classList.remove('show');
-        }
-    }
-
-    function scrollToTopSmooth() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
     // --- INICIALIZACIÓN DE EVENTOS ---
     if (closeDetailsBtn) {
         closeDetailsBtn.addEventListener('click', closeGameDetails);
@@ -428,25 +321,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // --- NUEVOS EVENTOS ---
-    if (btnNovato) {
-        btnNovato.addEventListener('click', showTutorial);
+    // --- BOTÓN VOLVER ARRIBA ---
+    function toggleBackToTopButton() {
+        if (!backToTopBtn) return;
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
     }
 
-    if (tutorialClose) {
-        tutorialClose.addEventListener('click', closeTutorial);
-    }
-
-    if (tutorialModal) {
-        tutorialModal.addEventListener('click', function(event) {
-            if (event.target === tutorialModal) {
-                closeTutorial();
-            }
-        });
-    }
-
-    if (lowResourceModeBtn) {
-        lowResourceModeBtn.addEventListener('click', enableLowResourceMode);
+    function scrollToTopSmooth() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     if (backToTopBtn) {
