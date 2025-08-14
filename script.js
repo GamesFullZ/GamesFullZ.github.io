@@ -21,6 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const addCommentBtn = document.getElementById('addCommentBtn');
     const randomGameBtn = document.getElementById('randomGameBtn');
     
+    // --- NUEVAS REFERENCIAS ---
+    const btnNovato = document.getElementById('btnNovato');
+    const tutorialModal = document.getElementById('tutorialModal');
+    const tutorialClose = document.querySelector('.tutorial-close');
+    const tutorialSteps = document.getElementById('tutorialSteps');
+    const lowResourceModeBtn = document.getElementById('lowResourceModeBtn');
+    const backToTopBtn = document.getElementById('backToTop');
+
     // --- REFERENCIAS PARA PAGINACIÓN ---
     const prevPageBtn = document.getElementById('prevPage');
     const nextPageBtn = document.getElementById('nextPage');
@@ -38,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentPage = 1;
     const gamesPerPage = 6;
     let filteredGames = recursos.filter(g => g.tipo === 'juego');
+    let isLowResourceMode = false;
 
     // --- FUNCIONES DE UTILIDAD ---
     function formatNumber(num) {
@@ -101,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 img.className = 'game-image';
                 img.loading = 'lazy';
                 
-                // Manejo de error de imagen con event listener (SIN onerror inline)
+                // Manejo de error de imagen con event listener
                 img.addEventListener('error', function() {
                     if (this.dataset.errorHandled) return;
                     this.dataset.errorHandled = 'true';
@@ -261,6 +270,103 @@ document.addEventListener('DOMContentLoaded', function () {
         // alert(`🎲 Juego aleatorio: ${randomGame.nombre}`); // Opcional
     }
 
+    // --- MODO BAJO RECURSOS ---
+    function enableLowResourceMode() {
+        isLowResourceMode = !isLowResourceMode;
+        
+        if (isLowResourceMode) {
+            document.body.classList.add('low-resource-mode');
+            if (lowResourceModeBtn) {
+                lowResourceModeBtn.innerHTML = '<i class="fas fa-mobile-alt"></i> Modo Normal';
+                lowResourceModeBtn.style.background = '#ffcc00';
+                lowResourceModeBtn.style.color = '#000';
+            }
+            alert('📱 Modo bajo recursos activado. Se han desactivado animaciones y efectos pesados.');
+        } else {
+            document.body.classList.remove('low-resource-mode');
+            if (lowResourceModeBtn) {
+                lowResourceModeBtn.innerHTML = '<i class="fas fa-mobile"></i> Modo Bajo Recursos';
+                lowResourceModeBtn.style.background = '#2196F3';
+                lowResourceModeBtn.style.color = 'white';
+            }
+            alert('恢复正常模式。所有动画和效果已重新启用。');
+        }
+    }
+
+    // --- MODO NOVATO - TUTORIAL PASO A PASO ---
+    function showTutorial() {
+        if (!tutorialModal) return;
+
+        // Definir pasos del tutorial
+        const pasos = [
+            {
+                icon: 'fas fa-download',
+                title: '1. Cómo descargar',
+                text: 'Haz clic en "Gofile" y luego en "Download" en la página que se abre.'
+            },
+            {
+                icon: 'fas fa-file-archive',
+                title: '2. Descomprimir archivos',
+                text: 'Usa WinRAR o 7-Zip para extraer el archivo .zip o .rar al escritorio.'
+            },
+            {
+                icon: 'fas fa-cog',
+                title: '3. Instalar el juego',
+                text: 'Entra a la carpeta descomprimida y ejecuta El juego y listo'
+            }
+        ];
+
+        // Limpiar pasos anteriores
+        if (tutorialSteps) tutorialSteps.innerHTML = '';
+
+        // Crear pasos en el modal
+        if (tutorialSteps) {
+            pasos.forEach((paso, index) => {
+                const step = document.createElement('div');
+                step.className = 'step';
+                step.innerHTML = `
+                    <h3><i class="${paso.icon}"></i> ${paso.title}</h3>
+                    <p>${paso.text}</p>
+                `;
+                tutorialSteps.appendChild(step);
+            });
+        }
+
+        // Mostrar tutorial con animación
+        tutorialModal.style.display = 'block';
+        const steps = tutorialSteps ? tutorialSteps.querySelectorAll('.step') : [];
+        if (steps.length > 0) {
+            steps.forEach((step, i) => {
+                setTimeout(() => {
+                    step.classList.add('active');
+                }, i * 300);
+            });
+        }
+    }
+
+    function closeTutorial() {
+        if (tutorialModal) {
+            tutorialModal.style.display = 'none';
+            if (tutorialSteps) {
+                tutorialSteps.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+            }
+        }
+    }
+
+    // --- BOTÓN VOLVER ARRIBA ---
+    function toggleBackToTopButton() {
+        if (!backToTopBtn) return;
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    }
+
+    function scrollToTopSmooth() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     // --- INICIALIZACIÓN DE EVENTOS ---
     if (closeDetailsBtn) {
         closeDetailsBtn.addEventListener('click', closeGameDetails);
@@ -320,6 +426,32 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('✉️ Mensaje enviado. Gracias por contactarnos.');
             contactForm.reset();
         });
+    }
+
+    // --- NUEVOS EVENTOS ---
+    if (btnNovato) {
+        btnNovato.addEventListener('click', showTutorial);
+    }
+
+    if (tutorialClose) {
+        tutorialClose.addEventListener('click', closeTutorial);
+    }
+
+    if (tutorialModal) {
+        tutorialModal.addEventListener('click', function(event) {
+            if (event.target === tutorialModal) {
+                closeTutorial();
+            }
+        });
+    }
+
+    if (lowResourceModeBtn) {
+        lowResourceModeBtn.addEventListener('click', enableLowResourceMode);
+    }
+
+    if (backToTopBtn) {
+        window.addEventListener('scroll', toggleBackToTopButton);
+        backToTopBtn.addEventListener('click', scrollToTopSmooth);
     }
 
     // --- INICIALIZACIÓN FINAL ---
