@@ -18,6 +18,27 @@
 </head>
 <body data-theme="dark">
 
+    <!-- Pantalla de bienvenida animada -->
+    <div id="welcomeScreen" class="welcome-screen">
+        <div class="welcome-content">
+            <div class="logo-animation">
+                <span class="logo-letter">G</span>
+                <span class="logo-letter">a</span>
+                <span class="logo-letter">m</span>
+                <span class="logo-letter">e</span>
+                <span class="logo-letter">s</span>
+                <span class="logo-letter">F</span>
+                <span class="logo-letter">u</span>
+                <span class="logo-letter">l</span>
+                <span class="logo-letter">l</span>
+                <span class="logo-letter">Z</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Cabecera fija -->
     <header id="mainHeader" class="site-header">
         <div class="container header-content">
@@ -28,28 +49,25 @@
             </div>
             
             <div class="header-actions">
-                <select id="theme-selector" onchange="changeTheme()">
-                    <option value="">Oscuro</option>
+                <!-- Botón de cambio de vista -->
+                <button id="viewToggle" class="view-toggle-btn" title="Cambiar vista">
+                    <i class="fas fa-th-large"></i>
+                </button>
+                
+                <!-- Selector de tema ESTILIZADO -->
+                <select id="themeSelector" class="theme-selector">
+                    <option value="dark">Oscuro</option>
                     <option value="light">Claro</option>
                     <option value="neon">Neón</option>
                 </select>
+                
+                <!-- Botón hacia el grupo de Telegram -->
                 <a href="https://web.telegram.org/k/#-4959297719" target="_blank" rel="noopener noreferrer" class="boton-telegram">
                     <i class="fab fa-telegram-plane"></i> Telegram
                 </a>
             </div>
         </div>
     </header>
-
-    <!-- Navegación principal (solo Juegos) -->
-    <nav class="main-nav">
-        <div class="container nav-container">
-            <div class="nav-buttons">
-                <button class="nav-button active" data-section="games">
-                    <i class="fas fa-gamepad"></i> 🎮 Juegos
-                </button>
-            </div>
-        </div>
-    </nav>
 
     <main class="container main-content">
         <!-- Sección de juegos -->
@@ -94,12 +112,12 @@
         </div>     
     </main>
 
-    <!-- Modal de detalles del juego (SOLO PORTADA) -->
+    <!-- Modal de detalles del juego -->
     <div id="gameModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" id="closeDetails">&times;</span>
             <div class="modal-body">
-                <img id="modalImage" src="" alt="Portada del juego" class="modal-image">
+                <img id="modalImage" src="" alt="Portada del juego">
                 <div class="modal-info">
                     <h2 id="modalTitle">Título del juego</h2>
                     <div class="rating-downloads">
@@ -107,12 +125,10 @@
                         <div class="downloads" id="modalDownloads">Descargado por +5,300 usuarios</div>
                     </div>
                     <p id="modalInfo">Descripción del juego.</p>
-                    
                     <div class="requirements">
                         <h3>Requisitos mínimos</h3>
                         <p id="modalRequirements">Procesador: ...</p>
                     </div>
-
                     <div class="download-options">
                         <h3>Descargar desde:</h3>
                         <div class="links">
@@ -124,7 +140,6 @@
                             </a>
                         </div>
                     </div>
-
                     <div class="comments-section">
                         <h3>Reseñas de usuarios</h3>
                         <div id="commentsContainer" class="comments-list"></div>
@@ -142,6 +157,11 @@
     <button id="backToTop" class="back-to-top-btn">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Audio para la animación de bienvenida -->
+    <audio id="welcomeSound" preload="auto">
+        <source src="https://www.soundjay.com/button/sounds/button-09.mp3" type="audio/mpeg">
+    </audio>
 
     <!-- Carga de datos y scripts -->
     <script src="data.js"></script>
