@@ -1,337 +1,155 @@
-// script.js - Corregido y mejorado
-
 document.addEventListener('DOMContentLoaded', function () {
-    // --- REFERENCIAS A ELEMENTOS DEL DOM ---
     const gallery = document.getElementById('gallery');
     const searchInput = document.getElementById('searchInput');
-    const contactForm = document.querySelector('.contact-section form');
-    const gameDetailsOverlay = document.getElementById('gameDetailsOverlay');
-    const closeDetailsBtn = document.querySelector('#gameDetailsOverlay .close');
-    const detailsImage = document.getElementById('detailsImage');
-    const detailsTitle = document.getElementById('detailsTitle');
-    const detailsRating = document.getElementById('detailsRating');
-    const detailsDownloads = document.getElementById('detailsDownloads');
-    const detailsDescription = document.getElementById('detailsDescription');
-    const detailsRequirements = document.getElementById('detailsRequirements');
-    const trailerFrame = document.getElementById('trailerFrame');
-    const linkGofile = document.getElementById('linkGofile');
-    const linkMediafire = document.getElementById('linkMediafire');
-    const detailsComments = document.getElementById('detailsComments');
-    const commentInput = document.getElementById('commentInput');
-    const addCommentBtn = document.getElementById('addCommentBtn');
-    const randomGameBtn = document.getElementById('randomGameBtn');
     const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const modal = document.getElementById('gameModal');
+    const contactForm = document.querySelector('form'); // Corregido el selector
 
-    // --- VERIFICACIÓN DE DATOS ---
-    if (typeof recursos === 'undefined' || !Array.isArray(recursos)) {
-        console.error('❌ Error: No se encontraron los datos de juegos (recursos) o no es un array.');
-        if (gallery) gallery.innerHTML = '<p style="color:red; text-align:center; grid-column: 1 / -1;">Error crítico: Datos de juegos no disponibles.</p>';
-        return;
-    }
-
-    // --- VARIABLES DE ESTADO ---
     let displayedGames = 0;
-    const gamesPerLoad = 6;
+    const gamesPerLoad = 2;
 
-    // --- FUNCIONES DE UTILIDAD ---
+    // Formatear números
     function formatNumber(num) {
         return num.toLocaleString();
     }
 
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function getTrailerId(gameName) {
-        // Mapa de nombres de juegos a IDs de YouTube
-        const trailerMap = {
-            "Resident Evil 4": "RgYqQsbKn6w",
-            "Dead Island": "qBmHIX5Xrk4",
-            "Postal 2": "u8D5rkcX78M",
-            "Left 4 Dead 2": "ZR3OX5uJN8",
-            "Call of Duty: Black Ops 1": "IRgJgpLwT4w",
-            "Red Dead Redemption 1": "EjKiSr6v2R8",
-            "Payday 2": "x9dhme",
-            "Battlefield 2": "DDlRTY",
-            "God of War (2018)": "K0OO5w8Q0MI",
-            "God of War: Ragnarök": "2btlPD2N2IU",
-            "Peak": "2uRoh0",
-            "Sons of the Forest": "c2B4Cd",
-            "Deltarune": "dQw4w9WgXcQ",
-            "LEGO Marvel Super Heroes": "bzh8jle3p3i7eil",
-            "Call of Duty: Black Ops 2": "cwdumqbqjz3j3nb",
-            "The Quarry": "bYr0O4",
-            "Bendy and the Ink Machine": "avMKZl",
-            "Bendy and the Dark Revivalo": "Qax9uu",
-            "Call of Juarez: Gunslinger": "DDlRTY",
-            "Far Cry 3": "2uRoh0",
-            "Call of Duty: Modern Warfare 3": "ioxs8mh1bgafbxl",
-            "Lego Batman 2 DC": "n1juuplitqdaj57",
-            "Assassins Creed 2 ": "gt7cklm07ifvkfz",
-            "Jurassic World Evolution 2": "d8q331qkl5527mn",
-            "Far Cry 5": "lg6fpmp3f2uhuho",
-            "Fnaf Collection": "sbws8mnvrtkjno0",
-            "Resident Evil 7: Biohazard": "uqduzvrhkb01kth"
-            // ... añade más mappings según necesites
-        };
-        return trailerMap[gameName] || "dQw4w9WgXcQ"; // Fallback a un video por defecto
-    }
-
-    // --- FUNCIONES PARA MOSTRAR DATOS ---
-    function displayGames(gamesToShow) {
-        if (!gallery) return;
-
-        gallery.innerHTML = '';
+    // Cargar juegos
+    function loadGames() {
         const fragment = document.createDocumentFragment();
+        const toLoad = recursos.slice(displayedGames, displayedGames + gamesPerLoad);
 
-        gamesToShow.forEach(game => {
-            if (game.tipo === 'juego') {
-                const gameCard = document.createElement('div');
-                gameCard.className = 'game-card';
-                gameCard.dataset.gameId = game.id;
-                
-                // Crear imagen con fallback mejorado
-                const img = document.createElement('img');
-                img.src = game.imagen;
-                img.alt = game.nombre;
-                img.className = 'game-image';
-                img.loading = 'lazy';
-                
-                // Añadir event listener para manejar errores de imagen
-                img.addEventListener('error', function() {
-                    // Evita ejecutar el manejador de error de nuevo si ya se ejecutó
-                    if (this.dataset.errorHandled) return;
-                    this.dataset.errorHandled = 'true';
-                    
-                    // Crea el contenido de fallback
-                    const fallbackDiv = document.createElement('div');
-                    fallbackDiv.className = 'game-image image-error';
-                    fallbackDiv.innerHTML = `
-                        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; padding:10px; text-align:center;">
-                            <i class="fas fa-image" style="font-size:2rem; margin-bottom:10px; color:var(--color-accent-purple);"></i>
-                            <span style="font-size:0.8rem;">Imagen no disponible</span>
-                            <span style="font-size:0.7rem; margin-top:5px;">${game.nombre}</span>
-                        </div>
-                    `;
-                    // Reemplaza la imagen por el div de fallback
-                    this.parentNode.replaceChild(fallbackDiv, this);
-                });
-
-                const gameInfo = document.createElement('div');
-                gameInfo.className = 'game-info';
-                gameInfo.innerHTML = `
-                    <h3 class="game-title">${game.nombre}</h3>
-                    <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
-                    <div class="game-meta">
-                        <span class="rating">${game.rating}</span>
-                        <span class="downloads">${formatNumber(game.downloads)} descargas</span>
-                    </div>
-                `;
-
-                gameCard.appendChild(img);
-                gameCard.appendChild(gameInfo);
-                gameCard.addEventListener('click', () => showGameDetails(game));
-                fragment.appendChild(gameCard);
-            }
+        toLoad.forEach(game => {
+            const img = document.createElement('img');
+            img.src = game.imagen;
+            img.alt = game.nombre;
+            img.classList.add('game-item');
+            img.dataset.gameId = game.id;
+            img.addEventListener('click', () => openModal(game));
+            fragment.appendChild(img);
         });
 
         gallery.appendChild(fragment);
+        displayedGames += toLoad.length;
+
+        if (displayedGames >= recursos.length) {
+            loadMoreBtn.style.display = 'none';
+        }
     }
 
-    function showGameDetails(game) {
-        if (!gameDetailsOverlay) return;
-
-        if (detailsImage) detailsImage.src = game.imagen;
-        if (detailsImage) detailsImage.alt = game.nombre;
-        if (detailsTitle) detailsTitle.textContent = game.nombre;
-        if (detailsRating) detailsRating.textContent = game.rating;
-        if (detailsDownloads) detailsDownloads.textContent = `Descargado por +${formatNumber(game.downloads)} usuarios`;
-        if (detailsDescription) detailsDescription.textContent = game.descripcion;
-
-        if (detailsRequirements) {
-            // Asumimos que game.requisitos es un string HTML
-            detailsRequirements.innerHTML = game.requisitos || 'Información no disponible.';
-        }
-
-        if (trailerFrame) {
-            const trailerId = getTrailerId(game.nombre);
-            trailerFrame.src = `https://www.youtube.com/embed/${trailerId}`;
-        }
-
-        if (linkGofile) linkGofile.href = (game.links.direct || "#").trim();
-        if (linkMediafire) linkMediafire.href = (game.links.mediafire || "#").trim();
-
-        if (detailsComments) {
-            detailsComments.innerHTML = '';
-            if (game.comments && game.comments.length > 0) {
-                game.comments.forEach(text => {
-                    const commentElement = document.createElement('div');
-                    commentElement.className = 'comment';
-                    commentElement.innerHTML = `
-                        <div class="comment-author">Usuario Anónimo</div>
-                        <div class="comment-text">${text}</div>
-                    `;
-                    detailsComments.appendChild(commentElement);
-                });
-            } else {
-                detailsComments.innerHTML = '<p>No hay comentarios aún. ¡Sé el primero en comentar!</p>';
+    // Buscador
+    searchInput.addEventListener('input', () => {
+        const term = searchInput.value.toLowerCase();
+        document.querySelectorAll('.game-item').forEach(img => {
+            const gameId = img.dataset.gameId;
+            const game = recursos.find(g => g.id == gameId);
+            if (game) {
+                const matches = game.nombre.toLowerCase().includes(term) ||
+                    game.tipo.toLowerCase().includes(term);
+                img.style.display = matches ? 'block' : 'none';
             }
-        }
+        });
+    });
 
-        gameDetailsOverlay.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-        scrollToTop();
+    // Botón "Ver más"
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', loadGames);
     }
 
-    function closeGameDetails() {
-        if (gameDetailsOverlay) {
-            gameDetailsOverlay.style.display = 'none';
+    // Modal
+    function openModal(game) {
+        document.getElementById('modalImage').src = game.imagen;
+        document.getElementById('modalTitle').textContent = game.nombre;
+        document.getElementById('modalInfo').textContent = game.descripcion;
+        document.getElementById('modalRequirements').innerHTML = game.requisitos;
+        document.getElementById('modalRating').textContent = game.rating;
+        document.getElementById('modalDownloads').textContent = `Descargado por +${formatNumber(game.downloads)} usuarios`;
+
+        // 🔁 Corregido: ID es linkGofile, no linkDirect
+        const linkGofile = document.getElementById('linkGofile');
+        if (linkGofile) {
+            linkGofile.href = game.links.direct || "#";
+        }
+
+        // Comentarios
+        const commentsContainer = document.getElementById('commentsContainer');
+        commentsContainer.innerHTML = '';
+
+        // Comentarios originales
+        game.comments.forEach(text => {
+            const div = document.createElement('div');
+            div.className = 'comment';
+            div.textContent = text;
+            commentsContainer.appendChild(div);
+        });
+
+        // Comentarios del usuario (localStorage)
+        const userComments = loadComments(game.id);
+        userComments.forEach(text => {
+            const div = document.createElement('div');
+            div.className = 'comment';
+            div.textContent = text;
+            commentsContainer.appendChild(div);
+        });
+
+        // Guardar ID del juego en el modal
+        modal.dataset.gameId = game.id;
+
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+
+        // Mostrar recomendaciones
+        showGameRecommendations(game.nombre);
+    }
+
+    // Cerrar modal
+    const closeBtn = document.querySelector('.close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
-        if (trailerFrame) {
-            trailerFrame.src = ''; // Pausa el video
+    });
+
+    // Funciones de comentarios
+    function saveComments(gameId, comments) {
+        localStorage.setItem(`comments_${gameId}`, JSON.stringify(comments));
+    }
+
+    function loadComments(gameId) {
+        const saved = localStorage.getItem(`comments_${gameId}`);
+        return saved ? JSON.parse(saved) : [];
+    }
+
+    // Añadir comentario
+    document.getElementById('addCommentBtn').addEventListener('click', function () {
+        const input = document.getElementById('commentInput');
+        const commentsContainer = document.getElementById('commentsContainer');
+        const currentGameId = modal.dataset.gameId;
+
+        if (input && input.value.trim() && currentGameId) {
+            const commentText = input.value.trim();
+
+            const div = document.createElement('div');
+            div.className = 'comment';
+            div.textContent = commentText;
+            commentsContainer.appendChild(div);
+
+            const savedComments = loadComments(currentGameId);
+            savedComments.push(commentText);
+            saveComments(currentGameId, savedComments);
+
+            input.value = '';
         }
-    }
+    });
 
-    // --- FUNCIONES DE FILTRO Y BÚSQUEDA ---
-    function applyFiltersAndSearch() {
-        const term = searchInput ? searchInput.value.toLowerCase() : '';
-        const filteredGames = recursos.filter(game => {
-            if (game.tipo !== 'juego') return false;
-            return game.nombre.toLowerCase().includes(term) ||
-                   game.descripcion.toLowerCase().includes(term);
-        });
-        displayGames(filteredGames);
-    }
-
-    // --- FUNCIONES PARA CARGAR MÁS JUEGOS ---
-    function loadMoreGames() {
-        const nextGames = recursos.slice(displayedGames, displayedGames + gamesPerLoad);
-        if (nextGames.length === 0) {
-            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-            return;
-        }
-
-        const fragment = document.createDocumentFragment();
-        nextGames.forEach(game => {
-            if (game.tipo === 'juego') {
-                const gameCard = document.createElement('div');
-                gameCard.className = 'game-card';
-                gameCard.dataset.gameId = game.id;
-
-                const img = document.createElement('img');
-                img.src = game.imagen;
-                img.alt = game.nombre;
-                img.className = 'game-image';
-                img.loading = 'lazy';
-
-                // Añadir event listener para manejar errores de imagen
-                img.addEventListener('error', function() {
-                    // Evita ejecutar el manejador de error de nuevo si ya se ejecutó
-                    if (this.dataset.errorHandled) return;
-                    this.dataset.errorHandled = 'true';
-                    
-                    // Crea el contenido de fallback
-                    const fallbackDiv = document.createElement('div');
-                    fallbackDiv.className = 'game-image image-error';
-                    fallbackDiv.innerHTML = `
-                        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; padding:10px; text-align:center;">
-                            <i class="fas fa-image" style="font-size:2rem; margin-bottom:10px; color:var(--color-accent-purple);"></i>
-                            <span style="font-size:0.8rem;">Imagen no disponible</span>
-                            <span style="font-size:0.7rem; margin-top:5px;">${game.nombre}</span>
-                        </div>
-                    `;
-                    // Reemplaza la imagen por el div de fallback
-                    this.parentNode.replaceChild(fallbackDiv, this);
-                });
-
-                const gameInfo = document.createElement('div');
-                gameInfo.className = 'game-info';
-                gameInfo.innerHTML = `
-                    <h3 class="game-title">${game.nombre}</h3>
-                    <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
-                    <div class="game-meta">
-                        <span class="rating">${game.rating}</span>
-                        <span class="downloads">${formatNumber(game.downloads)} descargas</span>
-                    </div>
-                `;
-
-                gameCard.appendChild(img);
-                gameCard.appendChild(gameInfo);
-                gameCard.addEventListener('click', () => showGameDetails(game));
-                fragment.appendChild(gameCard);
-            }
-        });
-
-        if (gallery) gallery.appendChild(fragment);
-        displayedGames += nextGames.length;
-
-        if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
-            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-        }
-    }
-
-    // --- FUNCIONES PARA JUEGO ALEATORIO ---
-    function randomGame() {
-        const juegos = recursos.filter(g => g.tipo === 'juego');
-        if (juegos.length === 0) {
-            alert("❌ No hay juegos disponibles.");
-            return;
-        }
-        const randomGame = juegos[Math.floor(Math.random() * juegos.length)];
-        showGameDetails(randomGame);
-        // alert(`🎲 Juego aleatorio: ${randomGame.nombre}`); // Opcional
-    }
-
-    // --- INICIALIZACIÓN DE EVENTOS ---
-    if (closeDetailsBtn) {
-        closeDetailsBtn.addEventListener('click', closeGameDetails);
-    }
-
-    if (gameDetailsOverlay) {
-        gameDetailsOverlay.addEventListener('click', function(event) {
-            if (event.target === gameDetailsOverlay) {
-                closeGameDetails();
-            }
-        });
-    }
-
-    if (addCommentBtn) {
-        addCommentBtn.addEventListener('click', function () {
-            if (commentInput && commentInput.value.trim() && detailsComments) {
-                const commentText = commentInput.value.trim();
-
-                const div = document.createElement('div');
-                div.className = 'comment';
-                div.innerHTML = `
-                    <div class="comment-author">Tú</div>
-                    <div class="comment-text">${commentText}</div>
-                `;
-
-                // Si solo hay el mensaje de "no hay comentarios", reemplazarlo
-                if (detailsComments.children.length === 1 &&
-                    detailsComments.children[0].tagName === 'P') {
-                    detailsComments.innerHTML = '';
-                }
-
-                detailsComments.appendChild(div);
-                commentInput.value = '';
-            }
-        });
-    }
-
-    if (searchInput) {
-        searchInput.addEventListener('input', applyFiltersAndSearch);
-    }
-
-    if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', loadMoreGames);
-    }
-
-    if (randomGameBtn) {
-        randomGameBtn.addEventListener('click', randomGame);
-    }
-
+    // Formulario de contacto
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -340,29 +158,161 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // --- INICIALIZACIÓN FINAL ---
+    // Cargar primeros juegos
+    loadGames();
+
+    // ================================================
+    // NUEVAS FUNCIONES AGREGADAS Y SIMPLIFICADAS
+    // ================================================
+
+    // === NOTIFICACIONES INTELIGENTES ===
+    function showNotification(text) {
+        const notif = document.createElement("div");
+        notif.className = "notification";
+        notif.textContent = text;
+        notif.style.position = "fixed";
+        notif.style.bottom = "20px"; // Cambiado a abajo
+        notif.style.right = "20px";
+        notif.style.background = "rgba(50, 50, 50, 0.9)"; // Fondo más sutil
+        notif.style.color = "white";
+        notif.style.padding = "12px 20px"; // Ajustado padding
+        notif.style.borderRadius = "8px";
+        notif.style.zIndex = "9999";
+        notif.style.boxShadow = "0 2px 10px rgba(0,0,0,0.3)";
+        notif.style.fontSize = "14px"; // Tamaño de fuente más pequeño
+        notif.style.maxWidth = "300px"; // Ancho máximo
+        notif.style.animation = "slideIn 0.3s ease"; // Animación más sutil
+
+        // Agregar animación CSS si no existe
+        if (!document.querySelector('#notification-style')) {
+            const style = document.createElement('style');
+            style.id = 'notification-style';
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        document.body.appendChild(notif);
+        setTimeout(() => {
+            if (notif.parentNode) {
+                notif.style.animation = "slideIn 0.3s ease reverse";
+                setTimeout(() => notif.remove(), 300);
+            }
+        }, 3000); // Auto-eliminar después de 3 segundos
+    }
+
+    // Función para mostrar notificaciones automáticas
+    function initNotifications() {
+        // Notificación de bienvenida
+        setTimeout(() => {
+            showNotification("¡Bienvenido a GamesFullZ! 🎮");
+        }, 2000);
+
+        // Notificación de nuevo juego (simulada)
+        setTimeout(() => {
+            showNotification("🎮 ¡Nuevo juego disponible!");
+        }, 10000);
+    }
+
+    // === IA RECOMENDADORA DE JUEGOS ===
+    // Esta función se necesita para showGameRecommendations
+    function recommendGames(gameTitle) {
+        const game = recursos.find(g => g.nombre === gameTitle);
+        if (!game || !game.tipo) return [];
+
+        // Buscar juegos del mismo tipo, excluyendo el actual
+        const similar = recursos.filter(g =>
+            g.id != game.id && // Excluir el juego actual por ID
+            g.tipo === game.tipo
+        ).slice(0, 3); // Limitar a 3 recomendaciones
+
+        return similar;
+    }
+
+    // Mostrar recomendaciones cuando se ve un juego
+    function showGameRecommendations(gameTitle) {
+        const recommendations = recommendGames(gameTitle);
+        if (recommendations.length > 0) {
+            const recText = recommendations.map(g => g.nombre).join(", ");
+            showNotification(`Si te gustó ${gameTitle}, prueba: ${recText}`);
+        }
+    }
+
+    // === MODO BAJO RECURSOS (Corregido) ===
+    function enableLowResourceMode() {
+        const isLowMode = confirm("¿Activar modo bajo recursos? Esto desactivará imágenes (excepto las de juegos) y animaciones.");
+        if (!isLowMode) return;
+
+        // Desactivar imágenes, pero NO las de los juegos en la galería principal
+        // Seleccionamos todas las imágenes que NO están dentro de .gallery__container
+        document.querySelectorAll("img:not(.gallery__container img)").forEach(img => {
+            img.style.display = "none";
+        });
+
+        // Desactivar animaciones
+        // Verificar si ya se ha agregado el estilo para evitar duplicados
+        if (!document.getElementById('low-resource-style')) {
+            const style = document.createElement('style');
+            style.id = 'low-resource-style'; // Damos un ID para identificarlo
+            style.textContent = `
+                * {
+                    animation: none !important;
+                    transition: none !important;
+                }
+                .no-animation {
+                    display: none !important;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // Desactivar scripts pesados (simulado)
+        console.log("Modo bajo recursos activado");
+        showNotification("📱 Modo bajo recursos activado. Imágenes (excepto juegos) y animaciones desactivadas.");
+    }
+
+    // === JUEGO ALEATORIO ===
+    function randomGame() {
+        if (recursos.length === 0) {
+            showNotification("❌ No hay juegos disponibles.");
+            return;
+        }
+        const random = recursos[Math.floor(Math.random() * recursos.length)];
+        openModal(random);
+        showNotification(`🎲 Juego aleatorio: ${random.nombre}`);
+    }
+
+    // === FUNCIONES PARA TEMAS ===
+    function changeTheme() {
+        const theme = document.getElementById("theme-selector").value;
+        document.body.setAttribute("data-theme", theme);
+        localStorage.setItem("selectedTheme", theme);
+        // Opcional: Notificación al cambiar tema
+        // showNotification(`🎨 Tema cambiado a ${theme || 'Oscuro'}`);
+    }
+
+    // Cargar tema guardado al inicio
     function loadSavedTheme() {
         const savedTheme = localStorage.getItem("selectedTheme");
-        if (savedTheme !== null) {
+        if (savedTheme !== null) { // Comprobar si existe (incluso si es "")
             document.getElementById("theme-selector").value = savedTheme;
             document.body.setAttribute("data-theme", savedTheme);
         }
     }
 
-    window.changeTheme = function() {
-        const themeSelector = document.getElementById("theme-selector");
-        if (themeSelector) {
-            const theme = themeSelector.value;
-            document.body.setAttribute("data-theme", theme);
-            localStorage.setItem("selectedTheme", theme);
-        }
-    };
-
+    // === INICIALIZACIÓN DE FUNCIONES ===
+    // Inicializar notificaciones
+    initNotifications();
+    
+    // Cargar tema guardado
     loadSavedTheme();
-    displayGames(recursos.filter(g => g.tipo === 'juego').slice(0, gamesPerLoad));
-    displayedGames = gamesPerLoad;
 
-    if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
-        if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-    }
+    // Exponer funciones globales que se usan desde el HTML inline
+    window.randomGame = randomGame;
+    window.enableLowResourceMode = enableLowResourceMode;
+    window.changeTheme = changeTheme; // Exponer changeTheme
 });
