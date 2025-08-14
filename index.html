@@ -18,96 +18,27 @@
 </head>
 <body data-theme="dark">
 
-    <!-- Pantalla de bienvenida animada -->
-    <div id="welcomeScreen" class="welcome-screen">
-        <div class="welcome-content">
-            <div class="logo-animation">
-                <span class="logo-letter">G</span>
-                <span class="logo-letter">a</span>
-                <span class="logo-letter">m</span>
-                <span class="logo-letter">e</span>
-                <span class="logo-letter">s</span>
-                <span class="logo-letter">F</span>
-                <span class="logo-letter">u</span>
-                <span class="logo-letter">l</span>
-                <span class="logo-letter">l</span>
-                <span class="logo-letter">Z</span>
-            </div>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Cabecera fija -->
-    <header id="mainHeader" class="site-header">
+    <!-- Cabecera fija con navegación -->
+    <header class="site-header">
         <div class="container header-content">
             <a href="#" class="logo">Games<span>FullZ</span></a>
+            
+            <nav class="main-nav">
+                <div class="nav-buttons">
+                    <button class="nav-button active" data-section="games">
+                        <i class="fas fa-gamepad"></i> 🎮 Juegos
+                    </button>
+                    <button class="nav-button" data-section="systems">
+                        <i class="fas fa-desktop"></i> 💻 Sistemas
+                    </button>
+                </div>
+            </nav>
             
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="🔍 Buscar juegos...">
             </div>
-            
-            <div class="header-actions">
-                <!-- Botón de cambio de vista -->
-                <button id="viewToggle" class="view-toggle-btn" title="Cambiar vista">
-                    <i class="fas fa-th-large"></i>
-                </button>
-                
-                <!-- Selector de tema -->
-                <select id="themeSelector" onchange="changeTheme()">
-                    <option value="">Oscuro</option>
-                    <option value="light">Claro</option>
-                    <option value="neon">Neón</option>
-                </select>
-                
-                <!-- Botón hacia el grupo de Telegram -->
-                <a href="https://web.telegram.org/k/#-4959297719" target="_blank" rel="noopener noreferrer" class="boton-telegram">
-                    <i class="fab fa-telegram-plane"></i> Telegram
-                </a>
-            </div>
-        </div>
-        
-        <!-- Separador de ondas -->
-        <div class="header-wave">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#00ffcc"></path>
-                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="#bf00ff"></path>
-                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#0066ff"></path>
-            </svg>
         </div>
     </header>
-
-    <!-- Navegación principal -->
-    <nav class="main-nav">
-        <div class="container nav-container">
-            <div class="nav-buttons">
-                <button class="nav-button active" data-section="games">
-                    <i class="fas fa-gamepad"></i> 🎮 Juegos
-                </button>
-                <button class="nav-button" data-section="systems">
-                    <i class="fas fa-desktop"></i> 💻 Sistemas
-                </button>
-            </div>
-            
-            <!-- Filtros -->
-            <div class="filters-container">
-                <select id="categoryFilter">
-                    <option value="">Todas las categorías</option>
-                    <option value="accion">Acción</option>
-                    <option value="aventura">Aventura</option>
-                    <option value="terror">Terror</option>
-                    <option value="multijugador">Multijugador</option>
-                </select>
-                
-                <select id="sortBy">
-                    <option value="nombre">Ordenar por nombre</option>
-                    <option value="downloads">Más descargados</option>
-                    <option value="rating">Mejor valorados</option>
-                </select>
-            </div>
-        </div>
-    </nav>
 
     <main class="container main-content">
         <!-- Sección de juegos -->
@@ -129,7 +60,7 @@
             </div>
         </section>
 
-        <!-- Sección de sistemas operativos -->
+        <!-- Sección de sistemas operativos (oculta por ahora) -->
         <section id="systems-section" class="content-section">
             <div class="systems-section">
                 <h2><i class="fas fa-desktop"></i> Sistemas Operativos</h2>
@@ -176,6 +107,32 @@
                         <div class="downloads" id="modalDownloads">Descargado por +5,300 usuarios</div>
                     </div>
                     <p id="modalInfo">Descripción del juego.</p>
+                    
+                    <!-- Sección de análisis detallado -->
+                    <div class="analysis-section">
+                        <h3>Análisis del Juego</h3>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✅ Lo bueno</h4>
+                                <ul id="modalPros">
+                                    <li>Punto positivo 1</li>
+                                    <li>Punto positivo 2</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>❌ Lo malo</h4>
+                                <ul id="modalCons">
+                                    <li>Punto negativo 1</li>
+                                    <li>Punto negativo 2</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="verdict" id="modalVerdict">
+                            <h4>🏆 Veredicto Final</h4>
+                            <p>Opinión general del juego.</p>
+                        </div>
+                    </div>
+
                     <div class="requirements">
                         <h3>Requisitos mínimos</h3>
                         <p id="modalRequirements">Procesador: ...</p>
