@@ -36,6 +36,11 @@
     --border-radius-lg: 16px;
     --transition-speed: 0.4s;
     --transition-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    /* Nuevas variables para animaciones */
+    --animation-duration-fast: 0.3s;
+    --animation-duration-medium: 0.5s;
+    --animation-duration-slow: 0.8s;
 }
 
 /* --- FONDO CON PARTÍCULAS --- */
@@ -47,6 +52,7 @@ body {
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
+    animation: fadeIn var(--animation-duration-medium) ease-out;
 }
 
 #particlesCanvas {
@@ -57,6 +63,8 @@ body {
     height: 100%;
     z-index: -1;
     pointer-events: none;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.5s forwards;
 }
 
 /* --- BODY & CONTAINER --- */
@@ -67,6 +75,16 @@ body {
     padding: 0 15px;
     position: relative;
     z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp var(--animation-duration-medium) ease-out 0.7s forwards;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* --- HEADER --- */
@@ -78,6 +96,14 @@ header {
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
+    transform: translateY(-100%);
+    animation: slideDown var(--animation-duration-medium) ease-out 0.3s forwards;
+}
+
+@keyframes slideDown {
+    to {
+        transform: translateY(0);
+    }
 }
 
 .header-content {
@@ -100,6 +126,23 @@ header {
     letter-spacing: 1px;
     text-shadow: 0 0 10px rgba(191, 0, 255, 0.3);
     transition: all var(--transition-speed) var(--transition-ease);
+    position: relative;
+    overflow: hidden;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.logo:hover::after {
+    left: 100%;
 }
 
 .logo:hover {
@@ -123,6 +166,16 @@ header {
     font-family: var(--font-main);
     transition: all var(--transition-speed) var(--transition-ease);
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    opacity: 0;
+    animation: popIn var(--animation-duration-medium) ease-out 0.9s forwards;
+}
+
+@keyframes popIn {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 #searchInput:focus {
@@ -136,6 +189,16 @@ header {
     align-items: center;
     gap: 15px;
     flex-shrink: 0;
+    opacity: 0;
+    transform: translateX(20px);
+    animation: slideInRight var(--animation-duration-medium) ease-out 1.1s forwards;
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 #theme-selector {
@@ -148,11 +211,29 @@ header {
     font-weight: 600;
     cursor: pointer;
     transition: all var(--transition-speed) var(--transition-ease);
+    position: relative;
+    overflow: hidden;
+}
+
+#theme-selector::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 153, 0.1), transparent);
+    transition: 0.5s;
+}
+
+#theme-selector:hover::before {
+    left: 100%;
 }
 
 #theme-selector:hover {
     background: rgba(0, 255, 153, 0.1);
     border-color: var(--color-accent-green);
+    transform: translateY(-2px);
 }
 
 .boton-telegram {
@@ -172,6 +253,25 @@ header {
     transition: all var(--transition-speed) var(--transition-ease);
     gap: 8px;
     font-family: var(--font-main);
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.boton-telegram::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.boton-telegram:hover::before {
+    left: 100%;
 }
 
 .boton-telegram:hover {
@@ -184,10 +284,13 @@ header {
     display: none;
     padding: 30px 0;
     animation: fadeInScale 0.5s var(--transition-ease) forwards;
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
 }
 
 .content-section.active {
     display: block;
+    animation: fadeInScale 0.5s var(--transition-ease) forwards;
 }
 
 @keyframes fadeInScale {
@@ -201,6 +304,14 @@ header {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 30px;
     margin: 35px 0;
+    opacity: 0;
+    animation: fadeIn var(--animation-duration-medium) ease-out 1.3s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 .game-card {
@@ -215,7 +326,26 @@ header {
     cursor: pointer;
     position: relative;
     isolation: isolate;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: cardAppear var(--animation-duration-medium) ease-out forwards;
 }
+
+@keyframes cardAppear {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.game-card:nth-child(1) { animation-delay: 0.1s; }
+.game-card:nth-child(2) { animation-delay: 0.2s; }
+.game-card:nth-child(3) { animation-delay: 0.3s; }
+.game-card:nth-child(4) { animation-delay: 0.4s; }
+.game-card:nth-child(5) { animation-delay: 0.5s; }
+.game-card:nth-child(6) { animation-delay: 0.6s; }
+.game-card:nth-child(7) { animation-delay: 0.7s; }
+.game-card:nth-child(8) { animation-delay: 0.8s; }
 
 .game-card::before {
     content: '';
@@ -278,6 +408,11 @@ header {
     margin-bottom: 10px;
     color: var(--color-accent-green);
     font-family: var(--font-heading);
+    transition: color 0.3s ease;
+}
+
+.game-card:hover .game-title {
+    color: var(--color-accent-blue);
 }
 
 .game-description {
@@ -290,6 +425,11 @@ header {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    transition: color 0.3s ease;
+}
+
+.game-card:hover .game-description {
+    color: #eee;
 }
 
 .game-meta {
@@ -299,6 +439,11 @@ header {
     color: #aaa;
     border-top: 1px dashed var(--color-border);
     padding-top: 12px;
+    transition: color 0.3s ease;
+}
+
+.game-card:hover .game-meta {
+    color: #ddd;
 }
 
 .rating {
@@ -309,6 +454,8 @@ header {
 .load-more-container {
     text-align: center;
     margin: 40px 0;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 1.5s forwards;
 }
 
 .btn-load-more {
@@ -322,10 +469,28 @@ header {
     transition: all var(--transition-speed) var(--transition-ease);
     font-size: 1.1rem;
     font-family: var(--font-heading);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-load-more::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--color-gradient-alt);
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+
+.btn-load-more:hover::before {
+    width: 100%;
 }
 
 .btn-load-more:hover {
-    background: var(--color-gradient-alt);
     color: var(--color-primary);
     transform: translateY(-3px);
     box-shadow: 0 0 20px rgba(0, 255, 153, 0.4);
@@ -341,6 +506,9 @@ header {
     text-align: center;
     border: 1px solid var(--color-border);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.7s ease-out 1.7s forwards;
 }
 
 .contact-section h2 {
@@ -353,7 +521,13 @@ header {
 .form-group {
     margin-bottom: 25px;
     text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.5s ease-out 1.9s forwards;
 }
+
+.form-group:nth-child(2) { animation-delay: 2.1s; }
+.form-group:nth-child(3) { animation-delay: 2.3s; }
 
 .form-group label {
     display: block;
@@ -393,10 +567,30 @@ header {
     transition: all var(--transition-speed) var(--transition-ease);
     font-size: 1.1rem;
     font-family: var(--font-heading);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 2.5s forwards;
+}
+
+.contact-section button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--color-gradient-alt);
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+
+.contact-section button:hover::before {
+    width: 100%;
 }
 
 .contact-section button:hover {
-    background: var(--color-gradient-alt);
     color: var(--color-primary);
     transform: translateY(-3px);
     box-shadow: 0 0 20px rgba(0, 102, 255, 0.4);
@@ -416,6 +610,9 @@ header {
     font-family: var(--font-heading);
     font-weight: 600;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: scale(0.95);
+    animation: popIn 0.6s ease-out 2.7s forwards;
 }
 
 /* --- DETALLES DEL JUEGO (Overlay) --- */
@@ -444,6 +641,16 @@ header {
     overflow: hidden;
     box-shadow: var(--color-hover-shadow), 0 20px 50px rgba(0, 0, 0, 0.7);
     border: 1px solid var(--color-border);
+    transform: scale(0.9);
+    opacity: 0;
+    animation: modalAppear 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes modalAppear {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .close-btn {
@@ -478,6 +685,8 @@ header {
     padding: 30px;
     max-height: 80vh;
     overflow-y: auto;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.3s forwards;
 }
 
 @media (min-width: 768px) {
@@ -493,11 +702,16 @@ header {
     border-radius: 14px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     align-self: center;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.6s ease-out 0.5s forwards;
 }
 
 .modal-info {
     flex: 1;
     color: #ddd;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.7s forwards;
 }
 
 .modal-info h2 {
@@ -548,6 +762,9 @@ header {
     color: #aaffff;
     border: 1px solid var(--color-border);
     white-space: pre-line;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideUp 0.5s ease-out 0.9s forwards;
 }
 
 /* Descargas con íconos */
@@ -556,6 +773,8 @@ header {
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 1.1s forwards;
 }
 
 .download-link {
@@ -572,20 +791,32 @@ header {
     border: 1px solid var(--color-border);
     font-family: var(--font-main);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-.download-link i {
-    margin-right: 8px;
+.download-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: width 0.4s ease;
+    z-index: -1;
 }
 
-.download-link.gofile {
+.download-link.gofile::before {
     background: linear-gradient(45deg, #f7941d, #ff6b00);
-    border-color: #f7941d;
 }
 
-.download-link.mediafire {
+.download-link.mediafire::before {
     background: linear-gradient(45deg, #0077b5, #00aaff);
-    border-color: #0077b5;
+}
+
+.download-link:hover::before {
+    width: 100%;
 }
 
 .download-link:hover {
@@ -596,6 +827,8 @@ header {
 /* Comentarios */
 .comments-section {
     margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 1.3s forwards;
 }
 
 .comments-list {
@@ -613,12 +846,28 @@ header {
     font-size: 14px;
     color: #ccc;
     border-left: 3px solid var(--color-accent-green);
+    transform: translateX(-10px);
+    opacity: 0;
+    animation: slideInLeft 0.4s ease-out forwards;
+}
+
+.comment:nth-child(1) { animation-delay: 1.4s; }
+.comment:nth-child(2) { animation-delay: 1.5s; }
+.comment:nth-child(3) { animation-delay: 1.6s; }
+
+@keyframes slideInLeft {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .add-comment {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 1.8s forwards;
 }
 
 #commentInput {
@@ -650,6 +899,25 @@ header {
     cursor: pointer;
     transition: all var(--transition-speed) var(--transition-ease);
     font-family: var(--font-main);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#addCommentBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(191, 0, 255, 0.2);
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+#addCommentBtn:hover::before {
+    width: 100%;
 }
 
 #addCommentBtn:hover {
@@ -674,15 +942,20 @@ header {
     box-shadow: 0 4px 15px rgba(0, 255, 153, 0.4);
     transition: all var(--transition-speed) var(--transition-ease);
     display: none; /* Oculto por defecto */
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.back-to-top-btn.show {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .back-to-top-btn:hover {
     transform: translateY(-3px) scale(1.1);
     box-shadow: 0 6px 20px rgba(0, 255, 153, 0.6);
-}
-
-.back-to-top-btn.show {
-    display: block;
 }
 
 /* --- BOTÓN SOY NUEVO --- */
@@ -706,6 +979,9 @@ header {
     gap: 8px;
     font-family: var(--font-main);
     animation: pulse 2s infinite;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.5s ease-out 3s forwards, pulse 2s infinite 3s;
 }
 
 .btn-novato:hover {
@@ -734,6 +1010,9 @@ header {
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(156, 39, 176, 0.4);
     transition: all var(--transition-speed) var(--transition-ease);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.5s ease-out 3.2s forwards;
 }
 
 .btn-random-game:hover {
@@ -756,6 +1035,9 @@ header {
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
     transition: all var(--transition-speed) var(--transition-ease);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.5s ease-out 3.4s forwards;
 }
 
 .btn-low-resource:hover {
