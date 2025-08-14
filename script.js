@@ -72,9 +72,9 @@ document.addEventListener('DOMContentLoaded', function () {
             "Far Cry 5": "lg6fpmp3f2uhuho",
             "Fnaf Collection": "sbws8mnvrtkjno0",
             "Resident Evil 7: Biohazard": "uqduzvrhkb01kth"
-            // ... añade más mappings ...
+            // ... añade más mappings según necesites
         };
-        return trailerMap[gameName] || "dQw4w9WgXcQ"; // Fallback
+        return trailerMap[gameName] || "dQw4w9WgXcQ"; // Fallback a un video por defecto
     }
 
     // --- FUNCIONES PARA MOSTRAR DATOS ---
@@ -89,18 +89,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 const gameCard = document.createElement('div');
                 gameCard.className = 'game-card';
                 gameCard.dataset.gameId = game.id;
-
+                
+                // Crear imagen con fallback mejorado
                 const img = document.createElement('img');
                 img.src = game.imagen;
                 img.alt = game.nombre;
                 img.className = 'game-image';
                 img.loading = 'lazy';
-
-                // Manejo de error de imagen con event listener
+                
+                // Añadir event listener para manejar errores de imagen
                 img.addEventListener('error', function() {
-                    if (this.dataset.errorHandled) return; // Evitar bucle
+                    // Evita ejecutar el manejador de error de nuevo si ya se ejecutó
+                    if (this.dataset.errorHandled) return;
                     this.dataset.errorHandled = 'true';
                     
+                    // Crea el contenido de fallback
                     const fallbackDiv = document.createElement('div');
                     fallbackDiv.className = 'game-image image-error';
                     fallbackDiv.innerHTML = `
@@ -110,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <span style="font-size:0.7rem; margin-top:5px;">${game.nombre}</span>
                         </div>
                     `;
+                    // Reemplaza la imagen por el div de fallback
                     this.parentNode.replaceChild(fallbackDiv, this);
                 });
 
@@ -145,6 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (detailsDescription) detailsDescription.textContent = game.descripcion;
 
         if (detailsRequirements) {
+            // Asumimos que game.requisitos es un string HTML
             detailsRequirements.innerHTML = game.requisitos || 'Información no disponible.';
         }
 
@@ -160,13 +165,13 @@ document.addEventListener('DOMContentLoaded', function () {
             detailsComments.innerHTML = '';
             if (game.comments && game.comments.length > 0) {
                 game.comments.forEach(text => {
-                    const div = document.createElement('div');
-                    div.className = 'comment';
-                    div.innerHTML = `
+                    const commentElement = document.createElement('div');
+                    commentElement.className = 'comment';
+                    commentElement.innerHTML = `
                         <div class="comment-author">Usuario Anónimo</div>
                         <div class="comment-text">${text}</div>
                     `;
-                    detailsComments.appendChild(div);
+                    detailsComments.appendChild(commentElement);
                 });
             } else {
                 detailsComments.innerHTML = '<p>No hay comentarios aún. ¡Sé el primero en comentar!</p>';
@@ -220,10 +225,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 img.className = 'game-image';
                 img.loading = 'lazy';
 
+                // Añadir event listener para manejar errores de imagen
                 img.addEventListener('error', function() {
+                    // Evita ejecutar el manejador de error de nuevo si ya se ejecutó
                     if (this.dataset.errorHandled) return;
                     this.dataset.errorHandled = 'true';
                     
+                    // Crea el contenido de fallback
                     const fallbackDiv = document.createElement('div');
                     fallbackDiv.className = 'game-image image-error';
                     fallbackDiv.innerHTML = `
@@ -233,6 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <span style="font-size:0.7rem; margin-top:5px;">${game.nombre}</span>
                         </div>
                     `;
+                    // Reemplaza la imagen por el div de fallback
                     this.parentNode.replaceChild(fallbackDiv, this);
                 });
 
@@ -299,6 +308,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="comment-text">${commentText}</div>
                 `;
 
+                // Si solo hay el mensaje de "no hay comentarios", reemplazarlo
                 if (detailsComments.children.length === 1 &&
                     detailsComments.children[0].tagName === 'P') {
                     detailsComments.innerHTML = '';
