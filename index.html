@@ -18,7 +18,7 @@
 </head>
 <body data-theme="dark">
 
-    <!-- Pantalla de bienvenida animada -->
+    <!-- Pantalla de bienvenida animada (CON FONDO NEGRO COMPLETO) -->
     <div id="welcomeScreen" class="welcome-screen">
         <div class="welcome-content">
             <div class="logo-animation">
@@ -49,14 +49,9 @@
             </div>
             
             <div class="header-actions">
-                <!-- Botón de cambio de vista -->
-                <button id="viewToggle" class="view-toggle-btn" title="Cambiar vista">
-                    <i class="fas fa-th-large"></i>
-                </button>
-                
-                <!-- Selector de tema ESTILIZADO -->
-                <select id="themeSelector" class="theme-selector">
-                    <option value="dark">Oscuro</option>
+                <!-- Selector de tema -->
+                <select id="theme-selector" onchange="changeTheme()">
+                    <option value="">Oscuro</option>
                     <option value="light">Claro</option>
                     <option value="neon">Neón</option>
                 </select>
@@ -70,24 +65,15 @@
     </header>
 
     <main class="container main-content">
-        <!-- Sección de juegos -->
-        <section id="games-section" class="content-section active">
-            <!-- Galería de juegos -->
-            <div class="gallery__container" id="gallery">
-                <!-- Los juegos se cargarán dinámicamente -->
-            </div>
-            
-           <!-- Paginación -->
-<div class="pagination-container">
-    <button id="prevPage" class="pagination-btn" disabled>
-        <i class="fas fa-chevron-left"></i> Anterior
-    </button>
-    <span id="pageInfo" class="page-info">Página 1 de 1</span>
-    <button id="nextPage" class="pagination-btn">
-        Siguiente <i class="fas fa-chevron-right"></i>
-    </button>
-</div>
-        </section>
+        <!-- Galería de juegos -->
+        <div class="gallery__container" id="gallery">
+            <!-- Los juegos se cargarán dinámicamente -->
+        </div>
+        
+        <!-- Botón para ver más juegos (CARGA MÁS HACIA ABAJO) -->
+        <div class="load-more-container">
+            <button id="loadMoreBtn" class="btn-load-more">Ver más juegos ↓</button>
+        </div>
 
         <!-- Sección de contacto -->
         <section class="contact-section">
@@ -112,7 +98,7 @@
         </div>     
     </main>
 
-    <!-- Modal de detalles del juego -->
+    <!-- Modal -->
     <div id="gameModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" id="closeDetails">&times;</span>
@@ -157,11 +143,6 @@
     <button id="backToTop" class="back-to-top-btn">
         <i class="fas fa-arrow-up"></i>
     </button>
-
-    <!-- Audio para la animación de bienvenida -->
-    <audio id="welcomeSound" preload="auto">
-        <source src="https://www.soundjay.com/button/sounds/button-09.mp3" type="audio/mpeg">
-    </audio>
 
     <!-- Carga de datos y scripts -->
     <script src="data.js"></script>
