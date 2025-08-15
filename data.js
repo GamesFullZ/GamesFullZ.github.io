@@ -505,4 +505,22 @@ const recursos = [
     },
     imagen: "Images/CoD4_MWR_cover.jpg"
    },
+    {
+    id: 30,
+    nombre: "Blur",
+    tipo: "juego",
+    descripcion: "Juego de carreras arcade con autos reales y power-ups que permiten atacar y defenderse durante las competencias",
+    requisitos: "Windows XP/Vista/7, Intel Pentium 4 3.0 GHz / AMD Athlon 64 3000+, 1 GB RAM, GeForce 6600 / Radeon X1300, 8 GB espacio.",
+    downloads: 0,  // Número de descargas
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "uno de los mejores juegos de caros",
+        "gracias bro"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/1rp9829y6k2lngo/Blur+Game.torrent/file",
+        mediafire: "https://www.mediafire.com/file/1rp9829y6k2lngo/Blur+Game.torrent/file"
+    },
+    imagen: "Images/Blur_(video_game).jpg"
+   },
 ];
