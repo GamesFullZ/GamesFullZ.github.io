@@ -487,4 +487,22 @@ const recursos = [
     },
     imagen: "Images/FCP_UCS17665_Store_Portrait_1200x1600-1200x1600-1069539bdf73f4ca48f7f64027a6e921.jpg"
    },
+    {
+    id: 29,
+    nombre: "Call of Duty 4 Modern Warfare",
+    tipo: "juego",
+    descripcion: "Shooter en primera persona que revolucionó el género con una intensa campaña moderna y multijugador competitivo.",
+    requisitos: " Windows XP/Vista, Intel Pentium 4 2.4 GHz / AMD Athlon 64 2800+, 512 MB RAM (XP) o 768 MB (Vista), GeForce 6600 / Radeon 9800Pro, 8 GB espacio.",
+    downloads: 0,  // Número de descargas
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "uno de los mejores modern warfare",
+        "sigueme en tiktok ´porfa"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/frjg3dfom6flrfs/Call+of+Duty+4+Modern+Warfare.torrent/file",
+        mediafire: "https://www.mediafire.com/file/frjg3dfom6flrfs/Call+of+Duty+4+Modern+Warfare.torrent/file"
+    },
+    imagen: "Images/CoD4_MWR_cover.jpg"
+   },
 ];
