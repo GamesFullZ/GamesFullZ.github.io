@@ -203,6 +203,25 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
+        // Mostrar advertencia si existe
+        const advertenciaContainer = document.querySelector('.modal-info .advertencia-container');
+        if (advertenciaContainer) advertenciaContainer.remove(); // Eliminar si ya existe
+
+        if (game.advertencia) {
+            const advertenciaDiv = document.createElement('div');
+            advertenciaDiv.className = 'advertencia-container';
+            advertenciaDiv.innerHTML = `
+                <div class="advertencia-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>${game.advertencia}</span>
+                </div>
+            `;
+            // Insertar después de la descripción
+            if (detailsDescription) {
+                detailsDescription.parentNode.insertBefore(advertenciaDiv, detailsDescription.nextSibling);
+            }
+        }
+
         gameDetailsOverlay.style.display = 'block';
         document.body.style.overflow = 'hidden';
         scrollToTop();
