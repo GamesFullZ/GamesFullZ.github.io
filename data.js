@@ -558,6 +558,6 @@ const recursos = [
         direct: "https://www.mediafire.com/file/muvrhvj9pabwqoz/JETEAV10_Opti_Fix_archive.torrent/file",
         mediafire: "https://www.mediafire.com/file/muvrhvj9pabwqoz/JETEAV10_Opti_Fix_archive.torrent/file"
     },
-    imagen: "Images/Grand_Theft_Auto_V.png",
+    imagen: "Images/actual_1364906194.jpg",
    },
 ];
