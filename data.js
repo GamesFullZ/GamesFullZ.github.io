@@ -560,4 +560,22 @@ const recursos = [
     },
     imagen: "Images/actual_1364906194.jpg",
    },
+    {
+    id: 33,
+    nombre: "Red Dead Redemption 2",
+    tipo: "juego",
+    descripcion: "Aventura de acción en mundo abierto ambientada en el Viejo Oeste, siguiendo a Arthur Morgan y la banda de Van der Linde.<br>",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core i5-2500K / AMD FX-6300, 8 GB RAM, GeForce GTX 770 / Radeon R9 280, 150 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "uno de los mejores juegos de la historia",
+        "goddd"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/xcppakw3qkgjse4/Red.Dead.Redemption.2.Ultimate.Edition.v1491.50-Repack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/xcppakw3qkgjse4/Red.Dead.Redemption.2.Ultimate.Edition.v1491.50-Repack.torrent/file"
+    },
+    imagen: "Images/Red-Dead-Redemption-2-pc-free-download.png",
+   },
 ];
