@@ -69,17 +69,23 @@
                 <!-- Los juegos se cargarán dinámicamente -->
             </div>
             
-            <!-- Paginación con estilo mejorado -->
-<!-- Paginación -->
-<div class="pagination-container">
-    <button id="prevPage" class="pagination-btn" disabled>
-        <i class="fas fa-chevron-left"></i> Anterior
-    </button>
-    <span id="pageInfo" class="page-info">Página 1 de 1</span>
-    <button id="nextPage" class="pagination-btn">
-        Siguiente <i class="fas fa-chevron-right"></i>
-    </button>
-</div>
+            <!-- Paginación con navegación directa -->
+            <div class="pagination-container">
+                <button id="prevPage" class="pagination-btn" disabled>
+                    <i class="fas fa-chevron-left"></i> Anterior
+                </button>
+                
+                <div class="page-navigation">
+                    <span id="pageInfo" class="page-info">Página 1 de 1</span>
+                    <div class="page-numbers" id="pageNumbersContainer">
+                        <!-- Los números de página se generarán dinámicamente -->
+                    </div>
+                </div>
+                
+                <button id="nextPage" class="pagination-btn">
+                    Siguiente <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
         </section>
 
         <!-- Sección de contacto -->
@@ -304,4 +310,3 @@
     </script>
 </body>
 </html>
-
