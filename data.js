@@ -578,4 +578,22 @@ const recursos = [
     },
     imagen: "Images/Red-Dead-Redemption-2-pc-free-download.png",
    },
+    {
+    id: 34,
+    nombre: "Marvel’s Spider-Man 2",
+    tipo: "juego",
+    descripcion: "Action y aventuras del simbionte con Peter y Miles enfrentando a Venom y Kraven en un Nueva York alucinante.",
+    requisitos: "Windows 10/11 (v1909+), Intel Core i3-8100 / Ryzen 3 3100, 16 GB RAM, GeForce GTX 1650 o Radeon RX 5500 XT, SSD 140 GB.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "god god",
+        "buena bro gracias"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/tjr5ls0mfi5rdz8/Marvels.Spider-Man.2.Digital.Deluxe.Edition.v1.526.0.0-Repack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/tjr5ls0mfi5rdz8/Marvels.Spider-Man.2.Digital.Deluxe.Edition.v1.526.0.0-Repack.torrent/file"
+    },
+    imagen: "Images/11459908.jpg",
+   },
 ];
