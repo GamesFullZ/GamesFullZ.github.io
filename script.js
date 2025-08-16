@@ -177,6 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
             detailsRequirements.innerHTML = game.requisitos || 'Información no disponible.';
         }
 
+        // Corrección: Eliminado el espacio extra en la URL de YouTube
         if (trailerFrame) {
             const trailerId = getTrailerId(game.nombre);
             trailerFrame.src = `https://www.youtube.com/embed/${trailerId}`;
