@@ -542,4 +542,22 @@ const recursos = [
     imagen: "Images/98ff6a8b9dbccb4c3067048eca92d6a3.jpg",
     advertencia: "Este juego es un port/repack del juego de Xbox 360. Puedes experimentar problemas o lags."
   },
+  {
+    id: 32,
+    nombre: "Grand Theft Auto V",
+    tipo: "juego",
+    descripcion: "Mundo abierto de acción y crimen en Los Santos con historia, misiones, online y total libertad de exploración.",
+    requisitos: "Windows 7/8/8.1/10 64-bit, Intel Core 2 Quad Q6600 2.4 GHz / AMD Phenom 9850, 4 GB RAM, GeForce 9800 GT / Radeon HD 4870, 72 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "uno de los mejores juegos de los gta",
+        "buenisimo"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/muvrhvj9pabwqoz/JETEAV10_Opti_Fix_archive.torrent/file",
+        mediafire: "https://www.mediafire.com/file/muvrhvj9pabwqoz/JETEAV10_Opti_Fix_archive.torrent/file"
+    },
+    imagen: "Images/Grand_Theft_Auto_V.png",
+   },
 ];
