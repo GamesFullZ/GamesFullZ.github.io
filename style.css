@@ -1762,4 +1762,51 @@ header {
     .faq-item.active .faq-answer {
         padding: 15px;
     }
+    /* --- BOTONES DE PAGINACIÓN --- */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.pagination-btn {
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--color-accent-green);
+    border: 2px solid var(--color-accent-green);
+    border-radius: var(--border-radius-md);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-speed) var(--transition-ease);
+    font-size: 1rem;
+    font-family: var(--font-heading);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: var(--color-gradient-alt);
+    color: var(--color-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.4);
+    border-color: transparent;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.page-info {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    background: var(--color-card-bg);
+    padding: 8px 15px;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--color-border);
 }
