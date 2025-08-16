@@ -596,4 +596,22 @@ const recursos = [
     },
     imagen: "Images/11459908.jpg",
    },
+    {
+    id: 35,
+    nombre: "Cyberpunk 2077",
+    tipo: "juego",
+    descripcion: "RPG de mundo abierto ambientado en Night City, donde tomas el rol de V, un mercenario en busca de la inmortalidad",
+    requisitos: "Windows 10 64-bit, Intel Core i7-6700 / AMD Ryzen 5 1600, 12 GB RAM, GeForce GTX 1060 6GB / Radeon RX 580 8GB, SSD 70 GB.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "god gracias",
+        "buena bro"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/w1g6k6bvr0nkfww/Cyberpunk.2077.Ultimate.Edition.v.2.3-Repack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/w1g6k6bvr0nkfww/Cyberpunk.2077.Ultimate.Edition.v.2.3-Repack.torrent/file"
+    },
+    imagen: "Images/Cyberpunk_2077_box_art.jpg",
+  },
 ];
