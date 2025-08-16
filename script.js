@@ -1,4 +1,4 @@
-// script.js - Con navegación directa a páginas
+// script.js - Sistema de paginación automática corregido
 
 document.addEventListener('DOMContentLoaded', function () {
     // --- REFERENCIAS A ELEMENTOS DEL DOM ---
@@ -51,8 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // --- VARIABLES DE ESTADO ---
-    let displayedGames = 0;
-    const gamesPerLoad = 6;
     let currentPage = 1;
     const gamesPerPage = 6;
     let filteredGames = recursos.filter(g => g.tipo === 'juego');
@@ -297,6 +295,11 @@ document.addEventListener('DOMContentLoaded', function () {
         
         // Generar números de página
         generatePageNumbers(totalPages);
+        
+        // Ocultar el botón de cargar más si estamos usando paginación
+        if (loadMoreBtn) {
+            loadMoreBtn.style.display = 'none';
+        }
     }
 
     function generatePageNumbers(totalPages) {
@@ -539,74 +542,9 @@ document.addEventListener('DOMContentLoaded', function () {
         nextPageBtn.addEventListener('click', goToNextPage);
     }
 
+    // Eliminamos el evento del botón "Cargar Más" ya que usamos paginación
     if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', function() {
-            const nextGames = recursos.slice(displayedGames, displayedGames + gamesPerLoad);
-            if (nextGames.length === 0) {
-                loadMoreBtn.style.display = 'none';
-                return;
-            }
-
-            const fragment = document.createDocumentFragment();
-            nextGames.forEach(game => {
-                if (game.tipo === 'juego') {
-                    const gameCard = document.createElement('div');
-                    gameCard.className = 'game-card';
-                    gameCard.dataset.gameId = game.id;
-
-                    const img = document.createElement('img');
-                    img.src = game.imagen;
-                    img.alt = game.nombre;
-                    img.className = 'game-image';
-                    img.loading = 'lazy';
-
-                    // Manejo de error de imagen con event listener
-                    img.addEventListener('error', function() {
-                        if (this.dataset.errorHandled) return;
-                        this.dataset.errorHandled = 'true';
-                        
-                        const fallbackDiv = document.createElement('div');
-                        fallbackDiv.className = 'game-image image-error';
-                        fallbackDiv.innerHTML = `
-                            <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; padding:10px; text-align:center;">
-                                <i class="fas fa-image" style="font-size:2rem; margin-bottom:10px; color:var(--color-accent-purple);"></i>
-                                <span style="font-size:0.8rem;">Imagen no disponible</span>
-                                <span style="font-size:0.7rem; margin-top:5px;">${game.nombre}</span>
-                            </div>
-                        `;
-                        this.parentNode.replaceChild(fallbackDiv, this);
-                    });
-
-                    const gameInfo = document.createElement('div');
-                    gameInfo.className = 'game-info';
-                    gameInfo.innerHTML = `
-                        <h3 class="game-title">${game.nombre}</h3>
-                        <p class="game-description">${game.descripcion.substring(0, 100)}...</p>
-                        <div class="game-meta">
-                            <span class="rating">${game.rating}</span>
-                            <span class="downloads">${formatNumber(game.downloads)} descargas</span>
-                        </div>
-                    `;
-
-                    gameCard.appendChild(img);
-                    gameCard.appendChild(gameInfo);
-                    gameCard.addEventListener('click', () => showGameDetails(game));
-                    
-                    // Eventos para vista previa al pasar el cursor
-                    gameCard.addEventListener('mouseenter', (e) => showGamePreview(e, game));
-                    gameCard.addEventListener('mouseleave', hideGamePreview);
-                    
-                    fragment.appendChild(gameCard);
-                }
-            });
-
-            if (gallery) gallery.appendChild(fragment);
-            displayedGames += nextGames.length;
-
-            if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
-                if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-            }
-        });
+        loadMoreBtn.style.display = 'none';
     }
 
     if (randomGameBtn) {
@@ -672,13 +610,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- INICIALIZACIÓN FINAL ---
     loadSavedTheme();
     
-    // Mostrar primeros juegos al cargar
-    displayGames(recursos.filter(g => g.tipo === 'juego').slice(0, gamesPerLoad));
-    displayedGames = gamesPerLoad;
-
-    if (displayedGames >= recursos.filter(g => g.tipo === 'juego').length) {
-        if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-    }
+    // Mostrar la primera página de juegos al cargar
+    displayCurrentPage();
     
     // Simular carga de fondo animado (en una implementación real, esto sería más complejo)
     console.log("Fondo animado cargado");
