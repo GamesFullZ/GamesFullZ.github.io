@@ -1,4 +1,4 @@
-// script.js - Corregido y mejorado con nuevas funciones
+// script.js - Con paginación automática
 
 document.addEventListener('DOMContentLoaded', function () {
     // --- REFERENCIAS A ELEMENTOS DEL DOM ---
