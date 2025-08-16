@@ -523,4 +523,23 @@ const recursos = [
     },
     imagen: "Images/Blur_(video_game).jpg"
    },
+    {
+    id: 31,
+    nombre: "Forza Horizon 2",
+    tipo: "juego",
+    descripcion: "Juego de carreras en mundo abierto con autos reales y eventos dinámicos en paisajes de Europa",
+    requisitos: "Windows 7/8/8.1/10 64-bit, Intel Core i3-2100 / AMD Phenom II X4 805, 4 GB RAM, GeForce GTX 650 / Radeon HD 7770, 20 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "uno de los mejores juegos de carros con el blur",
+        "gracias bro"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/ta4afcsy66ux52t/Forza-Horizon-2.torrent/file",
+        mediafire: "https://www.mediafire.com/file/ta4afcsy66ux52t/Forza-Horizon-2.torrent/file"
+    },
+    imagen: "Images/98ff6a8b9dbccb4c3067048eca92d6a3.jpg",
+    advertencia: "Este juego es un port/repack del juego de Xbox 360. Puedes experimentar problemas o lags."
+  },
 ];
