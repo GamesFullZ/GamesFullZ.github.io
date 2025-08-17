@@ -723,4 +723,22 @@ const recursos = [
     },
     imagen: "Images/Diesel_productv2_mafia-ii-definitive-edition_home_EGS_MafiaIIDefinitiveEdition_RedKiteGames_S2-1200x1600-4cbc94d86b3b82ef8a532fa96a2f28145dae0713-1200x1600-f2cdf5d42079674921f4a36e0254e088.jpg",
 },
+{
+    id: 42,
+    nombre: "Uncharted: Legacy of Thieves Collection",
+    tipo: "juego",
+    descripcion: "Colección remasterizada que incluye Uncharted 4 y The Lost Legacy con gráficos mejorados, cinemáticas épicas y aventuras de Nathan Drake y Chloe Frazer.",
+    requisitos: "Windows 10 64-bit, Intel Core i7-4770 / AMD Ryzen 5 1500X, 16 GB RAM, GeForce GTX 1060 / Radeon RX 580, 150 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god",
+        "no cierres la pagina porfa"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/t5l2cl9gl15pyk2/Uncharted+-+LoTC.torrent/file",
+        mediafire: "https://www.mediafire.com/file/t5l2cl9gl15pyk2/Uncharted+-+LoTC.torrent/file"
+    },
+    imagen: "Images/Final+Square.webp",
+},    
 ];
