@@ -614,4 +614,76 @@ const recursos = [
     },
     imagen: "Images/Cyberpunk_2077_box_art.jpg",
   },
+    {
+    id: 36,
+    nombre: "Naruto Shippuden: Ultimate Ninja Storm 4 – Road to Boruto",
+    tipo: "juego",
+    descripcion: "Juego de lucha que cierra la saga de Naruto con combates espectaculares, modo historia completo y la expansión con Boruto y la nueva generación.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core i3-530 / AMD Phenom II X4 940, 4 GB RAM, GeForce GTX 460 / Radeon HD 6870, 40 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "buenisimo el naruto",
+        "GRACIASSS"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/e435hrkl43l80px/NARUTO.SHIPPUDEN.Ultimate.Ninja.STORM.4.Road.to.Boruto.Next.Generations-CODEX.torrent/file",
+        mediafire: "https://www.mediafire.com/file/e435hrkl43l80px/NARUTO.SHIPPUDEN.Ultimate.Ninja.STORM.4.Road.to.Boruto.Next.Generations-CODEX.torrent/file"
+    },
+    imagen: "Images/NUNS4RTB_Square_Temple.jpg",
+},
+{
+    id: 37,
+    nombre: "The Last of Us Part I",
+    tipo: "juego",
+    descripcion: "Aventura de acción y supervivencia donde Joel y Ellie luchan por sobrevivir en un mundo postapocalíptico devastado por un hongo letal.",
+    requisitos: " Windows 10/11 64-bit, Intel Core i7-4770K / AMD Ryzen 5 1500X, 16 GB RAM, GeForce GTX 970 / Radeon RX 470, SSD 100 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "historia profunda",
+        "yo tenia el de randrogames xd"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/gf7fsc71w3bn43b/The+Last+of+Us+-+Part+I.torrent/file",
+        mediafire: "https://www.mediafire.com/file/gf7fsc71w3bn43b/The+Last+of+Us+-+Part+I.torrent/file"
+    },
+    imagen: "Images/The_Last_of_Us_Part_I_cover.jpg",
+},
+{
+    id: 38,
+    nombre: "The Last of Us Part II",
+    tipo: "juego",
+    descripcion: "Aventura de acción y supervivencia que sigue la historia de Ellie en un viaje brutal de venganza y redención en un mundo devastado por la infección.",
+    requisitos: " Windows 10/11 64-bit, Intel Core i7-8700 / AMD Ryzen 7 3700X, 16 GB RAM, GeForce GTX 1070 / Radeon RX 5600 XT, SSD 100 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "no me corre",
+        "no cierres la pagina porfa"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/txogd0dixohdphf/The_Last_of_Us_-_Part_II_Remastered.torrent/file",
+        mediafire: "https://www.mediafire.com/file/txogd0dixohdphf/The_Last_of_Us_-_Part_II_Remastered.torrent/file"
+    },
+    imagen: "Images/images3.jpg",
+},
+{
+    id: 39,
+    nombre: "Forza Horizon 3",
+    tipo: "juego",
+    descripcion: "Juego de carreras en mundo abierto ambientado en Australia, con autos reales, eventos dinámicos y exploración libre de paisajes impresionantes",
+    requisitos: "Windows 10 64-bit, Intel i3-4170 3.7 GHz / AMD FX-6300, 8 GB RAM, GeForce GTX 650 Ti / Radeon R7 250X, 30 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias",
+        "no cierres la pagina porfa"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/4ykqujbbzhyosjx/Forza.Horizon3.torrent/file",
+        mediafire: "https://www.mediafire.com/file/4ykqujbbzhyosjx/Forza.Horizon3.torrent/file"
+    },
+    imagen: "Images/Forza_horizon_3_cover_art.jpg",
+},
 ];
