@@ -686,4 +686,41 @@ const recursos = [
     },
     imagen: "Images/Forza_horizon_3_cover_art.jpg",
 },
+    {
+    id: 40,
+    nombre: "Mafia: Definitive Edition",
+    tipo: "juego",
+    descripcion: "Remake del clásico de 2002 con gráficos modernos, narrativa cinematográfica y la historia de Tommy Angelo ascendiendo en la familia criminal de Lost Heaven.",
+    requisitos: "Windows 10 64-bit, Intel Core-i5 2550K / AMD FX-8120, 6 GB RAM, GeForce GTX 660 / Radeon HD 7870, 50 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god",
+        "no cierres la pagina porfa"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/9vdnt3wkqoc2q3l/Mafia+-+Definitive+Edition.torrent/file",
+        mediafire: "https://www.mediafire.com/file/9vdnt3wkqoc2q3l/Mafia+-+Definitive+Edition.torrent/file"
+    },
+    imagen: "Images/AgWIv9NHpkWc1vXdNYuSGI8p.jpg",
+},
+
+{
+    id: 41,
+    nombre: "Mafia II: Definitive Edition",
+    tipo: "juego",
+    descripcion: "Remaster del clásico de 2010 con mejoras gráficas, historia profunda y la vida de Vito Scaletta dentro del crimen organizado en Empire Bay.",
+    requisitos: "Windows 10 64-bit, Intel Core i5-2500K / AMD FX-8120, 6 GB RAM, GeForce GTX 660 / Radeon HD 7870, 50 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god",
+        "god,siempre nos haces casooo (:"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/vcg4j1sixdhg63s/Mafia+II+-+Definitive+Edition.torrent/file",
+        mediafire: "https://www.mediafire.com/file/vcg4j1sixdhg63s/Mafia+II+-+Definitive+Edition.torrent/file"
+    },
+    imagen: "Images/Diesel_productv2_mafia-ii-definitive-edition_home_EGS_MafiaIIDefinitiveEdition_RedKiteGames_S2-1200x1600-4cbc94d86b3b82ef8a532fa96a2f28145dae0713-1200x1600-f2cdf5d42079674921f4a36e0254e088.jpg",
+},
 ];
