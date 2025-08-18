@@ -812,5 +812,23 @@ const recursos = [
         mediafire: "https://www.mediafire.com/file/6c8ls3uwt0ttop2/Mortal+Kombat+1.torrent/file"
     },
     imagen: "Images/Mortal_Kombat_1_key_art.jpeg",
-},   
+},
+    {
+    id: 47,
+    nombre: "Left 4 Dead",
+    tipo: "juego",
+    descripcion: "Shooter cooperativo en primera persona donde cuatro sobrevivientes deben luchar contra hordas de zombis a lo largo de distintos escenarios, con énfasis en la cooperación y la estrategia.",
+    requisitos: " Windows XP/Vista/7, Intel Pentium 4 3.0 GHz / AMD Athlon 64 3000+, 1 GB RAM, GeForce 6600 / Radeon X1300, 7 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/kinx20eyljwxn0e/Left.4.Dead.v1.0.4.5-Repack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/kinx20eyljwxn0e/Left.4.Dead.v1.0.4.5-Repack.torrent/file"
+    },
+    imagen: "Images/Left4Dead_Windows_cover.jpg",
+},
 ];
