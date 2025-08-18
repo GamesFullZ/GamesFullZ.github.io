@@ -794,5 +794,23 @@ const recursos = [
         mediafire: "https://www.mediafire.com/file/qtxh1llrqunk4v7/Resident.Evil.3.Build.8856549-Repack.torrent/file"
     },
     imagen: "Images/Resident_Evil_3.jpg",
-},  
+},
+ {
+    id: 46,
+    nombre: "Mortal Kombat 1",
+    tipo: "juego",
+    descripcion: " Reboot de la saga de lucha que presenta un universo renovado por el Dios del Fuego, Liu Kang, con un sistema de combate actualizado, nuevos personajes y el regreso de los fatalities más sangrientos",
+    requisitos: "Windows 10 64-bit, Intel Core i5-6600 / AMD Ryzen 3 3100 o Ryzen 5 2600, 8 GB RAM, Nvidia GeForce GTX 980 / AMD Radeon RX 470 / Intel Arc A750, DirectX 12, 100 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/6c8ls3uwt0ttop2/Mortal+Kombat+1.torrent/file",
+        mediafire: "https://www.mediafire.com/file/6c8ls3uwt0ttop2/Mortal+Kombat+1.torrent/file"
+    },
+    imagen: "Images/Mortal_Kombat_1_key_art.jpeg",
+},   
 ];
