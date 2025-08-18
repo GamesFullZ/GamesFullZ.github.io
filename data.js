@@ -740,5 +740,41 @@ const recursos = [
         mediafire: "https://www.mediafire.com/file/t5l2cl9gl15pyk2/Uncharted+-+LoTC.torrent/file"
     },
     imagen: "Images/Final+Square.webp",
-},    
+},
+    {
+    id: 43,
+    nombre: "Age of Empires",
+    tipo: "juego",
+    descripcion: "Remaster del clásico de estrategia en tiempo real, con gráficos en 4K, jugabilidad mejorada y todo el contenido de la expansión Rise of Rome",
+    requisitos: "Windows 10 64-bit, Intel Core 2 Duo 2.4 GHz / AMD Athlon X2 2.66 GHz, 4 GB RAM, Intel HD 4000 / GeForce 8800 GT / Radeon HD 2900 XT, 20 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god",
+        "no cierres la pagina porfa xd"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/ojzpi3r5envjxkc/Age+of+Empires+-+Definitive+Edition.torrent/file",
+        mediafire: "https://www.mediafire.com/file/ojzpi3r5envjxkc/Age+of+Empires+-+Definitive+Edition.torrent/file"
+    },
+    imagen: "Images/59b04543a434608db49d93cc9332e45f.jpg",
+},
+{
+    id: 44,
+    nombre: " Age of Empires II",
+    tipo: "juego",
+    descripcion: "Versión remasterizada del clásico de estrategia medieval con gráficos en 4K, nuevas campañas, civilizaciones y mejoras en la jugabilidad online",
+    requisitos: "Windows 10 64-bit, Intel Core 2 Duo 2.4 GHz / AMD Athlon X2 2.66 GHz, 4 GB RAM, Intel HD 4000 / GeForce 8800 GT / Radeon HD 2900 XT, 30 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god",
+        "no cierres la pagina porfa xd"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/kx5uaic98i9og04/Age+of+Empires+II+-+Definitive+Edition.torrent/file",
+        mediafire: "https://www.mediafire.com/file/kx5uaic98i9og04/Age+of+Empires+II+-+Definitive+Edition.torrent/file"
+    },
+    imagen: "Images/Age_of_Empires_II_Definitive_Edition_cover_art.jpeg",
+},
 ];
