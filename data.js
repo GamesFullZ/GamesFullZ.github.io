@@ -741,7 +741,7 @@ const recursos = [
     },
     imagen: "Images/Final+Square.webp",
 },
-    {
+{
     id: 43,
     nombre: "Age of Empires",
     tipo: "juego",
@@ -776,5 +776,5 @@ const recursos = [
         mediafire: "https://www.mediafire.com/file/kx5uaic98i9og04/Age+of+Empires+II+-+Definitive+Edition.torrent/file"
     },
     imagen: "Images/Age_of_Empires_II_Definitive_Edition_cover_art.jpeg",
-},
+},    
 ];
