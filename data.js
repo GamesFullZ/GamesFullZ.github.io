@@ -779,7 +779,7 @@ const recursos = [
 },
   {
     id: 45,
-    nombre: "Residen evil 3 remake",
+    nombre: "Resident evil 3 remake",
     tipo: "juego",
     descripcion: "Remake del clásico survival horror donde Jill Valentine debe escapar de Raccoon City mientras enfrenta al implacable Nemesis, con gráficos modernos y jugabilidad mejorada.",
     requisitos: "Windows 10 64-bit, Intel Core i5-4460 / AMD FX-6300, 8 GB RAM, GeForce GTX 760 / Radeon R7 260X, 25 GB espacio.",
