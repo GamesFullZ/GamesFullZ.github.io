@@ -776,5 +776,23 @@ const recursos = [
         mediafire: "https://www.mediafire.com/file/kx5uaic98i9og04/Age+of+Empires+II+-+Definitive+Edition.torrent/file"
     },
     imagen: "Images/Age_of_Empires_II_Definitive_Edition_cover_art.jpeg",
-},    
+},
+  {
+    id: 45,
+    nombre: "Residen evil 3 remake",
+    tipo: "juego",
+    descripcion: "Remake del clásico survival horror donde Jill Valentine debe escapar de Raccoon City mientras enfrenta al implacable Nemesis, con gráficos modernos y jugabilidad mejorada.",
+    requisitos: "Windows 10 64-bit, Intel Core i5-4460 / AMD FX-6300, 8 GB RAM, GeForce GTX 760 / Radeon R7 260X, 25 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god",
+        "no cierres la pagina porfa xd"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/qtxh1llrqunk4v7/Resident.Evil.3.Build.8856549-Repack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/qtxh1llrqunk4v7/Resident.Evil.3.Build.8856549-Repack.torrent/file"
+    },
+    imagen: "Images/Resident_Evil_3.jpg",
+},  
 ];
