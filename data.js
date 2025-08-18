@@ -831,4 +831,22 @@ const recursos = [
     },
     imagen: "Images/Left4Dead_Windows_cover.jpg",
 },
+    {
+    id: 48,
+    nombre: "Rise of the Tomb Raider",
+    tipo: "juego",
+    descripcion: "Aventura de acción en tercera persona donde Lara Croft explora tumbas, resuelve puzles y enfrenta enemigos mientras busca el secreto de la inmortalidad.",
+    requisitos: " Windows XP/Vista/7, Intel Pentium 4 3.0 GHz / AMD Athlon 64 3000+, 1 GB RAM, GeForce 6600 / Radeon X1300, 7 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/g4xrwmhdjfe2w6j/Rise.of.the.Tomb.Raider.20.Year.Celebration.v.1.0.1027.0-Repack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/g4xrwmhdjfe2w6j/Rise.of.the.Tomb.Raider.20.Year.Celebration.v.1.0.1027.0-Repack.torrent/file"
+    },
+    imagen: "Images/Rise_of_the_Tomb_Raider.jpg",
+},
 ];
