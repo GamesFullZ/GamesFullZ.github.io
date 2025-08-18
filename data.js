@@ -813,7 +813,7 @@ const recursos = [
     },
     imagen: "Images/Mortal_Kombat_1_key_art.jpeg",
 },
-    {
+{
     id: 47,
     nombre: "Left 4 Dead",
     tipo: "juego",
