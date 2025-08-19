@@ -862,8 +862,8 @@ const recursos = [
         "heroe"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/a5ur2zgpt2evguc/FIFA+23.torrent/file",
-        mediafire: "https://www.mediafire.com/file/a5ur2zgpt2evguc/FIFA+23.torrent/file"
+        direct: "https://www.mediafire.com/file/0zx2ac02qjhmmik/FIFA+23.torrent/file",
+        mediafire: "https://www.mediafire.com/file/0zx2ac02qjhmmik/FIFA+23.torrent/file"
     },
     imagen: "Images/fifa23.jpg",
 },
