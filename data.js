@@ -903,4 +903,22 @@ const recursos = [
     },
     imagen: "Images/6530b2b4bf996c001cd7a829.jpg",
 },
+    {
+    id: 51,
+    nombre: "Lies of P",
+    tipo: "juego",
+    descripcion: "Juego de acción tipo soulslike en tercera persona donde los jugadores controlan a P, una marioneta que busca a su creador, Geppetto, en la ciudad de Krat, enfrentándose a enemigos mecánicos y tomando decisiones morales que afectan la narrativa.",
+    requisitos: "Windows 10/11 64 bits, AMD Ryzen 3 1200 / Intel Core i3-6300, 8 GB RAM, AMD Radeon RX 560 4GB / NVIDIA GeForce GTX 960 4GB, DirectX 12, 50 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file_premium/686evf5afgw211j/Lies.of.P.Deluxe.Edition.v1.10.0.0-Repack.torrent/file",
+        mediafire: "https://www.mediafire.com/file_premium/686evf5afgw211j/Lies.of.P.Deluxe.Edition.v1.10.0.0-Repack.torrent/file"
+    },
+    imagen: "Images/lies_of_p.jpg",
+},
 ];
