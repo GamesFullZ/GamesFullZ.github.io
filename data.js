@@ -939,4 +939,22 @@ const recursos = [
     },
     imagen: "Images/250px-Resident_Evil_4_remake_cov.jpg",
 },
+    {
+    id: 52,
+    nombre: "Marvel's Spider-Man Remastered",
+    tipo: "juego",
+    descripcion: "Juego de acción y aventura en tercera persona donde los jugadores controlan a Peter Parker, un joven de 23 años que combina su vida como estudiante y fotógrafo con su identidad secreta como Spider-Man, enfrentándose a villanos icónicos y protegiendo Nueva York.",
+    requisitos: "0 (64 bits), Intel Core i3-4160 / AMD Ryzen 3 1300X, 8 GB RAM, NVIDIA GTX 950 / AMD Radeon R9 290X, DirectX 12, 75 GB espacio en disco.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/jertc0aeb0021tz/Marvel's+Spider-Man+Remastered+GamesFullZ.torrent/file",
+        mediafire: "https://www.mediafire.com/file/jertc0aeb0021tz/Marvel's+Spider-Man+Remastered+GamesFullZ.torrent/file"
+    },
+    imagen: "Images/EGS_MarvelsSpiderManRemastered_I.jpg",
+},
 ];
