@@ -921,4 +921,22 @@ const recursos = [
     },
     imagen: "Images/lies_of_p.jpg",
 },
+    {
+    id: 52,
+    nombre: "Resident Evil 4 Remake",
+    tipo: "juego",
+    descripcion: "Juego de acción y survival horror en tercera persona donde los jugadores controlan a Leon S. Kennedy, un agente del gobierno de EE. UU., que debe rescatar a Ashley Graham, la hija del presidente, de un culto misterioso en una aldea rural de España. El juego presenta una historia renovada, gráficos mejorados y mecánicas de juego modernizadas, siguiendo el estilo de los remakes anteriores de la saga..",
+    requisitos: "Windows 10 (64 bits), AMD Ryzen 3 1200 / Intel Core i5-7500, 8 GB RAM, AMD Radeon RX 560 4GB / NVIDIA GeForce GTX 1050 Ti 4GB, DirectX 12, 50 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/o74oypjcwdcx1r6/Resident+Evil+4+2023+Remake+Deluxe+Edition+GamesFullZ.torrent/file",
+        mediafire: "https://www.mediafire.com/file/o74oypjcwdcx1r6/Resident+Evil+4+2023+Remake+Deluxe+Edition+GamesFullZ.torrent/file"
+    },
+    imagen: "Images/250px-Resident_Evil_4_remake_cov.jpg",
+},
 ];
