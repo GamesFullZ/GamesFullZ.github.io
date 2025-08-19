@@ -1081,7 +1081,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/gcpcze2qpfw28bf/Monster+Hunter+World.torrent/file",
         mediafire: "https://www.mediafire.com/file/gcpcze2qpfw28bf/Monster+Hunter+World.torrent/file"
     },
-    imagen: "Images/t11307RW7B5mvRMeOG-1pM9RnGdpRQVQ2.jpg",
+    imagen: "Images/Monster_Hunter_World_cover_art.jpg",
 },
         {
     id: 61,
