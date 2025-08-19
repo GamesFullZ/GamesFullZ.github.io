@@ -940,7 +940,7 @@ const recursos = [
     imagen: "Images/250px-Resident_Evil_4_remake_cov.jpg",
 },
     {
-    id: 52,
+    id: 53,
     nombre: "Marvel's Spider-Man Remastered",
     tipo: "juego",
     descripcion: "Juego de acción y aventura en tercera persona donde los jugadores controlan a Peter Parker, un joven de 23 años que combina su vida como estudiante y fotógrafo con su identidad secreta como Spider-Man, enfrentándose a villanos icónicos y protegiendo Nueva York.",
