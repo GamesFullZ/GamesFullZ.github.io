@@ -867,4 +867,22 @@ const recursos = [
     },
     imagen: "Images/fifa23.jpg",
 },
+    {
+    id: 49,
+    nombre: "Sleeping Dogs",
+    tipo: "juego",
+    descripcion: "Juego de acción y mundo abierto ambientado en Hong Kong, donde el jugador controla a Wei Shen, un policía encubierto que debe infiltrarse en el crimen organizado",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core 2 Duo E8400 / AMD Phenom II X4 940, 2 GB RAM, GeForce 8800 / Radeon HD 3870, 15 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/jmmapj0k3xql7km/Sleeping.Dogs.Definitive.Edition-GOG.torrent/file",
+        mediafire: "https://www.mediafire.com/file/jmmapj0k3xql7km/Sleeping.Dogs.Definitive.Edition-GOG.torrent/file"
+    },
+    imagen: "Images/2327953-sleeping-dogs-definitive-edition-xbox-one-front-cover.png",
+},
 ];
