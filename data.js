@@ -1119,4 +1119,23 @@ const recursos = [
     },
     imagen: "Images/Sekiro_art.jpg",
 },
+    {
+    id: 63,
+    nombre: "Resident Evil Village",
+    tipo: "juego",
+    descripcion: "Juego de acción y survival horror en primera persona donde Ethan Winters busca a su hija secuestrada en una misteriosa aldea europea, enfrentándose a criaturas terroríficas y explorando escenarios llenos de tensión y misterio.",
+    requisitos: "Windows 10 64-bit, AMD Ryzen 3 1200 / Intel Core i5-7500, 8 GB RAM, AMD Radeon RX 560 / NVIDIA GeForce GTX 1050 Ti, DirectX 12, 50 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "Muy buen survival horror",
+        "Gracias"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/sx2hjr5kyutqxr4/Resident.Evil.Village.torrent/file",
+        mediafire: "https://www.mediafire.com/file/sx2hjr5kyutqxr4/Resident.Evil.Village.torrent/file"
+    },
+    imagen: "Images/FkzwjnJknkrFlozkTdeQBMub.jpg",
+},
+
 ];
