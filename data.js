@@ -975,4 +975,40 @@ const recursos = [
     },
     imagen: "Images/Call_of_Duty_Modern_Warfare_II_Key_Art.jpg",
 },
+    {
+    id: 55,
+    nombre: "Grounded",
+    tipo: "juego",
+    descripcion: "Juego de supervivencia y aventura en primera persona donde los jugadores son reducidos al tamaño de una hormiga en el patio trasero, debiendo explorar, construir y sobrevivir luchando contra insectos gigantes y cooperando con hasta otros tres jugadores.",
+    requisitos: " Windows 10 64-bit, Intel Core i3-3225, 4 GB RAM, Nvidia GTX 650 Ti, 8 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe de verdad"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/szg8dzv9c7drvyp/Grounded+GmaesFullZ.torrent/file",
+        mediafire: "https://www.mediafire.com/file/szg8dzv9c7drvyp/Grounded+GmaesFullZ.torrent/file"
+    },
+    imagen: "Images/grounded.jpg",
+},
+    {
+    id: 56,
+    nombre: "Grounded 2",
+    tipo: "juego",
+    descripcion: "Juego de supervivencia cooperativa en primera o tercera persona donde los jugadores vuelven a reducirse al tamaño de una hormiga en el parque Brookhollow de 1992, con un mundo mucho más grande que el del pequeño jardín del juego original; incluye monturas insectoides (Buggies), nuevas mecánicas de combate como esquivar, herramientas omnifunción (Omni-Tool), biomas diversos, narrativa expandida y desarrollo impulsado por la comunidad en su fase de acceso anticipado.",
+    requisitos: "Windows 10/11, Intel i5-8400 / AMD Ryzen 5 2600, 16 GB RAM, GTX 1070 / RX 5700, 40 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe de verdad"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/ppc2ojqt22uy8q7/Grounded.2.GmesFullZ.torrent/file",
+        mediafire: "https://www.mediafire.com/file/ppc2ojqt22uy8q7/Grounded.2.GmesFullZ.torrent/file"
+    },
+    imagen: "Images/250px-Grounded_2_cover.jpg",
+},
 ];
