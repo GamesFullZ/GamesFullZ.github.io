@@ -1101,4 +1101,22 @@ const recursos = [
     },
     imagen: "Images/ebf72e65c0b8c42b36a01f2ba55ac0a1.jpg",
 },
+    {
+    id: 62,
+    nombre: "Sekiro: Shadows Die Twice",
+    tipo: "juego",
+    descripcion: "Juego de acción y aventura ambientado en un Japón feudal ficticio, donde controlas a un shinobi en busca de venganza contra samuráis, clanes y criaturas sobrenaturales con un sistema de combate exigente y técnico.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core i3-2100 / AMD FX-6300, 4 GB RAM, GeForce GTX 760 / Radeon HD 7950, 25 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias",
+        "heroe"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file_premium/nkkff34ij5kukts/Sekiro.Shadows.Die.Twice.v1.06.torrent/file",
+        mediafire: "https://www.mediafire.com/file_premium/nkkff34ij5kukts/Sekiro.Shadows.Die.Twice.v1.06.torrent/file"
+    },
+    imagen: "Images/Sekiro_art.jpg",
+},
 ];
