@@ -1183,7 +1183,7 @@ const recursos = [
     rating: "⭐⭐⭐⭐☆",
     comments: [
         "Campaña futurista interesante",
-        "Multijugador divertido"
+        "Divertido"
     ],
     links: {
         direct: "https://www.mediafire.com/file/8n4a07y5vf6bsx1/C0DIWF.torrent/file",
@@ -1208,5 +1208,23 @@ const recursos = [
         mediafire: "https://www.mediafire.com/file/lko1qz61rl75ee2/R.B.I.Baseball.20-CODEX-[rarbg.to].torrent/file"
     },
     imagen: "Images/Baseball20.jpg",
+},
+    {
+    id: 68,
+    nombre: "Project Zomboid",
+    tipo: "juego",
+    descripcion: "Simulador de supervivencia en un apocalipsis zombi con vista isométrica, donde los jugadores deben gestionar su salud, hambre, sueño, heridas y enfermedades mientras exploran, construyen, luchan y sobreviven en un mundo abierto. La Build 42.11.0 introduce mejoras en la jugabilidad, optimización y nuevas mecánicas.",
+    requisitos: "Windows 10 64-bit, Intel Core i5-7500 / AMD Ryzen 5 1600, 8 GB RAM, NVIDIA GeForce GTX 960 / AMD Radeon RX 560, DirectX 11, 5 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Heroe",
+        "Me encanta"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/n4z04qkdp7djya1/Project.Zomboid.v42.11.0.rar/file",
+        mediafire: "https://www.mediafire.com/file/n4z04qkdp7djya1/Project.Zomboid.v42.11.0.rar/file"
+    },
+    imagen: "Images/who-exactly-is-this-in-the-proje.jpg",
 },
 ];
