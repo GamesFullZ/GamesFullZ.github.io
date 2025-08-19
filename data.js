@@ -1191,4 +1191,22 @@ const recursos = [
     },
     imagen: "Images/call-of-duty-infinite-warfare_3c.jpg",
 },
+    {
+    id: 67,
+    nombre: "R.B.I. Baseball 20",
+    tipo: "juego",
+    descripcion: "Videojuego de béisbol en tercera persona donde los jugadores pueden controlar equipos de las ligas mayores, gestionar estrategias de juego y competir en partidos completos con mecánicas realistas de bateo, lanzamiento y defensa.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core i3-2100 / AMD FX-6300, 4 GB RAM, NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260x, DirectX 11, 10 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Buen simulador de béisbol",
+        "Gracias por compartir"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/lko1qz61rl75ee2/R.B.I.Baseball.20-CODEX-[rarbg.to].torrent/file",
+        mediafire: "https://www.mediafire.com/file/lko1qz61rl75ee2/R.B.I.Baseball.20-CODEX-[rarbg.to].torrent/file"
+    },
+    imagen: "Images/Baseball20.jpg",
+},
 ];
