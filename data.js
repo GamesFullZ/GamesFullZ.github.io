@@ -1137,5 +1137,22 @@ const recursos = [
     },
     imagen: "Images/FkzwjnJknkrFlozkTdeQBMub.jpg",
 },
-
+{
+    id: 64,
+    nombre: "Forza Horizon 4 Ultimate Edition",
+    tipo: "juego",
+    descripcion: "Juego de carreras de mundo abierto ambientado en una recreación de Gran Bretaña, donde los jugadores pueden explorar libremente, competir en diversos eventos y coleccionar una gran variedad de autos, con estaciones dinámicas que cambian la jugabilidad.",
+    requisitos: "Windows 10 64-bit, Intel i3-4170 @ 3.7 GHz / Intel i5-750 @ 2.67 GHz, 8 GB RAM, NVIDIA GTX 650 Ti / AMD R7 250X, DirectX 12, 80 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "Edición Ultimate completa",
+        "Gracias por compartir"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/fxl96jd1ix4c7j0/Forza.Horizon.4.Ultimate.Edition.torrent/file",
+        mediafire: "https://www.mediafire.com/file/fxl96jd1ix4c7j0/Forza.Horizon.4.Ultimate.Edition.torrent/file"
+    },
+    imagen: "Images/forza-horizon-4-2018102103227_1.jpg",
+},
 ];
