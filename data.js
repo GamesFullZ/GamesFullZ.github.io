@@ -1047,4 +1047,58 @@ const recursos = [
     },
     imagen: "Images/twds.jpg",
 },
+    {
+    id: 59,
+    nombre: "BioShock 2",
+    tipo: "juego",
+    descripcion: "Shooter en primera persona con toques de rol y survival horror donde controlas a un Big Daddy en la ciudad submarina de Rapture, enfrentándote a splicers, usando armas y plásmidos mientras exploras una historia oscura y atmosférica",
+    requisitos: "Windows XP/Vista, Intel Pentium 4 2.4 GHz / AMD Athlon 64 2800+, 1 GB RAM (XP) / 2 GB RAM (Vista), NVIDIA GeForce 7600 / ATI Radeon X1950, DirectX 9.0c, 8 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe de verdad"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/kyqu7deup8q0lxs/BioShock.2.Complete.iso.torrent/file",
+        mediafire: "https://www.mediafire.com/file/kyqu7deup8q0lxs/BioShock.2.Complete.iso.torrent/file"
+    },
+    imagen: "Images/YWRvdXNKLmpwZw.jpg",
+},
+        {
+    id: 60,
+    nombre: "Monster Hunter: World",
+    tipo: "juego",
+    descripcion: "Videojuego de rol y acción en tercera persona donde los jugadores encarnan a un cazador que debe explorar un vasto mundo abierto repleto de ecosistemas vivos, enfrentarse a monstruos colosales, recolectar recursos y fabricar armas y armaduras. Ofrece modo en solitario y cooperativo en línea hasta 4 jugadores.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core i5-4460 3.2 GHz / AMD FX-6300, 8 GB RAM, NVIDIA GeForce GTX 760 / AMD Radeon R7 260x, DirectX 11, 48 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe de verdad"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/gcpcze2qpfw28bf/Monster+Hunter+World.torrent/file",
+        mediafire: "https://www.mediafire.com/file/gcpcze2qpfw28bf/Monster+Hunter+World.torrent/file"
+    },
+    imagen: "Images/t11307RW7B5mvRMeOG-1pM9RnGdpRQVQ2.jpg",
+},
+        {
+    id: 61,
+    nombre: "Monster Hunter Rise",
+    tipo: "juego",
+    descripcion: "Videojuego de rol y acción en tercera persona ambientado en la aldea de Kamura, donde los cazadores deben enfrentarse a monstruos gigantes utilizando un variado arsenal de armas, nuevas mecánicas como el cordóptero para movilidad aérea, y la posibilidad de luchar junto a compañeros Canyne y Felyne. Incluye modo individual y cooperativo en línea.",
+    requisitos: "Windows 10 64-bit, Intel Core i3-4130 / Core i5-3470 / AMD FX-6100, 8 GB RAM, NVIDIA GeForce GTX 760 / AMD Radeon R7 260x, DirectX 11, 36 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe de verdad"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/1di5u3v6hgm80jo/Monster+Hunter+Rise+.torrent/file",
+        mediafire: "https://www.mediafire.com/file/1di5u3v6hgm80jo/Monster+Hunter+Rise+.torrent/file"
+    },
+    imagen: "Images/ebf72e65c0b8c42b36a01f2ba55ac0a1.jpg",
+},
 ];
