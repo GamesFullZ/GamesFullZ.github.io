@@ -885,4 +885,22 @@ const recursos = [
     },
     imagen: "Images/2327953-sleeping-dogs-definitive-edition-xbox-one-front-cover.png",
 },
+    {
+    id: 50,
+    nombre: "Grand Theft Auto IV",
+    tipo: "juego",
+    descripcion: "Aventura de mundo abierto en tercera persona donde los jugadores controlan a Niko Bellic, un inmigrante que llega a Liberty City en busca del sueño americano, enfrentándose a mafias, cumpliendo misiones y explorando la ciudad libremente",
+    requisitos: "Windows XP/Vista/7, Intel Core 2 Duo 1.8 GHz / AMD Athlon X2 64 2.4 GHz, 1.5 GB RAM, GeForce 7900 / ATI X1900, 16 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/bvdymdwqtlm53bb/Grand.Theft.Auto.IV.The.Complete.Edition.v1.2.0.59.torrent/file",
+        mediafire: "https://www.mediafire.com/file/bvdymdwqtlm53bb/Grand.Theft.Auto.IV.The.Complete.Edition.v1.2.0.59.torrent/file"
+    },
+    imagen: "Images/6530b2b4bf996c001cd7a829.jpg",
+},
 ];
