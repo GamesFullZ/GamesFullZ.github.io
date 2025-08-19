@@ -849,4 +849,22 @@ const recursos = [
     },
     imagen: "Images/Rise_of_the_Tomb_Raider.jpg",
 },
+    {
+    id: 49,
+    nombre: "FIFA 23",
+    tipo: "juego",
+    descripcion: "Simulador de fútbol que ofrece partidos realistas, modos de juego variados como Ultimate Team y Carrera, y gráficos mejorados para una experiencia más inmersiva",
+    requisitos: "Windows 10 64-bit, Intel Core i3-6100 / AMD Ryzen 3 1200, 8 GB RAM, GeForce GTX 660 / Radeon HD 7850, 50 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/a5ur2zgpt2evguc/FIFA+23.torrent/file",
+        mediafire: "https://www.mediafire.com/file/a5ur2zgpt2evguc/FIFA+23.torrent/file"
+    },
+    imagen: "Images/fifa23.jpg",
+},
 ];
