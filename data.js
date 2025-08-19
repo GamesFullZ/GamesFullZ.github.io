@@ -1155,4 +1155,22 @@ const recursos = [
     },
     imagen: "Images/forza-horizon-4-2018102103227_1.jpg",
 },
+    {
+    id: 65,
+    nombre: "Devil May Cry 5 Deluxe Edition",
+    tipo: "juego",
+    descripcion: "Juego de acción y hack and slash de la aclamada saga Devil May Cry. Controla a Nero, Dante y V en intensos combates llenos de estilo contra hordas de demonios, con un sistema de combate dinámico y personalizable. La Deluxe Edition incluye contenido extra exclusivo.",
+    requisitos: "Windows 7/8.1/10 64-bit, Intel Core i7-3770 / AMD FX-9590, 8 GB RAM, NVIDIA GTX 960 / AMD R9 280X, DirectX 11, 35 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "Grax",
+        "Un clásico moderno"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/bb0mvmh4lo19wqr/Devil.May.Cry.5.Deluxe.Edition.zip.torrent/file",
+        mediafire: "https://www.mediafire.com/file/bb0mvmh4lo19wqr/Devil.May.Cry.5.Deluxe.Edition.zip.torrent/file"
+    },
+    imagen: "Images/86flTX6TLYP7MABrMUt3An6m.jpg",
+},
 ];
