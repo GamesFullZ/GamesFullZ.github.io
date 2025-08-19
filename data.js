@@ -957,4 +957,22 @@ const recursos = [
     },
     imagen: "Images/EGS_MarvelsSpiderManRemastered_I.jpg",
 },
+    {
+    id: 54,
+    nombre: "Call of Duty: Modern Warfare II",
+    tipo: "juego",
+    descripcion: "Shooter en primera persona que continúa la saga con una historia intensa, operaciones tácticas globales y el regreso de la Task Force 141, incluyendo a Ghost, Soap y Price.",
+    requisitos: " Windows 10 64-bit, Intel Core i5-3570 / AMD Ryzen 5 1400, 8 GB RAM, GeForce GTX 960 / Radeon RX 470, 125 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "gracias god xd",
+        "heroe de verdad"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/z986psfnet3oql0/Call.of.Duty.Modern.Warfare.II.v.9.7-Repack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/z986psfnet3oql0/Call.of.Duty.Modern.Warfare.II.v.9.7-Repack.torrent/file"
+    },
+    imagen: "Images/Call_of_Duty_Modern_Warfare_II_Key_Art.jpg",
+},
 ];
