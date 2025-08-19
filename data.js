@@ -1173,4 +1173,22 @@ const recursos = [
     },
     imagen: "Images/86flTX6TLYP7MABrMUt3An6m.jpg",
 },
+    {
+    id: 66,
+    nombre: "Call of Duty: Infinite Warfare",
+    tipo: "juego",
+    descripcion: "Shooter en primera persona ambientado en el espacio y en un futuro cercano, donde los jugadores combaten en batallas interplanetarias utilizando tecnología avanzada, vehículos espaciales y armas futuristas en una campaña épica y modos multijugador competitivos.",
+    requisitos: "Windows 7 64-bit, Intel Core i3-3220 / AMD FX-4350, 8 GB RAM, NVIDIA GTX 660 / AMD Radeon HD 7870, DirectX 11, 70 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Campaña futurista interesante",
+        "Multijugador divertido"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/8n4a07y5vf6bsx1/C0DIWF.torrent/file",
+        mediafire: "https://www.mediafire.com/file/8n4a07y5vf6bsx1/C0DIWF.torrent/file"
+    },
+    imagen: "Images/call-of-duty-infinite-warfare_3c.jpg",
+},
 ];
