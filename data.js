@@ -736,8 +736,8 @@ const recursos = [
         "no cierres la pagina porfa"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/t5l2cl9gl15pyk2/Uncharted+-+LoTC.torrent/file",
-        mediafire: "https://www.mediafire.com/file/t5l2cl9gl15pyk2/Uncharted+-+LoTC.torrent/file"
+        direct: "magnet:?xt=urn:btih:373d33a2a5e45ea5176e80199f31338074e82eda&dn=UNCHARTED_Legacy_of_Thieves_Collection_v1.4.21058-Razor1911&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://tracker.moeking.me:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.theoks.net:6969/announce&tr=udp://movies.zsw.ca:6969/announce&tr=udp://tracker-udp.gbitt.info:80/announce&tr=udp://tracker.tiny-vps.com:6969/announce&tr=http://tracker.gbitt.info:80/announce&tr=http://tracker.ccp.ovh:6969/announce&tr=https://tracker.gbitt.info:443/announce&tr=udp://tracker.dler.com:6969/announce&tr=udp://tracker.ccp.ovh:6969/announce",
+        mediafire: "magnet:?xt=urn:btih:373d33a2a5e45ea5176e80199f31338074e82eda&dn=UNCHARTED_Legacy_of_Thieves_Collection_v1.4.21058-Razor1911&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://tracker.moeking.me:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.theoks.net:6969/announce&tr=udp://movies.zsw.ca:6969/announce&tr=udp://tracker-udp.gbitt.info:80/announce&tr=udp://tracker.tiny-vps.com:6969/announce&tr=http://tracker.gbitt.info:80/announce&tr=http://tracker.ccp.ovh:6969/announce&tr=https://tracker.gbitt.info:443/announce&tr=udp://tracker.dler.com:6969/announce&tr=udp://tracker.ccp.ovh:6969/announce"
     },
     imagen: "Images/Final+Square.webp",
 },
