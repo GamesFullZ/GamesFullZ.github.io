@@ -1300,7 +1300,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     imagen: "Images/aE9HNEdnLmpwZw.jpg",
 },
 {
-id: 73,
+id: 74,
 nombre: "Metal Gear Rising: Revengeance",
 tipo: "juego",
 descripcion: "Juego de acción y hack and slash donde controlas a Raiden, un cyborg con habilidades sobrehumanas, luchando contra fuerzas privadas y terroristas con un sistema de combate rápido y cortante.",
