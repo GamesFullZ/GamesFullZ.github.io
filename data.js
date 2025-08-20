@@ -1245,4 +1245,77 @@ links: {
 },
 imagen: "Images/Resident_Evil_6_box_artwork.png",
 },
+    {
+    id: 70,
+    nombre: "Ghost of Tsushima Director's Cut",
+    tipo: "juego",
+    descripcion: "Juego de acción y aventura en tercera persona ambientado en el Japón feudal; controlas a Jin Sakai, un samurái que lucha por salvar Tsushima de una invasión mongola. Esta versión incluye la expansión Iki Island, combates refinados y ambiente inmersivo.",
+    requisitos: "Windows 10 64-bit, Intel Core i3-7100 / AMD Ryzen 3 1200, 8 GB RAM, NVIDIA GeForce GTX 960 / AMD Radeon RX 5500 XT, DirectX 11, 75 GB espacio (HDD; SSD recomendado).",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "Una experiencia samurái increíble en PC",
+        "Muy buena optimización para ser port de consola"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/9wdmm1iiniiw4ah/Ghost.of.Tsushima.DIRECTORS.CUT.MULTi26-RUNE.torrent/file",
+        mediafire: "https://www.mediafire.com/file/9wdmm1iiniiw4ah/Ghost.of.Tsushima.DIRECTORS.CUT.MULTi26-RUNE.torrent/file"
+    },
+    imagen: "Images/GhostT.jpg",
+},
+    {
+    id: 71,
+    nombre: "Diablo III: Eternal Collection (FitGirl Repack)",
+    tipo: "juego",
+    descripcion: "Juego de rol y acción tipo hack-and-slash en tercera persona con un estilo oscuro y frenético. Incluye contenido base, expansión Reaper of Souls y mejoras gráficas. Esta versión es una reducida “FitGirl Repack” que mantiene calidad sin alterar gameplay.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core 2 Duo 2.4 GHz / AMD Athlon 64 X2 5600+, 4 GB RAM, NVIDIA GeForce 8800 GT o ATI Radeon HD 2900 XT, DirectX 9.0c, 25 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "FitGirl repack mantiene calidad",
+        "Gran RPG de acción"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/ecgfaq6q2jsysec/Diablo+III+-+Eternal+Collection+[FitGirl+Repack]+INT.torrent/file",
+        mediafire: "https://www.mediafire.com/file/ecgfaq6q2jsysec/Diablo+III+-+Eternal+Collection+[FitGirl+Repack]+INT.torrent/file"
+    },
+    imagen: "Images/Diablo_III_cover.jpg",
+},
+{
+    id: 72,
+    nombre: "Resident Evil 5 Gold Edition",
+    tipo: "juego",
+    descripcion: "Shooter de acción y supervivencia en tercera persona donde controlas a Chris Redfield junto a Sheva Alomar en una misión para detener un brote bioterrorista en África. Combina combate, puzzles y cooperación en una atmósfera intensa.",
+    requisitos: "Windows XP/Vista/7, Intel Pentium D / AMD Athlon 64 X2, 512 MB–1 GB RAM, NVIDIA GeForce 6800 series / ATI Radeon HD 2400 Pro (256 MB VRAM), DirectX 9.0c, 8 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Clásico de survival horror",
+        "Muy optimizado incluso hoy"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/jixs1bmpj8x8p18/Resident.Evil.5.v10.04.2023.zip.torrent/file",
+        mediafire: "https://www.mediafire.com/file/jixs1bmpj8x8p18/Resident.Evil.5.v10.04.2023.zip.torrent/file"
+    },
+    imagen: "Images/aE9HNEdnLmpwZw.jpg",
+},
+{
+    id: 73,
+    nombre: "Call of Duty: Modern Warfare III",
+    tipo: "juego",
+    descripcion: "Shooter en primera persona centrado en combates militares modernos, con campaña cinematográfica intensa, multijugador competitivo y cooperativo, armas realistas y gráficos de última generación.",
+    requisitos: "Windows 10 64-bit, Intel Core i5-2500K / AMD Ryzen 3 1200, 8 GB RAM, NVIDIA GTX 960 / AMD Radeon RX 470, DirectX 12, 60 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Muy buena campaña y multiplayer",
+        "Acción pura"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/0ziswhub0iypksn/CoDM23odernWar23fareIII2023.elamigos.torrent/file",
+        mediafire: "https://www.mediafire.com/file/0ziswhub0iypksn/CoDM23odernWar23fareIII2023.elamigos.torrent/file",
+        packVocesLatino: "https://www.mediafire.com/file/69suagbuy6fbgn3/CDMW3-LnggPck-LTM.rar/file"
+    },
+    imagen: "Images/warfareIII.jpg",
+},
 ];
