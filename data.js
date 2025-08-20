@@ -1315,6 +1315,6 @@ links: {
     direct: "https://www.mediafire.com/file/q9yuoamg6hnccy2/METAL.GEAR.RISING.REVENGEANCE.v74575.torrent/file",
     mediafire: "https://www.mediafire.com/file/q9yuoamg6hnccy2/METAL.GEAR.RISING.REVENGEANCE.v74575.torrent/file"
 },
-imagen: "Images/A1FBBIIeFlL._UF894,1000_QL80_.jpg",
+imagen: Images/A1FBBIIeFlL._UF894,1000_QL80_.jpg,
 },
 ];
