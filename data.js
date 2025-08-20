@@ -1299,7 +1299,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     },
     imagen: "Images/aE9HNEdnLmpwZw.jpg",
 },
-  {
+{
 id: 73,
 nombre: "Metal Gear Rising: Revengeance",
 tipo: "juego",
