@@ -1314,7 +1314,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     links: {
         direct: "https://www.mediafire.com/file/0ziswhub0iypksn/CoDM23odernWar23fareIII2023.elamigos.torrent/file",
         mediafire: "https://www.mediafire.com/file/0ziswhub0iypksn/CoDM23odernWar23fareIII2023.elamigos.torrent/file",
-        packVocesLatino: "https://www.mediafire.com/file/69suagbuy6fbgn3/CDMW3-LnggPck-LTM.rar/file"
+        
     },
     imagen: "Images/warfareIII.jpg",
 },
