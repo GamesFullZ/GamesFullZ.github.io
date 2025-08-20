@@ -1353,4 +1353,23 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     },
     imagen: "Images/MV5BMzlmZTY0NzQtMGJmZC00MjI0LWI3.jpg",
 },
+    {
+    id: 76,
+    nombre: "Call of Duty: Black Ops III",
+    tipo: "juego",
+    descripcion: "Shooter futurista en primera persona con campaña cooperativa, multijugador competitivo y modo Zombies independiente, ambientado en un mundo tecnológico distópico lleno de mejoras cibernéticas.",
+    requisitos: "Windows 7/8/8.1 64-bit, Intel Core i3-530 @ 2.93 GHz / AMD Phenom II X4 810 @ 2.60 GHz, 6 GB RAM, NVIDIA GeForce GTX 470 @1 GB / ATI Radeon HD 6970 @1 GB, DirectX 11, 60 GB espacio (algunos sitios indican hasta 100 GB).",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Gran campaña y modo Zombies",
+        "Requiere bastante espacio pero vale la pena"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/6kdbf9zrsuo0vqr/C0D.B03.torrent/file",
+        mediafire: "https://www.mediafire.com/file/6kdbf9zrsuo0vqr/C0D.B03.torrent/file"
+    },
+    imagen: "Images/250px-Black_Ops_3.jpg",
+},
+
 ];
