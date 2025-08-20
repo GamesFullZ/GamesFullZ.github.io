@@ -270,7 +270,7 @@ const recursos = [
   },
   {
     id: 17,
-    nombre: "Bendy and the Ink Machine",
+    nombre: "Bendy and the Ink Machine (Mantenimiento)",
     tipo: "juego",
     descripcion: " Aventura de terror y puzles en primera persona donde exploras un viejo estudio de animación abandonado lleno de criaturas de tinta.",
     requisitos: "SO: Windows 7<br>Procesador: Intel Core 2 Duo E5200<br>RAM: 4 GB<br>Gráficos: GeForce 9800 GTX / AMD Radeon HD 5670<br>Almacenamiento: 2 GB",
@@ -289,7 +289,7 @@ const recursos = [
     },
     {
     id: 18,
-    nombre: "Bendy and the Dark Revivalo",
+    nombre: "Bendy and the Dark Revival (Mantenimiento)",
     tipo: "juego",
     descripcion: "Secuela de terror en primera persona donde Audrey explora un retorcido estudio de animación plagado de criaturas de tinta, resolviendo puzles y luchando por escapar.",
     requisitos: "SO: Windows 10 64-bit<br>RAM: 8 GB<br>Gráficos: GeForce GTX 1030 / AMD RX 550 (2 GB VRAM)<br>DirectX: 11<br>Almacenamiento: 15 GB",
