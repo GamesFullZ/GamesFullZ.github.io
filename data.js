@@ -1299,23 +1299,4 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     },
     imagen: "Images/aE9HNEdnLmpwZw.jpg",
 },
-{
-    id: 73,
-    nombre: "Call of Duty: Modern Warfare III",
-    tipo: "juego",
-    descripcion: "Shooter en primera persona centrado en combates militares modernos, con campaña cinematográfica intensa, multijugador competitivo y cooperativo, armas realistas y gráficos de última generación.",
-    requisitos: "Windows 10 64-bit, Intel Core i5-2500K / AMD Ryzen 3 1200, 8 GB RAM, NVIDIA GTX 960 / AMD Radeon RX 470, DirectX 12, 60 GB espacio.",
-    downloads: 0,
-    rating: "⭐⭐⭐⭐☆",
-    comments: [
-        "Muy buena campaña",
-        "Acción pura"
-    ],
-    links: {
-        direct: "https://www.mediafire.com/file/0ziswhub0iypksn/CoDM23odernWar23fareIII2023.elamigos.torrent/file",
-        mediafire: "https://www.mediafire.com/file/0ziswhub0iypksn/CoDM23odernWar23fareIII2023.elamigos.torrent/file",
-        
-    },
-    imagen: "Images/warfareIII.jpg",
-},
 ];
