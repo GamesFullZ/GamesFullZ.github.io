@@ -1335,5 +1335,22 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     },
     imagen: "Images/9627994-efootball-pes-2021-seaso.jpg",
 },
-
+    {
+    id: 75,
+    nombre: "Devil May Cry 3: Special Edition",
+    tipo: "juego",
+    descripcion: "Hack and slash en tercera persona donde controlas a Dante (y en esta edición también a Vergil), con combates frenéticos, modos extra como Turbo, Bloody Palace y Gold Mode.",
+    requisitos: "Windows 2000/XP, Intel Pentium III 1.0 GHz o superior, 256 MB RAM, GPU compatible DirectX 9.0c Shader 2.0 (128 MB VRAM), 3.5 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Estilo frenético clásico",
+        "Edición especial con contenido extra"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/1wkp441nmuo344l/Dev3ilM3ayCr3y3Spe3cialE.torrent/file",
+        mediafire: "https://www.mediafire.com/file/1wkp441nmuo344l/Dev3ilM3ayCr3y3Spe3cialE.torrent/file"
+    },
+    imagen: "Images/MV5BMzlmZTY0NzQtMGJmZC00MjI0LWI3.jpg",
+},
 ];
