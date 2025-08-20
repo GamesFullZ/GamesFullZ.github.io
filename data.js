@@ -1308,7 +1308,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     downloads: 0,
     rating: "⭐⭐⭐⭐☆",
     comments: [
-        "Muy buena campaña y multiplayer",
+        "Muy buena campaña",
         "Acción pura"
     ],
     links: {
