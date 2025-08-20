@@ -1319,7 +1319,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
 },
     {
     id: 74,
-    nombre: "eFootball PES 2021 Season Update",
+    nombre: "eFootball PES 2021",
     tipo: "juego",
     descripcion: "Videojuego de simulación de fútbol, parte de la serie Pro Evolution Soccer. Ofrece ligas oficiales, modos individuales y multijugador, con jugabilidad realista y gran atención táctica.",
     requisitos: "Windows 8.1/10 64-bit, Intel Core i5-3470 / AMD FX-4350, 8 GB RAM, NVIDIA GTX 670 / AMD Radeon HD 7870, 40 GB espacio.",
