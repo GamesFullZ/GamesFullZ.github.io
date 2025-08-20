@@ -1227,4 +1227,22 @@ const recursos = [
     },
     imagen: "Images/who-exactly-is-this-in-the-proje.jpg",
 },
+    {
+id: 69,
+nombre: "Resident Evil 6",
+tipo: "juego",
+descripcion: "Juego de acción y survival horror que combina múltiples campañas con personajes icónicos como Leon S. Kennedy, Chris Redfield y Ada Wong, enfrentando amenazas bioterroristas globales.",
+requisitos: "Windows 7/8/10 64-bit, Intel Core i5-4460 / AMD FX-6300, 4 GB RAM, GeForce GTX 760 / Radeon R7 260X, 15 GB espacio.",
+downloads: 0,
+rating: "⭐⭐⭐⭐☆",
+comments: [
+    "Heroe gracias",
+    "uff god"
+],
+links: {
+    direct: "https://www.mediafire.com/file/15wvcou4yo60db8/Resident+EVil+6.torrent/file",
+    mediafire: "https://www.mediafire.com/file/15wvcou4yo60db8/Resident+EVil+6.torrent/file"
+},
+imagen: "Images/Resident_Evil_6_box_artwork.png",
+},
 ];
