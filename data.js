@@ -1536,4 +1536,61 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     },
     imagen: "Images/subnautica_cover.jpg",
 },
+    {
+    id: 86,
+    nombre: "Subnautica: Below Zero",
+    tipo: "juego",
+    descripcion: "Secuela de Subnautica ambientada en un planeta helado, donde los jugadores deben explorar, recolectar recursos y sobrevivir a las condiciones extremas y a la fauna peligrosa.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core i3 / AMD Phenom II X4, 4 GB RAM, NVIDIA GTX 550 Ti / AMD Radeon HD 7850, 20 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Muy buena secuela, más desafío y nuevas criaturas",
+        "El hielo y la ambientación son impresionantes"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/fe50cehoaezvpt5/Sub1nBe5lowZe7ro-53115.torrent/file",
+        mediafire: "https://www.mediafire.com/file/fe50cehoaezvpt5/Sub1nBe5lowZe7ro-53115.torrent/file"
+    },
+    imagen: "Images/250px-Subnautica_Below_Zero_cove.jpg",
+},
+    {
+    id: 87,
+    nombre: "Mortal Kombat XL",
+    tipo: "juego",
+    descripcion: "Versión completa de Mortal Kombat X que incluye todos los personajes, skins, Fatalities y Kombat Packs, ofreciendo combates intensos y sangrientos en modo historia y multijugador.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core i5-2300 / AMD FX-6350, 4 GB RAM, NVIDIA GTX 560 / AMD Radeon HD 6950, 30 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "El mejor Mortal Kombat hasta ahora",
+        "Me encanta la brutalidad de los Fatalities"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/6ejrvjr4yw7uzfe/mkxl.torrent/file",
+        mediafire: "https://www.mediafire.com/file/6ejrvjr4yw7uzfe/mkxl.torrent/file"
+    },
+    imagen: "Images/MortalXL.jpg",
+},
+    {
+    id: 88,
+    nombre: "Halo: The Master Chief Collection",
+    tipo: "juego",
+    descripcion: "Colección que reúne los principales títulos de Halo, con campaña remasterizada, multijugador y gráficos mejorados, ofreciendo la experiencia completa del Jefe Maestro.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core i5-2400 / AMD FX-8320, 8 GB RAM, NVIDIA GTX 660 / AMD Radeon HD 7850, 50 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Excelente colección para fans de Halo",
+        "Las campañas remasterizadas se ven geniales"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/asmtw96kiullhkb/QXUZ3Y04wqg05pY.torrent/file",
+        mediafire: "https://www.mediafire.com/file/asmtw96kiullhkb/QXUZ3Y04wqg05pY.torrent/file"
+    },
+    extra: {
+        onlineFix: "https://www.mediafire.com/file/5wj9wuoztfrnydc/MCCFixOnlyv2.rar/file"
+    },
+    imagen: "Images/Halo_-The-Master-Chief-Collectio.jpg",
+},
 ];
