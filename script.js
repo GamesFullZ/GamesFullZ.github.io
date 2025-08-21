@@ -200,6 +200,10 @@ if (game.extra && extraContainer && extraLinksDiv) {
     if (game.extra.onlineFix) {
         extraLinksDiv.innerHTML += `<a href="${game.extra.onlineFix}" target="_blank" class="download-link">Online Fix</a>`;
     }
+    if (game.extra.updates) {
+        const versionText = game.extra.updateVersion ? `Update (${game.extra.updateVersion})` : 'Update';
+        extraLinksDiv.innerHTML += `<a href="${game.extra.updates}" target="_blank" class="download-link">${versionText}</a>`;
+    }
 } else if (extraContainer) {
     extraContainer.style.display = 'none'; // ocultar si no hay extras
 }
