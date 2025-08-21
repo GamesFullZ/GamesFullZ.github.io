@@ -1371,5 +1371,23 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     },
     imagen: "Images/250px-Black_Ops_3.jpg",
 },
+    {
+    id: 77,
+    nombre: "Elden Ring",
+    tipo: "juego",
+    descripcion: "Juego de rol de acción en mundo abierto con elementos soulsborne, donde explorás las vastas ‘Lands Between’, enfrentando criaturas épicas, recolectando runas y dominando un combate exigente.",
+    requisitos: "Windows 10 (64-bit), Intel Core i5-8400 / AMD Ryzen 3 3300X, 12 GB RAM, NVIDIA GeForce GTX 1060 (3 GB) / AMD Radeon RX 580 (4 GB), DirectX 12, 60 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "Impresionante mundo abierto",
+        "Desafiante y hermoso"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/p2ti65khtekjm5j/ELDEN.RING.Shadow.of.the.Erdtree-RUNE.torrent/file",
+        mediafire: "https://www.mediafire.com/file/p2ti65khtekjm5j/ELDEN.RING.Shadow.of.the.Erdtree-RUNE.torrent/file"
+    },
+    imagen: "Images/250px-Elden_Ring_Nightreign_cove.jpg",
+},
 
 ];
