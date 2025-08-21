@@ -1406,5 +1406,23 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         mediafire: "https://www.mediafire.com/file/1j2o0dzie089jug/ELDEN.RING.NIGHTREIGN.v1.02.0.rar.torrent/file"
     },
     imagen: "Images/250px-Elden_Ring_Nightreign_cove.jpg",
-}
+},
+ {
+    id: 78,
+    nombre: "Elden Ring: Nightreign v1.02.0",
+    tipo: "juego",
+    descripcion: "Spin-off roguelike cooperativo de Elden Ring donde encarnas a un Nightfarer que sobrevive tres noches en el mundo procedural de Limveld, luchando contra Nightlords y usando habilidades únicas por clase.",
+    requisitos: "Windows 10 (64-bit), Intel Core i5-8400 / AMD Ryzen 3 3300X, 12 GB RAM, NVIDIA GeForce GTX 1060 (3 GB) / AMD Radeon RX 580 (4 GB), DirectX 12, 60 GB espacio (base) – 80 GB con Shadow of the Erdtree.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "Experiencia Souls en modo roguelike",
+        "Desafiante y rejugable"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/1j2o0dzie089jug/ELDEN.RING.NIGHTREIGN.v1.02.0.rar.torrent/file",
+        mediafire: "https://www.mediafire.com/file/1j2o0dzie089jug/ELDEN.RING.NIGHTREIGN.v1.02.0.rar.torrent/file"
+    },
+    imagen: "Images/250px-Elden_Ring_Nightreign_cove.jpg",
+},
 ];
