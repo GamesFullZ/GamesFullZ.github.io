@@ -1518,4 +1518,19 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     },
     imagen: "Images/warfareIII.jpg",
 }
+    {
+    id: 85,
+    nombre: "Subnautica",
+    tipo: "juego",
+    descripcion: "Juego de supervivencia y exploración submarina en un planeta alienígena, donde el jugador debe recolectar recursos, construir bases y sobrevivir a la fauna y los peligros del océano.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core i3 / AMD Phenom II X4, 4 GB RAM, NVIDIA GTX 550 Ti / AMD Radeon HD 7850, 20 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [],
+    links: {
+        direct: "https://www.mediafire.com/file/g719nft8gf5m8a9/Su1bnau7tica-82304.torrent/file",
+        mediafire: "https://www.mediafire.com/file/g719nft8gf5m8a9/Su1bnau7tica-82304.torrent/file"
+    },
+    imagen: "Images/subnautica_cover.jpg",
+},
 ];
