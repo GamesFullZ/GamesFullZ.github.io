@@ -1681,7 +1681,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/d71sf64ez2yism6/Five.Nights.at.Freddys.Security.Breach.torrent/file",
         mediafire: "https://www.mediafire.com/file/d71sf64ez2yism6/Five.Nights.at.Freddys.Security.Breach.torrent/file"
     },
-    imagen: "Images/ruin.jpg",
+    imagen: "Images/Ruin.jpg",
 },
     {
     id: 94,
