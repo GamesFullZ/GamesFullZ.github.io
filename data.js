@@ -1406,5 +1406,5 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         mediafire: "https://www.mediafire.com/file/1j2o0dzie089jug/ELDEN.RING.NIGHTREIGN.v1.02.0.rar.torrent/file"
     },
     imagen: "Images/250px-Elden_Ring_Nightreign_cove.jpg",
-},
+}
 ];
