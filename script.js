@@ -186,6 +186,25 @@ document.addEventListener('DOMContentLoaded', function () {
         if (linkGofile) linkGofile.href = (game.links.direct || "#").trim();
         if (linkMediafire) linkMediafire.href = (game.links.mediafire || "#").trim();
 
+// --- MOSTRAR EXTRAS OPCIONALES ---
+const extraContainer = document.getElementById('extraDownloads'); // tu div opcional
+const extraLinksDiv = extraContainer ? extraContainer.querySelector('.links-extra') : null;
+
+if (game.extra && extraContainer && extraLinksDiv) {
+    extraContainer.style.display = 'block'; // mostrar el apartado
+    extraLinksDiv.innerHTML = ""; // limpiar antes de agregar
+
+    if (game.extra.vocesLatinas) {
+        extraLinksDiv.innerHTML += `<a href="${game.extra.vocesLatinas}" target="_blank" class="download-link">Paquete De Voces Latino</a>`;
+    }
+    if (game.extra.onlineFix) {
+        extraLinksDiv.innerHTML += `<a href="${game.extra.onlineFix}" target="_blank" class="download-link">Online Fix</a>`;
+    }
+} else if (extraContainer) {
+    extraContainer.style.display = 'none'; // ocultar si no hay extras
+}
+
+
         if (detailsComments) {
             detailsComments.innerHTML = '';
             if (game.comments && game.comments.length > 0) {
