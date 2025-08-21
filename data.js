@@ -1647,4 +1647,22 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     },
     imagen: "Images/250px-Among_Us_cover_art.jpg",
 },
+    {
+    id: 92,
+    nombre: "Warcraft III: Reforged",
+    tipo: "juego",
+    descripcion: "Remasterización del clásico juego de estrategia en tiempo real, que incluye la campaña de Reign of Chaos y The Frozen Throne, con gráficos mejorados, nuevas cinemáticas y soporte para partidas en línea a través de Battle.net.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core i3-530 / AMD Phenom II X4 910, 4 GB RAM, NVIDIA GeForce GTS 450 / AMD Radeon HD 5750, 30 GB espacio disponible.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Gráficos mejorados, pero faltan algunas características prometidas.",
+        "La campaña es excelente, pero el modo multijugador tiene problemas."
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/uszb0sjjjmzwh18/Warcr3aftIIIRe3forged-1.36.1-elamigos.torrent/file",
+        mediafire: "https://www.mediafire.com/file/uszb0sjjjmzwh18/Warcr3aftIIIRe3forged-1.36.1-elamigos.torrent/file"
+    },
+    imagen: "Images/warcraft-iii-reforged-2020110115.jpg",
+},
 ];
