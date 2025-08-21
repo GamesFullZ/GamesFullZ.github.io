@@ -1477,7 +1477,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/sma70pp0e8sqbaa/NSR3V0LUTI0N.torrent/file",
         mediafire: "https://www.mediafire.com/file/sma70pp0e8sqbaa/NSR3V0LUTI0N.torrent/file"
     },
-    imagen: "Images/is-there-anywhere-i-can-commissi.jpg",
+    imagen: "Images/naruto.jpg",
 },
     {
     id: 83,
