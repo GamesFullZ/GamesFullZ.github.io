@@ -1665,4 +1665,59 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     },
     imagen: "Images/warcraft-iii-reforged-2020110115.jpg",
 },
+    {
+    id: 93,
+    nombre: "Five Nights at Freddy's: Security Breach + DLC Ruin",
+    tipo: "juego",
+    descripcion: "Survival horror en primera persona donde encarnas a Gregory, un niño atrapado dentro de un gigantesco complejo de entretenimiento plagado de animatrónicos hostiles, y tu objetivo es sobrevivir hasta el amanecer explorando libremente el entorno.",
+    requisitos: "Windows 10 (64-bit), Intel Core i5-6600K / AMD Ryzen 5 3600, 8 GB RAM, NVIDIA GeForce GTX 1050 Ti (4 GB VRAM), DirectX 12, 80 GB espacio libre.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Muy intenso y aterrador",
+        "Gran ambiente y diseño visual"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/d71sf64ez2yism6/Five.Nights.at.Freddys.Security.Breach.torrent/file",
+        mediafire: "https://www.mediafire.com/file/d71sf64ez2yism6/Five.Nights.at.Freddys.Security.Breach.torrent/file"
+    },
+    imagen: "Images/ruin.jpg",
+},
+    {
+    id: 94,
+    nombre: "Murdered: Soul Suspect",
+    tipo: "juego",
+    descripcion: "Aventura de acción y misterio en tercera persona donde juegas como un detective fantasma que debe resolver su propio asesinato en la ciudad de Salem, usando habilidades sobrenaturales para investigar e interactuar con el entorno.",
+    requisitos: "Windows Vista (64-bit), Dual-Core 2.6 GHz (Intel Core 2 Duo E6750 o AMD Athlon 64 X2 5200+), 2 GB RAM, AMD Radeon HD 3870 / NVIDIA GeForce 8800 GT (512 MB VRAM), DirectX 10, 12 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐☆☆",
+    comments: [
+        "Intrigante misterio fantasmal",
+        "Bueno para fans de lo paranormal"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/gk3l5iz4qq5lro1/MurderedS-PiviGames.blog.torrent/file",
+        mediafire: "https://www.mediafire.com/file/gk3l5iz4qq5lro1/MurderedS-PiviGames.blog.torrent/file"
+    },
+    imagen: "Images/mixcollage-14-dec-2024-01-39-am.jpg",
+},
+    {
+    id: 95,
+    nombre: "Naruto Shippuden: Ultimate Ninja Storm Revolution",
+    tipo: "juego",
+    descripcion: "Juego de lucha en 3D con más de 100 personajes seleccionables, modo historia y torneos ninja, incluyendo el popular modo Mecha-Naruto para potenciar tus enfrentamientos.",
+    requisitos: "Windows XP o superior (64 bits), dual-core 2.3 GHz (Intel Core 2 Duo E6750 o AMD Athlon 64 X2 5200+), 1 GB RAM, GPU con Pixel Shader 4.0 (por ejemplo GeForce 8xxx o Radeon HD 2xxx), 8 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Juego frenético para fans del anime",
+        "Gran variedad de personajes"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/sma70pp0e8sqbaa/NSR3V0LUTI0N.torrent/file",
+        mediafire: "https://www.mediafire.com/file/sma70pp0e8sqbaa/NSR3V0LUTI0N.torrent/file"
+    },
+    imagen: "Images/naruto.jpg",
+},
+
 ];
