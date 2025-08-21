@@ -1407,4 +1407,22 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     },
     imagen: "Images/250px-Elden_Ring_Nightreign_cove.jpg",
 },
+    {
+    id: 79,
+    nombre: "Detroit: Become Human",
+    tipo: "juego",
+    descripcion: "Aventura narrativa interactiva ambientada en un futuro cercano donde androides buscan su libertad, con múltiples decisiones que afectan el destino de los personajes y el desarrollo de la historia.",
+    requisitos: "Windows 10 64-bit, Intel Core i7-3770 / AMD FX-8350, 8 GB RAM, GeForce GTX 780 / Radeon HD 7950, 55 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Gracias",
+        "Muy optimizado incluso hoy"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/2eudvmvwqxhkk28/Detroit+-+Become+Human.torrent/file",
+        mediafire: "https://www.mediafire.com/file/2eudvmvwqxhkk28/Detroit+-+Become+Human.torrent/file"
+    },
+    imagen: "Images/hola.jpg,
+},        
 ];
