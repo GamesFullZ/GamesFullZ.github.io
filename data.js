@@ -1760,22 +1760,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     nombre: "Blasphemous v4.0.67",
     tipo: "juego",
     descripcion: "Juego de acción y plataformas tipo metroidvania con combate hack and slash, ambientado en un mundo gótico inspirado en la religión y la Semana Santa española.",
-    requisitos: {
-        minimos: [
-            "Sistema operativo: Windows 7 64-bit",
-            "Procesador: Intel Core2 Duo E8400 o AMD Phenom II x2 550",
-            "Memoria: 4 GB de RAM",
-            "Gráficos: GeForce GTX 260 o Radeon HD 4850",
-            "Espacio en disco: 4 GB"
-        ],
-        recomendados: [
-            "Sistema operativo: Windows 10 64-bit",
-            "Procesador: Intel Core i5-750 o AMD Phenom II x4 945",
-            "Memoria: 4 GB de RAM",
-            "Gráficos: GeForce GTX 650 o Radeon HD 5770",
-            "Espacio en disco: 4 GB"
-        ]
-    },
+    requisitos: "Windows 7 64-bit, Intel Core2 Duo E8400 o AMD Phenom II x2 550, 4 GB RAM, GeForce GTX 260 o Radeon HD 4850, 4 GB espacio.",
     downloads: 0,
     rating: "⭐⭐⭐⭐☆",
     comments: [
@@ -1787,5 +1772,23 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         mediafire: "https://www.mediafire.com/file/i8bkqscj5v78i2g/Blas2phem7ous-4.0.67.rar/file"
     },
     imagen: "Images/Blasphemous_video_game.jpg",
+},
+    {
+    id: 99,
+    nombre: "Blasphemous 2",
+    tipo: "juego",
+    descripcion: "Secuela del metroidvania gótico donde controlas a un nuevo protagonista enfrentando horrores y desafíos en un mundo oscuro inspirado en la religión y la Semana Santa española.",
+    requisitos: "Windows 10 64-bit, Intel Core i5-2400 / AMD FX-6300, 8 GB RAM, GeForce GTX 960 / Radeon R9 380, 15 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Secuela que mantiene la esencia del original",
+        "Gran diseño artístico y combates desafiantes"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/4f81nlnucwrgito/Blasphemous.2.Mea.Culpa-RUNE.torrent/file",
+        mediafire: "https://www.mediafire.com/file/4f81nlnucwrgito/Blasphemous.2.Mea.Culpa-RUNE.torrent/file"
+    },
+    imagen: "Images/EGS_Blasphemous2_TheGameKitchen.jpg",
 },
 ];
