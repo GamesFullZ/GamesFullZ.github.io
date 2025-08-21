@@ -1517,7 +1517,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         vocesLatinas: "https://www.mediafire.com/file    _premium/69suagbuy6fbgn3/CDMW3-LnggPck-LTM.rar/file",
     },
     imagen: "Images/warfareIII.jpg",
-}
+},
     {
     id: 85,
     nombre: "Subnautica",
