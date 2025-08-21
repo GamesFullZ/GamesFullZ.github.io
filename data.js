@@ -1463,24 +1463,6 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
 },
     {
     id: 82,
-    nombre: "Naruto Shippuden: Ultimate Ninja Storm Revolution",
-    tipo: "juego",
-    descripcion: "Juego de lucha 3D basado en la saga Naruto donde peleas con más de 100 personajes jugables y ninjas de apoyo, disfrutas de animaciones espectaculares, técnicas mejoradas y modos como Ninja World Tournament y el exclusivo Mecha-Naruto.",
-    requisitos: "Windows XP o superior (SP actualizado), Dual-core 2.3 GHz (o equivalente AMD), 1 GB RAM, GPU 512 MB (Pixel Shader 4.0; GeForce 8xxx / ATI HD2xxx), DirectX 9.0c, 8 GB espacio.",
-    downloads: 0,
-    rating: "⭐⭐⭐⭐☆",
-    comments: [
-        "¡Gran experiencia para fans de Naruto!",
-        "Requiere muy poco hardware"
-    ],
-    links: {
-        direct: "https://www.mediafire.com/file/sma70pp0e8sqbaa/NSR3V0LUTI0N.torrent/file",
-        mediafire: "https://www.mediafire.com/file/sma70pp0e8sqbaa/NSR3V0LUTI0N.torrent/file"
-    },
-    imagen: "Images/naruto.jpg",
-},
-    {
-    id: 83,
     nombre: "Metal Gear Solid V: The Phantom Pain",
     tipo: "juego",
     descripcion: "Juego de acción y sigilo en mundo abierto que sigue a Big Boss en su búsqueda de venganza tras despertar de un coma de 9 años. Combina narrativa cinematográfica con jugabilidad táctica y exploración libre.",
@@ -1498,7 +1480,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     imagen: "Images/Metal-Gear-Solid-V-The-Phantom-P.jpg",
 },
     {
-    id: 84,
+    id: 83,
     nombre: "FIFA 20 Ultimate Edition (SOLO JUEGO)",
     tipo: "juego",
     descripcion: "FIFA 20 introduce el modo VOLTA Football, que ofrece una experiencia de fútbol callejero auténtica, y una nueva jugabilidad basada en la inteligencia del fútbol. La Ultimate Edition incluye acceso anticipado, packs de FUT y jugadores ICONO como Zidane, Pirlo y Drogba.",
@@ -1516,7 +1498,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     imagen: "Images/FIFA20.jpg",
 },
     {
-    id: 85,
+    id: 84,
     nombre: "Call of Duty: Modern Warfare III",
     tipo: "juego",
     descripcion: "Shooter en primera persona centrado en combates militares modernos, con campaña cinematográfica intensa, multijugador competitivo y cooperativo, armas realistas y gráficos de última generación.",
