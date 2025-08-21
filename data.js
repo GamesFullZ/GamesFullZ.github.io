@@ -1366,8 +1366,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Requiere bastante espacio pero vale la pena"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/6kdbf9zrsuo0vqr/C0D.B03.torrent/file",
-        mediafire: "https://www.mediafire.com/file/6kdbf9zrsuo0vqr/C0D.B03.torrent/file"
+        direct: "https://www.mediafire.com/file/xhrbrf6837z3egj/Call.of.Duty.Black.Ops.3.Zombies.Chronicles.Deluxe.Edition.v100.2.2.0.122.0-Canek77.torrent/file",
+        mediafire: "https://www.mediafire.com/file/xhrbrf6837z3egj/Call.of.Duty.Black.Ops.3.Zombies.Chronicles.Deluxe.Edition.v100.2.2.0.122.0-Canek77.torrent/file"
     },
     imagen: "Images/250px-Black_Ops_3.jpg",
 },
