@@ -1514,7 +1514,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         mediafire: "https://www.mediafire.com/file/0ziswhub0iypksn/CoDM23odernWar23fareIII2023.elamigos.torrent/file",
     },
     extra: {
-        vocesLatinas: "https://www.mediafire.com/file_premium/69suagbuy6fbgn3/CDMW3-LnggPck-LTM.rar/file",
+        vocesLatinas: "https://www.mediafire.com/file    _premium/69suagbuy6fbgn3/CDMW3-LnggPck-LTM.rar/file",
     },
     imagen: "Images/warfareIII.jpg",
 }
@@ -1526,7 +1526,10 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     requisitos: "Windows 7/8/10 64-bit, Intel Core i3 / AMD Phenom II X4, 4 GB RAM, NVIDIA GTX 550 Ti / AMD Radeon HD 7850, 20 GB espacio.",
     downloads: 0,
     rating: "⭐⭐⭐⭐☆",
-    comments: [],
+    comments: [
+        "Excelente juego de exploración",
+        "Me encanta la ambientación submarina"
+    ],
     links: {
         direct: "https://www.mediafire.com/file/g719nft8gf5m8a9/Su1bnau7tica-82304.torrent/file",
         mediafire: "https://www.mediafire.com/file/g719nft8gf5m8a9/Su1bnau7tica-82304.torrent/file"
