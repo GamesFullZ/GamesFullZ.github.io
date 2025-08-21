@@ -1407,4 +1407,112 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     },
     imagen: "Images/250px-Elden_Ring_Nightreign_cove.jpg",
 },
+    {
+    id: 79,
+    nombre: "Detroit: Become Human",
+    tipo: "juego",
+    descripcion: "Videojuego narrativo de aventura donde decisiones morales afectan el destino de tres androides (Kara, Connor y Markus) en un futuro cercano; sus elecciones moldean una historia emocional y ramificada.",
+    requisitos: "Windows 10 (64 bit), Intel Core i5-2300 @ 2.8 GHz / AMD Ryzen 3 1200 @ 3.1 GHz / AMD FX-8350 @ 4.2 GHz, 8 GB RAM, NVIDIA GeForce GTX 780 (3 GB VRAM) / AMD HD 7950 (3 GB VRAM) con soporte Vulkan 1.1, 55 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Emocionante historia ramificada",
+        "Porteo bien logrado a PC"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/om3wyofnpea763t/D3TR0IT-B3COM3-HUM4N.torrent/file",
+        mediafire: "https://www.mediafire.com/file/om3wyofnpea763t/D3TR0IT-B3COM3-HUM4N.torrent/file"
+    },
+    imagen: "Images/hola.jpg",
+},
+    {
+    id: 80,
+    nombre: "Stray",
+    tipo: "juego",
+    descripcion: "Stray es un juego de aventura en tercera persona donde controlas a un gato perdido en una ciudad cibernética habitada por robots. Explora, resuelve acertijos y descubre secretos para encontrar el camino de regreso a casa.",
+    requisitos: "Windows 10 64-bit, Intel Core i5-2300 / AMD FX-6350, 8 GB RAM, NVIDIA GeForce GTX 650 Ti / AMD Radeon R7 360, 10 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "Un gato increíble",
+        "Gracias por subirlo"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/th8itzebuedh80y/M3U4kDDG3m7oSFp.torrent/file",
+        mediafire: "https://www.mediafire.com/file/th8itzebuedh80y/M3U4kDDG3m7oSFp.torrent/file"
+    },
+    imagen: "Images/is-there-anywhere-i-can-commissi.jpg",
+},
+    {
+    id: 81,
+    nombre: "Far Cry 6",
+    tipo: "juego",
+    descripcion: "Shooter en primera persona ambientado en una isla caribeña bajo una dictadura. El jugador toma el rol de una guerrilla que busca liberar Yara luchando contra soldados, fauna salvaje y utilizando armas improvisadas, en un mundo abierto con componentes RPG.",
+    requisitos: "Windows 10 64-bit (20H1 o superior), AMD Ryzen 3 1200 / Intel Core i5-4460, 8 GB RAM, AMD Radeon RX 460 4 GB / NVIDIA GeForce GTX 960 4 GB, DirectX 12, 60 GB espacio (SSD recomendado).",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Muy buen sandbox",
+        "aceptable"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/njxx5cokbhxz43v/OgNFikJrXM0AsTz.torrent/file",
+        mediafire: "https://www.mediafire.com/file/njxx5cokbhxz43v/OgNFikJrXM0AsTz.torrent/file"
+    },
+    imagen: "Images/250px-Far_cry_6_cover.jpg",
+},
+    {
+    id: 82,
+    nombre: "Naruto Shippuden: Ultimate Ninja Storm Revolution",
+    tipo: "juego",
+    descripcion: "Juego de lucha 3D basado en la saga Naruto donde peleas con más de 100 personajes jugables y ninjas de apoyo, disfrutas de animaciones espectaculares, técnicas mejoradas y modos como Ninja World Tournament y el exclusivo Mecha-Naruto.",
+    requisitos: "Windows XP o superior (SP actualizado), Dual-core 2.3 GHz (o equivalente AMD), 1 GB RAM, GPU 512 MB (Pixel Shader 4.0; GeForce 8xxx / ATI HD2xxx), DirectX 9.0c, 8 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "¡Gran experiencia para fans de Naruto!",
+        "Requiere muy poco hardware"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/sma70pp0e8sqbaa/NSR3V0LUTI0N.torrent/file",
+        mediafire: "https://www.mediafire.com/file/sma70pp0e8sqbaa/NSR3V0LUTI0N.torrent/file"
+    },
+    imagen: "Images/is-there-anywhere-i-can-commissi.jpg",
+},
+    {
+    id: 83,
+    nombre: "Metal Gear Solid V: The Phantom Pain",
+    tipo: "juego",
+    descripcion: "Juego de acción y sigilo en mundo abierto que sigue a Big Boss en su búsqueda de venganza tras despertar de un coma de 9 años. Combina narrativa cinematográfica con jugabilidad táctica y exploración libre.",
+    requisitos: "SO: Windows 7/8/10 (64 bits), CPU: Intel Core i5-4460 (3.40 GHz) o AMD equivalente, RAM: 4 GB, GPU: NVIDIA GeForce GTX 650 (2 GB) o AMD equivalente, DirectX 11, 28 GB de espacio en disco.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "Una obra maestra de Hideo Kojima",
+        "Mundo abierto con gran libertad táctica"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/qe4uimjsp2lunug/M3t4lG34rS0l1d.torrent/file",
+        mediafire: "https://www.mediafire.com/file/qe4uimjsp2lunug/M3t4lG34rS0l1d.torrent/file"
+    },
+    imagen: "Images/Metal-Gear-Solid-V-The-Phantom-P.jpg",
+},
+    {
+    id: 84,
+    nombre: "FIFA 20 Ultimate Edition (SOLO JUEGO)",
+    tipo: "juego",
+    descripcion: "FIFA 20 introduce el modo VOLTA Football, que ofrece una experiencia de fútbol callejero auténtica, y una nueva jugabilidad basada en la inteligencia del fútbol. La Ultimate Edition incluye acceso anticipado, packs de FUT y jugadores ICONO como Zidane, Pirlo y Drogba.",
+    requisitos: "SO: Windows 7/8.1/10 (64 bits), CPU: Intel Core i3-2100 o AMD Phenom II X4 965, RAM: 8 GB, GPU: NVIDIA GTX 660 o AMD Radeon HD 7850 (2 GB), DirectX 11, 50 GB de espacio disponible.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Excelente jugabilidad y gráficos realistas.",
+        "El modo VOLTA es una gran adición para los fans del fútbol callejero."
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/970s6vizs9pboy9/FIFA.20.Ultimate.Edition.FULL.UNLOCKED.zip.torrent/file",
+        mediafire: "https://www.mediafire.com/file/970s6vizs9pboy9/FIFA.20.Ultimate.Edition.FULL.UNLOCKED.zip.torrent/file"
+    },
+    imagen: "Images/FIFA20.jpg",
+},
 ];
