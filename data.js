@@ -1719,5 +1719,73 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     },
     imagen: "Images/naruto.jpg",
 },
-
+    {
+    id: 96,
+    nombre: "Factorio",
+    tipo: "juego",
+    descripcion: "Juego de simulación y estrategia donde construyes y automatizas fábricas en un mundo alienígena, gestionando recursos, defensa y producción para finalmente lanzar un cohete.",
+    requisitos: "Windows 7/8/10 (64 bit), dual-core 3 GHz+, 4 GB RAM, GPU compatible con DirectX 10.1 (512 MB VRAM — GeForce GTX 260, Radeon HD 4850 o Intel HD 5500), DirectX 11, 3 GB espacio disponible.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "Funciona en PCs sencillos; muy bien optimizado",
+        "Ideal para fans de la automatización"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/r912vzz2uvboqxc/Factorio.v2.0.60.rar.torrent/file",
+        mediafire: "https://www.mediafire.com/file/r912vzz2uvboqxc/Factorio.v2.0.60.rar.torrent/file"
+    },
+    imagen: "Images/fff-310-factorio-cover-017-stabl.jpg",
+},
+    {
+    id: 97,
+    nombre: "The Walking Dead: The Telltale Definitive Series",
+    tipo: "juego",
+    descripcion: "Colección definitiva de la saga de Telltale que reúne todas las temporadas y contenido adicional, con mejoras visuales 'Graphic Black', audio remasterizado y extras de desarrollo.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core i3-2100 / AMD FX-4100, 4 GB RAM, NVIDIA GeForce GTX 650 / AMD Radeon HD 7770, DirectX 11, 45 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "La mejor forma de jugar toda la historia de Clementine",
+        "Buen remaster con Graphic Black"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/3dbovz40k57i47r/TWDSComp.torrent/file",
+        mediafire: "https://www.mediafire.com/file/3dbovz40k57i47r/TWDSComp.torrent/file"
+    },
+    imagen: "Images/TWDTTDS.jpg",
+},
+    {
+    id: 98,
+    nombre: "Blasphemous v4.0.67",
+    tipo: "juego",
+    descripcion: "Juego de acción y plataformas tipo metroidvania con combate hack and slash, ambientado en un mundo gótico inspirado en la religión y la Semana Santa española.",
+    requisitos: {
+        minimos: [
+            "Sistema operativo: Windows 7 64-bit",
+            "Procesador: Intel Core2 Duo E8400 o AMD Phenom II x2 550",
+            "Memoria: 4 GB de RAM",
+            "Gráficos: GeForce GTX 260 o Radeon HD 4850",
+            "Espacio en disco: 4 GB"
+        ],
+        recomendados: [
+            "Sistema operativo: Windows 10 64-bit",
+            "Procesador: Intel Core i5-750 o AMD Phenom II x4 945",
+            "Memoria: 4 GB de RAM",
+            "Gráficos: GeForce GTX 650 o Radeon HD 5770",
+            "Espacio en disco: 4 GB"
+        ]
+    },
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Gran juego de acción y plataformas",
+        "Excelente ambientación y música"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/i8bkqscj5v78i2g/Blas2phem7ous-4.0.67.rar/file",
+        mediafire: "https://www.mediafire.com/file/i8bkqscj5v78i2g/Blas2phem7ous-4.0.67.rar/file"
+    },
+    imagen: "Images/Blasphemous_video_game.jpg",
+},
 ];
