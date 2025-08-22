@@ -1811,6 +1811,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         updates: "https://www.mediafire.com/file/x57msx7p1p8tont/6387205-USF4U109.rar/file",
         updateVersion: "1.9"
     },
+    note: "⚠️ Antes de instalar el Update desactivar antivirus para evitar que borre el archivo",
     imagen: "Images/450_1000.jpg",
 },
 ];
