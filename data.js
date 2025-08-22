@@ -1835,4 +1835,106 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     },
     imagen: "Images/GPgBEeoPE615EvDZjI08ceUC3AfRNHwE.jpg",
 },
+    {
+    id: 102,
+    nombre: "Street Fighter V",
+    tipo: "juego",
+    descripcion: "Juego de lucha de la legendaria saga Street Fighter, con combates dinámicos, gráficos de nueva generación, amplio roster de personajes y soporte competitivo online.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core i3-4160, 6 GB RAM, NVIDIA GTX 480 / Radeon HD 5700, DirectX 11, 30 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Excelente jugabilidad, competitivo y adictivo",
+        "El online puede mejorar pero sigue siendo muy bueno"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/te662q9ahq4b0sx/HPHVUlky3FJds5c.torrent/file",
+        mediafire: "https://www.mediafire.com/file/te662q9ahq4b0sx/HPHVUlky3FJds5c.torrent/file"
+    },
+    extra: {
+    },
+    imagen: "Images/11307MTvkumhOsLQiA_3g0ZbFhLnHOOW.jpg",
+},
+    {
+    id: 103,
+    nombre: "Capcom Fighting Collection 2",
+    tipo: "juego",
+    descripcion: "Compilación de juegos clásicos de pelea de Capcom con mejoras modernas, soporte online, gráficos optimizados y múltiples modos de juego.",
+    requisitos: "Windows 10/11 64-bit, Intel Core i5-7500, 8 GB RAM, NVIDIA GTX 770 / Radeon R9 280, DirectX 11, 25 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "Gran colección para fans de los clásicos",
+        "El modo online funciona muy bien"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/m6s69192caycvfk/Capcom.Fighting.Collection.2.torrent/file",
+        mediafire: "https://www.mediafire.com/file/m6s69192caycvfk/Capcom.Fighting.Collection.2.torrent/file"
+    },
+    extra: {
+        onlineFix: "https://www.mediafire.com/file/s9183zh8jwny7cv/CapcFCollection2FixOnly(1).rar/file"
+    },
+    note: "⚠️ Antes de instalar el onlineFix desactivar antivirus para evitar que borre el archivo",
+    imagen: "Images/250px-CapcomFightingCollection2.jpg"
+},
+    {
+    id: 104,
+    nombre: "Marvel vs Capcom Fighting Collection: Arcade Classics",
+    tipo: "juego",
+    descripcion: "Colección arcade que reúne los títulos clásicos de Marvel vs Capcom con jugabilidad mejorada, soporte online y extras para los fans de la saga.",
+    requisitos: "Windows 10/11 64-bit, Intel Core i5-7500, 8 GB RAM, NVIDIA GTX 770 / Radeon R9 280, DirectX 11, 20 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "Increíble recopilación de clásicos",
+        "Funciona perfecto en online"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/tgh7qkpl88yrrhh/Marvel.vs.Capcom.Fighting.Collection.Arcade.Classics.elamigos.torrent/file",
+        mediafire: "https://www.mediafire.com/file/tgh7qkpl88yrrhh/Marvel.vs.Capcom.Fighting.Collection.Arcade.Classics.elamigos.torrent/file"
+    },
+    extra: {
+        onlineFix: "https://www.mediafire.com/file/dw1d4ho8k6txh29/MvsCFCAC_FixOnly.rar/file"
+    },
+    note: "⚠️ Antes de instalar el onlineFix desactivar antivirus para evitar que borre el archivo",
+    imagen: "Images/5d00de91c944dad1bb6a61a83058ede3.jpg"
+},
+    {
+    id: 104,
+    nombre: "Far Cry 1 y 2 Gold Edition",
+    tipo: "juego",
+    descripcion: "Pack que incluye el icónico shooter original Far Cry junto a su expansión. Sumérgete en la jungla tropical en una historia de supervivencia e infiltración.",
+    requisitos: "Windows 98/XP (yayos del siglo pasado), Athlon o Pentium III a 1 GHz, 256 MB RAM, tarjeta DX 9.0b de 64 MB, 4 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "Un clásico que marcó época por sus gráficos y libertad.",
+        "Muy nostálgico y desafiante aún hoy."
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/7syvlrh0jyqnkuh/FCRY1-2.torrent/file",
+        mediafire: "https://www.mediafire.com/file/7syvlrh0jyqnkuh/FCRY1-2.torrent/file"
+    },
+    imagen: "Images/COVER.jpg",
+},
+    {
+    id: 105,
+    nombre: "Subsistence",
+    tipo: "juego",
+    descripcion: "Survival sandbox en primera persona ambientado en un mundo abierto hostil. Recolecta recursos, construye bases, caza, cultiva y sobrevive contra la fauna salvaje y las estaciones cambiantes.",
+    requisitos: "Windows 7+, Dual Core 2.8 GHz, 2 GB RAM, tarjeta gráfica DX9 con 512 MB VRAM, 3 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐☆☆",
+    comments: [
+        "Muy buen survival en constante actualización.",
+        "Difícil al inicio pero muy adictivo."
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/43otj6n9zdlkaf7/Subsistence.Build.14874515.zip/file",
+        mediafire: "https://www.mediafire.com/file/43otj6n9zdlkaf7/Subsistence.Build.14874515.zip/file"
+    },
+    note: "⚠️ Este juego es Sin Online. No se encontro.",
+    imagen: "Images/43632_Subsistence.jpg",
+},
+
 ];
