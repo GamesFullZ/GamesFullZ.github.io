@@ -1933,7 +1933,11 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/43otj6n9zdlkaf7/Subsistence.Build.14874515.zip/file",
         mediafire: "https://www.mediafire.com/file/43otj6n9zdlkaf7/Subsistence.Build.14874515.zip/file"
     },
-    note: "⚠️ Este juego es Sin Online. No se encontro.",
+    extra: {
+        updates: "https://gamesfullz.github.io",
+        updateVersion: "El juego no cuenta con un crack online disponible de momento"
+    },
+    note: "⚠️ Este juego es Sin Online. Antes de instalar, desactiva el antivirus para evitar que borre archivos importantes.",
     imagen: "Images/43632_Subsistence.jpg",
 },
 ];
