@@ -1937,7 +1937,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         updates: "https://gamesfullz.github.io",
         updateVersion: "El juego no cuenta con un crack online disponible de momento"
     },
-    note: "⚠️ Este juego es Sin Online. Antes de instalar, desactiva el antivirus para evitar que borre archivos importantes.",
+    note: "⚠️ Este juego es Sin Online.",
     imagen: "Images/43632_Subsistence.jpg",
 },
 ];
