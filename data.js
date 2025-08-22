@@ -1936,5 +1936,4 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     note: "⚠️ Este juego es Sin Online. No se encontro.",
     imagen: "Images/43632_Subsistence.jpg",
 },
-
 ];
