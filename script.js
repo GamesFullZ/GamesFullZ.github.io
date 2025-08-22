@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (linkMediafire) linkMediafire.href = (game.links.mediafire || "#").trim();
 
 // --- MOSTRAR EXTRAS OPCIONALES ---
-const extraContainer = document.getElementById('extraDownloads'); // tu div opcional
+const extraContainer = document.getElementById('extraDownloads');
 const extraLinksDiv = extraContainer ? extraContainer.querySelector('.links-extra') : null;
 
 if (game.extra && extraContainer && extraLinksDiv) {
@@ -205,27 +205,37 @@ if (game.extra && extraContainer && extraLinksDiv) {
         extraLinksDiv.innerHTML += `<a href="${game.extra.updates}" target="_blank" class="download-link">${versionText}</a>`;
     }
 } else if (extraContainer) {
-    extraContainer.style.display = 'none'; // ocultar si no hay extras
+    extraContainer.style.display = 'none';
 }
 
+// --- MOSTRAR NOTA DEL JUEGO ---
+const noteContainer = document.getElementById('gameNote');
+const noteText = noteContainer ? noteContainer.querySelector('.note-text') : null;
 
-        if (detailsComments) {
-            detailsComments.innerHTML = '';
-            if (game.comments && game.comments.length > 0) {
-                game.comments.forEach(text => {
-                    const commentElement = document.createElement('div');
-                    commentElement.className = 'comment';
-                    commentElement.innerHTML = `
-                        <div class="comment-author">Usuario Anónimo</div>
-                        <div class="comment-text">${text}</div>
-                    `;
-                    detailsComments.appendChild(commentElement);
-                });
-            } else {
-                detailsComments.innerHTML = '<p>No hay comentarios aún. ¡Sé el primero en comentar!</p>';
-            }
-        }
+if (game.note && noteContainer && noteText) {
+    noteContainer.style.display = 'block';
+    noteText.textContent = game.note; // mensaje definido en data.js
+} else if (noteContainer) {
+    noteContainer.style.display = 'none';
+}
 
+// --- MOSTRAR COMENTARIOS ---
+if (detailsComments) {
+    detailsComments.innerHTML = '';
+    if (game.comments && game.comments.length > 0) {
+        game.comments.forEach(text => {
+            const commentElement = document.createElement('div');
+            commentElement.className = 'comment';
+            commentElement.innerHTML = `
+                <div class="comment-author">Usuario Anónimo</div>
+                <div class="comment-text">${text}</div>
+            `;
+            detailsComments.appendChild(commentElement);
+        });
+    } else {
+        detailsComments.innerHTML = '<p>No hay comentarios aún. ¡Sé el primero en comentar!</p>';
+    }
+}
         // Mostrar advertencia si existe
         const advertenciaContainer = document.querySelector('.modal-info .advertencia-container');
         if (advertenciaContainer) advertenciaContainer.remove(); // Eliminar si ya existe
