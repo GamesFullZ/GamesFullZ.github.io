@@ -1791,4 +1791,26 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     },
     imagen: "Images/EGS_Blasphemous2_TheGameKitchen.jpg",
 },
+    {
+    id: 100,
+    nombre: "Ultra Street Fighter IV",
+    tipo: "juego",
+    descripcion: "Juego de lucha clásico con los personajes más icónicos de Street Fighter, ofreciendo modos competitivos, torneos y un sistema de combate profundo y equilibrado.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core 2 Duo E8400 / AMD Phenom II X2 550, 2 GB RAM, GeForce GTX 460 / Radeon HD 6850, 4 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐☆",
+    comments: [
+        "El clásico de siempre, muy divertido",
+        "Perfecto para torneos online"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/0ooiwb3utmo3cww/UStr33tFight.torrent/file",
+        mediafire: "https://www.mediafire.com/file/0ooiwb3utmo3cww/UStr33tFight.torrent/file"
+    },
+    extra: {
+        updates: "https://www.mediafire.com/file/x57msx7p1p8tont/6387205-USF4U109.rar/file",
+        updateVersion: "1.9"
+    },
+    imagen: "Images/450_1000.jpg",
+},
 ];
