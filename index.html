@@ -190,22 +190,23 @@
 <div class="download-options extra-downloads" id="extraDownloads" style="display:none;">
     <h3>Extras disponibles:</h3>
     <div class="links-extra">
-        <!-- Aquí se inyectarán los links de Voces Latinas o Online Fix desde JS -->
+        <!-- Aquí se inyectarán los links de Voces Latinas, Online Fix o Updates desde JS -->
+    </div>
+    <!-- Contenedor de nota del juego -->
+    <div class="game-note" id="gameNote" style="display:none; margin-top: 10px; padding: 10px; background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: 5px;">
+        <p class="note-text" style="margin:0; color:#856404; font-weight:bold;"></p>
     </div>
 </div>
-                    <div class="comments-section">
-                        <h3>Reseñas de usuarios</h3>
-                        <div id="commentsContainer" class="comments-list"></div>
-                        <div class="add-comment">
-                            <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput"></textarea>
-                            <button id="addCommentBtn">Publicar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
+<!-- Sección de comentarios -->
+<div class="comments-section">
+    <h3>Reseñas de usuarios</h3>
+    <div id="commentsContainer" class="comments-list"></div>
+    <div class="add-comment">
+        <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput"></textarea>
+        <button id="addCommentBtn">Publicar</button>
+    </div>
+</div>
     <!-- Modal de vista previa al pasar el cursor -->
     <div id="previewModal" class="preview-modal">
         <div class="preview-content">
@@ -417,6 +418,3 @@
     </script>
 </body>
 </html>
-
-
-
