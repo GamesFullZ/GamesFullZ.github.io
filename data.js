@@ -1812,6 +1812,6 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         updateVersion: "1.9"
     },
     note: "⚠️ Antes de instalar el Update desactivar antivirus para evitar que borre el archivo",
-    imagen: "Images/450_1000.jpg",
+    imagen: "Images/450_1000.jpg"
 },
 ];
