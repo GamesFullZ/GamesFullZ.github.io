@@ -1814,4 +1814,25 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     note: "⚠️ Antes de instalar el Update desactivar antivirus para evitar que borre el archivo",
     imagen: "Images/450_1000.jpg"
 },
+    {
+    id: 101,
+    nombre: "Street Fighter 30th Anniversary Collection",
+    tipo: "juego",
+    descripcion: "Compilación que celebra los 30 años de Street Fighter con 12 títulos clásicos de la saga. Incluye modos arcade, multijugador online y galería con material histórico.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core i3-4160, 6 GB RAM, NVIDIA GeForce GTX 480 / Radeon HD 5700, DirectX 11, 6 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "Una joya para los fans de Street Fighter",
+        "Todos los clásicos en un solo paquete"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/c8c6p8szdpqnu4i/SF30th.torrent/file",
+        mediafire: "https://www.mediafire.com/file/c8c6p8szdpqnu4i/SF30th.torrent/file"
+    },
+    extra: {
+        onlineFix: "https://www.mediafire.com/file/60qfbu68o0t84hz/Street.Fighter.30th.Anniversary.Collection.Multiplayer.Fix-REVOLT.rar/file"
+    },
+    imagen: "Images/GPgBEeoPE615EvDZjI08ceUC3AfRNHwE.jpg",
+},
 ];
