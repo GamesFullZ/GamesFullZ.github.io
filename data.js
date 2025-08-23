@@ -1940,4 +1940,22 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     note: "⚠️ Este juego es Sin Online.",
     imagen: "Images/43632_Subsistence.jpg",
 },
+    {
+id: 106,
+nombre: "Silent Hill 2 Remake",
+tipo: "juego",
+descripcion: "Remake del clásico survival horror donde James Sunderland explora la misteriosa ciudad de Silent Hill en busca de su esposa, enfrentando criaturas aterradoras y una atmósfera opresiva.",
+requisitos: "Windows 10 64-bit, Intel Core i7-3770 / AMD FX-8350, 8 GB RAM, GeForce GTX 780 / Radeon HD 7950, 55 GB espacio.",
+downloads: 0,
+rating: "⭐⭐⭐⭐☆",
+comments: [
+    "Heroe",
+    "Me encanta"
+],
+links: {
+    direct: "<https://www.mediafire.com/file/tskvbgrnta3zdxb/Silent+Hill+2+-+Remake+[FitGirl+Repack].torrent/file>",
+    mediafire: "<https://cuty.io/M8Ff7EDe2>"
+},
+imagen: "Images/silent-hill-2-remake_ktez.1200.jpg",
+},
 ];
