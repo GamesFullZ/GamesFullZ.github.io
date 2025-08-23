@@ -1953,8 +1953,8 @@ comments: [
     "Me encanta"
 ],
 links: {
-    direct: "<https://www.mediafire.com/file/tskvbgrnta3zdxb/Silent+Hill+2+-+Remake+[FitGirl+Repack].torrent/file>",
-    mediafire: "<https://cuty.io/M8Ff7EDe2>"
+    direct: "https://www.mediafire.com/file/tskvbgrnta3zdxb/Silent+Hill+2+-+Remake+[FitGirl+Repack].torrent/file",
+    mediafire: "https://cuty.io/M8Ff7EDe2"
 },
 imagen: "Images/silent-hill-2-remake_ktez.1200.jpg",
 },
