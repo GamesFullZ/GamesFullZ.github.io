@@ -1959,4 +1959,22 @@ links: {
 },
 imagen: "Images/silent-hill-2-remake_ktez.1200.jpg",
 },
+    {
+id: 107,
+nombre: "Hollow Knight: Silksong",
+tipo: "juego",
+descripcion: "Hollow Knight: Silksong es la secuela independiente del aclamado metroidvania Hollow Knight. Protagonizada por Hornet, la princesa guerrera del primer juego.",
+requisitos: "SO: Windows 10 64-bit,Intel Core i3-3240,4 GB RAM,GeForce GTX 560 Ti,Almacenamiento: 8 GB.",
+downloads: 0,
+rating: "?????",
+comments: [
+    "volvimos",
+    "nuevesito de paquete"
+],
+links: {
+    direct: "https://www.mediafire.com/file/7r0l5us73qdim0z/Hollow+Knight+Silksong+V3.torrent/file",
+    mediafire: "https://cuty.io/RrBVYM6eR3"
+},
+imagen: "Images/hollow_knight_silksong_game_cover_cfd0d790af.webp",
+},
 ];
