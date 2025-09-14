@@ -1959,7 +1959,7 @@ links: {
 },
 imagen: "Images/silent-hill-2-remake_ktez.1200.jpg",
 },
-    {
+  {
 id: 107,
 nombre: "Hollow Knight: Silksong",
 tipo: "juego",
