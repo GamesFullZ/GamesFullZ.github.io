@@ -1966,7 +1966,7 @@ tipo: "juego",
 descripcion: "Hollow Knight: Silksong es la secuela independiente del aclamado metroidvania Hollow Knight. Protagonizada por Hornet, la princesa guerrera del primer juego.",
 requisitos: "SO: Windows 10 64-bit,Intel Core i3-3240,4 GB RAM,GeForce GTX 560 Ti,Almacenamiento: 8 GB.",
 downloads: 0,
-rating: "?????",
+rating: "⭐⭐⭐⭐⭐",
 comments: [
     "volvimos",
     "nuevesito de paquete"
