@@ -19,9 +19,118 @@
     
     <!-- Enlace al CSS externo -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Estilos para el bloqueador de AdBlock -->
+    <style>
+        .adblock-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            backdrop-filter: blur(10px);
+        }
+        
+        .adblock-content {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .adblock-content h2 {
+            color: #ff5252;
+            margin-top: 0;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .adblock-warning-icon {
+            font-size: 60px;
+            color: #ff5252;
+            margin-bottom: 20px;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .adblock-steps {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .adblock-steps li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+        
+        .adblock-reload-button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        
+        .adblock-reload-button:hover {
+            background: #43A047;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .adblock-hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body data-theme="dark" id="top">
-        <!-- Banner superior -->
+    <!-- Overlay para bloqueo por AdBlock (se mostrará solo si se detecta AdBlock) -->
+    <div id="adblock-overlay" class="adblock-overlay adblock-hidden">
+        <div class="adblock-content">
+            <div class="adblock-warning-icon">⚠️</div>
+            <h2>AdBlock Detectado</h2>
+            <p>Hemos detectado que estás utilizando un bloqueador de anuncios.</p>
+            <p>Nuestro sitio se mantiene gracias a la publicidad mostrada a nuestros visitantes.</p>
+            
+            <div class="adblock-steps">
+                <p><strong>Para acceder a nuestro contenido:</strong></p>
+                <ol>
+                    <li>Desactiva AdBlock para este sitio web</li>
+                    <li>Si usas uBlock Origin, haz clic en su icono y desactiva la protección para esta página</li>
+                    <li>Actualiza la página después de desactivar AdBlock</li>
+                </ol>
+            </div>
+            
+            <p>¡Tu apoyo nos ayuda a seguir creando contenido de calidad!</p>
+            
+            <button class="adblock-reload-button" id="adblock-reload-button">Ya desactivé AdBlock, continuar</button>
+            
+            <p style="margin-top: 25px; font-size: 14px; color: #aaa;">Si crees que es un error, ponte en contacto con nosotros</p>
+        </div>
+    </div>
+    
+    <!-- Banner superior -->
     <div class="banner-top" style="text-align:center; margin: 10px 0;">
         <a href="http://icutlink.com/ref/Jesus09xd">
             <img src="https://icutlink.com/img/banner728.gif" alt="Publicidad">
@@ -140,7 +249,7 @@
                 </div>
                 <div class="recommended-game">
                     <i class="fas fa-star"></i>
-                    <span>Marvel’s Spider-Man 2</span>
+                    <span>Marvel's Spider-Man 2</span>
                 </div>
             </div>
         </section>
@@ -426,12 +535,63 @@
             }, 600);
         });
     </script>
+    
+    <!-- Script para la detección de AdBlock -->
+    <script>
+        // Función para detectar AdBlock
+        function detectAdBlock() {
+            return new Promise((resolve) => {
+                // Crear un elemento que parezca un anuncio
+                const ad = document.createElement('div');
+                ad.innerHTML = '&nbsp;';
+                ad.className = 'adsbox';
+                ad.style.position = 'absolute';
+                ad.style.top = '-999px';
+                ad.style.left = '-999px';
+                ad.style.height = '1px';
+                ad.style.width = '1px';
+                ad.style.zIndex = '-1000';
+                
+                // Añadir clases comunes de anuncios
+                ad.classList.add('adsbygoogle');
+                ad.classList.add('ad-unit');
+                
+                document.body.appendChild(ad);
+                
+                // Verificar si el elemento está oculto
+                window.setTimeout(() => {
+                    const isAdBlocked = ad.offsetHeight === 0 || 
+                                        ad.offsetWidth === 0 || 
+                                        ad.style.display === 'none' || 
+                                        ad.style.visibility === 'hidden' ||
+                                        window.getComputedStyle(ad).display === 'none';
+                    
+                    document.body.removeChild(ad);
+                    resolve(isAdBlocked);
+                }, 100);
+            });
+        }
+
+        // Detectar AdBlock y mostrar advertencia si está activado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Esperar a que se cargue todo el contenido
+            setTimeout(function() {
+                detectAdBlock().then((isAdBlocked) => {
+                    if (isAdBlocked) {
+                        // Mostrar el mensaje de advertencia
+                        document.getElementById('adblock-overlay').classList.remove('adblock-hidden');
+                        
+                        // Bloquear el desplazamiento
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            }, 2000); // Esperar 2 segundos para asegurar que todo se cargó
+        });
+
+        // Botón para recargar después de desactivar AdBlock
+        document.getElementById('adblock-reload-button').addEventListener('click', function() {
+            window.location.reload();
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
