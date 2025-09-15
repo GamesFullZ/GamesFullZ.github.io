@@ -1977,4 +1977,22 @@ links: {
 },
 imagen: "Images/hollow_knight_silksong_game_cover_cfd0d790af.webp",
 },
+  {
+id: 108,
+nombre: "Garry's Mod",
+tipo: "juego",
+descripcion: "Sandbox basado en el motor Source que permite a los jugadores crear, modificar y experimentar con físicas, objetos y modos de juego personalizados sin límites.",
+requisitos: "Windows 10 64-bit, Intel Core i5-2400 / AMD FX-6300, 4 GB RAM, GeForce GTX 460 / Radeon HD 5850, 20 GB espacio.",
+downloads: 0,
+rating: "⭐⭐⭐⭐⭐",
+comments: [
+    "pidan juegos",
+    "da miedo cuando estamos solo"
+],
+links: {
+    direct: "https://www.mediafire.com/file/clnpnwn8vxiagnz/Garry's+Mod.torrent/file",
+    mediafire: "https://cuty.io/2tGMvsq96"
+},
+imagen: "Images/8964943.jpg",
+},
 ];
