@@ -102,6 +102,23 @@
         .adblock-hidden {
             display: none;
         }
+
+        /* Estilos para el test de anuncios */
+        #adblock-test {
+            position: absolute;
+            left: -999px;
+            top: -999px;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+        }
+        
+        .banner-ad {
+            width: 728px;
+            height: 90px;
+            background-color: transparent;
+            position: relative;
+        }
     </style>
 </head>
 <body data-theme="dark" id="top">
@@ -128,6 +145,12 @@
             
             <p style="margin-top: 25px; font-size: 14px; color: #aaa;">Si crees que es un error, ponte en contacto con nosotros</p>
         </div>
+    </div>
+
+    <!-- Elementos de prueba para detección de AdBlock -->
+    <div id="adblock-test">
+        <div class="banner-ad" id="test-ad"></div>
+        <div id="adsbox" class="adsbox ad-unit adsbygoogle"></div>
     </div>
     
     <!-- Banner superior -->
@@ -536,12 +559,15 @@
         });
     </script>
     
-    <!-- Script para la detección de AdBlock -->
+    <!-- Script mejorado para la detección de AdBlock -->
     <script>
-        // Función para detectar AdBlock
+        // Técnicas múltiples de detección de AdBlock
         function detectAdBlock() {
             return new Promise((resolve) => {
-                // Crear un elemento que parezca un anuncio
+                let isAdBlocked = false;
+                let detectionMethods = [];
+                
+                // Método 1: Detección mediante elemento de anuncio oculto
                 const ad = document.createElement('div');
                 ad.innerHTML = '&nbsp;';
                 ad.className = 'adsbox';
@@ -551,47 +577,127 @@
                 ad.style.height = '1px';
                 ad.style.width = '1px';
                 ad.style.zIndex = '-1000';
-                
-                // Añadir clases comunes de anuncios
                 ad.classList.add('adsbygoogle');
                 ad.classList.add('ad-unit');
                 
                 document.body.appendChild(ad);
                 
-                // Verificar si el elemento está oculto
-                window.setTimeout(() => {
-                    const isAdBlocked = ad.offsetHeight === 0 || 
-                                        ad.offsetWidth === 0 || 
-                                        ad.style.display === 'none' || 
-                                        ad.style.visibility === 'hidden' ||
-                                        window.getComputedStyle(ad).display === 'none';
+                setTimeout(() => {
+                    const isElementBlocked = ad.offsetHeight === 0 || 
+                                           ad.offsetWidth === 0 || 
+                                           ad.style.display === 'none' || 
+                                           ad.style.visibility === 'hidden' ||
+                                           window.getComputedStyle(ad).display === 'none';
                     
                     document.body.removeChild(ad);
-                    resolve(isAdBlocked);
+                    detectionMethods.push(isElementBlocked);
                 }, 100);
+                
+                // Método 2: Intentar cargar un script de anuncio conocido
+                const adScript = document.createElement('script');
+                adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+                adScript.onerror = function() {
+                    detectionMethods.push(true);
+                };
+                adScript.onload = function() {
+                    detectionMethods.push(false);
+                };
+                
+                document.head.appendChild(adScript);
+                setTimeout(() => {
+                    if (adScript.parentNode) {
+                        document.head.removeChild(adScript);
+                    }
+                }, 2000);
+                
+                // Método 3: Verificar si los iframes de anuncios son bloqueados
+                const adIframe = document.createElement('iframe');
+                adIframe.src = 'https://googleads.g.doubleclick.net/pagead/html/';
+                adIframe.style.width = '1px';
+                adIframe.style.height = '1px';
+                adIframe.style.position = 'absolute';
+                adIframe.style.top = '-999px';
+                adIframe.style.left = '-999px';
+                
+                document.body.appendChild(adIframe);
+                
+                setTimeout(() => {
+                    const isIframeBlocked = adIframe.contentDocument && 
+                                          adIframe.contentDocument.body && 
+                                          adIframe.contentDocument.body.children.length === 0;
+                    
+                    document.body.removeChild(adIframe);
+                    detectionMethods.push(isIframeBlocked);
+                }, 100);
+                
+                // Método 4: Verificar elementos existentes en la página
+                setTimeout(() => {
+                    const testAd = document.getElementById('test-ad');
+                    const isExistingElementBlocked = testAd && 
+                                                   (testAd.offsetHeight === 0 || 
+                                                    testAd.offsetWidth === 0 ||
+                                                    window.getComputedStyle(testAd).display === 'none');
+                    
+                    detectionMethods.push(isExistingElementBlocked);
+                    
+                    // Evaluar resultados después de un tiempo
+                    setTimeout(() => {
+                        // Si al menos dos métodos detectan AdBlock, consideramos que está activo
+                        const positiveDetections = detectionMethods.filter(result => result === true).length;
+                        isAdBlocked = positiveDetections >= 2;
+                        
+                        resolve(isAdBlocked);
+                    }, 500);
+                }, 200);
             });
+        }
+
+        // Función para mostrar el bloqueo de AdBlock
+        function showAdBlockWarning() {
+            document.getElementById('adblock-overlay').classList.remove('adblock-hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // Guardar en localStorage para recordar la detección
+            localStorage.setItem('adblockDetected', 'true');
         }
 
         // Detectar AdBlock y mostrar advertencia si está activado
         document.addEventListener('DOMContentLoaded', function() {
             // Esperar a que se cargue todo el contenido
             setTimeout(function() {
+                // Verificar si ya se detectó AdBlock previamente
+                const previouslyDetected = localStorage.getItem('adblockDetected') === 'true';
+                
+                if (previouslyDetected) {
+                    showAdBlockWarning();
+                    return;
+                }
+                
+                // Realizar detección
                 detectAdBlock().then((isAdBlocked) => {
                     if (isAdBlocked) {
-                        // Mostrar el mensaje de advertencia
-                        document.getElementById('adblock-overlay').classList.remove('adblock-hidden');
-                        
-                        // Bloquear el desplazamiento
-                        document.body.style.overflow = 'hidden';
+                        showAdBlockWarning();
                     }
                 });
-            }, 2000); // Esperar 2 segundos para asegurar que todo se cargó
+            }, 2000);
         });
 
         // Botón para recargar después de desactivar AdBlock
         document.getElementById('adblock-reload-button').addEventListener('click', function() {
-            window.location.reload();
+            // Limpiar el flag de detección
+            localStorage.removeItem('adblockDetected');
+            // Recargar la página
+            window.location.reload(true);
         });
+
+        // Verificación periódica para detectar si se activa AdBlock después de cargar la página
+        setInterval(() => {
+            detectAdBlock().then((isAdBlocked) => {
+                if (isAdBlocked && !document.getElementById('adblock-overlay').classList.contains('adblock-hidden')) {
+                    showAdBlockWarning();
+                }
+            });
+        }, 10000); // Verificar cada 10 segundos
     </script>
 </body>
 </html>
