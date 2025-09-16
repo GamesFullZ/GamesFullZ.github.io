@@ -1625,8 +1625,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Divertido y adictivo"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/pffgh8e3mm533x5/Among.Us.v2025.4.202.0.rar/file",
-        mediafire: "https://www.mediafire.com/file/pffgh8e3mm533x5/Among.Us.v2025.4.202.0.rar/file"
+        direct: "https://www.mediafire.com/file/o4c5ofpy1d76gxc/Among+Us+v2024.3.5i.torrent/file",
+        mediafire: "https://www.mediafire.com/file/o4c5ofpy1d76gxc/Among+Us+v2024.3.5i.torrent/file"
     },
     imagen: "Images/250px-Among_Us_cover_art.jpg",
 },
