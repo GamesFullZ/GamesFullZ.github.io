@@ -1568,8 +1568,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Las campañas remasterizadas se ven geniales"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/asmtw96kiullhkb/QXUZ3Y04wqg05pY.torrent/file",
-        mediafire: "https://www.mediafire.com/file/asmtw96kiullhkb/QXUZ3Y04wqg05pY.torrent/file"
+        direct: "https://www.mediafire.com/file/org3htvqx6eqaca/Halo.The.Master.Chief.Collection.v1.3495.0.0-P2P.torrent/file",
+        mediafire: "https://www.mediafire.com/file/org3htvqx6eqaca/Halo.The.Master.Chief.Collection.v1.3495.0.0-P2P.torrent/file"
     },
     extra: {
         onlineFix: "https://www.mediafire.com/file/5wj9wuoztfrnydc/MCCFixOnlyv2.rar/file"
