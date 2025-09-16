@@ -1439,8 +1439,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "aceptable"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/njxx5cokbhxz43v/OgNFikJrXM0AsTz.torrent/file",
-        mediafire: "https://www.mediafire.com/file/njxx5cokbhxz43v/OgNFikJrXM0AsTz.torrent/file"
+        direct: "https://www.mediafire.com/file/dv1t79aupdi8ybr/Far.Cry.6-EMPRESS.torrent/file",
+        mediafire: "https://www.mediafire.com/file/dv1t79aupdi8ybr/Far.Cry.6-EMPRESS.torrent/file"
     },
     imagen: "Images/250px-Far_cry_6_cover.jpg",
 },
