@@ -2049,7 +2049,7 @@ links: {
 },
 imagen: "Images/FIFA_14.jpeg",
 },
-  {
+   {
 id: 113,
 nombre: "Grand Theft Auto: San Andreas",
 tipo: "juego",
