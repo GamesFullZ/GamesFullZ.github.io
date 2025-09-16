@@ -1995,4 +1995,22 @@ links: {
 },
 imagen: "Images/MV5BN2I1ZTBiOTctZDc5MC00YjdkLWI3ZjUtNjI5Y2EzMjM2NGViXkEyXkFqcGc@._V1_.jpg",
 },
+  {
+id: 110,
+nombre: "Terraria",
+tipo: "juego",
+descripcion: "Sandbox de aventura en 2D con exploración, construcción, combate y supervivencia en mundos generados de forma aleatoria, lleno de criaturas, jefes y recursos por descubrir",
+requisitos: "Windows 10 64-bit, Intel Core 2 Duo 2.0 GHz / AMD Athlon 64 X2 4200+, 2.5 GB RAM, GeForce 6100 / Radeon X300, 200 MB espacio",
+downloads: 0,
+rating: "⭐⭐⭐⭐⭐",
+comments: [
+    "pidan juegos muchachada",
+    "buen juego indie"
+],
+links: {
+    direct: "https://www.mediafire.com/file/d6smqcbgjwti7gu/Terraria+GAMESFULLZ.torrent/file",
+    mediafire: "https://cuty.io/2iEOxk59Yxd"
+},
+imagen: "Images/anybody-know-where-i-can-find-the-cover-art-without-the-v0-dxdo7wt3eiy91.webp",
+},
 ];
