@@ -1457,8 +1457,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Mundo abierto con gran libertad táctica"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/qe4uimjsp2lunug/M3t4lG34rS0l1d.torrent/file",
-        mediafire: "https://www.mediafire.com/file/qe4uimjsp2lunug/M3t4lG34rS0l1d.torrent/file"
+        direct: "https://www.mediafire.com/file/6bczjucgonh2b9b/Metal+Gear+Solid.V+The+Phantom+Pain.torrent/file",
+        mediafire: "https://www.mediafire.com/file/6bczjucgonh2b9b/Metal+Gear+Solid.V+The+Phantom+Pain.torrent/file"
     },
     imagen: "Images/Metal-Gear-Solid-V-The-Phantom-P.jpg",
 },
