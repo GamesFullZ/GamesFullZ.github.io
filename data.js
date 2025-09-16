@@ -1493,8 +1493,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Acción pura"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/0ziswhub0iypksn/CoDM23odernWar23fareIII2023.elamigos.torrent/file",
-        mediafire: "https://www.mediafire.com/file/0ziswhub0iypksn/CoDM23odernWar23fareIII2023.elamigos.torrent/file",
+        direct: "https://www.mediafire.com/file/4gtwlrjya53y2wl/Call.of.Duty.Modern.Warfare.III.v10.4.torrent/file",
+        mediafire: "https://www.mediafire.com/file/4gtwlrjya53y2wl/Call.of.Duty.Modern.Warfare.III.v10.4.torrent/file",
     },
     extra: {
         vocesLatinas: "https://www.mediafire.com/file    _premium/69suagbuy6fbgn3/CDMW3-LnggPck-LTM.rar/file",
