@@ -1463,24 +1463,6 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     imagen: "Images/Metal-Gear-Solid-V-The-Phantom-P.jpg",
 },
     {
-    id: 83,
-    nombre: "FIFA 20 Ultimate Edition (SOLO JUEGO)",
-    tipo: "juego",
-    descripcion: "FIFA 20 introduce el modo VOLTA Football, que ofrece una experiencia de fútbol callejero auténtica, y una nueva jugabilidad basada en la inteligencia del fútbol. La Ultimate Edition incluye acceso anticipado, packs de FUT y jugadores ICONO como Zidane, Pirlo y Drogba.",
-    requisitos: "SO: Windows 7/8.1/10 (64 bits), CPU: Intel Core i3-2100 o AMD Phenom II X4 965, RAM: 8 GB, GPU: NVIDIA GTX 660 o AMD Radeon HD 7850 (2 GB), DirectX 11, 50 GB de espacio disponible.",
-    downloads: 0,
-    rating: "⭐⭐⭐⭐☆",
-    comments: [
-        "Excelente jugabilidad y gráficos realistas.",
-        "El modo VOLTA es una gran adición para los fans del fútbol callejero."
-    ],
-    links: {
-        direct: "https://www.mediafire.com/file/970s6vizs9pboy9/FIFA.20.Ultimate.Edition.FULL.UNLOCKED.zip.torrent/file",
-        mediafire: "https://www.mediafire.com/file/970s6vizs9pboy9/FIFA.20.Ultimate.Edition.FULL.UNLOCKED.zip.torrent/file"
-    },
-    imagen: "Images/FIFA20.jpg",
-},
-    {
     id: 84,
     nombre: "Call of Duty: Modern Warfare III",
     tipo: "juego",
