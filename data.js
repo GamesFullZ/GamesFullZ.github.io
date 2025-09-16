@@ -1514,8 +1514,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Me encanta la ambientación submarina"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/29xhi9ieve7njrs/Subnautica.torrent/file",
-        mediafire: "https://www.mediafire.com/file/29xhi9ieve7njrs/Subnautica.torrent/file"
+        direct: "https://www.mediafire.com/file/3xa1qo9r56qruoz/Subnautica.torrent/file",
+        mediafire: "https://www.mediafire.com/file/3xa1qo9r56qruoz/Subnautica.torrent/file"
     },
     imagen: "Images/subnautica_cover.jpg",
 },
