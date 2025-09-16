@@ -1013,24 +1013,6 @@ const recursos = [
     imagen: "Images/250px-Grounded_2_cover.jpg",
 },
     {
-    id: 57,
-    nombre: "Black Myth: Wukong",
-    tipo: "juego",
-    descripcion: "Aventura de acción y rol en tercera persona con elementos soulslike, donde controlas al Destined One (una reencarnación del Rey Mono) inmerso en una épica travesía mitológica basada en Viaje al Oeste, destacando por su combate dinámico con bastón extensible, narración fascinante y escenarios visualmente impresionantes.",
-    requisitos: "Windows 10/11 64 bits, Intel Core i5-8400 / AMD Ryzen 5 1600, 16 GB RAM, NVIDIA GeForce GTX 1060 o AMD Radeon RX 580, 130 GB espacio (HDD o SSD",
-    downloads: 0,
-    rating: "⭐⭐⭐⭐☆",
-    comments: [
-        "gracias god xd",
-        "heroe de verdad"
-    ],
-    links: {
-        direct: "https://www.mediafire.com/file/wshcc1helcq73yq/Black.Myth.Wukong-FULL.UNLOCKED-GamesFullZ.torrent/file",
-        mediafire: "https://www.mediafire.com/file/wshcc1helcq73yq/Black.Myth.Wukong-FULL.UNLOCKED-GamesFullZ.torrent/file"
-    },
-    imagen: "Images/black-myth-wukong-jjjfw.jpg",
-},
-    {
     id: 58,
     nombre: "he Walking Dead: Survival Instinct",
     tipo: "juego",
