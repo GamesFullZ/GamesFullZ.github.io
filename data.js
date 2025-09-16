@@ -1403,8 +1403,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Porteo bien logrado a PC"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/om3wyofnpea763t/D3TR0IT-B3COM3-HUM4N.torrent/file",
-        mediafire: "https://www.mediafire.com/file/om3wyofnpea763t/D3TR0IT-B3COM3-HUM4N.torrent/file"
+        direct: "https://www.mediafire.com/file/w32il0elmybqx76/Detroit.Become.Human.Build.7662975.torrent/file",
+        mediafire: "https://www.mediafire.com/file/w32il0elmybqx76/Detroit.Become.Human.Build.7662975.torrent/file"
     },
     imagen: "Images/hola.jpg",
 },
