@@ -1643,8 +1643,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "La campaña es excelente, pero el modo multijugador tiene problemas."
     ],
     links: {
-        direct: "https://www.mediafire.com/file/uszb0sjjjmzwh18/Warcr3aftIIIRe3forged-1.36.1-elamigos.torrent/file",
-        mediafire: "https://www.mediafire.com/file/uszb0sjjjmzwh18/Warcr3aftIIIRe3forged-1.36.1-elamigos.torrent/file"
+        direct: "https://www.mediafire.com/file/q4zbw7i5re8hqgq/WarCraft+III+-+Reforged+[FitGirl+Repack].torrent/file",
+        mediafire: "https://www.mediafire.com/file/q4zbw7i5re8hqgq/WarCraft+III+-+Reforged+[FitGirl+Repack].torrent/file"
     },
     imagen: "Images/warcraft-iii-reforged-2020110115.jpg",
 },
