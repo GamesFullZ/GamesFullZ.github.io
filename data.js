@@ -1679,8 +1679,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Bueno para fans de lo paranormal"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/gk3l5iz4qq5lro1/MurderedS-PiviGames.blog.torrent/file",
-        mediafire: "https://www.mediafire.com/file/gk3l5iz4qq5lro1/MurderedS-PiviGames.blog.torrent/file"
+        direct: "https://www.mediafire.com/file/3civynmby7sq4x4/Murdered.Soul.Suspect+GAMESFULLZ.torrent/file",
+        mediafire: "https://www.mediafire.com/file/3civynmby7sq4x4/Murdered.Soul.Suspect+GAMESFULLZ.torrent/file"
     },
     imagen: "Images/mixcollage-14-dec-2024-01-39-am.jpg",
 },
