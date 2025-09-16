@@ -1733,8 +1733,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Buen remaster con Graphic Black"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/3dbovz40k57i47r/TWDSComp.torrent/file",
-        mediafire: "https://www.mediafire.com/file/3dbovz40k57i47r/TWDSComp.torrent/file"
+        direct: "https://www.mediafire.com/file/2mzr3ytsmbbxhub/The.Walking.Dead.The.Telltale.Definitive.Series.v5952618.torrent/file",
+        mediafire: "https://www.mediafire.com/file/2mzr3ytsmbbxhub/The.Walking.Dead.The.Telltale.Definitive.Series.v5952618.torrent/file"
     },
     imagen: "Images/TWDTTDS.jpg",
 },
