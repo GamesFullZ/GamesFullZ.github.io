@@ -2085,4 +2085,22 @@ links: {
 },
 imagen: "Images/Halo2-cover.png",
 },
+  {
+id: 115,
+nombre: "Furry Love",
+tipo: "juego",
+descripcion: "Visual novel romántica con estilo anime centrada en la interacción con personajes antropomórficos, donde las decisiones del jugador influyen en el desarrollo de la historia y las relaciones",
+requisitos: "Windows 10 64-bit, Intel Core i3-2100 / AMD FX-4100, 4 GB RAM, GeForce GTX 550 Ti / Radeon HD 5770, 5 GB espacio",
+downloads: 0,
+rating: "⭐⭐⭐⭐⭐",
+comments: [
+    "pidan juegos muchachada",
+    "un poco raro eh"
+],
+links: {
+    direct: "https://www.mediafire.com/file/hdoxzvgxwlbuo2z/Furry+Love+GAMESFULLZ.torrent/file",
+    mediafire: "https://cuty.io/FyFer"
+},
+imagen: "Images/co400s.webp",
+},
 ];
