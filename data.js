@@ -1596,7 +1596,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
 },
     {
     id: 90,
-    nombre: "Dragon Ball Z: Kakarot",
+    nombre: "Dragon Ball Z Kakarot Legendary Edition HD",
     tipo: "juego",
     descripcion: "Juego de acción y rol que recrea las sagas principales de Dragon Ball Z, permitiendo explorar el mundo, luchar con personajes icónicos y vivir la historia desde la perspectiva de Goku.",
     requisitos: "Windows 7/8/10 64-bit, Intel Core i5-2300 / AMD FX-6350, 8 GB RAM, NVIDIA GTX 660 / AMD Radeon HD 7870, 40 GB espacio.",
@@ -1607,8 +1607,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Muy buen sistema de combate y exploración"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/oe9ki2itjyjzjgg/Dragon.Ball.Z.Kakarot.DAIMA.Adventure.Through.The.Demon.Realm.Part.1-RUNE.torrent/file",
-        mediafire: "https://www.mediafire.com/file/oe9ki2itjyjzjgg/Dragon.Ball.Z.Kakarot.DAIMA.Adventure.Through.The.Demon.Realm.Part.1-RUNE.torrent/file"
+        direct: "https://www.mediafire.com/file/7yk8u4q3xs2ijr4/Dragon.Ball.Z.Kakarot.Legendary.Edition.HD.v1.30-Repack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/7yk8u4q3xs2ijr4/Dragon.Ball.Z.Kakarot.Legendary.Edition.HD.v1.30-Repack.torrent/file"
     },
     imagen: "Images/rsiZucmepcNwIbIvMLradwwu.jpg",
 },
