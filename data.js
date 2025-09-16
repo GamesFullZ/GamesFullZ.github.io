@@ -2051,24 +2051,6 @@ imagen: "Images/FIFA_14.jpeg",
 },
   {
 id: 113,
-nombre: "Grand Theft Auto: San Andreas",
-tipo: "juego",
-descripcion: "Clásico de mundo abierto donde sigues la historia de Carl "CJ" Johnson, regresando a Los Santos para recuperar el control de su familia y enfrentarse a pandillas, corrupción y traiciones en una enorme ciudad inspirada en California y Nevada",
-requisitos: "Windows XP/7/8/10, Intel Pentium III / AMD Athlon equivalente, 256 MB RAM, GeForce 3 / Radeon 8500, 4.7 GB espacio",
-downloads: 0,
-rating: "⭐⭐⭐⭐⭐",
-comments: [
-    "pidan juegos muchachada",
-    "el mejor gta"
-],
-links: {
-    direct: "https://www.mediafire.com/file/fmclrculpe6ib22/GTA+SA+GAMESFULLZ.torrent/file",
-    mediafire: "https://cuty.io/Moxc6EKUVm"
-},
-imagen: "Images/GTASABOX.jpg",
-},
-  {
-id: 114,
 nombre: "Hades II",
 tipo: "juego",
 descripcion: "Secuela del aclamado roguelike de acción donde encarnas a Melinoë, la princesa inmortal del inframundo, en su lucha contra el Titán del Tiempo, con combates dinámicos y mejoras constantes a través de cada intento.",
