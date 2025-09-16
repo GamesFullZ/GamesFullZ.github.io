@@ -1650,7 +1650,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
 },
     {
     id: 93,
-    nombre: "Five Nights at Freddy's: Security Breach + DLC Ruin",
+    nombre: "Five Nights at Freddy's: Security Breach",
     tipo: "juego",
     descripcion: "Survival horror en primera persona donde encarnas a Gregory, un niño atrapado dentro de un gigantesco complejo de entretenimiento plagado de animatrónicos hostiles, y tu objetivo es sobrevivir hasta el amanecer explorando libremente el entorno.",
     requisitos: "Windows 10 (64-bit), Intel Core i5-6600K / AMD Ryzen 5 3600, 8 GB RAM, NVIDIA GeForce GTX 1050 Ti (4 GB VRAM), DirectX 12, 80 GB espacio libre.",
@@ -1661,8 +1661,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Gran ambiente y diseño visual"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/d71sf64ez2yism6/Five.Nights.at.Freddys.Security.Breach.torrent/file",
-        mediafire: "https://www.mediafire.com/file/d71sf64ez2yism6/Five.Nights.at.Freddys.Security.Breach.torrent/file"
+        direct: "https://www.mediafire.com/file/c9747b52f9wial9/Five.Nights.at.Freddys.Security.Breach.v1.0.20211222-P2P.torrent/file",
+        mediafire: "https://www.mediafire.com/file/c9747b52f9wial9/Five.Nights.at.Freddys.Security.Breach.v1.0.20211222-P2P.torrent/file"
     },
     imagen: "Images/Ruin.jpg",
 },
