@@ -1895,8 +1895,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Muy nostálgico y desafiante aún hoy."
     ],
     links: {
-        direct: "https://www.mediafire.com/file/7syvlrh0jyqnkuh/FCRY1-2.torrent/file",
-        mediafire: "https://www.mediafire.com/file/7syvlrh0jyqnkuh/FCRY1-2.torrent/file"
+        direct: "https://www.mediafire.com/file/pk8tsiljpvwo2hs/Far+cry+1+y+2.torrent/file",
+        mediafire: "https://www.mediafire.com/file/pk8tsiljpvwo2hs/Far+cry+1+y+2.torrent/file"
     },
     imagen: "Images/COVER.jpg",
 },
