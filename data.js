@@ -1550,8 +1550,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Me encanta la brutalidad de los Fatalities"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/6ejrvjr4yw7uzfe/mkxl.torrent/file",
-        mediafire: "https://www.mediafire.com/file/6ejrvjr4yw7uzfe/mkxl.torrent/file"
+        direct: "https://www.mediafire.com/file/ozi5hsm0db1ssau/Mortal+Kombat+XL.torrent/file",
+        mediafire: "https://www.mediafire.com/file/ozi5hsm0db1ssau/Mortal+Kombat+XL.torrent/file"
     },
     imagen: "Images/MortalXL.jpg",
 },
