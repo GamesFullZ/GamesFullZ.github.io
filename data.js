@@ -2029,6 +2029,24 @@ links: {
     direct: "https://www.mediafire.com/file/jrrni1rg1e4jnim/F1+2014+GAMESFULLZ.torrent/file",
     mediafire: "https://cuty.io/4mQcL8"
 },
-imagen: "Images/",
+imagen: "Images/co2q4a.jpg",
+},
+  {
+id: 112,
+nombre: "FIFA 14",
+tipo: "juego",
+descripcion: "Entrega de la popular saga de fútbol que introduce el motor Ignite, con mejoras en físicas, inteligencia artificial y animaciones realistas, ofreciendo modos clásicos como Carrera, Ultimate Team y partidos online",
+requisitos: " Windows 7/8/10 64-bit, Intel Core 2 Duo @ 2.4 GHz / AMD Athlon X2, 2 GB RAM, GeForce 8800 GT / Radeon HD 2900, 8 GB espacio",
+downloads: 0,
+rating: "⭐⭐⭐⭐⭐",
+comments: [
+    "pidan juegos muchachada",
+    "es mejor el pes 2013"
+],
+links: {
+    direct: "https://www.mediafire.com/file/n2521wj65xsupsj/FIFA+14+V2.1.torrent/file",
+    mediafire: "https://cuty.io/AOTY4PPxMH"
+},
+imagen: "Images/FIFA_14.jpeg",
 },
 ];
