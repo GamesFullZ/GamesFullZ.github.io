@@ -1831,8 +1831,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "El online puede mejorar pero sigue siendo muy bueno"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/te662q9ahq4b0sx/HPHVUlky3FJds5c.torrent/file",
-        mediafire: "https://www.mediafire.com/file/te662q9ahq4b0sx/HPHVUlky3FJds5c.torrent/file"
+        direct: "https://www.mediafire.com/file/72hrtcbuiijbz1a/Street.Fighter.V.v07.011.torrent/file",
+        mediafire: "https://www.mediafire.com/file/72hrtcbuiijbz1a/Street.Fighter.V.v07.011.torrent/file"
     },
     extra: {
     },
