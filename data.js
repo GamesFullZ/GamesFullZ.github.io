@@ -1913,8 +1913,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Difícil al inicio pero muy adictivo."
     ],
     links: {
-        direct: "https://www.mediafire.com/file/43otj6n9zdlkaf7/Subsistence.Build.14874515.zip/file",
-        mediafire: "https://www.mediafire.com/file/43otj6n9zdlkaf7/Subsistence.Build.14874515.zip/file"
+        direct: "https://www.mediafire.com/file/sbzwrtl0kt4tzg3/Subsistence.v03.02.2024.torrent/file",
+        mediafire: "https://www.mediafire.com/file/sbzwrtl0kt4tzg3/Subsistence.v03.02.2024.torrent/file"
     },
     extra: {
         updates: "https://gamesfullz.github.io",
