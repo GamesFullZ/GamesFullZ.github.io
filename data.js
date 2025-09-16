@@ -1751,8 +1751,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Excelente ambientación y música"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/i8bkqscj5v78i2g/Blas2phem7ous-4.0.67.rar/file",
-        mediafire: "https://www.mediafire.com/file/i8bkqscj5v78i2g/Blas2phem7ous-4.0.67.rar/file"
+        direct: "https://www.mediafire.com/file/xnw3ds6zvon6427/Blasphemous+1.torrent/file",
+        mediafire: "https://www.mediafire.com/file/xnw3ds6zvon6427/Blasphemous+1.torrent/file"
     },
     imagen: "Images/Blasphemous_video_game.jpg",
 },
@@ -1807,8 +1807,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "El modo online funciona muy bien"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/m6s69192caycvfk/Capcom.Fighting.Collection.2.torrent/file",
-        mediafire: "https://www.mediafire.com/file/m6s69192caycvfk/Capcom.Fighting.Collection.2.torrent/file"
+        direct: "https://www.mediafire.com/file/bsudfzck80gh86z/Capcom.Fighting.Collection.2.v1.0.0.3-P2P.torrent/file",
+        mediafire: "https://www.mediafire.com/file/bsudfzck80gh86z/Capcom.Fighting.Collection.2.v1.0.0.3-P2P.torrent/file"
     },
     extra: {
         onlineFix: "https://www.mediafire.com/file/s9183zh8jwny7cv/CapcFCollection2FixOnly(1).rar/file"
