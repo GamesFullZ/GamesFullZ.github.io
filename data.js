@@ -1995,4 +1995,22 @@ links: {
 },
 imagen: "Images/8964943.jpg",
 },
+  {
+id: 109,
+nombre: "Cuphead",
+tipo: "juego",
+descripcion: "Juego de acción y plataformas con estilo de animación clásica de los años 30, enfocado en combates contra jefes desafiantes y una jugabilidad precisa y exigente",
+requisitos: "Windows 10 64-bit, Intel Core i3-2100 / AMD FX-6300, 4 GB RAM, GeForce GTX 550 Ti / Radeon HD 6850, 20 GB espacio.",
+downloads: 0,
+rating: "⭐⭐⭐⭐⭐",
+comments: [
+    "pidan juegos",
+    "joya"
+],
+links: {
+    direct: "https://www.mediafire.com/file/hpjdz43mxgq40ry/Cuphead+GAMESFULLZ.torrent/file",
+    mediafire: "https://cuty.io/mA4QyxtPe"
+},
+imagen: "Images/MV5BN2I1ZTBiOTctZDc5MC00YjdkLWI3ZjUtNjI5Y2EzMjM2NGViXkEyXkFqcGc@._V1_.jpg",
+},
 ];
