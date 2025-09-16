@@ -2067,4 +2067,22 @@ links: {
 },
 imagen: "Images/hades-ii-wclv5.png",
 },
+  {
+id: 114,
+nombre: "Halo 2",
+tipo: "juego",
+descripcion: "Shooter en primera persona que retoma la lucha del Jefe Maestro contra el Covenant y el Pacto Profeta, ofreciendo batallas épicas tanto en campaña como en multijugador online.",
+requisitos: "Windows Vista, Intel Pentium 4 a 2.0 GHz / AMD Athlon XP 2200+, 1 GB RAM, GeForce 6100 / Radeon 9600, 7 GB espacio",
+downloads: 0,
+rating: "⭐⭐⭐⭐⭐",
+comments: [
+    "pidan juegos muchachada",
+    "juegazo del heilo xdd"
+],
+links: {
+    direct: "https://www.mediafire.com/file/v6oorzq1e3g4bzh/Halo+2+V2.torrent/file",
+    mediafire: "https://cuty.io/rix3dp"
+},
+imagen: "Images/Halo2-cover.png",
+},
 ];
