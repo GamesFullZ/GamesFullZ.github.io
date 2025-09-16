@@ -1532,8 +1532,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "El hielo y la ambientación son impresionantes"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/fe50cehoaezvpt5/Sub1nBe5lowZe7ro-53115.torrent/file",
-        mediafire: "https://www.mediafire.com/file/fe50cehoaezvpt5/Sub1nBe5lowZe7ro-53115.torrent/file"
+        direct: "https://www.mediafire.com/file/h2zr2kde8kzncgv/Subnautica+Bellow+Zero.torrent/file",
+        mediafire: "https://www.mediafire.com/file/h2zr2kde8kzncgv/Subnautica+Bellow+Zero.torrent/file"
     },
     imagen: "Images/250px-Subnautica_Below_Zero_cove.jpg",
 },
