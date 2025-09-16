@@ -2067,4 +2067,22 @@ links: {
 },
 imagen: "Images/GTASABOX.jpg",
 },
+  {
+id: 114,
+nombre: "Hades II",
+tipo: "juego",
+descripcion: "Secuela del aclamado roguelike de acción donde encarnas a Melinoë, la princesa inmortal del inframundo, en su lucha contra el Titán del Tiempo, con combates dinámicos y mejoras constantes a través de cada intento.",
+requisitos: "Windows 10 64-bit, Intel Core i7-4770K / AMD Ryzen 5 1500X, 8 GB RAM, GeForce GTX 950 / Radeon R7 370, 10 GB espacio.",
+downloads: 0,
+rating: "⭐⭐⭐⭐⭐",
+comments: [
+    "pidan juegos muchachada",
+    "juegazo"
+],
+links: {
+    direct: "https://www.mediafire.com/file/rttju079lm1afes/Hades.II.v0.125553-Repack.torrent/file",
+    mediafire: "https://cuty.io/wBd9q"
+},
+imagen: "Images/hades-ii-wclv5.png",
+},
 ];
