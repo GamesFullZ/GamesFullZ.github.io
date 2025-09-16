@@ -1697,8 +1697,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Gran variedad de personajes"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/sma70pp0e8sqbaa/NSR3V0LUTI0N.torrent/file",
-        mediafire: "https://www.mediafire.com/file/sma70pp0e8sqbaa/NSR3V0LUTI0N.torrent/file"
+        direct: "https://www.mediafire.com/file/oy61z98vyazieqk/NARUTO.SHIPPUDEN.Ultimate.Ninja.STORM.Revolution.torrent/file",
+        mediafire: "https://www.mediafire.com/file/oy61z98vyazieqk/NARUTO.SHIPPUDEN.Ultimate.Ninja.STORM.Revolution.torrent/file"
     },
     imagen: "Images/naruto.jpg",
 },
