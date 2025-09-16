@@ -1873,8 +1873,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Funciona perfecto en online"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/tgh7qkpl88yrrhh/Marvel.vs.Capcom.Fighting.Collection.Arcade.Classics.elamigos.torrent/file",
-        mediafire: "https://www.mediafire.com/file/tgh7qkpl88yrrhh/Marvel.vs.Capcom.Fighting.Collection.Arcade.Classics.elamigos.torrent/file"
+        direct: "https://www.mediafire.com/file/n3gocvgxsor5zci/MARVEL.vs.CAPCOM.Fighting.Collection.Arcade.Classics.v1.0.0.4.torrent/file",
+        mediafire: "https://www.mediafire.com/file/n3gocvgxsor5zci/MARVEL.vs.CAPCOM.Fighting.Collection.Arcade.Classics.v1.0.0.4.torrent/file"
     },
     extra: {
         onlineFix: "https://www.mediafire.com/file/dw1d4ho8k6txh29/MvsCFCAC_FixOnly.rar/file"
