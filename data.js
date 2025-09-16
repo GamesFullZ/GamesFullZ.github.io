@@ -1703,24 +1703,6 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     imagen: "Images/naruto.jpg",
 },
     {
-    id: 96,
-    nombre: "Factorio",
-    tipo: "juego",
-    descripcion: "Juego de simulación y estrategia donde construyes y automatizas fábricas en un mundo alienígena, gestionando recursos, defensa y producción para finalmente lanzar un cohete.",
-    requisitos: "Windows 7/8/10 (64 bit), dual-core 3 GHz+, 4 GB RAM, GPU compatible con DirectX 10.1 (512 MB VRAM — GeForce GTX 260, Radeon HD 4850 o Intel HD 5500), DirectX 11, 3 GB espacio disponible.",
-    downloads: 0,
-    rating: "⭐⭐⭐⭐⭐",
-    comments: [
-        "Funciona en PCs sencillos; muy bien optimizado",
-        "Ideal para fans de la automatización"
-    ],
-    links: {
-        direct: "https://www.mediafire.com/file/r912vzz2uvboqxc/Factorio.v2.0.60.rar.torrent/file",
-        mediafire: "https://www.mediafire.com/file/r912vzz2uvboqxc/Factorio.v2.0.60.rar.torrent/file"
-    },
-    imagen: "Images/fff-310-factorio-cover-017-stabl.jpg",
-},
-    {
     id: 97,
     nombre: "The Walking Dead: The Telltale Definitive Series",
     tipo: "juego",
