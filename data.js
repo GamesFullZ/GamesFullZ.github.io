@@ -2067,7 +2067,7 @@ links: {
 },
 imagen: "Images/hades-ii-wclv5.png",
 },
-  {
+ {
 id: 114,
 nombre: "Halo 2",
 tipo: "juego",
