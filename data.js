@@ -2013,4 +2013,22 @@ links: {
 },
 imagen: "Images/anybody-know-where-i-can-find-the-cover-art-without-the-v0-dxdo7wt3eiy91.webp",
 },
+  {
+id: 111,
+nombre: "F1 2014",
+tipo: "juego",
+descripcion: "Simulador de carreras oficial de la Fórmula 1 que incluye todos los equipos, pilotos y circuitos de la temporada 2014, con mejoras en la jugabilidad y un sistema de control accesible para novatos y veteranos",
+requisitos: "Windows 7/8/10 64-bit, Intel Core 2 Duo @ 2.4 GHz / AMD Athlon X2, 2 GB RAM, GeForce 8600 / Radeon HD 2600, 10 GB espacio",
+downloads: 0,
+rating: "⭐⭐⭐⭐⭐",
+comments: [
+    "pidan juegos muchachada",
+    "casi me cago en las carreras"
+],
+links: {
+    direct: "https://www.mediafire.com/file/jrrni1rg1e4jnim/F1+2014+GAMESFULLZ.torrent/file",
+    mediafire: "https://cuty.io/4mQcL8"
+},
+imagen: "Images/",
+},
 ];
