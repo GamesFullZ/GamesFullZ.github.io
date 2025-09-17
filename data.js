@@ -1385,8 +1385,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Desafiante y rejugable"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/1j2o0dzie089jug/ELDEN.RING.NIGHTREIGN.v1.02.0.rar.torrent/file",
-        mediafire: "https://www.mediafire.com/file/1j2o0dzie089jug/ELDEN.RING.NIGHTREIGN.v1.02.0.rar.torrent/file"
+        direct: "https://www.mediafire.com/file/jrj4m0ps0snk00x/ELDEN.RING.NIGHTREIGN.v1.02.2-P2P.torrent/file",
+        mediafire: "https://www.mediafire.com/file/jrj4m0ps0snk00x/ELDEN.RING.NIGHTREIGN.v1.02.2-P2P.torrent/file"
     },
     imagen: "Images/250px-Elden_Ring_Nightreign_cove.jpg",
 },
