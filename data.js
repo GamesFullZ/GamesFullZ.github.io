@@ -1421,8 +1421,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Gracias por subirlo"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/th8itzebuedh80y/M3U4kDDG3m7oSFp.torrent/file",
-        mediafire: "https://www.mediafire.com/file/th8itzebuedh80y/M3U4kDDG3m7oSFp.torrent/file"
+        direct: "https://www.mediafire.com/file/vn17r9kkracbbdi/Stray_v1.5-GAMESFULLZ.torrent/file",
+        mediafire: "https://www.mediafire.com/file/vn17r9kkracbbdi/Stray_v1.5-GAMESFULLZ.torrent/file"
     },
     imagen: "Images/is-there-anywhere-i-can-commissi.jpg",
 },
