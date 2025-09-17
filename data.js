@@ -1313,8 +1313,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Funciona bien en equipos modestos"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/kphp5ngcorull8q/E.Football.PES.2021-CPY.torrent/file",
-        mediafire: "https://www.mediafire.com/file/kphp5ngcorull8q/E.Football.PES.2021-CPY.torrent/file"
+        direct: "https://www.mediafire.com/file/um93tupgg1esg76/P4S_2021_Opti_archive.torrent/file",
+        mediafire: "https://www.mediafire.com/file/um93tupgg1esg76/P4S_2021_Opti_archive.torrent/file"
     },
     imagen: "Images/9627994-efootball-pes-2021-seaso.jpg",
 },
