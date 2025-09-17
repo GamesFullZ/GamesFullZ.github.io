@@ -1241,8 +1241,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Muy buena optimización para ser port de consola"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/9wdmm1iiniiw4ah/Ghost.of.Tsushima.DIRECTORS.CUT.MULTi26-RUNE.torrent/file",
-        mediafire: "https://www.mediafire.com/file/9wdmm1iiniiw4ah/Ghost.of.Tsushima.DIRECTORS.CUT.MULTi26-RUNE.torrent/file"
+        direct: "https://www.mediafire.com/file/wuj9vsderiqlne7/Ghost+of+Tsushima+DC+[FitGirl+Repack].torrent/file",
+        mediafire: "https://www.mediafire.com/file/wuj9vsderiqlne7/Ghost+of+Tsushima+DC+[FitGirl+Repack].torrent/file"
     },
     imagen: "Images/GhostT.jpg",
 },
