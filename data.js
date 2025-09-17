@@ -1169,8 +1169,8 @@ const recursos = [
         "Divertido"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/8n4a07y5vf6bsx1/C0DIWF.torrent/file",
-        mediafire: "https://www.mediafire.com/file/8n4a07y5vf6bsx1/C0DIWF.torrent/file"
+        direct: "https://www.mediafire.com/file/e6rmo8fklgywn8u/Call+Of+Duty+Infinite+Warfare.torrent/file",
+        mediafire: "https://www.mediafire.com/file/e6rmo8fklgywn8u/Call+Of+Duty+Infinite+Warfare.torrent/file"
     },
     imagen: "Images/call-of-duty-infinite-warfare_3c.jpg",
 },
