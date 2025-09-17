@@ -1259,8 +1259,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Gran RPG de acción"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/ecgfaq6q2jsysec/Diablo+III+-+Eternal+Collection+[FitGirl+Repack]+INT.torrent/file",
-        mediafire: "https://www.mediafire.com/file/ecgfaq6q2jsysec/Diablo+III+-+Eternal+Collection+[FitGirl+Repack]+INT.torrent/file"
+        direct: "https://www.mediafire.com/file/888cp7mtfmlth0c/Diablo+III+-+Eternal+Collection+[FitGirl+Repack]+INT.torrent/file",
+        mediafire: "https://www.mediafire.com/file/888cp7mtfmlth0c/Diablo+III+-+Eternal+Collection+[FitGirl+Repack]+INT.torrent/file"
     },
     imagen: "Images/Diablo_III_cover.jpg",
 },
