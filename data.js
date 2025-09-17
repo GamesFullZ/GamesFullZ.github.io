@@ -1367,8 +1367,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Desafiante y hermoso"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/p2ti65khtekjm5j/ELDEN.RING.Shadow.of.the.Erdtree-RUNE.torrent/file",
-        mediafire: "https://www.mediafire.com/file/p2ti65khtekjm5j/ELDEN.RING.Shadow.of.the.Erdtree-RUNE.torrent/file"
+        direct: "https://www.mediafire.com/file/51uj7brkjr8ie7t/ELDEN.RING.v1.16.1-P2P.torrent/file",
+        mediafire: "https://www.mediafire.com/file/51uj7brkjr8ie7t/ELDEN.RING.v1.16.1-P2P.torrent/file"
     },
     imagen: "Images/MV5BZGQxMjYyOTUtNjYyMC00NzdmLWI4.jpg",
 },
