@@ -1295,8 +1295,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Muy optimizado incluso hoy"
     ],
     links: {
-        direct: "https://www.mediafire.com/file_premium/q9yuoamg6hnccy2/METAL.GEAR.RISING.REVENGEANCE.v74575.torrent/file",
-        mediafire: "https://www.mediafire.com/file_premium/q9yuoamg6hnccy2/METAL.GEAR.RISING.REVENGEANCE.v74575.torrent/file"
+        direct: "https://www.mediafire.com/file/f9f2nsyq5gugks3/METAL.GEAR.RISING.REVENGEANCE.v74575.torrent/file",
+        mediafire: "https://www.mediafire.com/file/f9f2nsyq5gugks3/METAL.GEAR.RISING.REVENGEANCE.v74575.torrent/file"
     },
     imagen: "Images/A1FBBIIeFlL._UF894,1000_QL80_.jpg",
 },
