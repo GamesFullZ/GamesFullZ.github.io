@@ -1331,8 +1331,8 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         "Edición especial con contenido extra"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/1wkp441nmuo344l/Dev3ilM3ayCr3y3Spe3cialE.torrent/file",
-        mediafire: "https://www.mediafire.com/file/1wkp441nmuo344l/Dev3ilM3ayCr3y3Spe3cialE.torrent/file"
+        direct: "https://www.mediafire.com/file/afft8zbls36zfsp/Devil+May+Cry+3+Special+GAMESFULLZ.torrent/file",
+        mediafire: "https://www.mediafire.com/file/afft8zbls36zfsp/Devil+May+Cry+3+Special+GAMESFULLZ.torrent/file"
     },
     imagen: "Images/MV5BMzlmZTY0NzQtMGJmZC00MjI0LWI3.jpg",
 },
