@@ -1187,8 +1187,8 @@ const recursos = [
         "Gracias por compartir"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/lko1qz61rl75ee2/R.B.I.Baseball.20-CODEX-[rarbg.to].torrent/file",
-        mediafire: "https://www.mediafire.com/file/lko1qz61rl75ee2/R.B.I.Baseball.20-CODEX-[rarbg.to].torrent/file"
+        direct: "https://www.mediafire.com/file/4wm5h9z2aax3ujq/R.B.I.Baseball20_FitGirlRepack_INT.torrent/file",
+        mediafire: "https://www.mediafire.com/file/4wm5h9z2aax3ujq/R.B.I.Baseball20_FitGirlRepack_INT.torrent/file"
     },
     imagen: "Images/Baseball20.jpg",
 },
