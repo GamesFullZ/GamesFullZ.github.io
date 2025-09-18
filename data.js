@@ -1043,8 +1043,8 @@ const recursos = [
         "heroe de verdad"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/kyqu7deup8q0lxs/BioShock.2.Complete.iso.torrent/file",
-        mediafire: "https://www.mediafire.com/file/kyqu7deup8q0lxs/BioShock.2.Complete.iso.torrent/file"
+        direct: "https://www.mediafire.com/file/f4ylsuhei6n7py6/Bioshock.2.(2010).torrent/file",
+        mediafire: "https://www.mediafire.com/file/f4ylsuhei6n7py6/Bioshock.2.(2010).torrent/file"
     },
     imagen: "Images/YWRvdXNKLmpwZw.jpg",
 },
