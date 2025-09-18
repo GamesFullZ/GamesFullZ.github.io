@@ -1097,8 +1097,8 @@ const recursos = [
         "heroe"
     ],
     links: {
-        direct: "https://www.mediafire.com/file_premium/nkkff34ij5kukts/Sekiro.Shadows.Die.Twice.v1.06.torrent/file",
-        mediafire: "https://www.mediafire.com/file_premium/nkkff34ij5kukts/Sekiro.Shadows.Die.Twice.v1.06.torrent/file"
+        direct: "https://www.mediafire.com/file/xdxh31mk0bgynoh/Sekiro+-+Shadows+Die+Twice.torrent/file",
+        mediafire: "https://www.mediafire.com/file/xdxh31mk0bgynoh/Sekiro+-+Shadows+Die+Twice.torrent/file"
     },
     imagen: "Images/Sekiro_art.jpg",
 },
