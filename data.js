@@ -881,8 +881,8 @@ const recursos = [
         "heroe"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/jmmapj0k3xql7km/Sleeping.Dogs.Definitive.Edition-GOG.torrent/file",
-        mediafire: "https://www.mediafire.com/file/jmmapj0k3xql7km/Sleeping.Dogs.Definitive.Edition-GOG.torrent/file"
+        direct: "https://www.mediafire.com/file/lkio44ic9knrtyw/SleepingDogsPack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/lkio44ic9knrtyw/SleepingDogsPack.torrent/file"
     },
     imagen: "Images/2327953-sleeping-dogs-definitive-edition-xbox-one-front-cover.png",
 },
