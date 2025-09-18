@@ -1223,8 +1223,8 @@ comments: [
     "uff god"
 ],
 links: {
-    direct: "https://www.mediafire.com/file/15wvcou4yo60db8/Resident+EVil+6.torrent/file",
-    mediafire: "https://www.mediafire.com/file/15wvcou4yo60db8/Resident+EVil+6.torrent/file"
+    direct: "https://www.mediafire.com/file/77fpzhv2oehjhjb/Resident+Evil+6.torrent/file",
+    mediafire: "https://www.mediafire.com/file/77fpzhv2oehjhjb/Resident+Evil+6.torrent/file"
 },
 imagen: "Images/Resident_Evil_6_box_artwork.png",
 },
