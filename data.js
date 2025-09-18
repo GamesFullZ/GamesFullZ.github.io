@@ -917,8 +917,8 @@ const recursos = [
         "heroe"
     ],
     links: {
-        direct: "https://www.mediafire.com/file_premium/686evf5afgw211j/Lies.of.P.Deluxe.Edition.v1.10.0.0-Repack.torrent/file",
-        mediafire: "https://www.mediafire.com/file_premium/686evf5afgw211j/Lies.of.P.Deluxe.Edition.v1.10.0.0-Repack.torrent/file"
+        direct: "https://www.mediafire.com/file/rt3hgp9b3uizdz7/Lies+of+P.torrent/file",
+        mediafire: "https://www.mediafire.com/file/rt3hgp9b3uizdz7/Lies+of+P.torrent/file"
     },
     imagen: "Images/lies_of_p.jpg",
 },
