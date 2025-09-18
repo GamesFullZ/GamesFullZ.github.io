@@ -1151,8 +1151,8 @@ const recursos = [
         "Un clásico moderno"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/bb0mvmh4lo19wqr/Devil.May.Cry.5.Deluxe.Edition.zip.torrent/file",
-        mediafire: "https://www.mediafire.com/file/bb0mvmh4lo19wqr/Devil.May.Cry.5.Deluxe.Edition.zip.torrent/file"
+        direct: "https://www.mediafire.com/file/akr3k34st97gw7o/Devil+May+Cry+5.torrent/file",
+        mediafire: "https://www.mediafire.com/file/akr3k34st97gw7o/Devil+May+Cry+5.torrent/file"
     },
     imagen: "Images/86flTX6TLYP7MABrMUt3An6m.jpg",
 },
