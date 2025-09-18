@@ -935,8 +935,8 @@ const recursos = [
         "heroe"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/o74oypjcwdcx1r6/Resident+Evil+4+2023+Remake+Deluxe+Edition+GamesFullZ.torrent/file",
-        mediafire: "https://www.mediafire.com/file/o74oypjcwdcx1r6/Resident+Evil+4+2023+Remake+Deluxe+Edition+GamesFullZ.torrent/file"
+        direct: "https://www.mediafire.com/file/napfqsgniffygld/Resident.Evil.4.Deluxe.Edition-Repack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/napfqsgniffygld/Resident.Evil.4.Deluxe.Edition-Repack.torrent/file"
     },
     imagen: "Images/250px-Resident_Evil_4_remake_cov.jpg",
 },
