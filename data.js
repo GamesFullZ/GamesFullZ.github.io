@@ -1025,8 +1025,8 @@ const recursos = [
         "heroe de verdad"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/iq2j6agbwuaetuw/TWD+Survival+Instinct+GamesFullZ.torrent/file",
-        mediafire: "https://www.mediafire.com/file/iq2j6agbwuaetuw/TWD+Survival+Instinct+GamesFullZ.torrent/file"
+        direct: "https://www.mediafire.com/file/w7km4z1y4axewo3/The.Walking.Dead.Survival.Instinct.v20923-Repack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/w7km4z1y4axewo3/The.Walking.Dead.Survival.Instinct.v20923-Repack.torrent/file"
     },
     imagen: "Images/twds.jpg",
 },
