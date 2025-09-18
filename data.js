@@ -1079,8 +1079,8 @@ const recursos = [
         "heroe de verdad"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/1di5u3v6hgm80jo/Monster+Hunter+Rise+.torrent/file",
-        mediafire: "https://www.mediafire.com/file/1di5u3v6hgm80jo/Monster+Hunter+Rise+.torrent/file"
+        direct: "https://www.mediafire.com/file/boxggsh9po595kl/Monster+Hunter+Rise.torrent/file",
+        mediafire: "https://www.mediafire.com/file/boxggsh9po595kl/Monster+Hunter+Rise.torrent/file"
     },
     imagen: "Images/ebf72e65c0b8c42b36a01f2ba55ac0a1.jpg",
 },
