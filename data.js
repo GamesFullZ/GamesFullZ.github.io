@@ -899,8 +899,8 @@ const recursos = [
         "heroe"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/bvdymdwqtlm53bb/Grand.Theft.Auto.IV.The.Complete.Edition.v1.2.0.59.torrent/file",
-        mediafire: "https://www.mediafire.com/file/bvdymdwqtlm53bb/Grand.Theft.Auto.IV.The.Complete.Edition.v1.2.0.59.torrent/file"
+        direct: "https://www.mediafire.com/file/xsmmv2xga98btsz/GTA+IV+-+Complete+Edition.torrent/file",
+        mediafire: "https://www.mediafire.com/file/xsmmv2xga98btsz/GTA+IV+-+Complete+Edition.torrent/file"
     },
     imagen: "Images/6530b2b4bf996c001cd7a829.jpg",
 },
