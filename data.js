@@ -971,8 +971,8 @@ const recursos = [
         "heroe de verdad"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/z986psfnet3oql0/Call.of.Duty.Modern.Warfare.II.v.9.7-Repack.torrent/file",
-        mediafire: "https://www.mediafire.com/file/z986psfnet3oql0/Call.of.Duty.Modern.Warfare.II.v.9.7-Repack.torrent/file"
+        direct: "https://www.mediafire.com/file/lp8am3njs8xrzi4/Call+of+Duty+-+Modern+Warfare+II+[FitGirl+Repack].torrent/file",
+        mediafire: "https://www.mediafire.com/file/lp8am3njs8xrzi4/Call+of+Duty+-+Modern+Warfare+II+[FitGirl+Repack].torrent/file"
     },
     imagen: "Images/Call_of_Duty_Modern_Warfare_II_Key_Art.jpg",
 },
