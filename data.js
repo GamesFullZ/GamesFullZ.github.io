@@ -1007,8 +1007,8 @@ const recursos = [
         "heroe de verdad"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/ppc2ojqt22uy8q7/Grounded.2.GmesFullZ.torrent/file",
-        mediafire: "https://www.mediafire.com/file/ppc2ojqt22uy8q7/Grounded.2.GmesFullZ.torrent/file"
+        direct: "https://www.mediafire.com/file/x3w99l9u8kier8e/Grounded.2.Build.19507695.torrent/file",
+        mediafire: "https://www.mediafire.com/file/x3w99l9u8kier8e/Grounded.2.Build.19507695.torrent/file"
     },
     imagen: "Images/250px-Grounded_2_cover.jpg",
 },
