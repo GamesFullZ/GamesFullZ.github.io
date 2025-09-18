@@ -1205,8 +1205,8 @@ const recursos = [
         "Me encanta"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/n4z04qkdp7djya1/Project.Zomboid.v42.11.0.rar/file",
-        mediafire: "https://www.mediafire.com/file/n4z04qkdp7djya1/Project.Zomboid.v42.11.0.rar/file"
+        direct: "https://www.mediafire.com/file/3mdy8mi82hnbhdp/ProjectZomboid+v42.1.0+Opti+BETA.torrent/file",
+        mediafire: "https://www.mediafire.com/file/3mdy8mi82hnbhdp/ProjectZomboid+v42.1.0+Opti+BETA.torrent/file"
     },
     imagen: "Images/who-exactly-is-this-in-the-proje.jpg",
 },
