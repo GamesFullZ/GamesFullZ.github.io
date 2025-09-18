@@ -1133,8 +1133,8 @@ const recursos = [
         "Gracias por compartir"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/fxl96jd1ix4c7j0/Forza.Horizon.4.Ultimate.Edition.torrent/file",
-        mediafire: "https://www.mediafire.com/file/fxl96jd1ix4c7j0/Forza.Horizon.4.Ultimate.Edition.torrent/file"
+        direct: "https://www.mediafire.com/file/999n7syemzawmjx/Forza+Horizon+4.torrent/file",
+        mediafire: "https://www.mediafire.com/file/999n7syemzawmjx/Forza+Horizon+4.torrent/file"
     },
     imagen: "Images/forza-horizon-4-2018102103227_1.jpg",
 },
