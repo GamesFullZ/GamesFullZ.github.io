@@ -1115,8 +1115,8 @@ const recursos = [
         "Gracias"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/sx2hjr5kyutqxr4/Resident.Evil.Village.torrent/file",
-        mediafire: "https://www.mediafire.com/file/sx2hjr5kyutqxr4/Resident.Evil.Village.torrent/file"
+        direct: "https://www.mediafire.com/file/emn9f3pqht50vbn/Resident+Evil+-+Village.torrent/file",
+        mediafire: "https://www.mediafire.com/file/emn9f3pqht50vbn/Resident+Evil+-+Village.torrent/file"
     },
     imagen: "Images/FkzwjnJknkrFlozkTdeQBMub.jpg",
 },
