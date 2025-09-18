@@ -1061,8 +1061,8 @@ const recursos = [
         "heroe de verdad"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/gcpcze2qpfw28bf/Monster+Hunter+World.torrent/file",
-        mediafire: "https://www.mediafire.com/file/gcpcze2qpfw28bf/Monster+Hunter+World.torrent/file"
+        direct: "https://www.mediafire.com/file/ajsfizauaikg71o/Monster+Hunter+World.torrent/file",
+        mediafire: "https://www.mediafire.com/file/ajsfizauaikg71o/Monster+Hunter+World.torrent/file"
     },
     imagen: "Images/Monster_Hunter_World_cover_art.jpg",
 },
