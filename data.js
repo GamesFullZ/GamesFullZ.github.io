@@ -953,8 +953,8 @@ const recursos = [
         "heroe"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/jertc0aeb0021tz/Marvel's+Spider-Man+Remastered+GamesFullZ.torrent/file",
-        mediafire: "https://www.mediafire.com/file/jertc0aeb0021tz/Marvel's+Spider-Man+Remastered+GamesFullZ.torrent/file"
+        direct: "https://www.mediafire.com/file/zrr95zrmlymtap2/Spider-man+Remastered.torrent/file",
+        mediafire: "https://www.mediafire.com/file/zrr95zrmlymtap2/Spider-man+Remastered.torrent/file"
     },
     imagen: "Images/EGS_MarvelsSpiderManRemastered_I.jpg",
 },
