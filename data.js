@@ -519,8 +519,8 @@ const recursos = [
         "gracias bro"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/1rp9829y6k2lngo/Blur+Game.torrent/file",
-        mediafire: "https://www.mediafire.com/file/1rp9829y6k2lngo/Blur+Game.torrent/file"
+        direct: "https://www.mediafire.com/file/60ugqy8pbdrz3fc/Blur+Game.torrent/file",
+        mediafire: "https://www.mediafire.com/file/60ugqy8pbdrz3fc/Blur+Game.torrent/file"
     },
     imagen: "Images/Blur_(video_game).jpg"
    },
@@ -537,8 +537,8 @@ const recursos = [
         "gracias bro"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/ta4afcsy66ux52t/Forza-Horizon-2.torrent/file",
-        mediafire: "https://www.mediafire.com/file/ta4afcsy66ux52t/Forza-Horizon-2.torrent/file"
+        direct: "https://www.mediafire.com/file/h3rtdsmary2evka/Forza-Horizon-2.torrent/file",
+        mediafire: "https://www.mediafire.com/file/h3rtdsmary2evka/Forza-Horizon-2.torrent/file"
     },
     imagen: "Images/98ff6a8b9dbccb4c3067048eca92d6a3.jpg",
     advertencia: "Este juego es un port/repack del juego de Xbox 360. Puedes experimentar problemas o lags."
@@ -556,8 +556,8 @@ const recursos = [
         "buenisimo"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/muvrhvj9pabwqoz/JETEAV10_Opti_Fix_archive.torrent/file",
-        mediafire: "https://www.mediafire.com/file/muvrhvj9pabwqoz/JETEAV10_Opti_Fix_archive.torrent/file"
+        direct: "https://www.mediafire.com/file/fa97gbu0c6jzdxm/Grand+Theft+Auto+V.torrent/file",
+        mediafire: "https://www.mediafire.com/file/fa97gbu0c6jzdxm/Grand+Theft+Auto+V.torrent/file"
     },
     imagen: "Images/actual_1364906194.jpg",
    },
@@ -574,8 +574,8 @@ const recursos = [
         "goddd"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/xcppakw3qkgjse4/Red.Dead.Redemption.2.Ultimate.Edition.v1491.50-Repack.torrent/file",
-        mediafire: "https://www.mediafire.com/file/xcppakw3qkgjse4/Red.Dead.Redemption.2.Ultimate.Edition.v1491.50-Repack.torrent/file"
+        direct: "https://www.mediafire.com/file/gkoymn1kefbx1ue/Red.Dead.Redemption.2.Ultimate.Edition.v1491.50-Repack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/gkoymn1kefbx1ue/Red.Dead.Redemption.2.Ultimate.Edition.v1491.50-Repack.torrent/file"
     },
     imagen: "Images/Red-Dead-Redemption-2-pc-free-download.png",
    },
@@ -592,8 +592,8 @@ const recursos = [
         "buena bro gracias"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/tjr5ls0mfi5rdz8/Marvels.Spider-Man.2.Digital.Deluxe.Edition.v1.526.0.0-Repack.torrent/file",
-        mediafire: "https://www.mediafire.com/file/tjr5ls0mfi5rdz8/Marvels.Spider-Man.2.Digital.Deluxe.Edition.v1.526.0.0-Repack.torrent/file"
+        direct: "https://www.mediafire.com/file/7v1g1f2mysi53al/Marvel's+Spider-Man+2.torrent/file",
+        mediafire: "https://www.mediafire.com/file/7v1g1f2mysi53al/Marvel's+Spider-Man+2.torrent/file"
     },
     imagen: "Images/11459908.jpg",
    },
@@ -610,8 +610,8 @@ const recursos = [
         "buena bro"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/w1g6k6bvr0nkfww/Cyberpunk.2077.Ultimate.Edition.v.2.3-Repack.torrent/file",
-        mediafire: "https://www.mediafire.com/file/w1g6k6bvr0nkfww/Cyberpunk.2077.Ultimate.Edition.v.2.3-Repack.torrent/file"
+        direct: "https://www.mediafire.com/file/0bofwjootaod0xm/Cyberpunk.2077.Ultimate.Edition.v.2.3-Repack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/0bofwjootaod0xm/Cyberpunk.2077.Ultimate.Edition.v.2.3-Repack.torrent/file"
     },
     imagen: "Images/Cyberpunk_2077_box_art.jpg",
   },
@@ -628,8 +628,8 @@ const recursos = [
         "GRACIASSS"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/e435hrkl43l80px/NARUTO.SHIPPUDEN.Ultimate.Ninja.STORM.4.Road.to.Boruto.Next.Generations-CODEX.torrent/file",
-        mediafire: "https://www.mediafire.com/file/e435hrkl43l80px/NARUTO.SHIPPUDEN.Ultimate.Ninja.STORM.4.Road.to.Boruto.Next.Generations-CODEX.torrent/file"
+        direct: "https://www.mediafire.com/file/usjplkmwk7lx7xb/NARUTO.SHIPPUDEN.Ultimate.Ninja.STORM.4.Road.to.Boruto.Next.Generations-CODEX.torrent/file",
+        mediafire: "https://www.mediafire.com/file/usjplkmwk7lx7xb/NARUTO.SHIPPUDEN.Ultimate.Ninja.STORM.4.Road.to.Boruto.Next.Generations-CODEX.torrent/file"
     },
     imagen: "Images/NUNS4RTB_Square_Temple.jpg",
 },
@@ -646,8 +646,8 @@ const recursos = [
         "yo tenia el de randrogames xd"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/gf7fsc71w3bn43b/The+Last+of+Us+-+Part+I.torrent/file",
-        mediafire: "https://www.mediafire.com/file/gf7fsc71w3bn43b/The+Last+of+Us+-+Part+I.torrent/file"
+        direct: "https://www.mediafire.com/file/74lkodm5kzxpfgp/The+Last+of+Us+-+Part+I.torrent/file",
+        mediafire: "https://www.mediafire.com/file/74lkodm5kzxpfgp/The+Last+of+Us+-+Part+I.torrent/file"
     },
     imagen: "Images/The_Last_of_Us_Part_I_cover.jpg",
 },
@@ -664,8 +664,8 @@ const recursos = [
         "no cierres la pagina porfa"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/txogd0dixohdphf/The_Last_of_Us_-_Part_II_Remastered.torrent/file",
-        mediafire: "https://www.mediafire.com/file/txogd0dixohdphf/The_Last_of_Us_-_Part_II_Remastered.torrent/file"
+        direct: "https://www.mediafire.com/file/049ix769l33xjo3/The+Last+of+Us+-+Part+II+Remastered.torrent/file",
+        mediafire: "https://www.mediafire.com/file/049ix769l33xjo3/The+Last+of+Us+-+Part+II+Remastered.torrent/file"
     },
     imagen: "Images/images3.jpg",
 },
@@ -682,8 +682,8 @@ const recursos = [
         "no cierres la pagina porfa"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/4ykqujbbzhyosjx/Forza.Horizon3.torrent/file",
-        mediafire: "https://www.mediafire.com/file/4ykqujbbzhyosjx/Forza.Horizon3.torrent/file"
+        direct: "https://www.mediafire.com/file/5pqrwpabwd64c8i/Forza.Horizon3.torrent/file",
+        mediafire: "https://www.mediafire.com/file/5pqrwpabwd64c8i/Forza.Horizon3.torrent/file"
     },
     imagen: "Images/Forza_horizon_3_cover_art.jpg",
 },
@@ -700,8 +700,8 @@ const recursos = [
         "no cierres la pagina porfa"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/9vdnt3wkqoc2q3l/Mafia+-+Definitive+Edition.torrent/file",
-        mediafire: "https://www.mediafire.com/file/9vdnt3wkqoc2q3l/Mafia+-+Definitive+Edition.torrent/file"
+        direct: "https://www.mediafire.com/file/tobryrnba09r3yx/Mafia+-+Definitive+Edition.torrent/file",
+        mediafire: "https://www.mediafire.com/file/tobryrnba09r3yx/Mafia+-+Definitive+Edition.torrent/file"
     },
     imagen: "Images/AgWIv9NHpkWc1vXdNYuSGI8p.jpg",
 },
@@ -719,8 +719,8 @@ const recursos = [
         "god,siempre nos haces casooo (:"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/vcg4j1sixdhg63s/Mafia+II+-+Definitive+Edition.torrent/file",
-        mediafire: "https://www.mediafire.com/file/vcg4j1sixdhg63s/Mafia+II+-+Definitive+Edition.torrent/file"
+        direct: "https://www.mediafire.com/file/zl9ar73nrff0kk5/Mafia+II+-+Definitive+Edition.torrent/file",
+        mediafire: "https://www.mediafire.com/file/zl9ar73nrff0kk5/Mafia+II+-+Definitive+Edition.torrent/file"
     },
     imagen: "Images/Diesel_productv2_mafia-ii-definitive-edition_home_EGS_MafiaIIDefinitiveEdition_RedKiteGames_S2-1200x1600-4cbc94d86b3b82ef8a532fa96a2f28145dae0713-1200x1600-f2cdf5d42079674921f4a36e0254e088.jpg",
 },
@@ -736,11 +736,11 @@ const recursos = [
         "gracias god",
         "no cierres la pagina porfa"
     ],
-    links: {
-        direct: "magnet:?xt=urn:btih:373d33a2a5e45ea5176e80199f31338074e82eda&dn=UNCHARTED_Legacy_of_Thieves_Collection_v1.4.21058-Razor1911&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://tracker.moeking.me:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.theoks.net:6969/announce&tr=udp://movies.zsw.ca:6969/announce&tr=udp://tracker-udp.gbitt.info:80/announce&tr=udp://tracker.tiny-vps.com:6969/announce&tr=http://tracker.gbitt.info:80/announce&tr=http://tracker.ccp.ovh:6969/announce&tr=https://tracker.gbitt.info:443/announce&tr=udp://tracker.dler.com:6969/announce&tr=udp://tracker.ccp.ovh:6969/announce",
-        mediafire: "magnet:?xt=urn:btih:373d33a2a5e45ea5176e80199f31338074e82eda&dn=UNCHARTED_Legacy_of_Thieves_Collection_v1.4.21058-Razor1911&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://tracker.moeking.me:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.theoks.net:6969/announce&tr=udp://movies.zsw.ca:6969/announce&tr=udp://tracker-udp.gbitt.info:80/announce&tr=udp://tracker.tiny-vps.com:6969/announce&tr=http://tracker.gbitt.info:80/announce&tr=http://tracker.ccp.ovh:6969/announce&tr=https://tracker.gbitt.info:443/announce&tr=udp://tracker.dler.com:6969/announce&tr=udp://tracker.ccp.ovh:6969/announce"
+  links: {
+        direct: "https://www.mediafire.com/file/ad9jgyca90mf4fc/Uncharted+-+LoTC.torrent/file",
+        mediafire: "https://www.mediafire.com/file/ad9jgyca90mf4fc/Uncharted+-+LoTC.torrent/file"
     },
-    imagen: "Images/Final+Square.webp",
+    imagen: "Images/59b04543a434608db49d93cc9332e45f.jpg",
 },
 {
     id: 43,
@@ -755,14 +755,14 @@ const recursos = [
         "no cierres la pagina porfa xd"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/ojzpi3r5envjxkc/Age+of+Empires+-+Definitive+Edition.torrent/file",
-        mediafire: "https://www.mediafire.com/file/ojzpi3r5envjxkc/Age+of+Empires+-+Definitive+Edition.torrent/file"
+        direct: "https://www.mediafire.com/file/l6hc4zkh1ikhnzl/Age+of+Empires+-+Definitive+Edition.torrent/file",
+        mediafire: "https://www.mediafire.com/file/l6hc4zkh1ikhnzl/Age+of+Empires+-+Definitive+Edition.torrent/file"
     },
     imagen: "Images/59b04543a434608db49d93cc9332e45f.jpg",
 },
 {
     id: 44,
-    nombre: " Age of Empires II",
+    nombre: "Age of Empires II",
     tipo: "juego",
     descripcion: "Versión remasterizada del clásico de estrategia medieval con gráficos en 4K, nuevas campañas, civilizaciones y mejoras en la jugabilidad online",
     requisitos: "Windows 10 64-bit, Intel Core 2 Duo 2.4 GHz / AMD Athlon X2 2.66 GHz, 4 GB RAM, Intel HD 4000 / GeForce 8800 GT / Radeon HD 2900 XT, 30 GB espacio.",
@@ -773,8 +773,8 @@ const recursos = [
         "no cierres la pagina porfa xd"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/kx5uaic98i9og04/Age+of+Empires+II+-+Definitive+Edition.torrent/file",
-        mediafire: "https://www.mediafire.com/file/kx5uaic98i9og04/Age+of+Empires+II+-+Definitive+Edition.torrent/file"
+        direct: "https://www.mediafire.com/file/a3goiv6u95k67zm/Age+of+Empires+II+-+Definitive+Edition.torrent/file",
+        mediafire: "https://www.mediafire.com/file/a3goiv6u95k67zm/Age+of+Empires+II+-+Definitive+Edition.torrent/file"
     },
     imagen: "Images/Age_of_Empires_II_Definitive_Edition_cover_art.jpeg",
 },
@@ -791,30 +791,12 @@ const recursos = [
         "no cierres la pagina porfa xd"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/qtxh1llrqunk4v7/Resident.Evil.3.Build.8856549-Repack.torrent/file",
-        mediafire: "https://www.mediafire.com/file/qtxh1llrqunk4v7/Resident.Evil.3.Build.8856549-Repack.torrent/file"
+        direct: "https://www.mediafire.com/file/q7y9tjlc5lmhdta/Resident.Evil.3-HOODLUM.torrent/file",
+        mediafire: "https://www.mediafire.com/file/q7y9tjlc5lmhdta/Resident.Evil.3-HOODLUM.torrent/file"
     },
     imagen: "Images/Resident_Evil_3.jpg",
 },
- {
-    id: 46,
-    nombre: "Mortal Kombat 1",
-    tipo: "juego",
-    descripcion: " Reboot de la saga de lucha que presenta un universo renovado por el Dios del Fuego, Liu Kang, con un sistema de combate actualizado, nuevos personajes y el regreso de los fatalities más sangrientos",
-    requisitos: "Windows 10 64-bit, Intel Core i5-6600 / AMD Ryzen 3 3100 o Ryzen 5 2600, 8 GB RAM, Nvidia GeForce GTX 980 / AMD Radeon RX 470 / Intel Arc A750, DirectX 12, 100 GB espacio.",
-    downloads: 0,
-    rating: "⭐⭐⭐⭐☆",
-    comments: [
-        "gracias god xd",
-        "heroe"
-    ],
-    links: {
-        direct: "https://www.mediafire.com/file/6c8ls3uwt0ttop2/Mortal+Kombat+1.torrent/file",
-        mediafire: "https://www.mediafire.com/file/6c8ls3uwt0ttop2/Mortal+Kombat+1.torrent/file"
-    },
-    imagen: "Images/Mortal_Kombat_1_key_art.jpeg",
-},
-{
+   { 
     id: 47,
     nombre: "Left 4 Dead",
     tipo: "juego",
@@ -845,8 +827,8 @@ const recursos = [
         "heroe"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/g4xrwmhdjfe2w6j/Rise.of.the.Tomb.Raider.20.Year.Celebration.v.1.0.1027.0-Repack.torrent/file",
-        mediafire: "https://www.mediafire.com/file/g4xrwmhdjfe2w6j/Rise.of.the.Tomb.Raider.20.Year.Celebration.v.1.0.1027.0-Repack.torrent/file"
+        direct: "https://www.mediafire.com/file/lhw3tlmm26ul9ub/Rise+of+the+Tomb+Raider.torrent/file",
+        mediafire: "https://www.mediafire.com/file/lhw3tlmm26ul9ub/Rise+of+the+Tomb+Raider.torrent/file"
     },
     imagen: "Images/Rise_of_the_Tomb_Raider.jpg",
 },
@@ -863,8 +845,8 @@ const recursos = [
         "heroe"
     ],
     links: {
-        direct: "magnet:?xt=urn:btih:9af25aed2bb2d5c073e35fe938810c0b2097239c&dn=FIFA.23.Ultimate.Edition.v1.0.82.43747.zip&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://tracker.moeking.me:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.theoks.net:6969/announce&tr=udp://movies.zsw.ca:6969/announce&tr=udp://tracker.tiny-vps.com:6969/announce&tr=udp://tracker-udp.gbitt.info:80/announce&tr=http://tracker.gbitt.info:80/announce&tr=https://tracker.gbitt.info:443/announce&tr=http://tracker.ccp.ovh:6969/announce&tr=udp://tracker.ccp.ovh:6969/announce&tr=udp://tracker.dler.com:6969/announce",
-        mediafire: "magnet:?xt=urn:btih:9af25aed2bb2d5c073e35fe938810c0b2097239c&dn=FIFA.23.Ultimate.Edition.v1.0.82.43747.zip&tr=udp://tracker.torrent.eu.org:451/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://tracker.moeking.me:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.theoks.net:6969/announce&tr=udp://movies.zsw.ca:6969/announce&tr=udp://tracker.tiny-vps.com:6969/announce&tr=udp://tracker-udp.gbitt.info:80/announce&tr=http://tracker.gbitt.info:80/announce&tr=https://tracker.gbitt.info:443/announce&tr=http://tracker.ccp.ovh:6969/announce&tr=udp://tracker.ccp.ovh:6969/announce&tr=udp://tracker.dler.com:6969/announce"
+        direct: "https://www.mediafire.com/file/lkio44ic9knrtyw/SleepingDogsPack.torrent/file",
+        mediafire: "https://www.mediafire.com/file/lkio44ic9knrtyw/SleepingDogsPack.torrent/file"
     },
     imagen: "Images/fifa23.jpg",
 },
