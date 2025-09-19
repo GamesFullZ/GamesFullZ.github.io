@@ -65,8 +65,8 @@ const recursos = [
             "Mejor juego de zombies"
         ],
         links: {
-            direct: "https://gofile.io/d/Js6Zsk",
-            mediafire: "https://gofile.io/d/Js6Zsk"
+            direct: "https://www.mediafire.com/file/h7alfyzl5lwrqv4/Left+4+Dead+2.torrent/file",
+            mediafire: "https://www.mediafire.com/file/h7alfyzl5lwrqv4/Left+4+Dead+2.torrent/file"
         },
         imagen: "Images/Left4Dead2.jpg",
         password: "123"
@@ -97,8 +97,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Divertido", "Me encanta Los caballos", "Recomendado para fans de vaqueros"],
         links: {
-            direct: "https://gofile.io/d/c2B4Cd",
-            mediafire: "https://gofile.io/d/c2B4Cd"
+            direct: "https://www.mediafire.com/file/5b3y8o017dmlmqr/Red+Dead+Redemption.torrent/file",
+            mediafire: "https://www.mediafire.com/file/5b3y8o017dmlmqr/Red+Dead+Redemption.torrent/file"
         },
         imagen: "Images/Red_Dead_Redemption.jpg",
         password: "123"
@@ -118,22 +118,6 @@ const recursos = [
         },
         imagen: "Images/Payday2cover.jpg",
         password: "contraseña123"
-    },
-    {
-        id: 8,
-        nombre: "Battlefield 2",
-        tipo: "juego",
-        descripcion: "Juego de disparos en primera persona con combates a gran escala, vehículos y mapas grandes ambientado en una guerra ficticia moderna.",
-        requisitos: "SO: Windows 2000/XP<br>Procesador: 1.5 GHz P4 o equivalente<br>Memoria: 512 MB RAM<br>Gráficos: 100% DirectX 9.0c compatible con 128 MB VRAM (NVIDIA GeForce FX 5700 o ATI Radeon 9500)<br>Almacenamiento: 4.5 GB",
-        downloads: 0,
-        rating: "⭐⭐⭐⭐☆",
-        comments: ["Clásico de los shooters", "Épicas batallas con vehículos"],
-        links: {
-            direct: "https://gofile.io/d/DDlRTY",
-            mediafire: "https://gofile.io/d/DDlRTY"
-        },
-        imagen: "Images/51XE9qx04ML._UF1000,1000_QL80_.jpg",
-        password: "123"
     },
     {
         id: 9,
@@ -809,8 +793,8 @@ const recursos = [
         "heroe"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/kinx20eyljwxn0e/Left.4.Dead.v1.0.4.5-Repack.torrent/file",
-        mediafire: "https://www.mediafire.com/file/kinx20eyljwxn0e/Left.4.Dead.v1.0.4.5-Repack.torrent/file"
+        direct: "https://www.mediafire.com/file/dhjsz5zswrbxfem/Left.4.Dead.Build.19703213.torrent/file",
+        mediafire: "https://www.mediafire.com/file/dhjsz5zswrbxfem/Left.4.Dead.Build.19703213.torrent/file"
     },
     imagen: "Images/Left4Dead_Windows_cover.jpg",
 },
