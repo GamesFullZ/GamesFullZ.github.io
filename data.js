@@ -193,8 +193,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐☆",
         comments: ["Terror psicológico y supervivencia", "Muy prometedor"],
         links: {
-            direct: "https://www.mediafire.com/file/0vci1qnuuw6ms0q/Sons+Of+The+Forest+Opti.7z.torrent/file",
-            mediafire: "https://www.mediafire.com/file/0vci1qnuuw6ms0q/Sons+Of+The+Forest+Opti.7z.torrent/file"
+            direct: "https://www.mediafire.com/file/8z5hj5cza92jxqk/Sons+Of+The+Forest+Opti.7z.torrent/file",
+            mediafire: "https://www.mediafire.com/file/8z5hj5cza92jxqk/Sons+Of+The+Forest+Opti.7z.torrent/file"
         },
         imagen: "Images/Sons_of_the_Forest.jpg",
         password: "123"
@@ -212,8 +212,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Hermoso y emotivo", "Perfecto para fans de Undertale"],
         links: {
-            direct: "https://www.mediafire.com/file/m54hdi7s9uaoinj/DELTARUNE.zip.torrent/file",
-            mediafire: "https://www.mediafire.com/file/m54hdi7s9uaoinj/DELTARUNE.zip.torrent/file"
+            direct: "https://www.mediafire.com/file/0s9jwqtssaer2hs/DELTARUNE.zip.torrent/file",
+            mediafire: "https://www.mediafire.com/file/0s9jwqtssaer2hs/DELTARUNE.zip.torrent/file"
         },
         imagen: "Images/0x1900-000000-80-0-0.jpg",
         password: "deltarune"
@@ -228,8 +228,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐☆",
         comments: ["Divertido para toda la familia", "Lleno de referencias"],
         links: {
-            direct: "https://www.mediafire.com/file/h6rjz007a4m8ush/LEGO.Marvel.Super.Heroes.torrent/file",
-            mediafire: "https://www.mediafire.com/file/h6rjz007a4m8ush/LEGO.Marvel.Super.Heroes.torrent/file"
+            direct: "https://www.mediafire.com/file/c2vrkxewox3x5sj/LEGO-MARVEL-Super-Heroes-SteamRIP.com.rar.torrent/file",
+            mediafire: "https://www.mediafire.com/file/c2vrkxewox3x5sj/LEGO-MARVEL-Super-Heroes-SteamRIP.com.rar.torrent/file"
         },
         imagen: "Images/7YrRqN2wgRzpzX4K5RLUEecDyu53mz8U.jpg",
         password: "123"
@@ -244,8 +244,8 @@ const recursos = [
         rating: "⭐⭐⭐⭐⭐",
         comments: ["Uno de los mejores CoD", "Campaña con múltiples finales"],
         links: {
-            direct: "https://www.mediafire.com/file/cwdumqbqjz3j3nb/Call+of+Duty+-+Black+Ops+2.rar.torrent/file",
-            mediafire: "https://www.mediafire.com/file/cwdumqbqjz3j3nb/Call+of+Duty+-+Black+Ops+2.rar.torrent/file"
+            direct: "https://www.mediafire.com/file/nfusb6lf5tl6d5y/Call+of+Duty+-+Black+Ops+2.torrent/file",
+            mediafire: "https://www.mediafire.com/file/nfusb6lf5tl6d5y/Call+of+Duty+-+Black+Ops+2.torrent/filee"
         },
         imagen: "Images/BlackOPS2.jpg",
         password: "123"
@@ -263,8 +263,8 @@ const recursos = [
         "Se traba un poco"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/84w2ozjtilvi6s6/The-Quarry-SteamRIP.com.torrent/file",
-        mediafire: "https://www.mediafire.com/file/84w2ozjtilvi6s6/The-Quarry-SteamRIP.com.torrent/file"
+        direct: "https://www.mediafire.com/file/gmyn8azr945kk23/The-Quarry-SteamRIP.com.torrent/file",
+        mediafire: "https://www.mediafire.com/file/gmyn8azr945kk23/The-Quarry-SteamRIP.com.torrent/file"
     },
     imagen: "Images/The_Quarry_cover_art.png",
     password: "123"
@@ -282,8 +282,8 @@ const recursos = [
         "Se traba un poco pero es mi pc xd"
     ],
     links: {
-        direct: "https://www.mediafire.com/file_premium/yfjx3eegg1d32xe/BendyandInkMaCH.torrent/file",
-        mediafire: "https://www.mediafire.com/file_premium/yfjx3eegg1d32xe/BendyandInkMaCH.torrent/file"
+        direct: "https://www.mediafire.com/file/htwkj6l7q79tzec/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file",
+        mediafire: "https://www.mediafire.com/file/htwkj6l7q79tzec/Bendy-and-the-Ink-M-SteamRIP.com.rar.torrent/file"
     },
     imagen: "Images/7288998-bendy-and-the-ink-machine-playstation-4-front-cover.png",
     password: "123"
@@ -301,8 +301,8 @@ const recursos = [
         "xd casi no da miedo"
     ],
     links: {
-        direct: "https://www.mediafire.com/file/k8khnbn9zq3tnhx/togiiF42NnnFHAO.torrent/file",
-        mediafire: "https://www.mediafire.com/file/k8khnbn9zq3tnhx/togiiF42NnnFHAO.torrent/file"
+        direct: "https://www.mediafire.com/file/45nvpgbywgez9j6/Bendy-and-the-Dark-Revival-SteamRIP.com.rar.torrent/file",
+        mediafire: "https://www.mediafire.com/file/45nvpgbywgez9j6/Bendy-and-the-Dark-Revival-SteamRIP.com.rar.torrent/file"
     },
     imagen: "Images/618lYWO7raL._UF894,1000_QL80_.jpg",
     password: "123"
