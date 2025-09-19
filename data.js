@@ -199,7 +199,7 @@ const recursos = [
             direct: "https://www.mediafire.com/file/0s9jwqtssaer2hs/DELTARUNE.zip.torrent/file",
             mediafire: "https://www.mediafire.com/file/0s9jwqtssaer2hs/DELTARUNE.zip.torrent/file"
         },
-        imagen: "Images/0x1900-000000-80-0-0.jpg",
+        imagen: "Images/0x1900-000000-80-0-0.webp",
         password: "deltarune"
     },
     {
