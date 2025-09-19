@@ -14,7 +14,7 @@ const recursos = [
             direct: "https://gofile.io/d/x9dhme",
             mediafire: "https://gofile.io/d/x9dhme"
         },
-        images: "Images/Resi4-gc-cover.webp",
+        images: "Images/Resi4-gc-cover",
         password: "123"
     },
     {
