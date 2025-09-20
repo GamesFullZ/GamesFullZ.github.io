@@ -2097,4 +2097,22 @@ links: {
 },
 imagen: "Images/nig.webp",
 },
+    {
+    id: 122,
+    nombre: "Mortal Kombat 11",
+    tipo: "juego",
+    descripcion: "Videojuego de lucha en 2D con gráficos 3D que continúa la icónica saga Mortal Kombat. Presenta un sistema de combate refinado, mecánicas como Fatal Blows y Krushing Blows, y una amplia plantilla de luchadores clásicos y nuevos. Incluye un modo historia cinematográfico, torres de desafíos y multijugador en línea.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core i5-750 / AMD Phenom II X4 965 o AMD Ryzen 3 1200, 8 GB RAM, NVIDIA GeForce GTX 670 / GTX 1050 o AMD Radeon HD 7950 / R9 270, 60 GB espacio",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "pidan juegos muchachada",
+        "combates brutales"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/vav0lfegbg8ore4/Mortal+Kombat+11.torrent/file",
+        mediafire: "https://cuty.io/lRyCYoD"
+    },
+    imagen: "Images/7573623-mortal-kombat-11-nintendo-switch-front-cover.webp",
+},
 ];
