@@ -344,7 +344,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/ioxs8mh1bgafbxl/Call+OF+Duty+2+Modern+Warfare+Opti.torrent/file",
         mediafire: "https://www.mediafire.com/file/ioxs8mh1bgafbxl/Call+OF+Duty+2+Modern+Warfare+Opti.torrent/file"
     },
-    imagen: "Images/Call_of_Duty_Modern_Warfare_2_(2009)_cover.png"
+    imagen: "Images/Call_of_Duty_Modern_Warfare_2_(2009)_cover.webp"
    },
     {
     id: 22,
