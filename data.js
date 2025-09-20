@@ -49,7 +49,7 @@ const recursos = [
             direct: "https://gofile.io/d/avMKZl",
             mediafire: "https://gofile.io/d/avMKZl"
         },
-        Imagen: "Images/Postal_2_cover.webp",
+        imagen: "Images/Postal_2_cover.webp",
         password: "123"
     },
     {
