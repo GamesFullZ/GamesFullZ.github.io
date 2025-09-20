@@ -14,7 +14,7 @@ const recursos = [
             direct: "https://gofile.io/d/x9dhme",
             mediafire: "https://gofile.io/d/x9dhme"
         },
-        imagen:         imagen: "Images/Resi4-gc-cover.webp",
+        imagen: "Images/Resi4-gc-cover.jpg",
         password: "123"
     },
     {
@@ -68,7 +68,7 @@ const recursos = [
             direct: "https://www.mediafire.com/file/h7alfyzl5lwrqv4/Left+4+Dead+2.torrent/file",
             mediafire: "https://www.mediafire.com/file/h7alfyzl5lwrqv4/Left+4+Dead+2.torrent/file"
         },
-        imagen: "Images/Left4Dead2.webp",
+        imagen: "Images/Left4Dead2.jpg",
         password: "123"
     },
     {
@@ -100,7 +100,7 @@ const recursos = [
             direct: "https://www.mediafire.com/file/5b3y8o017dmlmqr/Red+Dead+Redemption.torrent/file",
             mediafire: "https://www.mediafire.com/file/5b3y8o017dmlmqr/Red+Dead+Redemption.torrent/file"
         },
-        imagen: "Images/Red_Dead_Redemption.webp",
+        imagen: "Images/Red_Dead_Redemption.jpg",
         password: "123"
     },
     {
@@ -116,7 +116,7 @@ const recursos = [
             direct: "https://www.mediafire.com/file/y7z5pibt4j1ol9q/PayDay.2.v1.143.246-Repack.iso.torrent/file",
             mediafire: "https://www.mediafire.com/file/y7z5pibt4j1ol9q/PayDay.2.v1.143.246-Repack.iso.torrent/file"
         },
-        imagen: "Images/Payday2cover.webp",
+        imagen: "Images/Payday2cover.jpg",
         password: "contraseña123"
     },
     {
@@ -132,7 +132,7 @@ const recursos = [
             direct: "https://gofile.io/d/bYr0O4",
             mediafire: "https://gofile.io/d/bYr0O4"
         },
-        imagen: "Images/God_of_War_4_cover.webp",
+        imagen: "Images/God_of_War_4_cover.jpg",
         password: "123"
     },
     {
@@ -148,7 +148,7 @@ const recursos = [
             direct: "https://gofile.io/d/bYr0O4",
             mediafire: "https://gofile.io/d/bYr0O4"
         },
-        imagen: "Images/God_of_War_Ragnarök_cover.webp",
+        imagen: "Images/God_of_War_Ragnarök_cover.jpg",
         password: "123"
     },
     {
@@ -164,7 +164,7 @@ const recursos = [
             direct: "https://gofile.io/d/2uRoh0",
             mediafire: "https://gofile.io/d/2uRoh0"
         },
-        imagen: "Images/images.webp",
+        imagen: "Images/images.jpg",
         password: "123"
     },
     {
@@ -180,7 +180,7 @@ const recursos = [
             direct: "https://www.mediafire.com/file/8z5hj5cza92jxqk/Sons+Of+The+Forest+Opti.7z.torrent/file",
             mediafire: "https://www.mediafire.com/file/8z5hj5cza92jxqk/Sons+Of+The+Forest+Opti.7z.torrent/file"
         },
-        imagen: "Images/Sons_of_the_Forest.webp",
+        imagen: "Images/Sons_of_the_Forest.jpg",
         password: "123"
     },
 
@@ -199,7 +199,7 @@ const recursos = [
             direct: "https://www.mediafire.com/file/0s9jwqtssaer2hs/DELTARUNE.zip.torrent/file",
             mediafire: "https://www.mediafire.com/file/0s9jwqtssaer2hs/DELTARUNE.zip.torrent/file"
         },
-        imagen: "Images/0x1900-000000-80-0-0.webp",
+        imagen: "Images/0x1900-000000-80-0-0.jpg",
         password: "deltarune"
     },
     {
@@ -307,7 +307,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/jy6gzcnydlolmpa/Call-of-Juarez-Gunslinger-SteamRIP.com.rar.torrent/file",
         mediafire: "https://www.mediafire.com/file/jy6gzcnydlolmpa/Call-of-Juarez-Gunslinger-SteamRIP.com.rar.torrent/file"
     },
-    imagen: "Images/call_of_juarez_gunslinger-2242897.webp",
+    imagen: "Images/call_of_juarez_gunslinger-2242897.jpg",
     password: "123"
    },
     {
@@ -398,7 +398,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/d8q331qkl5527mn/Jurassic+World+Evolution+2+v1.3.1.36069.torrent/file",
         mediafire: "https://www.mediafire.com/file/d8q331qkl5527mn/Jurassic+World+Evolution+2+v1.3.1.36069.torrent/file"
     },
-    imagen: "Images/Jurassic_World_Evolution_box_art.webp"
+    imagen: "Images/Jurassic_World_Evolution_box_art.jpg"
    },
     {
     id: 25,
@@ -416,7 +416,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/lg6fpmp3f2uhuho/Far_Cry_5.torrent/file",
         mediafire: "https://www.mediafire.com/file/lg6fpmp3f2uhuho/Far_Cry_5.torrent/file"
     },
-    imagen: "Images/FCZ_StorePortrait_1200x1600_1200x1600-a254f505d277fe3dc17beb12416bf11a.webp"
+    imagen: "Images/FCZ_StorePortrait_1200x1600_1200x1600-a254f505d277fe3dc17beb12416bf11a.jpg"
     },
     {
     id: 26,
@@ -434,7 +434,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/sbws8mnvrtkjno0/Todos+Los+Fnaf+del+1+al+4.torrent/file",
         mediafire: "https://www.mediafire.com/file/sbws8mnvrtkjno0/Todos+Los+Fnaf+del+1+al+4.torrent/file"
     },
-    imagen: "Images/fnaf 1 al 4.webp"
+    imagen: "Images/fnaf 1 al 4.jpg"
     },
     {
     id: 27,
@@ -452,7 +452,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/uqduzvrhkb01kth/Resident.Evil.7.Biohazard.v20220613-Repack.torrent/file",
         mediafire: "https://www.mediafire.com/file/uqduzvrhkb01kth/Resident.Evil.7.Biohazard.v20220613-Repack.torrent/file"
     },
-    imagen: "Images/Resident_Evil_7_cover_art.webp"
+    imagen: "Images/Resident_Evil_7_cover_art.jpg"
    },
     {
     id: 28,
@@ -470,7 +470,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/2croqvw1tozk6oo/Far+Cry+Primal.torrent/file",
         mediafire: "https://www.mediafire.com/file/2croqvw1tozk6oo/Far+Cry+Primal.torrent/file"
     },
-    imagen: "Images/FCP_UCS17665_Store_Portrait_1200x1600-1200x1600-1069539bdf73f4ca48f7f64027a6e921.webp"
+    imagen: "Images/FCP_UCS17665_Store_Portrait_1200x1600-1200x1600-1069539bdf73f4ca48f7f64027a6e921.jpg"
    },
     {
     id: 29,
@@ -488,7 +488,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/frjg3dfom6flrfs/Call+of+Duty+4+Modern+Warfare.torrent/file",
         mediafire: "https://www.mediafire.com/file/frjg3dfom6flrfs/Call+of+Duty+4+Modern+Warfare.torrent/file"
     },
-    imagen: "Images/CoD4_MWR_cover.webp"
+    imagen: "Images/CoD4_MWR_cover.jpg"
    },
     {
     id: 30,
@@ -506,7 +506,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/60ugqy8pbdrz3fc/Blur+Game.torrent/file",
         mediafire: "https://www.mediafire.com/file/60ugqy8pbdrz3fc/Blur+Game.torrent/file"
     },
-    imagen: "Images/Blur_(video_game).webp"
+    imagen: "Images/Blur_(video_game).jpg"
    },
     {
     id: 31,
@@ -597,7 +597,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/0bofwjootaod0xm/Cyberpunk.2077.Ultimate.Edition.v.2.3-Repack.torrent/file",
         mediafire: "https://www.mediafire.com/file/0bofwjootaod0xm/Cyberpunk.2077.Ultimate.Edition.v.2.3-Repack.torrent/file"
     },
-    imagen: "Images/Cyberpunk_2077_box_art.webp",
+    imagen: "Images/Cyberpunk_2077_box_art.jpg",
   },
     {
     id: 36,
@@ -615,7 +615,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/usjplkmwk7lx7xb/NARUTO.SHIPPUDEN.Ultimate.Ninja.STORM.4.Road.to.Boruto.Next.Generations-CODEX.torrent/file",
         mediafire: "https://www.mediafire.com/file/usjplkmwk7lx7xb/NARUTO.SHIPPUDEN.Ultimate.Ninja.STORM.4.Road.to.Boruto.Next.Generations-CODEX.torrent/file"
     },
-    imagen: "Images/NUNS4RTB_Square_Temple.webp",
+    imagen: "Images/NUNS4RTB_Square_Temple.jpg",
 },
 {
     id: 37,
@@ -633,7 +633,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/74lkodm5kzxpfgp/The+Last+of+Us+-+Part+I.torrent/file",
         mediafire: "https://www.mediafire.com/file/74lkodm5kzxpfgp/The+Last+of+Us+-+Part+I.torrent/file"
     },
-    imagen: "Images/The_Last_of_Us_Part_I_cover.webp",
+    imagen: "Images/The_Last_of_Us_Part_I_cover.jpg",
 },
 {
     id: 38,
@@ -651,7 +651,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/049ix769l33xjo3/The+Last+of+Us+-+Part+II+Remastered.torrent/file",
         mediafire: "https://www.mediafire.com/file/049ix769l33xjo3/The+Last+of+Us+-+Part+II+Remastered.torrent/file"
     },
-    imagen: "Images/images3.webp",
+    imagen: "Images/images3.jpg",
 },
 {
     id: 39,
@@ -669,7 +669,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/5pqrwpabwd64c8i/Forza.Horizon3.torrent/file",
         mediafire: "https://www.mediafire.com/file/5pqrwpabwd64c8i/Forza.Horizon3.torrent/file"
     },
-    imagen: "Images/Forza_horizon_3_cover_art.webp",
+    imagen: "Images/Forza_horizon_3_cover_art.jpg",
 },
     {
     id: 40,
@@ -706,7 +706,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/zl9ar73nrff0kk5/Mafia+II+-+Definitive+Edition.torrent/file",
         mediafire: "https://www.mediafire.com/file/zl9ar73nrff0kk5/Mafia+II+-+Definitive+Edition.torrent/file"
     },
-    imagen: "Images/Diesel_productv2_mafia-ii-definitive-edition_home_EGS_MafiaIIDefinitiveEdition_RedKiteGames_S2-1200x1600-4cbc94d86b3b82ef8a532fa96a2f28145dae0713-1200x1600-f2cdf5d42079674921f4a36e0254e088.webp",
+    imagen: "Images/Diesel_productv2_mafia-ii-definitive-edition_home_EGS_MafiaIIDefinitiveEdition_RedKiteGames_S2-1200x1600-4cbc94d86b3b82ef8a532fa96a2f28145dae0713-1200x1600-f2cdf5d42079674921f4a36e0254e088.jpg",
 },
 {
     id: 42,
@@ -724,7 +724,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/ad9jgyca90mf4fc/Uncharted+-+LoTC.torrent/file",
         mediafire: "https://www.mediafire.com/file/ad9jgyca90mf4fc/Uncharted+-+LoTC.torrent/file"
     },
-    imagen: "Images/59b04543a434608db49d93cc9332e45f.webp",
+    imagen: "Images/59b04543a434608db49d93cc9332e45f.jpg",
 },
 {
     id: 43,
@@ -778,7 +778,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/q7y9tjlc5lmhdta/Resident.Evil.3-HOODLUM.torrent/file",
         mediafire: "https://www.mediafire.com/file/q7y9tjlc5lmhdta/Resident.Evil.3-HOODLUM.torrent/file"
     },
-    imagen: "Images/Resident_Evil_3.webp",
+    imagen: "Images/Resident_Evil_3.jpg",
 },
    { 
     id: 47,
@@ -796,7 +796,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/dhjsz5zswrbxfem/Left.4.Dead.Build.19703213.torrent/file",
         mediafire: "https://www.mediafire.com/file/dhjsz5zswrbxfem/Left.4.Dead.Build.19703213.torrent/file"
     },
-    imagen: "Images/Left4Dead_Windows_cover.webp",
+    imagen: "Images/Left4Dead_Windows_cover.jpg",
 },
     {
     id: 48,
@@ -814,7 +814,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/lhw3tlmm26ul9ub/Rise+of+the+Tomb+Raider.torrent/file",
         mediafire: "https://www.mediafire.com/file/lhw3tlmm26ul9ub/Rise+of+the+Tomb+Raider.torrent/file"
     },
-    imagen: "Images/Rise_of_the_Tomb_Raider.webp",
+    imagen: "Images/Rise_of_the_Tomb_Raider.jpg",
 },
     {
     id: 49,
@@ -832,7 +832,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/lkio44ic9knrtyw/SleepingDogsPack.torrent/file",
         mediafire: "https://www.mediafire.com/file/lkio44ic9knrtyw/SleepingDogsPack.torrent/file"
     },
-    imagen: "Images/fifa23.webp",
+    imagen: "Images/fifa23.jpg",
 },
     {
     id: 49,
@@ -886,7 +886,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/rt3hgp9b3uizdz7/Lies+of+P.torrent/file",
         mediafire: "https://www.mediafire.com/file/rt3hgp9b3uizdz7/Lies+of+P.torrent/file"
     },
-    imagen: "Images/lies_of_p.webp",
+    imagen: "Images/lies_of_p.jpg",
 },
     {
     id: 52,
@@ -922,7 +922,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/zrr95zrmlymtap2/Spider-man+Remastered.torrent/file",
         mediafire: "https://www.mediafire.com/file/zrr95zrmlymtap2/Spider-man+Remastered.torrent/file"
     },
-    imagen: "Images/EGS_MarvelsSpiderManRemastered_I.webp",
+    imagen: "Images/EGS_MarvelsSpiderManRemastered_I.jpg",
 },
     {
     id: 54,
@@ -940,7 +940,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/lp8am3njs8xrzi4/Call+of+Duty+-+Modern+Warfare+II+[FitGirl+Repack].torrent/file",
         mediafire: "https://www.mediafire.com/file/lp8am3njs8xrzi4/Call+of+Duty+-+Modern+Warfare+II+[FitGirl+Repack].torrent/file"
     },
-    imagen: "Images/Call_of_Duty_Modern_Warfare_II_Key_Art.webp",
+    imagen: "Images/Call_of_Duty_Modern_Warfare_II_Key_Art.jpg",
 },
     {
     id: 55,
@@ -958,7 +958,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/119xzzau5qbbblw/Grounded.v1.4.7.4815.torrent/file",
         mediafire: "https://www.mediafire.com/file/119xzzau5qbbblw/Grounded.v1.4.7.4815.torrent/file"
     },
-    imagen: "Images/grounded.webp",
+    imagen: "Images/grounded.jpg",
 },
     {
     id: 56,
@@ -976,7 +976,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/x3w99l9u8kier8e/Grounded.2.Build.19507695.torrent/file",
         mediafire: "https://www.mediafire.com/file/x3w99l9u8kier8e/Grounded.2.Build.19507695.torrent/file"
     },
-    imagen: "Images/250px-Grounded_2_cover.webp",
+    imagen: "Images/250px-Grounded_2_cover.jpg",
 },
     {
     id: 58,
@@ -994,7 +994,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/w7km4z1y4axewo3/The.Walking.Dead.Survival.Instinct.v20923-Repack.torrent/file",
         mediafire: "https://www.mediafire.com/file/w7km4z1y4axewo3/The.Walking.Dead.Survival.Instinct.v20923-Repack.torrent/file"
     },
-    imagen: "Images/twds.webp",
+    imagen: "Images/twds.jpg",
 },
     {
     id: 59,
@@ -1012,7 +1012,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/f4ylsuhei6n7py6/Bioshock.2.(2010).torrent/file",
         mediafire: "https://www.mediafire.com/file/f4ylsuhei6n7py6/Bioshock.2.(2010).torrent/file"
     },
-    imagen: "Images/YWRvdXNKLmpwZw.webp",
+    imagen: "Images/YWRvdXNKLmpwZw.jpg",
 },
         {
     id: 60,
@@ -1030,7 +1030,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/ajsfizauaikg71o/Monster+Hunter+World.torrent/file",
         mediafire: "https://www.mediafire.com/file/ajsfizauaikg71o/Monster+Hunter+World.torrent/file"
     },
-    imagen: "Images/Monster_Hunter_World_cover_art.webp",
+    imagen: "Images/Monster_Hunter_World_cover_art.jpg",
 },
         {
     id: 61,
@@ -1048,7 +1048,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/boxggsh9po595kl/Monster+Hunter+Rise.torrent/file",
         mediafire: "https://www.mediafire.com/file/boxggsh9po595kl/Monster+Hunter+Rise.torrent/file"
     },
-    imagen: "Images/ebf72e65c0b8c42b36a01f2ba55ac0a1.webp",
+    imagen: "Images/ebf72e65c0b8c42b36a01f2ba55ac0a1.jpg",
 },
     {
     id: 62,
@@ -1066,7 +1066,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/xdxh31mk0bgynoh/Sekiro+-+Shadows+Die+Twice.torrent/file",
         mediafire: "https://www.mediafire.com/file/xdxh31mk0bgynoh/Sekiro+-+Shadows+Die+Twice.torrent/file"
     },
-    imagen: "Images/Sekiro_art.webp",
+    imagen: "Images/Sekiro_art.jpg",
 },
     {
     id: 63,
@@ -1084,7 +1084,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/emn9f3pqht50vbn/Resident+Evil+-+Village.torrent/file",
         mediafire: "https://www.mediafire.com/file/emn9f3pqht50vbn/Resident+Evil+-+Village.torrent/file"
     },
-    imagen: "Images/FkzwjnJknkrFlozkTdeQBMub.webp",
+    imagen: "Images/FkzwjnJknkrFlozkTdeQBMub.jpg",
 },
 {
     id: 64,
@@ -1102,7 +1102,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/999n7syemzawmjx/Forza+Horizon+4.torrent/file",
         mediafire: "https://www.mediafire.com/file/999n7syemzawmjx/Forza+Horizon+4.torrent/file"
     },
-    imagen: "Images/forza-horizon-4-2018102103227_1.webp",
+    imagen: "Images/forza-horizon-4-2018102103227_1.jpg",
 },
     {
     id: 65,
@@ -1138,7 +1138,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/e6rmo8fklgywn8u/Call+Of+Duty+Infinite+Warfare.torrent/file",
         mediafire: "https://www.mediafire.com/file/e6rmo8fklgywn8u/Call+Of+Duty+Infinite+Warfare.torrent/file"
     },
-    imagen: "Images/call-of-duty-infinite-warfare_3c.webp",
+    imagen: "Images/call-of-duty-infinite-warfare_3c.jpg",
 },
     {
     id: 67,
@@ -1174,7 +1174,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/3mdy8mi82hnbhdp/ProjectZomboid+v42.1.0+Opti+BETA.torrent/file",
         mediafire: "https://www.mediafire.com/file/3mdy8mi82hnbhdp/ProjectZomboid+v42.1.0+Opti+BETA.torrent/file"
     },
-    imagen: "Images/who-exactly-is-this-in-the-proje.webp",
+    imagen: "Images/who-exactly-is-this-in-the-proje.jpg",
 },
     {
 id: 69,
@@ -1210,7 +1210,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/wuj9vsderiqlne7/Ghost+of+Tsushima+DC+[FitGirl+Repack].torrent/file",
         mediafire: "https://www.mediafire.com/file/wuj9vsderiqlne7/Ghost+of+Tsushima+DC+[FitGirl+Repack].torrent/file"
     },
-    imagen: "Images/GhostT.webp",
+    imagen: "Images/GhostT.jpg",
 },
     {
     id: 71,
@@ -1228,7 +1228,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/888cp7mtfmlth0c/Diablo+III+-+Eternal+Collection+[FitGirl+Repack]+INT.torrent/file",
         mediafire: "https://www.mediafire.com/file/888cp7mtfmlth0c/Diablo+III+-+Eternal+Collection+[FitGirl+Repack]+INT.torrent/file"
     },
-    imagen: "Images/Diablo_III_cover.webp",
+    imagen: "Images/Diablo_III_cover.jpg",
 },
 {
     id: 72,
@@ -1300,7 +1300,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/afft8zbls36zfsp/Devil+May+Cry+3+Special+GAMESFULLZ.torrent/file",
         mediafire: "https://www.mediafire.com/file/afft8zbls36zfsp/Devil+May+Cry+3+Special+GAMESFULLZ.torrent/file"
     },
-    imagen: "Images/MV5BMzlmZTY0NzQtMGJmZC00MjI0LWI3.webp",
+    imagen: "Images/MV5BMzlmZTY0NzQtMGJmZC00MjI0LWI3.jpg",
 },
     {
     id: 76,
@@ -1336,7 +1336,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/51uj7brkjr8ie7t/ELDEN.RING.v1.16.1-P2P.torrent/file",
         mediafire: "https://www.mediafire.com/file/51uj7brkjr8ie7t/ELDEN.RING.v1.16.1-P2P.torrent/file"
     },
-    imagen: "Images/MV5BZGQxMjYyOTUtNjYyMC00NzdmLWI4.webp",
+    imagen: "Images/MV5BZGQxMjYyOTUtNjYyMC00NzdmLWI4.jpg",
 },
     {
     id: 78,
@@ -1372,7 +1372,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/w32il0elmybqx76/Detroit.Become.Human.Build.7662975.torrent/file",
         mediafire: "https://www.mediafire.com/file/w32il0elmybqx76/Detroit.Become.Human.Build.7662975.torrent/file"
     },
-    imagen: "Images/hola.webp",
+    imagen: "Images/hola.jpg",
 },
     {
     id: 80,
@@ -1390,7 +1390,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/vn17r9kkracbbdi/Stray_v1.5-GAMESFULLZ.torrent/file",
         mediafire: "https://www.mediafire.com/file/vn17r9kkracbbdi/Stray_v1.5-GAMESFULLZ.torrent/file"
     },
-    imagen: "Images/is-there-anywhere-i-can-commissi.webp",
+    imagen: "Images/is-there-anywhere-i-can-commissi.jpg",
 },
     {
     id: 81,
@@ -1408,7 +1408,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/dv1t79aupdi8ybr/Far.Cry.6-EMPRESS.torrent/file",
         mediafire: "https://www.mediafire.com/file/dv1t79aupdi8ybr/Far.Cry.6-EMPRESS.torrent/file"
     },
-    imagen: "Images/250px-Far_cry_6_cover.webp",
+    imagen: "Images/250px-Far_cry_6_cover.jpg",
 },
     {
     id: 82,
@@ -1426,7 +1426,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/6bczjucgonh2b9b/Metal+Gear+Solid.V+The+Phantom+Pain.torrent/file",
         mediafire: "https://www.mediafire.com/file/6bczjucgonh2b9b/Metal+Gear+Solid.V+The+Phantom+Pain.torrent/file"
     },
-    imagen: "Images/Metal-Gear-Solid-V-The-Phantom-P.webp",
+    imagen: "Images/Metal-Gear-Solid-V-The-Phantom-P.jpg",
 },
     {
     id: 84,
@@ -1447,7 +1447,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     extra: {
         vocesLatinas: "https://www.mediafire.com/file    _premium/69suagbuy6fbgn3/CDMW3-LnggPck-LTM.rar/file",
     },
-    imagen: "Images/warfareIII.webp",
+    imagen: "Images/warfareIII.jpg",
 },
     {
     id: 85,
@@ -1465,7 +1465,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/3xa1qo9r56qruoz/Subnautica.torrent/file",
         mediafire: "https://www.mediafire.com/file/3xa1qo9r56qruoz/Subnautica.torrent/file"
     },
-    imagen: "Images/subnautica_cover.webp",
+    imagen: "Images/subnautica_cover.jpg",
 },
     {
     id: 86,
@@ -1501,7 +1501,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/ozi5hsm0db1ssau/Mortal+Kombat+XL.torrent/file",
         mediafire: "https://www.mediafire.com/file/ozi5hsm0db1ssau/Mortal+Kombat+XL.torrent/file"
     },
-    imagen: "Images/MortalXL.webp",
+    imagen: "Images/MortalXL.jpg",
 },
     {
     id: 88,
@@ -1522,7 +1522,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
     extra: {
         onlineFix: "https://www.mediafire.com/file/5wj9wuoztfrnydc/MCCFixOnlyv2.rar/file"
     },
-    imagen: "Images/Halo_-The-Master-Chief-Collectio.webp",
+    imagen: "Images/Halo_-The-Master-Chief-Collectio.jpg",
 },
     {
     id: 89,
@@ -1558,7 +1558,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/7yk8u4q3xs2ijr4/Dragon.Ball.Z.Kakarot.Legendary.Edition.HD.v1.30-Repack.torrent/file",
         mediafire: "https://www.mediafire.com/file/7yk8u4q3xs2ijr4/Dragon.Ball.Z.Kakarot.Legendary.Edition.HD.v1.30-Repack.torrent/file"
     },
-    imagen: "Images/rsiZucmepcNwIbIvMLradwwu.webp",
+    imagen: "Images/rsiZucmepcNwIbIvMLradwwu.jpg",
 },
     {
     id: 91,
@@ -1576,7 +1576,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/o4c5ofpy1d76gxc/Among+Us+v2024.3.5i.torrent/file",
         mediafire: "https://www.mediafire.com/file/o4c5ofpy1d76gxc/Among+Us+v2024.3.5i.torrent/file"
     },
-    imagen: "Images/250px-Among_Us_cover_art.webp",
+    imagen: "Images/250px-Among_Us_cover_art.jpg",
 },
     {
     id: 92,
@@ -1594,7 +1594,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/q4zbw7i5re8hqgq/WarCraft+III+-+Reforged+[FitGirl+Repack].torrent/file",
         mediafire: "https://www.mediafire.com/file/q4zbw7i5re8hqgq/WarCraft+III+-+Reforged+[FitGirl+Repack].torrent/file"
     },
-    imagen: "Images/warcraft-iii-reforged-2020110115.webp",
+    imagen: "Images/warcraft-iii-reforged-2020110115.jpg",
 },
     {
     id: 93,
@@ -1612,7 +1612,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/c9747b52f9wial9/Five.Nights.at.Freddys.Security.Breach.v1.0.20211222-P2P.torrent/file",
         mediafire: "https://www.mediafire.com/file/c9747b52f9wial9/Five.Nights.at.Freddys.Security.Breach.v1.0.20211222-P2P.torrent/file"
     },
-    imagen: "Images/Ruin.webp",
+    imagen: "Images/Ruin.jpg",
 },
     {
     id: 94,
@@ -1630,7 +1630,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/3civynmby7sq4x4/Murdered.Soul.Suspect+GAMESFULLZ.torrent/file",
         mediafire: "https://www.mediafire.com/file/3civynmby7sq4x4/Murdered.Soul.Suspect+GAMESFULLZ.torrent/file"
     },
-    imagen: "Images/mixcollage-14-dec-2024-01-39-am.webp",
+    imagen: "Images/mixcollage-14-dec-2024-01-39-am.jpg",
 },
     {
     id: 95,
@@ -1648,7 +1648,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/oy61z98vyazieqk/NARUTO.SHIPPUDEN.Ultimate.Ninja.STORM.Revolution.torrent/file",
         mediafire: "https://www.mediafire.com/file/oy61z98vyazieqk/NARUTO.SHIPPUDEN.Ultimate.Ninja.STORM.Revolution.torrent/file"
     },
-    imagen: "Images/naruto.webp",
+    imagen: "Images/naruto.jpg",
 },
     {
     id: 97,
@@ -1666,7 +1666,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/2mzr3ytsmbbxhub/The.Walking.Dead.The.Telltale.Definitive.Series.v5952618.torrent/file",
         mediafire: "https://www.mediafire.com/file/2mzr3ytsmbbxhub/The.Walking.Dead.The.Telltale.Definitive.Series.v5952618.torrent/file"
     },
-    imagen: "Images/TWDTTDS.webp",
+    imagen: "Images/TWDTTDS.jpg",
 },
     {
     id: 98,
@@ -1702,7 +1702,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/4f81nlnucwrgito/Blasphemous.2.Mea.Culpa-RUNE.torrent/file",
         mediafire: "https://www.mediafire.com/file/4f81nlnucwrgito/Blasphemous.2.Mea.Culpa-RUNE.torrent/file"
     },
-    imagen: "Images/EGS_Blasphemous2_TheGameKitchen.webp",
+    imagen: "Images/EGS_Blasphemous2_TheGameKitchen.jpg",
 },
    {
     id: 102,
@@ -1784,7 +1784,7 @@ imagen: "Images/Resident_Evil_6_box_artwork.png",
         direct: "https://www.mediafire.com/file/pk8tsiljpvwo2hs/Far+cry+1+y+2.torrent/file",
         mediafire: "https://www.mediafire.com/file/pk8tsiljpvwo2hs/Far+cry+1+y+2.torrent/file"
     },
-    imagen: "Images/COVER.webp",
+    imagen: "Images/COVER.jpg",
 },
     {
     id: 105,
@@ -1825,7 +1825,7 @@ links: {
     direct: "https://www.mediafire.com/file/tskvbgrnta3zdxb/Silent+Hill+2+-+Remake+[FitGirl+Repack].torrent/file",
     mediafire: "https://cuty.io/M8Ff7EDe2"
 },
-imagen: "Images/silent-hill-2-remake_ktez.1200.webp",
+imagen: "Images/silent-hill-2-remake_ktez.1200.jpg",
 },
   {
 id: 107,
@@ -1879,7 +1879,7 @@ links: {
     direct: "https://www.mediafire.com/file/hpjdz43mxgq40ry/Cuphead+GAMESFULLZ.torrent/file",
     mediafire: "https://cuty.io/mA4QyxtPe"
 },
-imagen: "Images/MV5BN2I1ZTBiOTctZDc5MC00YjdkLWI3ZjUtNjI5Y2EzMjM2NGViXkEyXkFqcGc@._V1_.webp",
+imagen: "Images/MV5BN2I1ZTBiOTctZDc5MC00YjdkLWI3ZjUtNjI5Y2EzMjM2NGViXkEyXkFqcGc@._V1_.jpg",
 },
   {
 id: 110,
@@ -1915,7 +1915,7 @@ links: {
     direct: "https://www.mediafire.com/file/jrrni1rg1e4jnim/F1+2014+GAMESFULLZ.torrent/file",
     mediafire: "https://cuty.io/4mQcL8"
 },
-imagen: "Images/co2q4a.webp",
+imagen: "Images/co2q4a.jpg",
 },
   {
 id: 112,
@@ -1933,7 +1933,8 @@ links: {
     direct: "https://www.mediafire.com/file/n2521wj65xsupsj/FIFA+14+V2.1.torrent/file",
     mediafire: "https://cuty.io/AOTY4PPxMH"
 },
-imagen: "Images/FIFA_14.webp",
+imagen: "Images/FIFA_14.jpeg",
+FIFA_14.webp",
 mediafire: "https://cuty.io/FyFer"
 },
 imagen: "Images/co400s.webp",
