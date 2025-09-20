@@ -49,7 +49,7 @@ const recursos = [
             direct: "https://gofile.io/d/avMKZl",
             mediafire: "https://gofile.io/d/avMKZl"
         },
-        imagen: "Images/Postal_2_cover.png",
+        imagen: "Images/Postal_2_cover.webp",
         password: "123"
     },
     {
@@ -84,7 +84,7 @@ const recursos = [
             direct: "https://gofile.io/d/Qax9uu",
             mediafire: "https://gofile.io/d/Qax9uu"
         },
-        imagen: "Images/CoD_Black_Ops_cover.png",
+        imagen: "Images/CoD_Black_Ops_cover.webp",
         password: "123"
     },
     {
