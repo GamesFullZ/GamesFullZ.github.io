@@ -250,7 +250,7 @@ const recursos = [
         direct: "https://www.mediafire.com/file/gmyn8azr945kk23/The-Quarry-SteamRIP.com.torrent/file",
         mediafire: "https://www.mediafire.com/file/gmyn8azr945kk23/The-Quarry-SteamRIP.com.torrent/file"
     },
-    imagen: "Images/The_Quarry_cover_art_1.webp",
+    imagen: "Images/The_Quarry_cover_art.webp",
     password: "123"
   },
   {
