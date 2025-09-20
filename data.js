@@ -19,7 +19,7 @@ const recursos = [
     },
     {
         id: 2,
-        nombre: "Dead Island",
+        nombre: "Dead Island Definitive Edition",
         tipo: "juego",
         descripcion: "Supervivencia en una isla infestada de zombis. Combate cuerpo a cuerpo brutal.",
         requisitos: "SO: Windows 7 / Vista / XP<br>Procesador: Core2Duo 2.66 GHz<br>Memoria: 1 GB RAM<br>Gráficos: GeForce 8600 GT / Radeon HD 2600XT (256 MB VRAM)<br>Almacenamiento: 7 GB",
@@ -27,8 +27,8 @@ const recursos = [
         rating: "⭐⭐⭐☆☆",
         comments: ["Divertido pero bugueado", "Me encanta el combate", "Recomendado para fans de left 4 dead 2"],
         links: {
-            direct: "https://gofile.io/d/78ptPe",
-            mediafire: "https://gofile.io/d/78ptPe"
+            direct: "https://www.mediafire.com/file/af2z1m5ypa0kkhv/Dead.Island.Definitive.Edition.v1.1.2.0-Repack.torrent/file",
+            mediafire: "https://www.mediafire.com/file/af2z1m5ypa0kkhv/Dead.Island.Definitive.Edition.v1.1.2.0-Repack.torrent/file"
         },
         imagen: "Images/Dead_island_PC_packshot.png",
         password: "123"
