@@ -30,7 +30,7 @@ const recursos = [
             direct: "https://gofile.io/d/78ptPe",
             mediafire: "https://gofile.io/d/78ptPe"
         },
-        imagen: "Images/Dead_island_PC_packshot.png",
+        imagen: "Images/Dead_island_PC.webp",
         password: "123"
     },
     {
