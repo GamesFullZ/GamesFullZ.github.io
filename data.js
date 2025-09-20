@@ -2025,4 +2025,22 @@ links: {
 },
 imagen: "Images/jaquette-crysis-2-pc-cover-avant-g-1300898648.webp",
 },
+       {
+id: 118,
+nombre: "Rayman Legends",
+tipo: "juego",
+descripcion: "Juego de plataformas en 2D con un estilo artístico vibrante y animaciones fluidas, donde Rayman y sus amigos recorren mundos llenos de desafíos, enemigos y secretos. Combina niveles clásicos de desplazamiento lateral con fases musicales rítmicas y cooperativo local para hasta cuatro jugadores, ofreciendo una experiencia divertida y variada",
+requisitos: "Windows 7/8/10 64-bit, Intel Core 2 Duo E4400 / AMD Athlon X2 3800+, 2 GB RAM, NVIDIA GeForce 8800 GT / AMD Radeon HD 3870, 6 GB espacio",
+downloads: 0,
+rating: "⭐⭐⭐⭐⭐",
+comments: [
+    "pidan juegos muchachada",
+    "esta vergas"
+],
+links: {
+    direct: "https://www.mediafire.com/file/6uxpedmi5qd9vvy/Rayman.Legends-RELOADED.torrent/file",
+    mediafire: "https://cuty.io/Kq7ya7KSMD9"
+},
+imagen: "Images/R.webp",
+},
 ];
