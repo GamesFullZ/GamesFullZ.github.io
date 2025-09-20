@@ -2007,4 +2007,22 @@ links: {
 },
 imagen: "Images/crysis_3_pc_eu_.webp",
 },
+  {
+id: 117,
+nombre: "Crysis 2",
+tipo: "juego",
+descripcion: "Shooter en primera persona ambientado en una Nueva York devastada por una invasión alienígena y una epidemia mortal. El jugador asume el papel de Alcatraz, un marine equipado con el Nanotraje 2.0, que ofrece habilidades avanzadas de sigilo, fuerza y blindaje, mientras lucha contra fuerzas hostiles humanas y extraterrestres en entornos urbanos detallados",
+requisitos: "Windows XP/Vista/7 64-bit, Intel Core 2 Duo a 2.0 GHz / AMD Athlon 64 X2 2.0 GHz, 2 GB RAM, NVIDIA GeForce 8800 GT / ATI Radeon HD 3850, 9 GB espacio",
+downloads: 0,
+rating: "⭐⭐⭐⭐⭐",
+comments: [
+    "pidan juegos muchachada",
+    "juegazo x2"
+],
+links: {
+    direct: "https://www.mediafire.com/file/hf65dsjbmok14hx/Crysis.2.Maximum.Edition.v1.9.Canek77.torrent/file",
+    mediafire: "https://cuty.io/FU7vF1wCi"
+},
+imagen: "Images/jaquette-crysis-2-pc-cover-avant-g-1300898648.webp",
+},
 ];
