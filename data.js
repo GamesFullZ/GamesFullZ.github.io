@@ -2079,4 +2079,22 @@ links: {
 },
 imagen: "Images/OIP.webp",
 },
+   {
+id: 121,
+nombre: "Little Nightmare",
+tipo: "juego",
+descripcion: "Aventura de terror y plataformas con un estilo oscuro y atmosférico, donde controlas a Six, una niña atrapada en Las Fauces, un misterioso y siniestro complejo habitado por criaturas grotescas. Combina exploración, sigilo y resolución de puzles para escapar, mientras descubres una inquietante historia sin diálogos",
+requisitos: "Windows 7/8/10 64-bit, Intel CPU Core i3, 4 GB RAM, NVIDIA GeForce GTX 460 / AMD Radeon HD 6850, 10 GB espacio",
+downloads: 0,
+rating: "⭐⭐⭐⭐⭐",
+comments: [
+    "pidan juegos muchachada",
+    "relajante"
+],
+links: {
+    direct: "https://www.mediafire.com/file/pvk8shpf85z9334/Little.Nightmares.Complete.Edition.torrent/file",
+    mediafire: "https://cuty.io/Skr6o9j9iMuH"
+},
+imagen: "Images/nig.webp",
+},
 ];
