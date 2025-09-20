@@ -2007,7 +2007,7 @@ links: {
 },
 imagen: "Images/crysis_3_pc_eu_.webp",
 },
-  {
+   {
 id: 117,
 nombre: "Crysis 2",
 tipo: "juego",
