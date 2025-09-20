@@ -2043,4 +2043,22 @@ links: {
 },
 imagen: "Images/R.webp",
 },
+   {
+id: 119,
+nombre: "Crysis",
+tipo: "juego",
+descripcion: "Shooter en primera persona ambientado en una isla tropical ficticia en el Pacífico, donde un escuadrón de fuerzas especiales equipado con nanotrajes debe enfrentarse a soldados norcoreanos y a una amenaza alienígena. Destaca por su mundo abierto, entornos destructibles y el uso estratégico de habilidades como fuerza, velocidad, blindaje y camuflaje",
+requisitos: "Windows XP/Vista 32-bit, Intel Pentium 4 2.8 GHz / AMD Athlon 2800+, 1 GB RAM (1.5 GB en Vista), NVIDIA GeForce 6800 GT / ATI Radeon 9800 Pro, 12 GB espacio",
+downloads: 0,
+rating: "⭐⭐⭐⭐⭐",
+comments: [
+    "pidan juegos muchachada",
+    "esta vergas"
+],
+links: {
+    direct: "https://www.mediafire.com/file/ib6nvf4myznf7kk/Crysis.Build.10207757-Repack.torrent/file",
+    mediafire: "https://cuty.io/htibB"
+},
+imagen: "Images/Crysis-pc-free-download.webp",
+},
 ];
