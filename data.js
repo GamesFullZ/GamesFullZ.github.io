@@ -84,7 +84,7 @@ const recursos = [
             direct: "https://gofile.io/d/Qax9uu",
             mediafire: "https://gofile.io/d/Qax9uu"
         },
-        Imagen: "Images/CoD_Black_Ops_cover.webp",
+        imagen: "Images/CoD_Black_Ops_cover.webp",
         password: "123"
     },
     {
