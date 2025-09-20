@@ -2061,4 +2061,22 @@ links: {
 },
 imagen: "Images/Crysis-pc-free-download.webp",
 },
+   {
+id: 120,
+nombre: "Rayman Origins",
+tipo: "juego",
+descripcion: "Juego de plataformas en 2D con un estilo artístico dibujado a mano, donde Rayman, Globox y los Diminutos deben salvar el Claro de los Sueños de criaturas oscuras. Ofrece más de 60 niveles llenos de acción, exploración y humor, con la posibilidad de jugar en modo cooperativo local para hasta cuatro jugadores",
+requisitos: "Windows XP/Vista/7, Intel Pentium 4 a 3.0 GHz / AMD Athlon 64 3000+, 1 GB RAM (2 GB en Vista/7), NVIDIA GeForce 6800 / ATI Radeon X600, 6 GB espacio",
+downloads: 0,
+rating: "⭐⭐⭐⭐⭐",
+comments: [
+    "pidan juegos muchachada",
+    "me gusta un chingo el estilo"
+],
+links: {
+    direct: "https://www.mediafire.com/file/sq4v2cnzv871iv5/Rayman.Origins.v1.0.32504.torrent/filee",
+    mediafire: "https://cuty.io/nn16wHT4QODG"
+},
+imagen: "Images/OIP.webp",
+},
 ];
