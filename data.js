@@ -68,7 +68,7 @@ const recursos = [
             direct: "https://www.mediafire.com/file/h7alfyzl5lwrqv4/Left+4+Dead+2.torrent/file",
             mediafire: "https://www.mediafire.com/file/h7alfyzl5lwrqv4/Left+4+Dead+2.torrent/file"
         },
-        imagen: "Images/Left4Dead2.webp",
+        imagen: "Images/Left4Dead2.png",
         password: "123"
     },
     {
