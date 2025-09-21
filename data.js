@@ -2246,4 +2246,23 @@ imagen: "Images/nig.webp",
     },
     imagen: "Images/the crew.webp",
 },
+    {
+    id: 130,
+    nombre: "Way of the Hunter",
+    tipo: "juego",
+    descripcion: "Simulador de caza en mundo abierto desarrollado por Nine Rocks Games y publicado por THQ Nordic. Los jugadores exploran vastos entornos naturales en América y Europa, con ecosistemas realistas y fauna salvaje detallada. El juego ofrece una experiencia inmersiva con armas auténticas, mecánicas de rastreo, gestión de reservas de caza y una narrativa que combina tradición y conservación.",
+    requisitos: "Windows 10 64-bit, Procesador Intel Core i7-7700 / AMD Ryzen 5 1600, 8 GB RAM, NVIDIA GeForce GTX 1070 / AMD Radeon RX 5600 XT, DirectX 11, 15 GB espacio",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐",
+    comments: [
+        "los paisajes son impresionantes",
+        "muy realista en la simulación de caza",
+        "ideal para jugar con calma y paciencia"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/ilxflopgd79omsx/Way+of+the+Hunter.torrent/file",
+        mediafire: "https://cuty.io/Ydt6q"
+    },
+    imagen: "Images/EGS_WayoftheHunter_NineRocksGames_S4_1200x1600-5dd9ed2026622e31045803363ec18a11.webp",
+},
 ];
