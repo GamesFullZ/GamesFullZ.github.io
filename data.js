@@ -2170,7 +2170,7 @@ imagen: "Images/nig.webp",
     },
     imagen: "Images/a-blue-version-of-the-ds3-the-fire-fades-edition-japanese-v0-zv12p4r1f37a1.webp",
 },
-    {
+   {
     id: 126,
     nombre: "WWE 2K25",
     tipo: "juego",
