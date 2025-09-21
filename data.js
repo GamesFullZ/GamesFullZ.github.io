@@ -2189,4 +2189,23 @@ imagen: "Images/nig.webp",
     },
     imagen: "Images/WWE-2K25-Cover.webp",
 },
+    {
+    id: 127,
+    nombre: "Planet Zoo",
+    tipo: "juego",
+    descripcion: "Simulador de construcción y gestión de zoológicos desarrollado por Frontier Developments. Los jugadores pueden diseñar hábitats detallados, cuidar de una gran variedad de animales con comportamientos realistas y gestionar todos los aspectos de un parque zoológico, desde la economía hasta la conservación. Con gráficos impresionantes y un enfoque en el bienestar animal, Planet Zoo es una experiencia profunda y creativa para los amantes de la simulación.",
+    requisitos: "Windows 7/8/10 64-bit, Procesador Intel i5-2500 / AMD FX-6350, 8 GB RAM, NVIDIA GeForce GTX 770 (2 GB) / AMD Radeon R9 270X (2 GB), DirectX 11, 16 GB espacio",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "muy completo y educativo",
+        "los animales se ven súper realistas",
+        "ideal para fans de los simuladores"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/kgyyjdphke4v8hp/Planet+Zoo.torrent/file",
+        mediafire: "https://cuty.io/S0Z3Y"
+    },
+    imagen: "Images/planet zoo.webp",
+},
 ];
