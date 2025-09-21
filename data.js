@@ -2244,6 +2244,6 @@ imagen: "Images/nig.webp",
         direct: "https://www.mediafire.com/file/ccxydzjx5twpk6u/The+Crew.torrent/file",
         mediafire: "https://cuty.io/JOBQWy9"
     },
-    imagen: "Images/the crew.webpg",
+    imagen: "Images/the crew.webp",
 },
 ];
