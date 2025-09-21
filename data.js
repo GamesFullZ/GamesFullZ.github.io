@@ -2115,4 +2115,22 @@ imagen: "Images/nig.webp",
     },
     imagen: "Images/7573623-mortal-kombat-11-nintendo-switch-front-cover.webp",
 },
+    {
+    id: 123,
+    nombre: "Borderlands 2",
+    tipo: "juego",
+    descripcion: "Shooter en primera persona con elementos de rol y mundo abierto, ambientado en el planeta Pandora. Los jugadores asumen el papel de uno de los nuevos buscadores de la Cámara, cada uno con habilidades únicas, para enfrentarse a la corporación Hyperion y su líder Handsome Jack. Combina acción intensa, humor característico y un extenso arsenal de armas generadas de forma procedimental.",
+    requisitos: "Windows XP SP3/Vista/7, Procesador Dual Core a 2.4 GHz, 2 GB RAM, NVIDIA GeForce 8500 / ATI Radeon HD 2600, 13 GB espacio",
+    downloads: 0,
+    rating: "⭐⭐⭐",
+    comments: [
+        "pidan juegos muchachada",
+        "cooperativo muy divertido"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/a69arunot8zhpge/Borderlands+2.torrent/file",
+        mediafire: "https://cuty.io/1XNKf7A"
+    },
+    imagen: "Images/4d8220a585f9718eb779c8b72794a1f8.jpg.webp",
+},
 ];
