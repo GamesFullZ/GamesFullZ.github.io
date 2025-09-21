@@ -2208,4 +2208,23 @@ imagen: "Images/nig.webp",
     },
     imagen: "Images/planet zoo.webp",
 },
+    {
+    id: 128,
+    nombre: "Call of Duty: Advanced Warfare",
+    tipo: "juego",
+    descripcion: "Shooter en primera persona desarrollado por Sledgehammer Games y publicado por Activision. Ambientado en un futuro cercano, los jugadores asumen el papel de un soldado equipado con un exoesqueleto avanzado que otorga habilidades sobrehumanas como saltos potentes, camuflaje y fuerza mejorada. Con una campaña cinematográfica protagonizada por Kevin Spacey, un multijugador dinámico y el modo Exo-Zombies, Advanced Warfare redefinió la movilidad en la saga Call of Duty.",
+    requisitos: "Windows 7/8/8.1 64-bit, Procesador Intel Core i3-530 @ 2.93 GHz / AMD Phenom II X4 810 @ 2.60 GHz, 6 GB RAM, NVIDIA GeForce GTX 460 / ATI Radeon HD 5870, DirectX 11, 55 GB espacio",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐",
+    comments: [
+        "el exoesqueleto cambia totalmente la jugabilidad",
+        "campaña muy cinematográfica",
+        "el multijugador es rápido y frenético"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/vb64ewzw5eu4vzy/Call.of.Duty.Advanced.Warfare-CODEX.torrent/file",
+        mediafire: "https://cuty.io/kpch38sG"
+    },
+    imagen: "Images/7668651-call-of-duty-advanced-warfare-windows-front-cover.webp",
+},
 ];
