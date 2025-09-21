@@ -2152,4 +2152,22 @@ imagen: "Images/nig.webp",
     },
     imagen: "Images/8460730-doom-windows-front-cover.webp",
 },
+    {
+    id: 125,
+    nombre: "Dark Souls 3",
+    tipo: "juego",
+    descripcion: "RPG de acción en tercera persona desarrollado por FromSoftware. Ambientado en un oscuro mundo de fantasía medieval, los jugadores asumen el papel del 'Unkindled' en su misión por enlazar la Llama. Con combates desafiantes, jefes imponentes y una atmósfera opresiva, Dark Souls 3 combina exploración, estrategia y precisión en cada enfrentamiento.",
+    requisitos: "Windows 7 SP1 64bit, Procesador Intel Core i3-2100 / AMD FX-6300, 4 GB RAM, NVIDIA GeForce GTX 750 Ti / ATI Radeon HD 7950, 25 GB espacio",
+    downloads: 0,
+    rating: "?????",
+    comments: [
+        "difícil pero increíblemente satisfactorio",
+        "la ambientación es brutal, cada jefe es una obra de arte"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/vo4xjz6m8pc830z/Dark+Souls+3+[RePAck].zip.torrent/file",
+        mediafire: "https://www.mediafire.com/file/vo4xjz6m8pc830z/Dark+Souls+3+[RePAck].zip.torrent/file"
+    },
+imagen: "Images/ab67616d0000b2735b8b6bc0bd351d7129386d7f.webp",
+},
 ];
