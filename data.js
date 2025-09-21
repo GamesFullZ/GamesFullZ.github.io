@@ -2133,4 +2133,23 @@ imagen: "Images/nig.webp",
     },
     imagen: "Images/4d8220a585f9718eb779c8b72794a1f8.jpg.webp",
 },
+    {
+    id: 124,
+    nombre: "DOOM (2016)",
+    tipo: "juego",
+    descripcion: "Shooter en primera persona desarrollado por id Software y publicado por Bethesda. Es un reinicio de la saga DOOM que devuelve la acción frenética, el combate brutal y la exploración de instalaciones en Marte infestadas de demonios. Con un arsenal icónico, ejecuciones cuerpo a cuerpo (Glory Kills) y una banda sonora intensa, DOOM 2016 redefine el género con velocidad y violencia estilizada.",
+    requisitos: "Windows 7/8.1/10 (64-bit), Procesador Intel Core i5-2400 / AMD FX-8320, 8 GB RAM, NVIDIA GTX 670 2GB / AMD Radeon HD 7870 2GB, 55 GB espacio",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "acción pura y sin pausas",
+        "la música y la jugabilidad son una locura",
+        "ideal para liberar adrenalina"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/jvaoqkr824ggep6/DOOM.torrent/file",
+        mediafire: "https://cuty.io/vpxjw2098ek"
+    },
+    imagen: "Images/8460730-doom-windows-front-cover.webp",
+},
 ];
