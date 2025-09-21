@@ -2168,6 +2168,6 @@ imagen: "Images/nig.webp",
         direct: "https://www.mediafire.com/file/vo4xjz6m8pc830z/Dark+Souls+3+[RePAck].zip.torrent/file",
         mediafire: "https://www.mediafire.com/file/vo4xjz6m8pc830z/Dark+Souls+3+[RePAck].zip.torrent/file"
     },
-    imagen: "Images/ab67616d0000b2735b8b6bc0bd351d7129386d7f.webp",
+    imagen: "Images/ab67616d0000b2735b8b6bc0bd351d7129386d7f.jpg",
 },
 ];
