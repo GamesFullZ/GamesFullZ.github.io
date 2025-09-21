@@ -2041,7 +2041,7 @@ links: {
     direct: "https://www.mediafire.com/file/6uxpedmi5qd9vvy/Rayman.Legends-RELOADED.torrent/file",
     mediafire: "https://cuty.io/Kq7ya7KSMD9"
 },
-imagen: "Images/R.webp",
+imagen: "Images/Rayman.webp",
 },
    {
 id: 119,
