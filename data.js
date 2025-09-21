@@ -2170,4 +2170,23 @@ imagen: "Images/nig.webp",
     },
     imagen: "Images/a-blue-version-of-the-ds3-the-fire-fades-edition-japanese-v0-zv12p4r1f37a1.webp",
 },
+    {
+    id: 126,
+    nombre: "WWE 2K25",
+    tipo: "juego",
+    descripcion: "Simulador de lucha libre profesional desarrollado por Visual Concepts y publicado por 2K Sports. WWE 2K25 ofrece un roster actualizado con superestrellas clásicas y actuales, modos de juego como MyRise, Universe y MyFaction, además de mejoras gráficas y de jugabilidad que buscan recrear la experiencia televisiva de la WWE con realismo y espectáculo.",
+    requisitos: "Windows 10/11 64-bit, Procesador Intel Core i5-3550 / AMD FX 8150, 8 GB RAM, NVIDIA GeForce GTX 1060 (6 GB) / AMD Radeon RX 480 (4 GB), DirectX 12, 80 GB espacio",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐",
+    comments: [
+        "el roster está brutal este año",
+        "mejor jugabilidad que en 2K23",
+        "ideal para fans de la WWE"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/dpaiot83oj8m5qr/WWE+2K25.torrent/file",
+        mediafire: "https://cuty.io/ojjW3"
+    },
+    imagen: "Images/WWE-2K25-Cover.webp",
+},
 ];
