@@ -2227,4 +2227,23 @@ imagen: "Images/nig.webp",
     },
     imagen: "Images/7668651-call-of-duty-advanced-warfare-windows-front-cover.webp",
 },
+    {
+    id: 129,
+    nombre: "The Crew",
+    tipo: "juego",
+    descripcion: "Juego de carreras en mundo abierto desarrollado por Ivory Tower y Ubisoft. Ambientado en una recreación a escala de los Estados Unidos, permite recorrer ciudades, carreteras y paisajes icónicos. Incluye un modo historia, desafíos online y cooperativos, además de una gran variedad de vehículos personalizables. Su propuesta principal es la experiencia de conducción social y conectada.",
+    requisitos: "Windows 7/8/8.1/10 64-bit, Procesador Intel Core 2 Quad Q9300 @ 2.5 GHz / AMD Athlon II X4 620 @ 2.6 GHz, 4 GB RAM, NVIDIA GeForce GTX 260 / AMD Radeon HD 4870, DirectX 11, 30 GB espacio",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐",
+    comments: [
+        "el mapa enorme es lo mejor",
+        "ideal para jugar con amigos online",
+        "gran variedad de coches y personalización"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/ccxydzjx5twpk6u/The+Crew.torrent/file",
+        mediafire: "https://cuty.io/JOBQWy9"
+    },
+    imagen: "Images/the crew.webpg",
+},
 ];
