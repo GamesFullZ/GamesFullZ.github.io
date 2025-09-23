@@ -2285,4 +2285,23 @@ imagen: "Images/nig.webp",
     imagen: "Images/chernobyl.webp"
 }
 ];
+{
+    id: 125,
+    nombre: "S.T.A.L.K.E.R.: Shadow of Chernobyl",
+    tipo: "juego",
+    descripcion: "FPS con elementos de survival horror y rol desarrollado por GSC Game World. Ambientado en la Zona de Exclusión de Chernóbil tras un segundo desastre nuclear, los jugadores asumen el papel del 'Marcado', un hombre sin memoria que busca descubrir su identidad y los secretos de la Zona. Combina exploración no lineal, facciones enemigas, anomalías letales y criaturas mutantes en un mundo hostil y atmosférico.",
+    requisitos: "Windows XP/Vista/7, Procesador Intel Pentium 4 2.0 GHz / AMD XP 2200+, 512 MB RAM, NVIDIA GeForce 5700 / ATI Radeon 9600, 10 GB espacio",
+    downloads: 0,
+    rating: "★★★★☆",
+    comments: [
+        "la atmósfera es única, realmente sientes el miedo y la tensión",
+        "un clásico del survival FPS, imprescindible para fans de lo postapocalíptico"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/z6odi0iymdseuqn/Stalker+Shadow+of+Chernobyl+-+[DODI+Repack].torrent/file",
+        mediafire: "https://www.mediafire.com/file/z6odi0iymdseuqn/Stalker+Shadow+of+Chernobyl+-+[DODI+Repack].torrent/file"
+    },
+    imagen: "Images/S.T.A.L.K.E.R._Shadow_of_Chernobyl_DVD_cover.webp",
+},
+
 
