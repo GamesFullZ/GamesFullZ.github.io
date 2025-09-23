@@ -2303,5 +2303,23 @@ imagen: "Images/nig.webp",
     },
     imagen: "Images/S.T.A.L.K.E.R._Shadow_of_Chernobyl_DVD_cover.webp",
 },
-
+];
+{
+    id: 126,
+    nombre: "Dante's Inferno",
+    tipo: "juego",
+    descripcion: "Hack and slash en tercera persona desarrollado por Visceral Games y publicado por Electronic Arts. Inspirado en 'La Divina Comedia' de Dante Alighieri, el juego sigue a Dante, un cruzado que desciende a los nueve círculos del Infierno para rescatar el alma de su amada Beatriz. Con combates rápidos, armas icónicas como la guadaña de la Muerte y la cruz sagrada, ofrece una experiencia intensa llena de jefes grotescos y escenarios infernales.",
+    requisitos: "Windows 7/8/10 (32 o 64 bits), Procesador Intel Core 2 Duo 2.4 GHz o equivalente, 2 GB RAM, NVIDIA GeForce 8800 GT / ATI Radeon HD 3850, 10 GB espacio libre",
+    downloads: 0,
+    rating: "★★★★☆",
+    comments: [
+        "muy brutal, la ambientación del infierno es impresionante",
+        "me recuerda a God of War pero con un toque más oscuro"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/59qkgeulwzwxmnv/DANTE`S+INFERNO.torrent/file",
+        mediafire: "https://www.mediafire.com/file/59qkgeulwzwxmnv/DANTE`S+INFERNO.torrent/file"
+    },
+    imagen: "Images/DNTSINF.webp",
+},
 
