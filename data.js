@@ -2286,7 +2286,7 @@ imagen: "Images/nig.webp",
 }
 ];
 {
-    id: 125,
+    id: 132,
     nombre: "S.T.A.L.K.E.R.: Shadow of Chernobyl",
     tipo: "juego",
     descripcion: "FPS con elementos de survival horror y rol desarrollado por GSC Game World. Ambientado en la Zona de Exclusión de Chernóbil tras un segundo desastre nuclear, los jugadores asumen el papel del 'Marcado', un hombre sin memoria que busca descubrir su identidad y los secretos de la Zona. Combina exploración no lineal, facciones enemigas, anomalías letales y criaturas mutantes en un mundo hostil y atmosférico.",
@@ -2305,7 +2305,7 @@ imagen: "Images/nig.webp",
 },
 ];
 {
-    id: 126,
+    id: 133,
     nombre: "Dante's Inferno",
     tipo: "juego",
     descripcion: "Hack and slash en tercera persona desarrollado por Visceral Games y publicado por Electronic Arts. Inspirado en 'La Divina Comedia' de Dante Alighieri, el juego sigue a Dante, un cruzado que desciende a los nueve círculos del Infierno para rescatar el alma de su amada Beatriz. Con combates rápidos, armas icónicas como la guadaña de la Muerte y la cruz sagrada, ofrece una experiencia intensa llena de jefes grotescos y escenarios infernales.",
