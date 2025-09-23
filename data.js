@@ -2285,6 +2285,7 @@ imagen: "Images/nig.webp",
     imagen: "Images/chernobyl.webp"
 }
 ];
+
 {
     id: 132,
     nombre: "S.T.A.L.K.E.R.: Shadow of Chernobyl",
