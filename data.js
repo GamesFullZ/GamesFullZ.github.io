@@ -2304,9 +2304,7 @@ imagen: "Images/nig.webp",
     },
     imagen: "Images/S.T.A.L.K.E.R._Shadow_of_Chernobyl_DVD_cover.webp",
 },
-];
 
-},
  id: 133,
     nombre: "Dante's Inferno",
     tipo: "juego",
