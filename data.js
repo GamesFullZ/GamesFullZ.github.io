@@ -2265,7 +2265,7 @@ imagen: "Images/nig.webp",
     },
     imagen: "Images/EGS_WayoftheHunter_NineRocksGames_S4_1200x1600-5dd9ed2026622e31045803363ec18a11.webp",
 },
-    {
+   {
     id: 131,
     nombre: "S.T.A.L.K.E.R.: Shadow of Chernobyl",
     tipo: "juego",
@@ -2283,40 +2283,5 @@ imagen: "Images/nig.webp",
         mediafire: "https://cuty.io/jrJc"
     },
     imagen: "Images/chernobyl.webp"
-},
-{
-    id: 132,
-    nombre: "S.T.A.L.K.E.R.: Shadow of Chernobyl",
-    tipo: "juego",
-    descripcion: "FPS con elementos de survival horror y rol desarrollado por GSC Game World. Ambientado en la Zona de Exclusión de Chernóbil tras un segundo desastre nuclear, los jugadores asumen el papel del 'Marcado', un hombre sin memoria que busca descubrir su identidad y los secretos de la Zona. Combina exploración no lineal, facciones enemigas, anomalías letales y criaturas mutantes en un mundo hostil y atmosférico.",
-    requisitos: "Windows XP/Vista/7, Procesador Intel Pentium 4 2.0 GHz / AMD XP 2200+, 512 MB RAM, NVIDIA GeForce 5700 / ATI Radeon 9600, 10 GB espacio",
-    downloads: 0,
-    rating: "★★★★☆",
-    comments: [
-        "la atmósfera es única, realmente sientes el miedo y la tensión",
-        "un clásico del survival FPS, imprescindible para fans de lo postapocalíptico"
-    ],
-    links: {
-        direct: "https://www.mediafire.com/file/z6odi0iymdseuqn/Stalker+Shadow+of+Chernobyl+-+[DODI+Repack].torrent/file",
-        mediafire: "https://www.mediafire.com/file/z6odi0iymdseuqn/Stalker+Shadow+of+Chernobyl+-+[DODI+Repack].torrent/file"
-    },
-    imagen: "Images/S.T.A.L.K.E.R._Shadow_of_Chernobyl_DVD_cover.webp",
-},
-{
- id: 133,
-    nombre: "Dante's Inferno",
-    tipo: "juego",
-    descripcion: "Hack and slash en tercera persona desarrollado por Visceral Games y publicado por Electronic Arts. Inspirado en 'La Divina Comedia' de Dante Alighieri, el juego sigue a Dante, un cruzado que desciende a los nueve círculos del Infierno para rescatar el alma de su amada Beatriz. Con combates rápidos, armas icónicas como la guadaña de la Muerte y la cruz sagrada, ofrece una experiencia intensa llena de jefes grotescos y escenarios infernales.",
-    requisitos: "Windows 7/8/10 (32 o 64 bits), Procesador Intel Core 2 Duo 2.4 GHz o equivalente, 2 GB RAM, NVIDIA GeForce 8800 GT / ATI Radeon HD 3850, 10 GB espacio libre",
-    downloads: 0,
-    rating: "★★★★☆",
-    comments: [
-        "muy brutal, la ambientación del infierno es impresionante",
-        "me recuerda a God of War pero con un toque más oscuro"
-    ],
-    links: {
-        direct: "https://www.mediafire.com/file/59qkgeulwzwxmnv/DANTE`S+INFERNO.torrent/file",
-        mediafire: "https://www.mediafire.com/file/59qkgeulwzwxmnv/DANTE`S+INFERNO.torrent/file"
-    },
-    imagen: "Images/DNTSINF.webp",
-
+}
+];
