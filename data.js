@@ -2283,9 +2283,7 @@ imagen: "Images/nig.webp",
         mediafire: "https://cuty.io/jrJc"
     },
     imagen: "Images/chernobyl.webp"
-}
-];
-
+},
 {
     id: 132,
     nombre: "S.T.A.L.K.E.R.: Shadow of Chernobyl",
