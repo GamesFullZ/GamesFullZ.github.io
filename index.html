@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GamesFullZ - Descarga Juegos Gratis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>GamesFullZ - Descarga Juegos Gratis | Gaming Hub</title>
     
     <!-- Meta tags mejorados para SEO -->
-    <meta name="description" content="Descubre y descarga juegos gratis en GamesFullZ. Revive el historial de tus títulos favoritos con descargas seguras y verificadas.">
-    <meta name="keywords" content="juegos gratis, descarga juegos, videojuegos, PC games, descarga segura">
+    <meta name="description" content="Descubre y descarga juegos gratis en GamesFullZ. Revive el historial de tus títulos favoritos con descargas seguras y verificadas. Gaming Hub con categorías, modo oscuro y enlaces verificados.">
+    <meta name="keywords" content="juegos gratis, descarga juegos, videojuegos, PC games, descarga segura, gaming, modo oscuro, categorías">
     <meta name="author" content="GamesFullZ">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#00ff41">
+    <meta name="color-scheme" content="dark light">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -40,6 +42,167 @@
     
     <!-- Enlace al CSS externo -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gamer-styles.css">
+    
+    <!-- CSS crítico para modo gamer -->
+    <style>
+        :root {
+            --primary-neon: #00ff41;
+            --secondary-neon: #ff0080;
+            --accent-neon: #8000ff;
+            --bg-dark: #0a0a0a;
+            --bg-darker: #000000;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --neon-glow: 0 0 20px currentColor;
+        }
+        
+        [data-theme="light"] {
+            --bg-dark: #f5f5f5;
+            --bg-darker: #ffffff;
+            --text-primary: #000000;
+            --text-secondary: #333333;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
+            color: var(--text-primary);
+            font-family: 'Exo 2', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .neon-text {
+            color: var(--primary-neon);
+            text-shadow: var(--neon-glow);
+        }
+        
+        .gamer-btn {
+            background: linear-gradient(45deg, var(--primary-neon), var(--accent-neon));
+            border: 2px solid var(--primary-neon);
+            color: var(--bg-darker);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+        }
+        
+        .gamer-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 30px rgba(0, 255, 65, 0.6);
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            background: var(--bg-dark);
+            border: 2px solid var(--primary-neon);
+            color: var(--primary-neon);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--neon-glow);
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+        
+        .notification-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, var(--accent-neon), var(--secondary-neon));
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 1002;
+            transform: translateY(-100%);
+            transition: transform 0.5s ease;
+        }
+        
+        .notification-banner.show {
+            transform: translateY(0);
+        }
+        
+        .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+            justify-content: center;
+        }
+        
+        .category-btn {
+            background: transparent;
+            border: 2px solid var(--primary-neon);
+            color: var(--primary-neon);
+            padding: 8px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+        }
+        
+        .category-btn.active,
+        .category-btn:hover {
+            background: var(--primary-neon);
+            color: var(--bg-darker);
+            box-shadow: var(--neon-glow);
+        }
+        
+        .link-status {
+            display: inline-block;
+            margin-left: 8px;
+            font-size: 1.2em;
+        }
+        
+        .link-status.verified {
+            color: var(--primary-neon);
+        }
+        
+        .link-status.broken {
+            color: var(--secondary-neon);
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .category-filters {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .theme-toggle {
+                top: 10px;
+                right: 10px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
     
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795479991735761" crossorigin="anonymous"></script>
@@ -73,6 +236,20 @@
     </script>
 </head>
 <body data-theme="dark" id="top">
+    <!-- Botón de cambio de tema -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema" title="Alternar modo oscuro/claro">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+    
+    <!-- Banner de notificación de juegos nuevos -->
+    <div id="newGameBanner" class="notification-banner" role="alert" aria-live="polite">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+            <span>🔥 <strong>Nuevo:</strong> <span id="newGameName">Cyberpunk 2077</span> añadido hoy</span>
+            <button id="closeBanner" style="background: none; border: none; color: white; font-size: 1.5em; cursor: pointer;" aria-label="Cerrar notificación">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
     <!-- Pantalla de bienvenida animada -->
     <div id="welcomeScreen" class="welcome-screen" role="banner" aria-label="Pantalla de carga">
         <div class="welcome-content">
@@ -114,7 +291,7 @@
             
             <div class="header-actions">
                 <!-- Botón hacia el grupo de Telegram -->
-                <a href="https://web.telegram.org/k/#-4959297719" target="_blank" rel="noopener noreferrer" class="boton-telegram" aria-label="Únete a nuestro grupo de Telegram">
+                <a href="https://web.telegram.org/k/#-4959297719" target="_blank" rel="noopener noreferrer" class="boton-telegram gamer-btn" aria-label="Únete a nuestro grupo de Telegram">
                     <i class="fab fa-telegram-plane" aria-hidden="true"></i> 
                     <span>Telegram</span>
                 </a>
@@ -125,6 +302,31 @@
     <main class="container main-content" role="main">
         <!-- Sección de juegos -->
         <section id="games-section" class="content-section active" aria-label="Catálogo de juegos">
+            <!-- Filtros de categorías -->
+            <div class="category-filters" role="tablist" aria-label="Filtros de categorías">
+                <button class="category-btn active" data-category="all" role="tab" aria-selected="true" aria-controls="gallery">
+                    <i class="fas fa-th-large" aria-hidden="true"></i> Todos
+                </button>
+                <button class="category-btn" data-category="accion" role="tab" aria-selected="false" aria-controls="gallery">
+                    <i class="fas fa-fire" aria-hidden="true"></i> Acción
+                </button>
+                <button class="category-btn" data-category="terror" role="tab" aria-selected="false" aria-controls="gallery">
+                    <i class="fas fa-skull" aria-hidden="true"></i> Terror
+                </button>
+                <button class="category-btn" data-category="indie" role="tab" aria-selected="false" aria-controls="gallery">
+                    <i class="fas fa-palette" aria-hidden="true"></i> Indie
+                </button>
+                <button class="category-btn" data-category="multijugador" role="tab" aria-selected="false" aria-controls="gallery">
+                    <i class="fas fa-users" aria-hidden="true"></i> Multijugador
+                </button>
+                <button class="category-btn" data-category="aventura" role="tab" aria-selected="false" aria-controls="gallery">
+                    <i class="fas fa-compass" aria-hidden="true"></i> Aventura
+                </button>
+                <button class="category-btn" data-category="estrategia" role="tab" aria-selected="false" aria-controls="gallery">
+                    <i class="fas fa-chess" aria-hidden="true"></i> Estrategia
+                </button>
+            </div>
+            
             <!-- Galería de juegos -->
             <div class="gallery__container" id="gallery" role="grid" aria-label="Galería de juegos">
                 <!-- Los juegos se cargarán dinámicamente -->
@@ -225,7 +427,7 @@
                     <textarea name="Mensaje" id="mensaje" rows="5" placeholder="Escribe tu mensaje..." required aria-describedby="mensaje-error"></textarea>
                     <div id="mensaje-error" class="error-message" role="alert" aria-live="polite"></div>
                 </div>
-                <button type="submit" aria-describedby="submit-help">
+                <button type="submit" class="gamer-btn" aria-describedby="submit-help">
                     <span>Enviar mensaje</span> 
                     <i class="fas fa-paper-plane" aria-hidden="true"></i>
                 </button>
@@ -265,10 +467,12 @@
                             <a href="#" id="linkGofile" target="_blank" rel="noopener noreferrer" class="download-link gofile" aria-label="Descargar desde Gofile">
                                 <i class="fas fa-cloud" aria-hidden="true"></i> 
                                 <span>Gofile</span>
+                                <span class="link-status" id="gofile-status" aria-label="Estado del enlace"></span>
                             </a>
                             <a href="#" id="linkMediafire" target="_blank" rel="noopener noreferrer" class="download-link mediafire" aria-label="Descargar desde Mediafire">
                                 <i class="fas fa-file-download" aria-hidden="true"></i> 
                                 <span>Mediafire</span>
+                                <span class="link-status" id="mediafire-status" aria-label="Estado del enlace"></span>
                             </a>
                         </div>
                     </div>
@@ -295,7 +499,7 @@
                             <label for="commentInput" class="sr-only">Escribe tu comentario</label>
                             <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput" aria-describedby="comment-help"></textarea>
                             <div id="comment-help" class="sr-only">Tu comentario será visible para otros usuarios</div>
-                            <button id="addCommentBtn" type="button">Publicar</button>
+                            <button id="addCommentBtn" type="button" class="gamer-btn">Publicar</button>
                         </div>
                     </div>
                 </div>
@@ -551,10 +755,136 @@
     <!-- Carga de datos y scripts -->
     <script src="data.js" defer></script>
     <script src="script.js" defer></script>
+    <script src="gamer-features.js" defer></script>
     
     <!-- Script optimizado para la animación del logo -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Sistema de cambio de tema
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            const html = document.documentElement;
+            
+            // Cargar tema guardado
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+            
+            themeToggle.addEventListener('click', function() {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+            
+            function updateThemeIcon(theme) {
+                if (themeIcon) {
+                    themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+                }
+            }
+            
+            // Sistema de notificaciones
+            const banner = document.getElementById('newGameBanner');
+            const closeBanner = document.getElementById('closeBanner');
+            
+            // Mostrar banner después de 2 segundos
+            setTimeout(() => {
+                if (banner) {
+                    banner.classList.add('show');
+                }
+            }, 2000);
+            
+            if (closeBanner) {
+                closeBanner.addEventListener('click', function() {
+                    banner.classList.remove('show');
+                });
+            }
+            
+            // Sistema de categorías
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const gallery = document.getElementById('gallery');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remover clase active de todos los botones
+                    categoryBtns.forEach(b => {
+                        b.classList.remove('active');
+                        b.setAttribute('aria-selected', 'false');
+                    });
+                    
+                    // Activar botón clickeado
+                    this.classList.add('active');
+                    this.setAttribute('aria-selected', 'true');
+                    
+                    // Filtrar juegos por categoría
+                    const category = this.getAttribute('data-category');
+                    filterGamesByCategory(category);
+                });
+            });
+            
+            function filterGamesByCategory(category) {
+                const gameCards = document.querySelectorAll('.game-card');
+                
+                gameCards.forEach(card => {
+                    const gameCategory = card.getAttribute('data-category');
+                    if (category === 'all' || gameCategory === category) {
+                        card.style.display = 'block';
+                        card.setAttribute('aria-hidden', 'false');
+                    } else {
+                        card.style.display = 'none';
+                        card.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            }
+            
+            // Verificación de enlaces
+            function verifyLink(url, statusElement) {
+                if (!url || url === '#') {
+                    statusElement.innerHTML = '❌';
+                    statusElement.className = 'link-status broken';
+                    return;
+                }
+                
+                // Simular verificación (en producción usaría un proxy o API)
+                fetch(url, { method: 'HEAD', mode: 'no-cors' })
+                    .then(() => {
+                        statusElement.innerHTML = '✅';
+                        statusElement.className = 'link-status verified';
+                    })
+                    .catch(() => {
+                        statusElement.innerHTML = '❌';
+                        statusElement.className = 'link-status broken';
+                    });
+            }
+            
+            // Verificar enlaces cuando se abra el modal
+            const gameModal = document.getElementById('gameModal');
+            if (gameModal) {
+                const observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                        if (mutation.type === 'attributes' && mutation.attributeName === 'aria-hidden') {
+                            if (gameModal.getAttribute('aria-hidden') === 'false') {
+                                const gofileLink = document.getElementById('linkGofile');
+                                const mediafireLink = document.getElementById('linkMediafire');
+                                const gofileStatus = document.getElementById('gofile-status');
+                                const mediafireStatus = document.getElementById('mediafire-status');
+                                
+                                if (gofileLink && gofileStatus) {
+                                    verifyLink(gofileLink.href, gofileStatus);
+                                }
+                                if (mediafireLink && mediafireStatus) {
+                                    verifyLink(mediafireLink.href, mediafireStatus);
+                                }
+                            }
+                        }
+                    });
+                });
+                
+                observer.observe(gameModal, { attributes: true });
+            }
+            
             const logoLink = document.getElementById('logoLink');
             if (logoLink) {
                 logoLink.addEventListener('click', function(e) {
@@ -570,7 +900,7 @@
                 });
             }
             
-            // Mejorar funcionalidad de búsqueda
+            // Mejorar funcionalidad de búsqueda con filtros
             const searchInput = document.getElementById('searchInput');
             const clearSearchBtn = document.getElementById('clearSearch');
             
@@ -578,8 +908,15 @@
                 searchInput.addEventListener('input', function() {
                     if (this.value.length > 0) {
                         clearSearchBtn.style.display = 'block';
+                        // Filtrar juegos por búsqueda
+                        filterGamesBySearch(this.value);
                     } else {
                         clearSearchBtn.style.display = 'none';
+                        // Mostrar todos los juegos de la categoría activa
+                        const activeCategory = document.querySelector('.category-btn.active');
+                        if (activeCategory) {
+                            filterGamesByCategory(activeCategory.getAttribute('data-category'));
+                        }
                     }
                 });
                 
@@ -587,8 +924,29 @@
                     searchInput.value = '';
                     searchInput.focus();
                     this.style.display = 'none';
-                    // Disparar evento de búsqueda para limpiar resultados
-                    searchInput.dispatchEvent(new Event('input'));
+                    // Mostrar todos los juegos de la categoría activa
+                    const activeCategory = document.querySelector('.category-btn.active');
+                    if (activeCategory) {
+                        filterGamesByCategory(activeCategory.getAttribute('data-category'));
+                    }
+                });
+            }
+            
+            function filterGamesBySearch(searchTerm) {
+                const gameCards = document.querySelectorAll('.game-card');
+                const term = searchTerm.toLowerCase();
+                
+                gameCards.forEach(card => {
+                    const title = card.querySelector('.game-title')?.textContent.toLowerCase() || '';
+                    const description = card.querySelector('.game-description')?.textContent.toLowerCase() || '';
+                    
+                    if (title.includes(term) || description.includes(term)) {
+                        card.style.display = 'block';
+                        card.setAttribute('aria-hidden', 'false');
+                    } else {
+                        card.style.display = 'none';
+                        card.setAttribute('aria-hidden', 'true');
+                    }
                 });
             }
             
