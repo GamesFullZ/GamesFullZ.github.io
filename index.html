@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamesFullZ - Descarga Juegos Gratis</title>
-    <!-- AdManager -->
+    <!-- AdManager - Anuncio principal (728x90) -->
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
     <script>
         window.googletag = window.googletag || {cmd: []};
         googletag.cmd.push(function() {
             googletag.defineSlot('/23318791520/GFZ_TOP_728x90', [728, 90], 'div-gpt-ad-1758490864512-0')
+                .addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <!-- AdManager - Anuncio lateral (120x240) -->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+    <script>
+        window.googletag = window.googletag || {cmd: []};
+        googletag.cmd.push(function() {
+            googletag.defineSlot('/23318791520/GFZ_TOP_120x240', [120, 240], 'div-gpt-ad-1758669141603-0')
                 .addService(googletag.pubads());
             googletag.pubads().enableSingleRequest();
             googletag.enableServices();
@@ -96,7 +107,7 @@
                 <!-- Los juegos se cargarán dinámicamente -->
             </div>
 
-            <!-- Anuncio -->
+            <!-- 👇 Anuncio principal (728x90) -->
             <div id='div-gpt-ad-1758490864512-0' 
                  style='min-width: 728px; min-height: 90px; margin: 30px auto; text-align:center;'>
               <script>
@@ -104,7 +115,15 @@
                   googletag.display('div-gpt-ad-1758490864512-0'); 
                 });
               </script>
-            </div>         
+            </div>
+
+            <!-- 👇 Anuncio lateral (120x240) -->
+            <!-- /23318791520/GFZ_TOP_120x240 -->
+            <div id='div-gpt-ad-1758669141603-0' style='min-width: 120px; min-height: 240px; margin: 20px auto; text-align: center;'>
+              <script>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1758669141603-0'); });
+              </script>
+            </div>
             
             <!-- Paginación -->
             <div class="pagination-container">
@@ -118,29 +137,6 @@
                 <button id="nextPage" class="pagination-btn">
                     Siguiente <i class="fas fa-chevron-right"></i>
                 </button>
-            </div>
-        </section>
-
-        <!-- 🔜 Sección Próximamente -->
-        <section id="coming-soon" class="coming-soon-section">
-            <h2>Próximamente</h2>
-            <p class="coming-soon-description">Juegos que llegarán próximamente. ¡Sé el primero en saberlo!</p>
-            <div class="coming-soon-list">
-                <div class="coming-soon-item">
-                    <h3>Elden Ring: Shadow of the Erdtree</h3>
-                    <p class="release-date">Fecha estimada: Julio 2024</p>
-                    <button class="notify-btn" data-game="elden-ring-dlc">🔔 Notificarme</button>
-                </div>
-                <div class="coming-soon-item">
-                    <h3>GTA VI (PC)</h3>
-                    <p class="release-date">Fecha estimada: Q4 2025</p>
-                    <button class="notify-btn" data-game="gta6-pc">🔔 Notificarme</button>
-                </div>
-                <div class="coming-soon-item">
-                    <h3>The Witcher 4</h3>
-                    <p class="release-date">Fecha estimada: 2026</p>
-                    <button class="notify-btn" data-game="witcher4">🔔 Notificarme</button>
-                </div>
             </div>
         </section>
 
@@ -279,29 +275,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- 💬 Asistente Gamer (Chatbot flotante) -->
-    <div id="gamerAssistant" class="gamer-assistant">
-        <div class="assistant-header">
-            <i class="fas fa-robot"></i> Asistente Gamer
-            <button id="closeAssistant" class="close-assistant">&times;</button>
-        </div>
-        <div class="assistant-body">
-            <div class="assistant-message assistant-bot">
-                ¡Hola! Soy tu asistente gamer. ¿En qué puedo ayudarte?
-            </div>
-            <div class="assistant-quick-replies">
-                <button class="quick-reply" data-q="instalacion">¿Cómo instalo un juego?</button>
-                <button class="quick-reply" data-q="crack">¿Dónde está el crack?</button>
-                <button class="quick-reply" data-q="mods">¿Cómo instalo mods?</button>
-                <button class="quick-reply" data-q="password">¿Cuál es la contraseña?</button>
-            </div>
-            <div id="assistantResponse" class="assistant-response"></div>
-        </div>
-        <button id="openAssistant" class="open-assistant-btn">
-            <i class="fas fa-comments"></i>
-        </button>
     </div>
 
     <!-- Botón volver arriba -->
@@ -495,7 +468,7 @@
         });
     </script>
 
-    <!-- ✨ Scripts de nuevas funcionalidades -->
+    <!-- ✨ Scripts de navegación y funcionalidades -->
     <script>
         // 🔗 Navegación suave a secciones
         document.querySelectorAll('.navigation-buttons .nav-btn').forEach(btn => {
@@ -508,40 +481,6 @@
                         behavior: 'smooth'
                     });
                 }
-            });
-        });
-
-        // 🔔 Notificarme (Próximamente)
-        document.querySelectorAll('.notify-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const game = this.dataset.game;
-                alert(`¡Listo! Te notificaremos cuando "${this.previousElementSibling.previousElementSibling.textContent}" esté disponible.`);
-                // Aquí podrías guardar en localStorage o enviar a un backend
-            });
-        });
-
-        // 💬 Asistente Gamer
-        const openAssistant = document.getElementById('openAssistant');
-        const closeAssistant = document.getElementById('closeAssistant');
-        const assistant = document.getElementById('gamerAssistant');
-        const quickReplies = document.querySelectorAll('.quick-reply');
-        const responseDiv = document.getElementById('assistantResponse');
-
-        openAssistant.addEventListener('click', () => assistant.classList.add('open'));
-        closeAssistant.addEventListener('click', () => assistant.classList.remove('open'));
-
-        const responses = {
-            instalacion: "1. Descarga el juego. 2. Descomprime con la contraseña '123'. 3. Ejecuta el instalador o el .exe directo.",
-            crack: "El crack ya está incluido en la carpeta 'Crack' dentro del archivo descargado. Solo cópialo al directorio del juego.",
-            mods: "Descomprime el mod en la carpeta del juego. Algunos requieren un gestor como Vortex o Mod Organizer.",
-            password: "La contraseña para todos los archivos es: <strong>123</strong>"
-        };
-
-        quickReplies.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const q = btn.dataset.q;
-                responseDiv.innerHTML = `<div class="assistant-message assistant-bot">${responses[q]}</div>`;
-                responseDiv.scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
