@@ -2038,7 +2038,7 @@ comments: [
     "esta vergas"
 ],
 links: {
-    direct: "https://www.mediafire.com/file/6uxpedmi5qd9vvy/Rayman.Legends-RELOADED.torrent/file",
+    direct: "https://www.mediafire.com/file/tzck0rdr12s5zme/Rayman.Legends-RELOADED.torrent/file",
     mediafire: "https://cuty.io/Kq7ya7KSMD9"
 },
 imagen: "Images/Rayman.webp",
