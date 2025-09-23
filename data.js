@@ -2265,4 +2265,23 @@ imagen: "Images/nig.webp",
     },
     imagen: "Images/EGS_WayoftheHunter_NineRocksGames_S4_1200x1600-5dd9ed2026622e31045803363ec18a11.webp",
 },
+    {
+    id: 131,
+    nombre: "S.T.A.L.K.E.R.: Shadow of Chernobyl",
+    tipo: "juego",
+    descripcion: "Shooter en primera persona con elementos de supervivencia y mundo abierto desarrollado por GSC Game World y publicado por THQ. Ambientado en una versión alternativa de la Zona de Exclusión de Chernóbil, los jugadores exploran entornos post-apocalípticos llenos de anomalías, criaturas mutantes y facciones rivales. El juego combina combate táctico, exploración libre, gestión de recursos y una narrativa oscura que se ramifica según las decisiones del jugador.",
+    requisitos: "Windows XP/2000 SP4, Procesador Intel Pentium 4 2.0 GHz / AMD XP 2200+, 512 MB RAM, NVIDIA GeForce 5700 / ATI Radeon 9600 (128 MB), DirectX 9.0c, 10 GB espacio",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "atmósfera increíble y muy inmersiva",
+        "la historia y las misiones secundarias son profundas",
+        "perfecto para amantes del survival y la exploración"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/0l8321f1jnpxzir/Stalker_Shadow_of_Chernobyl.torrent/file",
+        mediafire: "https://cuty.io/jrJc"
+    },
+    imagen: "Images/chernobyl.webp"
+}
 ];
