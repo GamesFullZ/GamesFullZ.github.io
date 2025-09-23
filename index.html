@@ -32,13 +32,7 @@
     <!-- Enlace al CSS externo -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="dark" id="top">
-
-    <!-- 🔥 Notificación de juego nuevo (cerrable) -->
-    <div id="newGameBanner" class="new-game-banner">
-        <span>🔥 Nuevo: Cyberpunk 2077 añadido hoy</span>
-        <button id="closeBanner" class="close-banner-btn">&times;</button>
-    </div>
+<body id="top">
 
     <!-- Pantalla de bienvenida animada -->
     <div id="welcomeScreen" class="welcome-screen">
@@ -64,7 +58,6 @@
     <!-- Cabecera fija -->
     <header id="mainHeader" class="site-header">
         <div class="container header-content">
-            <!-- Logo que ahora recarga la página con animación -->
             <a href="/" class="logo" id="logoLink">
                 <span class="logo-text">Games<span>FullZ</span></span>
                 <span class="logo-loader"></span>
@@ -75,10 +68,6 @@
             </div>
             
             <div class="header-actions">
-                <!-- Botón para alternar modo claro/oscuro -->
-                <button id="themeToggle" class="theme-toggle-btn" aria-label="Cambiar tema">
-                    <i class="fas fa-moon"></i>
-                </button>
                 <!-- Botón hacia el grupo de Telegram -->
                 <a href="https://web.telegram.org/k/#-4959297719" target="_blank" rel="noopener noreferrer" class="boton-telegram">
                     <i class="fab fa-telegram-plane"></i> Telegram
@@ -103,12 +92,11 @@
     <main class="container main-content">
         <!-- Sección de juegos -->
         <section id="games-section" class="content-section active">
-            <!-- Galería de juegos -->
             <div class="gallery__container" id="gallery">
                 <!-- Los juegos se cargarán dinámicamente -->
             </div>
 
-            <!-- 👇anuncio -->
+            <!-- Anuncio -->
             <div id='div-gpt-ad-1758490864512-0' 
                  style='min-width: 728px; min-height: 90px; margin: 30px auto; text-align:center;'>
               <script>
@@ -118,22 +106,41 @@
               </script>
             </div>         
             
-            <!-- Paginación con navegación directa -->
+            <!-- Paginación -->
             <div class="pagination-container">
                 <button id="prevPage" class="pagination-btn" disabled>
                     <i class="fas fa-chevron-left"></i> Anterior
                 </button>
-                
                 <div class="page-navigation">
                     <span id="pageInfo" class="page-info">Página 1 de 1</span>
-                    <div class="page-numbers" id="pageNumbersContainer">
-                        <!-- Los números de página se generarán dinámicamente -->
-                    </div>
+                    <div class="page-numbers" id="pageNumbersContainer"></div>
                 </div>
-                
                 <button id="nextPage" class="pagination-btn">
                     Siguiente <i class="fas fa-chevron-right"></i>
                 </button>
+            </div>
+        </section>
+
+        <!-- 🔜 Sección Próximamente -->
+        <section id="coming-soon" class="coming-soon-section">
+            <h2>Próximamente</h2>
+            <p class="coming-soon-description">Juegos que llegarán próximamente. ¡Sé el primero en saberlo!</p>
+            <div class="coming-soon-list">
+                <div class="coming-soon-item">
+                    <h3>Elden Ring: Shadow of the Erdtree</h3>
+                    <p class="release-date">Fecha estimada: Julio 2024</p>
+                    <button class="notify-btn" data-game="elden-ring-dlc">🔔 Notificarme</button>
+                </div>
+                <div class="coming-soon-item">
+                    <h3>GTA VI (PC)</h3>
+                    <p class="release-date">Fecha estimada: Q4 2025</p>
+                    <button class="notify-btn" data-game="gta6-pc">🔔 Notificarme</button>
+                </div>
+                <div class="coming-soon-item">
+                    <h3>The Witcher 4</h3>
+                    <p class="release-date">Fecha estimada: 2026</p>
+                    <button class="notify-btn" data-game="witcher4">🔔 Notificarme</button>
+                </div>
             </div>
         </section>
 
@@ -220,6 +227,20 @@
                         <div class="downloads" id="modalDownloads">Descargado por +5,300 usuarios</div>
                     </div>
                     <p id="modalInfo">Descripción del juego.</p>
+                    
+                    <!-- ✅ Verificador de requisitos dinámico -->
+                    <div class="specs-checker">
+                        <h3>¿Puedo ejecutar este juego?</h3>
+                        <p>Ingresa tus especificaciones:</p>
+                        <div class="specs-form">
+                            <input type="text" id="userCPU" placeholder="Procesador (ej: Intel i5-9400F)">
+                            <input type="text" id="userGPU" placeholder="Tarjeta gráfica (ej: GTX 1660)">
+                            <input type="number" id="userRAM" placeholder="RAM (GB)" min="1" max="128">
+                            <button id="checkSpecsBtn">Verificar compatibilidad</button>
+                        </div>
+                        <div id="compatibilityResult" class="compatibility-result"></div>
+                    </div>
+
                     <div class="requirements">
                         <h3>Requisitos mínimos</h3>
                         <p id="modalRequirements">Procesador: ...</p>
@@ -241,7 +262,6 @@
                         <div class="links-extra">
                             <!-- Aquí se inyectarán los links de Voces Latinas, Online Fix o Updates desde JS -->
                         </div>
-                        <!-- Contenedor de nota del juego -->
                         <div class="game-note" id="gameNote" style="display:none; margin-top: 10px; padding: 10px; background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: 5px;">
                             <p class="note-text" style="margin:0; color:#856404; font-weight:bold;"></p>
                         </div>
@@ -261,19 +281,27 @@
         </div>
     </div>
 
-    <!-- Modal de vista previa al pasar el cursor -->
-    <div id="previewModal" class="preview-modal">
-        <div class="preview-content">
-            <img id="previewImage" src="" alt="Vista previa del juego">
-            <div class="preview-info">
-                <h3 id="previewTitle"></h3>
-                <div class="preview-meta">
-                    <span class="preview-rating" id="previewRating"></span>
-                    <span class="preview-downloads" id="previewDownloads"></span>
-                </div>
-                <p id="previewDescription"></p>
-            </div>
+    <!-- 💬 Asistente Gamer (Chatbot flotante) -->
+    <div id="gamerAssistant" class="gamer-assistant">
+        <div class="assistant-header">
+            <i class="fas fa-robot"></i> Asistente Gamer
+            <button id="closeAssistant" class="close-assistant">&times;</button>
         </div>
+        <div class="assistant-body">
+            <div class="assistant-message assistant-bot">
+                ¡Hola! Soy tu asistente gamer. ¿En qué puedo ayudarte?
+            </div>
+            <div class="assistant-quick-replies">
+                <button class="quick-reply" data-q="instalacion">¿Cómo instalo un juego?</button>
+                <button class="quick-reply" data-q="crack">¿Dónde está el crack?</button>
+                <button class="quick-reply" data-q="mods">¿Cómo instalo mods?</button>
+                <button class="quick-reply" data-q="password">¿Cuál es la contraseña?</button>
+            </div>
+            <div id="assistantResponse" class="assistant-response"></div>
+        </div>
+        <button id="openAssistant" class="open-assistant-btn">
+            <i class="fas fa-comments"></i>
+        </button>
     </div>
 
     <!-- Botón volver arriba -->
@@ -281,17 +309,17 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Botones de navegación adicionales -->
+    <!-- 🔗 Botones de navegación que funcionan -->
     <div class="navigation-buttons">
-        <a href="#about" class="nav-btn about-btn">
+        <button class="nav-btn about-btn" data-target="about">
             <i class="fas fa-info-circle"></i> Sobre Nosotros
-        </a>
-        <a href="#faq" class="nav-btn faq-btn">
+        </button>
+        <button class="nav-btn faq-btn" data-target="faq">
             <i class="fas fa-question-circle"></i> FAQ
-        </a>
-        <a href="#privacy" class="nav-btn privacy-btn">
+        </button>
+        <button class="nav-btn privacy-btn" data-target="privacy">
             <i class="fas fa-lock"></i> Privacidad
-        </a>
+        </button>
     </div>
 
     <!-- Sección Sobre Nosotros -->
@@ -467,84 +495,55 @@
         });
     </script>
 
-    <!-- ✨ Scripts de las nuevas funcionalidades -->
+    <!-- ✨ Scripts de nuevas funcionalidades -->
     <script>
-        // 🌙 Modo oscuro/claro
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        const icon = themeToggle.querySelector('i');
-
-        // Cargar tema guardado
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        body.setAttribute('data-theme', savedTheme);
-        icon.className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-
-        themeToggle.addEventListener('click', () => {
-            const current = body.getAttribute('data-theme');
-            const newTheme = current === 'dark' ? 'light' : 'dark';
-            body.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-        });
-
-        // ❌ Cerrar banner de notificación
-        document.getElementById('closeBanner').addEventListener('click', () => {
-            document.getElementById('newGameBanner').style.display = 'none';
-        });
-
-        // 🗂️ Filtro por categorías
-        document.querySelectorAll('.category-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                const category = this.dataset.category;
-                // Esta función debe implementarse en script.js
-                if (typeof filterGamesByCategory === 'function') {
-                    filterGamesByCategory(category);
+        // 🔗 Navegación suave a secciones
+        document.querySelectorAll('.navigation-buttons .nav-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.dataset.target;
+                const target = document.getElementById(targetId);
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
 
-        // 🔗 Verificación de enlaces (función global para usar en script.js)
-        async function checkLinkStatus(url) {
-            if (!url || url.startsWith('#') || url.startsWith('mailto:')) return null;
-            try {
-                const response = await fetch(url, { method: 'HEAD', mode: 'no-cors' });
-                // Nota: por CORS, no siempre podemos leer el status, pero timeout sí ayuda
-                return true;
-            } catch (e) {
-                return false;
-            }
-        }
-
-        // Función para verificar todos los enlaces de descarga (llamar desde script.js tras renderizar)
-        window.verifyDownloadLinks = function() {
-            document.querySelectorAll('.download-link').forEach(link => {
-                const url = link.href;
-                if (!url || url === '#') return;
-
-                // Evitar verificar múltiples veces
-                if (link.dataset.verified) return;
-                link.dataset.verified = 'true';
-
-                const statusSpan = document.createElement('span');
-                statusSpan.style.marginLeft = '6px';
-                statusSpan.style.fontSize = '0.9em';
-                link.appendChild(statusSpan);
-
-                // Intento básico (mejorable con backend)
-                const img = new Image();
-                img.onload = () => {
-                    statusSpan.textContent = '✅';
-                    statusSpan.style.color = '#0f0';
-                };
-                img.onerror = () => {
-                    statusSpan.textContent = '❌';
-                    statusSpan.style.color = '#f00';
-                };
-                img.src = url;
+        // 🔔 Notificarme (Próximamente)
+        document.querySelectorAll('.notify-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const game = this.dataset.game;
+                alert(`¡Listo! Te notificaremos cuando "${this.previousElementSibling.previousElementSibling.textContent}" esté disponible.`);
+                // Aquí podrías guardar en localStorage o enviar a un backend
             });
+        });
+
+        // 💬 Asistente Gamer
+        const openAssistant = document.getElementById('openAssistant');
+        const closeAssistant = document.getElementById('closeAssistant');
+        const assistant = document.getElementById('gamerAssistant');
+        const quickReplies = document.querySelectorAll('.quick-reply');
+        const responseDiv = document.getElementById('assistantResponse');
+
+        openAssistant.addEventListener('click', () => assistant.classList.add('open'));
+        closeAssistant.addEventListener('click', () => assistant.classList.remove('open'));
+
+        const responses = {
+            instalacion: "1. Descarga el juego. 2. Descomprime con la contraseña '123'. 3. Ejecuta el instalador o el .exe directo.",
+            crack: "El crack ya está incluido en la carpeta 'Crack' dentro del archivo descargado. Solo cópialo al directorio del juego.",
+            mods: "Descomprime el mod en la carpeta del juego. Algunos requieren un gestor como Vortex o Mod Organizer.",
+            password: "La contraseña para todos los archivos es: <strong>123</strong>"
         };
+
+        quickReplies.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const q = btn.dataset.q;
+                responseDiv.innerHTML = `<div class="assistant-message assistant-bot">${responses[q]}</div>`;
+                responseDiv.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
     </script>
 </body>
 </html>
