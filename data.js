@@ -2303,9 +2303,10 @@ imagen: "Images/nig.webp",
     },
     imagen: "Images/S.T.A.L.K.E.R._Shadow_of_Chernobyl_DVD_cover.webp",
 },
+];
 
-{
-    id: 133,
+},
+ id: 133,
     nombre: "Dante's Inferno",
     tipo: "juego",
     descripcion: "Hack and slash en tercera persona desarrollado por Visceral Games y publicado por Electronic Arts. Inspirado en 'La Divina Comedia' de Dante Alighieri, el juego sigue a Dante, un cruzado que desciende a los nueve círculos del Infierno para rescatar el alma de su amada Beatriz. Con combates rápidos, armas icónicas como la guadaña de la Muerte y la cruz sagrada, ofrece una experiencia intensa llena de jefes grotescos y escenarios infernales.",
@@ -2321,5 +2322,4 @@ imagen: "Images/nig.webp",
         mediafire: "https://www.mediafire.com/file/59qkgeulwzwxmnv/DANTE`S+INFERNO.torrent/file"
     },
     imagen: "Images/DNTSINF.webp",
-},
 
