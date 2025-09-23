@@ -4,39 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamesFullZ - Descarga Juegos Gratis</title>
-      <!-- AdManager -->
-  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-  <script>
-    window.googletag = window.googletag || {cmd: []};
-    googletag.cmd.push(function() {
-      googletag.defineSlot('/23318791520/GFZ_TOP_728x90', [728, 90], 'div-gpt-ad-1758490864512-0')
-               .addService(googletag.pubads());
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-    });
-  </script>
-    <meta name="description" content="Descubre y descarga juegos gratis en GamesFullZ.revive el historial de tus títulos favoritos.">
+    <!-- AdManager -->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+    <script>
+        window.googletag = window.googletag || {cmd: []};
+        googletag.cmd.push(function() {
+            googletag.defineSlot('/23318791520/GFZ_TOP_728x90', [728, 90], 'div-gpt-ad-1758490864512-0')
+                .addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <meta name="description" content="Descubre y descarga juegos gratis en GamesFullZ. Revive el historial de tus títulos favoritos.">
     
     <!-- Fuentes modernas -->
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
     <!-- Iconos con Font Awesome -->
-    <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795479991735761"
      crossorigin="anonymous"></script>
-         <!-- Google AdSense AMP -->
+    <!-- Google AdSense AMP -->
     <script async custom-element="amp-auto-ads"
-        src="  https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js  ">
-</script>
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
     
     <!-- Enlace al CSS externo -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Estilos para el bloqueador de AdBlock (eliminados junto con su contenido) -->
-    <!-- Nota: Los estilos .adblock-* han sido removidos por completo -->
 </head>
 <body data-theme="dark" id="top">
-    
+
+    <!-- 🔥 Notificación de juego nuevo (cerrable) -->
+    <div id="newGameBanner" class="new-game-banner">
+        <span>🔥 Nuevo: Cyberpunk 2077 añadido hoy</span>
+        <button id="closeBanner" class="close-banner-btn">&times;</button>
+    </div>
+
     <!-- Pantalla de bienvenida animada -->
     <div id="welcomeScreen" class="welcome-screen">
         <div class="welcome-content">
@@ -72,6 +75,10 @@
             </div>
             
             <div class="header-actions">
+                <!-- Botón para alternar modo claro/oscuro -->
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
                 <!-- Botón hacia el grupo de Telegram -->
                 <a href="https://web.telegram.org/k/#-4959297719" target="_blank" rel="noopener noreferrer" class="boton-telegram">
                     <i class="fab fa-telegram-plane"></i> Telegram
@@ -79,6 +86,19 @@
             </div>
         </div>
     </header>
+
+    <!-- Sección de categorías (filtros) -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="category-filters" id="categoryFilters">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="accion">Acción</button>
+                <button class="category-btn" data-category="terror">Terror</button>
+                <button class="category-btn" data-category="indie">Indie</button>
+                <button class="category-btn" data-category="multijugador">Multijugador</button>
+            </div>
+        </div>
+    </section>
 
     <main class="container main-content">
         <!-- Sección de juegos -->
@@ -89,14 +109,15 @@
             </div>
 
             <!-- 👇anuncio -->
-<div id='div-gpt-ad-1758490864512-0' 
-     style='min-width: 728px; min-height: 90px; margin: 30px auto; text-align:center;'>
-  <script>
-    googletag.cmd.push(function() { 
-      googletag.display('div-gpt-ad-1758490864512-0'); 
-    });
-  </script>
-   </div>         
+            <div id='div-gpt-ad-1758490864512-0' 
+                 style='min-width: 728px; min-height: 90px; margin: 30px auto; text-align:center;'>
+              <script>
+                googletag.cmd.push(function() { 
+                  googletag.display('div-gpt-ad-1758490864512-0'); 
+                });
+              </script>
+            </div>         
+            
             <!-- Paginación con navegación directa -->
             <div class="pagination-container">
                 <button id="prevPage" class="pagination-btn" disabled>
@@ -167,7 +188,7 @@
         <section class="contact-section">
             <h2>¿Necesitas ayuda?</h2>
             <p>Contáctanos si tienes problemas con una descarga o reportar un error.</p>
-            <form action="  https://formspree.io/f/mpwlozqz  " method="POST">
+            <form action="https://formspree.io/f/mpwlozqz" method="POST">
                 <div class="form-group">
                     <label for="email">Tu Correo</label>
                     <input type="email" name="Correo" id="email" placeholder="tu@correo.com" required>
@@ -214,27 +235,32 @@
                             </a>
                         </div>
                     </div>
-<!-- Contenedor de extras opcionales -->
-<div class="download-options extra-downloads" id="extraDownloads" style="display:none;">
-    <h3>Extras disponibles:</h3>
-    <div class="links-extra">
-        <!-- Aquí se inyectarán los links de Voces Latinas, Online Fix o Updates desde JS -->
-    </div>
-    <!-- Contenedor de nota del juego -->
-    <div class="game-note" id="gameNote" style="display:none; margin-top: 10px; padding: 10px; background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: 5px;">
-        <p class="note-text" style="margin:0; color:#856404; font-weight:bold;"></p>
-    </div>
-</div>
+                    <!-- Contenedor de extras opcionales -->
+                    <div class="download-options extra-downloads" id="extraDownloads" style="display:none;">
+                        <h3>Extras disponibles:</h3>
+                        <div class="links-extra">
+                            <!-- Aquí se inyectarán los links de Voces Latinas, Online Fix o Updates desde JS -->
+                        </div>
+                        <!-- Contenedor de nota del juego -->
+                        <div class="game-note" id="gameNote" style="display:none; margin-top: 10px; padding: 10px; background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: 5px;">
+                            <p class="note-text" style="margin:0; color:#856404; font-weight:bold;"></p>
+                        </div>
+                    </div>
 
-<!-- Sección de comentarios -->
-<div class="comments-section">
-    <h3>Reseñas de usuarios</h3>
-    <div id="commentsContainer" class="comments-list"></div>
-    <div class="add-comment">
-        <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput"></textarea>
-        <button id="addCommentBtn">Publicar</button>
+                    <!-- Sección de comentarios -->
+                    <div class="comments-section">
+                        <h3>Reseñas de usuarios</h3>
+                        <div id="commentsContainer" class="comments-list"></div>
+                        <div class="add-comment">
+                            <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput"></textarea>
+                            <button id="addCommentBtn">Publicar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
     <!-- Modal de vista previa al pasar el cursor -->
     <div id="previewModal" class="preview-modal">
         <div class="preview-content">
@@ -421,7 +447,7 @@
         </div>
     </footer>
 
-    <!-- Botón para volver al inicio -->
+    <!-- Botón para volver al inicio (móvil) -->
     <a href="#top" class="back-to-top-mobile">
         <i class="fas fa-arrow-up"></i>
     </a>
@@ -434,15 +460,91 @@
     <script>
         document.getElementById('logoLink').addEventListener('click', function(e) {
             e.preventDefault();
-            
-            // Añadir clase de animación al logo
             this.classList.add('logo-clicked');
-            
-            // Recargar la página después de la animación
             setTimeout(function() {
                 window.location.href = '/';
             }, 600);
         });
+    </script>
+
+    <!-- ✨ Scripts de las nuevas funcionalidades -->
+    <script>
+        // 🌙 Modo oscuro/claro
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+
+        // Cargar tema guardado
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        body.setAttribute('data-theme', savedTheme);
+        icon.className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+
+        themeToggle.addEventListener('click', () => {
+            const current = body.getAttribute('data-theme');
+            const newTheme = current === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+        });
+
+        // ❌ Cerrar banner de notificación
+        document.getElementById('closeBanner').addEventListener('click', () => {
+            document.getElementById('newGameBanner').style.display = 'none';
+        });
+
+        // 🗂️ Filtro por categorías
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const category = this.dataset.category;
+                // Esta función debe implementarse en script.js
+                if (typeof filterGamesByCategory === 'function') {
+                    filterGamesByCategory(category);
+                }
+            });
+        });
+
+        // 🔗 Verificación de enlaces (función global para usar en script.js)
+        async function checkLinkStatus(url) {
+            if (!url || url.startsWith('#') || url.startsWith('mailto:')) return null;
+            try {
+                const response = await fetch(url, { method: 'HEAD', mode: 'no-cors' });
+                // Nota: por CORS, no siempre podemos leer el status, pero timeout sí ayuda
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        // Función para verificar todos los enlaces de descarga (llamar desde script.js tras renderizar)
+        window.verifyDownloadLinks = function() {
+            document.querySelectorAll('.download-link').forEach(link => {
+                const url = link.href;
+                if (!url || url === '#') return;
+
+                // Evitar verificar múltiples veces
+                if (link.dataset.verified) return;
+                link.dataset.verified = 'true';
+
+                const statusSpan = document.createElement('span');
+                statusSpan.style.marginLeft = '6px';
+                statusSpan.style.fontSize = '0.9em';
+                link.appendChild(statusSpan);
+
+                // Intento básico (mejorable con backend)
+                const img = new Image();
+                img.onload = () => {
+                    statusSpan.textContent = '✅';
+                    statusSpan.style.color = '#0f0';
+                };
+                img.onerror = () => {
+                    statusSpan.textContent = '❌';
+                    statusSpan.style.color = '#f00';
+                };
+                img.src = url;
+            });
+        };
     </script>
 </body>
 </html>
