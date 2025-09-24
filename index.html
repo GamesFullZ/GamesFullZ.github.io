@@ -1,51 +1,86 @@
 <!DOCTYPE html>
+<!--
+    GamesFullZ - Portal de Descargas de Juegos
+    Desarrollado con ❤️ por GamesFullZ
+    Última actualización: 2025
+-->
 <html lang="es">
 <head>
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamesFullZ - Descarga Juegos Gratis</title>
-    <!-- AdManager - Anuncio principal (728x90) -->
+    <meta name="description" content="Descarga juegos gratis en GamesFullZ. Biblioteca de juegos completos y seguros. Actualizaciones constantes y soporte activo.">
+    <meta name="keywords" content="juegos gratis, descargar juegos, juegos pc, videojuegos, games, descargas seguras">
+    <meta name="author" content="GamesFullZ">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gamesfullz.github.io/">
+    <meta property="og:title" content="GamesFullZ - Descarga Juegos Gratis">
+    <meta property="og:description" content="Descarga juegos gratis en GamesFullZ. Biblioteca de juegos completos y seguros. Actualizaciones constantes y soporte activo.">
+    <meta property="og:image" content="https://gamesfullz.github.io/Images/logo.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://gamesfullz.github.io/">
+    <meta name="twitter:title" content="GamesFullZ - Descarga Juegos Gratis">
+    <meta name="twitter:description" content="Descarga juegos gratis en GamesFullZ. Biblioteca de juegos completos y seguros. Actualizaciones constantes y soporte activo.">
+    <meta name="twitter:image" content="https://gamesfullz.github.io/Images/logo.png">
+    <!-- Google AdManager - Anuncios -->
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
     <script>
         window.googletag = window.googletag || {cmd: []};
         googletag.cmd.push(function() {
+            // Definir slots de anuncios
             googletag.defineSlot('/23318791520/GFZ_TOP_728x90', [728, 90], 'div-gpt-ad-1758490864512-0')
                 .addService(googletag.pubads());
-            googletag.pubads().enableSingleRequest();
-            googletag.enableServices();
-        });
-    </script>
-    <!-- AdManager - Anuncio lateral (120x240) -->
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-    <script>
-        window.googletag = window.googletag || {cmd: []};
-        googletag.cmd.push(function() {
             googletag.defineSlot('/23318791520/GFZ_TOP_120x240', [120, 240], 'div-gpt-ad-1758669141603-0')
                 .addService(googletag.pubads());
+            
+            // Configuración global
             googletag.pubads().enableSingleRequest();
             googletag.enableServices();
         });
     </script>
     <meta name="description" content="Descubre y descarga juegos gratis en GamesFullZ. Revive el historial de tus títulos favoritos.">
     
-    <!-- Fuentes modernas -->
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
-    <!-- Iconos con Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795479991735761"
-     crossorigin="anonymous"></script>
-    <!-- Google AdSense AMP -->
-    <script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-    </script>
-    
-    <!-- Enlace al CSS externo -->
+    <!-- Estilos críticos -->
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Fuentes modernas - precargar para mejor rendimiento -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" media="print" onload="this.media='all'">
+    
+    <!-- Iconos con Font Awesome - carga diferida -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795479991735761" crossorigin="anonymous"></script>
+    
+    <!-- Google AdSense AMP -->
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 </head>
 <body id="top">
+    <!--
+        ESTRUCTURA DEL SITIO
+        1. Pantalla de bienvenida
+        2. Cabecera fija con búsqueda
+        3. Categorías y filtros
+        4. Galería de juegos
+        5. Secciones informativas
+        6. Pie de página
+    -->
 
-    <!-- Pantalla de bienvenida animada -->
+    <!-- 
+        SECCIÓN: Pantalla de bienvenida animada 
+        - Animación inicial del logo
+        - Barra de carga para feedback visual
+    -->
     <div id="welcomeScreen" class="welcome-screen">
         <div class="welcome-content">
             <div class="logo-animation">
@@ -454,33 +489,35 @@
     </a>
 
     <!-- Carga de datos y scripts -->
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+    <script src="data.js" defer></script>
+    <script src="script.js" defer></script>
     
-    <!-- Script para la animación del logo -->
+    <!-- Scripts optimizados de navegación y funcionalidades -->
     <script>
-        document.getElementById('logoLink').addEventListener('click', function(e) {
-            e.preventDefault();
-            this.classList.add('logo-clicked');
-            setTimeout(function() {
-                window.location.href = '/';
-            }, 600);
-        });
-    </script>
+        // Esperar a que el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animación del logo
+            const logoLink = document.getElementById('logoLink');
+            if (logoLink) {
+                logoLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.classList.add('logo-clicked');
+                    setTimeout(() => window.location.href = '/', 600);
+                });
+            }
 
-    <!-- ✨ Scripts de navegación y funcionalidades -->
-    <script>
-        // 🔗 Navegación suave a secciones
-        document.querySelectorAll('.navigation-buttons .nav-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const targetId = btn.dataset.target;
-                const target = document.getElementById(targetId);
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+            // Navegación suave a secciones
+            document.querySelectorAll('.navigation-buttons .nav-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetId = btn.dataset.target;
+                    const target = document.getElementById(targetId);
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
         });
     </script>
