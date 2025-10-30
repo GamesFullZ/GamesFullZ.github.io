@@ -2283,5 +2283,24 @@ imagen: "Images/nig.webp",
         mediafire: "https://cuty.io/jrJc"
     },
     imagen: "Images/chernobyl.webp"
+},
+  {
+    id: 132,
+    nombre: " Silent Hill F",
+    tipo: "juego",
+    descripcion: "Survival horror ambientado en la década de 1960 en Japón, donde Hinako Shimizu debe enfrentarse a criaturas grotescas, resolver enigmas y descubrir la verdad tras la densa niebla que envuelve su pueblo",
+    requisitos: "Windows 10 64-bit, Intel Core i5-8400 / AMD Ryzen 5 2600, 16 GB RAM, GeForce GTX 1070 Ti / Radeon RX 5700, 40 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "Este Silent Hill se ve increíble, la ambientación japonesa le da un toque mucho más perturbador que los anteriores",
+        "Konami por fin está reviviendo la saga con estilo, ojalá mantengan ese terror psicológico clásico",
+        "perfecto para amantes del survival horror"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/nlxvg7n8h04ylx9/SILENT.HILL.f.Digital.Deluxe.Edition.v1.1.380590.1-GOG.torrent/file",
+        mediafire: "https://cuty.io/e9d9"
+    },
+    imagen: "Images/silent-hill-f-tag-page-cover-art.webp"
 }
 ];
