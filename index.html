@@ -4,76 +4,330 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamesFullZ - Descarga Juegos Gratis</title>
-      <!-- AdManager -->
-  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js " crossorigin="anonymous"></script>
-  <script>
-    window.googletag = window.googletag || {cmd: []};
-    googletag.cmd.push(function() {
-      googletag.defineSlot('/23318791520/GFZ_TOP_728x90', [728, 90], 'div-gpt-ad-1758490864512-0')
-               .addService(googletag.pubads());
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-    });
-  </script>
-    <meta name="description" content="Descubre y descarga juegos gratis en GamesFullZ.revive el historial de tus títulos favoritos.">
     
-    <!-- Fuentes modernas -->
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300 ;400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
-    <!-- Iconos con Font Awesome -->
-    <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css   ">
-    <!-- Google AdSense -->
+    <!-- Metadatos optimizados -->
+    <meta name="description" content="Descubre y descarga juegos gratis en GamesFullZ. Revive el historial de tus títulos favoritos con descargas seguras y rápidas.">
+    <meta name="keywords" content="juegos pc, descargar juegos, juegos gratis, torrents, juegos full">
+    <meta name="author" content="GamesFullZ">
+    
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:title" content="GamesFullZ - Descarga Juegos Gratis para PC">
+    <meta property="og:description" content="Descubre y descarga juegos gratis para PC en GamesFullZ">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gamesfullz.com">
+    <meta property="og:image" content="https://gamesfullz.com/images/og-image.jpg">
+    
+    <!-- Datos estructurados para juegos -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "GamesFullZ",
+      "url": "https://gamesfullz.com",
+      "description": "Descarga de juegos gratis para PC",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://gamesfullz.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- AdManager (MANTENIDO) -->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js " crossorigin="anonymous"></script>
+    <script>
+      window.googletag = window.googletag || {cmd: []};
+      googletag.cmd.push(function() {
+        googletag.defineSlot('/23318791520/GFZ_TOP_728x90', [728, 90], 'div-gpt-ad-1758490864512-0')
+                 .addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+      });
+    </script>
+    
+    <!-- Google AdSense (MANTENIDO) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795479991735761 "
      crossorigin="anonymous"></script>
-         <!-- Google AdSense AMP -->
+         
+    <!-- Google AdSense AMP (MANTENIDO) -->
     <script async custom-element="amp-auto-ads"
-        src="  https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js   ">
-</script>
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+    
+    <!-- Fuentes modernas -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos con Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Enlace al CSS externo -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- Estilos para el bloqueador de AdBlock (eliminados junto con su contenido) -->
-    <!-- Nota: Los estilos .adblock-* han sido removidos por completo -->
+    <!-- Estilos para la animación de entrada mejorada -->
+    <style>
+        /* Animación de entrada mejorada */
+        .welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            overflow: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        .welcome-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .particles-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(0, 255, 255, 0.8);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            animation: float 8s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+        
+        .welcome-content {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+        
+        .logo-animation {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .logo-letter {
+            display: inline-block;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+            animation: glitch 2s infinite;
+            animation-delay: calc(var(--i) * 0.1s);
+            transform: translateY(50px);
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+        
+        @keyframes glitch {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+                text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+            }
+            20% {
+                transform: translateY(-5px) scale(1.05);
+                text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff;
+            }
+            40% {
+                transform: translateY(5px) scale(0.95);
+                text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+            }
+        }
+        
+        .loading-container {
+            width: 300px;
+            margin: 0 auto;
+        }
+        
+        .loading-text {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.2rem;
+            color: #00ffff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .loading-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .loading-progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #00ffff, #ff00ff, #00ffff);
+            background-size: 200% 100%;
+            border-radius: 3px;
+            animation: loading 2s ease-in-out forwards, gradient 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes loading {
+            to {
+                width: 100%;
+            }
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .loading-percentage {
+            margin-top: 10px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 600;
+        }
+        
+        .skip-intro {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            z-index: 20;
+        }
+        
+        .skip-intro:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-50%) scale(1.05);
+        }
+        
+        /* Efecto de scanlines gaming */
+        .scanlines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                transparent 50%,
+                rgba(0, 255, 255, 0.03) 50%
+            );
+            background-size: 100% 4px;
+            animation: scanlines 8s linear infinite;
+            pointer-events: none;
+            z-index: 5;
+        }
+        
+        @keyframes scanlines {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 0 10px;
+            }
+        }
+    </style>
 </head>
 <body data-theme="dark" id="top">
     
-    <!-- Pantalla de bienvenida animada -->
+    <!-- Pantalla de bienvenida MEJORADA -->
     <div id="welcomeScreen" class="welcome-screen">
+        <!-- Partículas animadas -->
+        <div class="particles-container" id="particlesContainer"></div>
+        
+        <!-- Efecto scanlines -->
+        <div class="scanlines"></div>
+        
         <div class="welcome-content">
             <div class="logo-animation">
-                <span class="logo-letter">G</span>
-                <span class="logo-letter">a</span>
-                <span class="logo-letter">m</span>
-                <span class="logo-letter">e</span>
-                <span class="logo-letter">s</span>
-                <span class="logo-letter">F</span>
-                <span class="logo-letter">u</span>
-                <span class="logo-letter">l</span>
-                <span class="logo-letter">l</span>
-                <span class="logo-letter">Z</span>
+                <span class="logo-letter" style="--i: 0">G</span>
+                <span class="logo-letter" style="--i: 1">a</span>
+                <span class="logo-letter" style="--i: 2">m</span>
+                <span class="logo-letter" style="--i: 3">e</span>
+                <span class="logo-letter" style="--i: 4">s</span>
+                <span class="logo-letter" style="--i: 5">F</span>
+                <span class="logo-letter" style="--i: 6">u</span>
+                <span class="logo-letter" style="--i: 7">l</span>
+                <span class="logo-letter" style="--i: 8">l</span>
+                <span class="logo-letter" style="--i: 9">Z</span>
             </div>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
+            
+            <div class="loading-container">
+                <div class="loading-text">Cargando juegos...</div>
+                <div class="loading-bar">
+                    <div class="loading-progress" id="loadingProgress"></div>
+                </div>
+                <div class="loading-percentage" id="loadingPercentage">0%</div>
             </div>
         </div>
+        
+        <!-- Botón para saltar intro -->
+        <button class="skip-intro" id="skipIntro">Saltar introducción</button>
     </div>
 
     <!-- Cabecera fija -->
     <header id="mainHeader" class="site-header">
         <div class="container header-content">
             <!-- Logo que ahora recarga la página con animación -->
-            <a href="/" class="logo" id="logoLink">
+            <a href="/" class="logo" id="logoLink" aria-label="Inicio de GamesFullZ">
                 <span class="logo-text">Games<span>FullZ</span></span>
                 <span class="logo-loader"></span>
             </a>
             
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="🔍 Buscar juegos...">
+                <input type="text" id="searchInput" placeholder="🔍 Buscar juegos..." aria-label="Buscar juegos">
+                <div id="searchSuggestions" class="search-suggestions" aria-hidden="true"></div>
             </div>
             
             <div class="header-actions">
+                <!-- Botón de tema -->
+                <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
                 <!-- Botón hacia el grupo de Telegram -->
-                <a href="https://web.telegram.org/k/#-4959297719 " target="_blank" rel="noopener noreferrer" class="boton-telegram">
+                <a href="https://web.telegram.org/k/#-4959297719" target="_blank" rel="noopener noreferrer" class="boton-telegram" aria-label="Únete a nuestro Telegram">
                     <i class="fab fa-telegram-plane"></i> Telegram
                 </a>
             </div>
@@ -81,33 +335,88 @@
     </header>
 
     <main class="container main-content">
+        <!-- Filtros de juegos (NUEVO) -->
+        <section class="filters-section">
+            <h2 class="sr-only">Filtros de juegos</h2>
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="genreFilter">Género</label>
+                    <select id="genreFilter" aria-label="Filtrar por género">
+                        <option value="">Todos los géneros</option>
+                        <option value="action">Acción</option>
+                        <option value="adventure">Aventura</option>
+                        <option value="rpg">RPG</option>
+                        <option value="strategy">Estrategia</option>
+                        <option value="sports">Deportes</option>
+                        <option value="racing">Carreras</option>
+                        <option value="simulation">Simulación</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="yearFilter">Año</label>
+                    <select id="yearFilter" aria-label="Filtrar por año">
+                        <option value="">Todos los años</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="older">Anteriores</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="sortFilter">Ordenar por</label>
+                    <select id="sortFilter" aria-label="Ordenar juegos">
+                        <option value="newest">Más nuevos</option>
+                        <option value="popular">Más populares</option>
+                        <option value="downloaded">Más descargados</option>
+                        <option value="rated">Mejor valorados</option>
+                        <option value="alphabetical">Alfabético</option>
+                    </select>
+                </div>
+                
+                <button id="resetFilters" class="reset-filters" aria-label="Restablecer filtros">
+                    <i class="fas fa-undo"></i> Restablecer
+                </button>
+            </div>
+        </section>
+        
         <!-- Sección de juegos -->
         <section id="games-section" class="content-section active">
+            <h1 class="section-title">Catálogo de Juegos</h1>
+            
             <!-- Galería de juegos -->
-            <div class="gallery__container" id="gallery">
+            <div class="gallery__container" id="gallery" aria-live="polite">
                 <!-- Los juegos se cargarán dinámicamente -->
             </div>
 
-            <!-- 👇anuncio -->
-<div id='div-gpt-ad-1758490864512-0' 
-     style='min-width: 728px; min-height: 90px; margin: 30px auto; text-align:center;'>
-  <script>
-    googletag.cmd.push(function() { 
-      googletag.display('div-gpt-ad-1758490864512-0'); 
-    });
-  </script>
-   </div>
+            <!-- Anuncio TOP (MANTENIDO) -->
+            <div id='div-gpt-ad-1758490864512-0' 
+                 style='min-width: 728px; min-height: 90px; margin: 30px auto; text-align:center;'
+                 role="complementary" aria-label="Anuncio">
+                <script>
+                    googletag.cmd.push(function() { 
+                        googletag.display('div-gpt-ad-1758490864512-0'); 
+                    });
+                </script>
+            </div>
 
-            <!-- /23318791520/GFZ_TOP_120x240 -->
-<div id='div-gpt-ad-1762575181936-0' style='min-width: 120px; min-height: 240px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1762575181936-0'); });
-  </script>
-</div>
-         
+            <!-- Anuncio LATERAL (MANTENIDO) -->
+            <div id='div-gpt-ad-1762575181936-0' 
+                 style='min-width: 120px; min-height: 240px; margin: 20px auto; text-align:center;'
+                 role="complementary" aria-label="Anuncio lateral">
+                <script>
+                    googletag.cmd.push(function() { 
+                        googletag.display('div-gpt-ad-1762575181936-0'); 
+                    });
+                </script>
+            </div>
+            
             <!-- Paginación con navegación directa -->
             <div class="pagination-container">
-                <button id="prevPage" class="pagination-btn" disabled>
+                <button id="prevPage" class="pagination-btn" disabled aria-label="Página anterior">
                     <i class="fas fa-chevron-left"></i> Anterior
                 </button>
                 
@@ -118,7 +427,7 @@
                     </div>
                 </div>
                 
-                <button id="nextPage" class="pagination-btn">
+                <button id="nextPage" class="pagination-btn" aria-label="Página siguiente">
                     Siguiente <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
@@ -140,13 +449,13 @@
                 </div>
                 <div class="guide-step">
                     <i class="fas fa-file-archive"></i>
-                    <h3>3. Extrae o usa un cliente torrent para instalarlo</h3>
+                    <h3>3. Extrae</h3>
                     <p>Usa la contraseña <strong>123</strong> para descomprimir</p>
                 </div>
                 <div class="guide-step">
                     <i class="fas fa-play"></i>
                     <h3>4. Juega</h3>
-                    <p>Ejecuta el instalador O Ejecuta directamente el juego y depues disfruta del juego</p>
+                    <p>Ejecuta el instalador y disfruta del juego</p>
                 </div>
             </div>
         </section>
@@ -174,8 +483,8 @@
         <!-- Sección de contacto -->
         <section class="contact-section">
             <h2>¿Necesitas ayuda?</h2>
-            <p>Contáctanos si tienes problemas con una descarga o reportar un error.</p>
-            <form action="  https://formspree.io/f/mpwlozqz   " method="POST">
+            <p>Contáctanos si tienes problemas con una descarga o para reportar un error.</p>
+            <form action="https://formspree.io/f/mpwlozqz" method="POST">
                 <div class="form-group">
                     <label for="email">Tu Correo</label>
                     <input type="email" name="Correo" id="email" placeholder="tu@correo.com" required>
@@ -197,7 +506,7 @@
     <!-- Modal de detalles del juego -->
     <div id="gameModal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" id="closeDetails">&times;</span>
+            <span class="close-btn" id="closeDetails" aria-label="Cerrar">&times;</span>
             <div class="modal-body">
                 <img id="modalImage" src="" alt="Portada del juego">
                 <div class="modal-info">
@@ -222,27 +531,33 @@
                             </a>
                         </div>
                     </div>
-<!-- Contenedor de extras opcionales -->
-<div class="download-options extra-downloads" id="extraDownloads" style="display:none;">
-    <h3>Extras disponibles:</h3>
-    <div class="links-extra">
-        <!-- Aquí se inyectarán los links de Voces Latinas, Online Fix o Updates desde JS -->
-    </div>
-    <!-- Contenedor de nota del juego -->
-    <div class="game-note" id="gameNote" style="display:none; margin-top: 10px; padding: 10px; background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: 5px;">
-        <p class="note-text" style="margin:0; color:#856404; font-weight:bold;"></p>
-    </div>
-</div>
+                    
+                    <!-- Contenedor de extras opcionales -->
+                    <div class="download-options extra-downloads" id="extraDownloads" style="display:none;">
+                        <h3>Extras disponibles:</h3>
+                        <div class="links-extra">
+                            <!-- Aquí se inyectarán los links de Voces Latinas, Online Fix o Updates desde JS -->
+                        </div>
+                        <!-- Contenedor de nota del juego -->
+                        <div class="game-note" id="gameNote" style="display:none; margin-top: 10px; padding: 10px; background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: 5px;">
+                            <p class="note-text" style="margin:0; color:#856404; font-weight:bold;"></p>
+                        </div>
+                    </div>
 
-<!-- Sección de comentarios -->
-<div class="comments-section">
-    <h3>Reseñas de usuarios</h3>
-    <div id="commentsContainer" class="comments-list"></div>
-    <div class="add-comment">
-        <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput"></textarea>
-        <button id="addCommentBtn">Publicar</button>
+                    <!-- Sección de comentarios -->
+                    <div class="comments-section">
+                        <h3>Reseñas de usuarios</h3>
+                        <div id="commentsContainer" class="comments-list"></div>
+                        <div class="add-comment">
+                            <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput"></textarea>
+                            <button id="addCommentBtn">Publicar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
     <!-- Modal de vista previa al pasar el cursor -->
     <div id="previewModal" class="preview-modal">
         <div class="preview-content">
@@ -259,7 +574,7 @@
     </div>
 
     <!-- Botón volver arriba -->
-    <button id="backToTop" class="back-to-top-btn">
+    <button id="backToTop" class="back-to-top-btn" aria-label="Volver arriba">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -344,7 +659,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>¡Por supuesto! Puedes solicitarnos juegos a través de nuestro formulario de contacto o directamente en nuestro grupo de Telegram O Mi Cuenta De Tiktok. Hago mi mejor esfuerzo para agregar los títulos más solicitados.</p>
+                    <p>¡Por supuesto! Puedes solicitarnos juegos a través de nuestro formulario de contacto o directamente en nuestro grupo de Telegram o mi cuenta de Tiktok. Hago mi mejor esfuerzo para agregar los títulos más solicitados.</p>
                 </div>
             </div>
             <div class="faq-item">
@@ -430,7 +745,7 @@
     </footer>
 
     <!-- Botón para volver al inicio -->
-    <a href="#top" class="back-to-top-mobile">
+    <a href="#top" class="back-to-top-mobile" aria-label="Volver arriba">
         <i class="fas fa-arrow-up"></i>
     </a>
 
@@ -450,6 +765,55 @@
             setTimeout(function() {
                 window.location.href = '/';
             }, 600);
+        });
+    </script>
+    
+    <!-- Script para la animación de entrada mejorada -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const welcomeScreen = document.getElementById('welcomeScreen');
+            const loadingProgress = document.getElementById('loadingProgress');
+            const loadingPercentage = document.getElementById('loadingPercentage');
+            const skipIntro = document.getElementById('skipIntro');
+            const particlesContainer = document.getElementById('particlesContainer');
+            
+            // Crear partículas animadas
+            function createParticles() {
+                for (let i = 0; i < 50; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 8 + 's';
+                    particle.style.animationDuration = (Math.random() * 3 + 5) + 's';
+                    particlesContainer.appendChild(particle);
+                }
+            }
+            
+            // Simular progreso de carga
+            let progress = 0;
+            const loadingInterval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress > 100) progress = 100;
+                
+                loadingProgress.style.width = progress + '%';
+                loadingPercentage.textContent = Math.floor(progress) + '%';
+                
+                if (progress >= 100) {
+                    clearInterval(loadingInterval);
+                    setTimeout(() => {
+                        welcomeScreen.classList.add('hidden');
+                    }, 500);
+                }
+            }, 200);
+            
+            // Opción para saltar la introducción
+            skipIntro.addEventListener('click', function() {
+                clearInterval(loadingInterval);
+                welcomeScreen.classList.add('hidden');
+            });
+            
+            // Inicializar partículas
+            createParticles();
         });
     </script>
 </body>
