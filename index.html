@@ -11,7 +11,7 @@
     <meta name="keywords" content="juegos pc gratis, descargar juegos full, juegos 2025, juegos completos, juegos sin internet, juegos offline, juegos indie, cracked games, juegos completos en español">
     <meta name="author" content="GamesFullZ">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#1e1e1e">
+    <meta name="theme-color" content="#000000">
 
     <!-- 🔗 Open Graph / Facebook -->
     <meta property="og:title" content="GamesFullZ - Descarga Juegos PC Gratis | Los Mejores Títulos 2025">
@@ -36,13 +36,13 @@
     <!-- ⚡ Preconnect y preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     </noscript>
 
     <!-- 🎨 Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- 📢 Google AdSense y AdManager -->
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
@@ -188,102 +188,105 @@
     </section>
 
     <main id="main-content" class="container" role="main">
+        <div class="layout-grid">
+            <!-- 📁 Filtros y Categorías -->
+            <aside class="filters-sidebar" aria-label="Filtros de búsqueda">
+                <h2 class="filters-title">Filtrar Juegos</h2>
 
-        <!-- 📁 Filtros y Categorías -->
-        <aside class="filters-sidebar" aria-label="Filtros de búsqueda">
-            <h2 class="filters-title">Filtrar Juegos</h2>
+                <!-- Categorías rápidas -->
+                <section class="categories-section" id="categories">
+                    <h3><i class="fas fa-th-large"></i> Categorías</h3>
+                    <div class="categories-grid">
+                        <a href="#" class="category-card" data-category="accion" aria-label="Juegos de Acción"><i class="fas fa-fist-raised"></i> Acción</a>
+                        <a href="#" class="category-card" data-category="aventura" aria-label="Juegos de Aventura"><i class="fas fa-map-marked-alt"></i> Aventura</a>
+                        <a href="#" class="category-card" data-category="rpg" aria-label="Juegos RPG"><i class="fas fa-dragon"></i> RPG</a>
+                        <a href="#" class="category-card" data-category="estrategia" aria-label="Juegos de Estrategia"><i class="fas fa-chess"></i> Estrategia</a>
+                        <a href="#" class="category-card" data-category="deportes" aria-label="Juegos de Deportes"><i class="fas fa-futbol"></i> Deportes</a>
+                        <a href="#" class="category-card" data-category="indie" aria-label="Juegos Indie"><i class="fas fa-palette"></i> Indie</a>
+                    </div>
+                </section>
 
-            <!-- Categorías rápidas -->
-            <section class="categories-section" id="categories">
-                <h3><i class="fas fa-th-large"></i> Categorías</h3>
-                <div class="categories-grid">
-                    <a href="#" class="category-card" data-category="accion" aria-label="Juegos de Acción"><i class="fas fa-fist-raised"></i> Acción</a>
-                    <a href="#" class="category-card" data-category="aventura" aria-label="Juegos de Aventura"><i class="fas fa-map-marked-alt"></i> Aventura</a>
-                    <a href="#" class="category-card" data-category="rpg" aria-label="Juegos RPG"><i class="fas fa-dragon"></i> RPG</a>
-                    <a href="#" class="category-card" data-category="estrategia" aria-label="Juegos de Estrategia"><i class="fas fa-chess"></i> Estrategia</a>
-                    <a href="#" class="category-card" data-category="deportes" aria-label="Juegos de Deportes"><i class="fas fa-futbol"></i> Deportes</a>
-                    <a href="#" class="category-card" data-category="indie" aria-label="Juegos Indie"><i class="fas fa-palette"></i> Indie</a>
+                <!-- Filtros avanzados -->
+                <form class="filters-form">
+                    <fieldset>
+                        <legend>Género</legend>
+                        <label><input type="checkbox" name="genre" value="accion"> Acción</label>
+                        <label><input type="checkbox" name="genre" value="rpg"> RPG</label>
+                        <!-- otros géneros -->
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Tamaño</legend>
+                        <label><input type="radio" name="size" value="small"> Menos de 5 GB</label>
+                        <label><input type="radio" name="size" value="medium"> 5–20 GB</label>
+                        <label><input type="radio" name="size" value="large"> Más de 20 GB</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Año</legend>
+                        <input type="range" id="yearRange" min="2000" max="2025" value="2025">
+                        <output for="yearRange" id="yearValue">2025</output>
+                    </fieldset>
+
+                    <div class="filter-actions">
+                        <button type="button" id="applyFilters" class="btn-primary">Aplicar</button>
+                        <button type="button" id="clearFilters" class="btn-secondary">Limpiar</button>
+                    </div>
+                </form>
+
+                <p id="resultsCount" class="results-count" aria-live="polite">Mostrando <strong>0</strong> resultados</p>
+            </aside>
+
+            <!-- 🕹️ Sección de juegos -->
+            <section id="games-section" class="content-section active" aria-labelledby="games-heading">
+                <h2 id="games-heading">Catálogo de Juegos</h2>
+
+                <!-- Skeleton loaders -->
+                <div class="skeleton-loader" aria-hidden="true">
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                </div>
+
+                <!-- Galería de juegos -->
+                <div class="gallery__container" id="gallery" aria-live="polite">
+                    <!-- Los juegos se cargarán dinámicamente -->
+                </div>
+
+                <!-- 👇 Anuncio (mantenido) -->
+                <div id='div-gpt-ad-1758490864512-0'
+                    style='min-width: 728px; min-height: 90px; margin: 30px auto; text-align:center;'>
+                    <script>
+                        googletag.cmd.push(function() {
+                            googletag.display('div-gpt-ad-1758490864512-0');
+                        });
+                    </script>
+                </div>
+
+                <!-- Paginación -->
+                <div class="pagination-container" role="navigation" aria-label="Navegación de páginas">
+                    <button id="prevPage" class="pagination-btn" disabled aria-label="Página anterior">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i> Anterior
+                    </button>
+
+                    <div class="page-navigation">
+                        <span id="pageInfo" class="page-info">Página 1 de 1</span>
+                        <div class="page-numbers" id="pageNumbersContainer">
+                            <!-- Dinámico -->
+                        </div>
+                    </div>
+
+                    <button id="nextPage" class="pagination-btn" aria-label="Página siguiente">
+                        Siguiente <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
                 </div>
             </section>
+        </div>
+    </main>
 
-            <!-- Filtros avanzados -->
-            <form class="filters-form">
-                <fieldset>
-                    <legend>Género</legend>
-                    <label><input type="checkbox" name="genre" value="accion"> Acción</label>
-                    <label><input type="checkbox" name="genre" value="rpg"> RPG</label>
-                    <!-- otros géneros -->
-                </fieldset>
-
-                <fieldset>
-                    <legend>Tamaño</legend>
-                    <label><input type="radio" name="size" value="small"> Menos de 5 GB</label>
-                    <label><input type="radio" name="size" value="medium"> 5–20 GB</label>
-                    <label><input type="radio" name="size" value="large"> Más de 20 GB</label>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Año</legend>
-                    <input type="range" id="yearRange" min="2000" max="2025" value="2025">
-                    <output for="yearRange" id="yearValue">2025</output>
-                </fieldset>
-
-                <div class="filter-actions">
-                    <button type="button" id="applyFilters" class="btn-primary">Aplicar</button>
-                    <button type="button" id="clearFilters" class="btn-secondary">Limpiar</button>
-                </div>
-            </form>
-
-            <p id="resultsCount" class="results-count" aria-live="polite">Mostrando <strong>0</strong> resultados</p>
-        </aside>
-
-        <!-- 🕹️ Sección de juegos -->
-        <section id="games-section" class="content-section active" aria-labelledby="games-heading">
-            <h2 id="games-heading">Catálogo de Juegos</h2>
-
-            <!-- Skeleton loaders -->
-            <div class="skeleton-loader" aria-hidden="true">
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-            </div>
-
-            <!-- Galería de juegos -->
-            <div class="gallery__container" id="gallery" aria-live="polite">
-                <!-- Los juegos se cargarán dinámicamente -->
-            </div>
-
-            <!-- 👇 Anuncio (mantenido) -->
-            <div id='div-gpt-ad-1758490864512-0'
-                style='min-width: 728px; min-height: 90px; margin: 30px auto; text-align:center;'>
-                <script>
-                    googletag.cmd.push(function() {
-                        googletag.display('div-gpt-ad-1758490864512-0');
-                    });
-                </script>
-            </div>
-
-            <!-- Paginación -->
-            <div class="pagination-container" role="navigation" aria-label="Navegación de páginas">
-                <button id="prevPage" class="pagination-btn" disabled aria-label="Página anterior">
-                    <i class="fas fa-chevron-left" aria-hidden="true"></i> Anterior
-                </button>
-
-                <div class="page-navigation">
-                    <span id="pageInfo" class="page-info">Página 1 de 1</span>
-                    <div class="page-numbers" id="pageNumbersContainer">
-                        <!-- Dinámico -->
-                    </div>
-                </div>
-
-                <button id="nextPage" class="pagination-btn" aria-label="Página siguiente">
-                    Siguiente <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                </button>
-            </div>
-        </section>
-
-        <!-- ⭐ Juegos destacados (carrusel base) -->
-        <section id="featured" class="featured-section" aria-labelledby="featured-heading">
+    <!-- ⭐ Juegos destacados (carrusel base) -->
+    <section id="featured" class="featured-section" aria-labelledby="featured-heading">
+        <div class="container">
             <h2 id="featured-heading">Juegos Destacados</h2>
             <div class="carousel" data-current-slide="0">
                 <button class="carousel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
@@ -295,10 +298,12 @@
                     <!-- Puntos dinámicos -->
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 📘 Guía de descarga mejorada -->
-        <section class="guide-section" id="download-guide" aria-labelledby="guide-heading">
+    <!-- 📘 Guía de descarga mejorada -->
+    <section class="guide-section" id="download-guide" aria-labelledby="guide-heading">
+        <div class="container">
             <h2 id="guide-heading">Guía Rápida de Descarga</h2>
             <div class="guide-steps timeline">
                 <div class="guide-step">
@@ -326,10 +331,12 @@
                     <p>Ejecuta el instalador o el juego directamente y disfruta</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 👑 Juegos recomendados (mejorada semánticamente) -->
-        <section class="recommended-section" aria-labelledby="recommended-heading">
+    <!-- 👑 Juegos recomendados (mejorada semánticamente) -->
+    <section class="recommended-section" aria-labelledby="recommended-heading">
+        <div class="container">
             <h2 id="recommended-heading">Juegos Recomendados</h2>
             <p class="recommended-description">Selección semanal de los mejores títulos</p>
             <div class="recommended-games">
@@ -346,10 +353,12 @@
                     <span>Marvel's Spider-Man 2</span>
                 </article>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 📩 Contacto -->
-        <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+    <!-- 📩 Contacto -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+        <div class="container">
             <h2 id="contact-heading">¿Necesitas ayuda?</h2>
             <p>Contáctanos si tienes problemas con una descarga o reportar un error.</p>
             <form action="https://formspree.io/f/mpwlozqz" method="POST" aria-label="Formulario de contacto">
@@ -363,20 +372,15 @@
                 </div>
                 <button type="submit">Enviar mensaje ✉️</button>
             </form>
-        </section>
+        </div>
+    </section>
 
-        <!-- ❤️ Agradecimiento -->
-        <div class="thank-you" role="status">
+    <!-- ❤️ Agradecimiento -->
+    <div class="thank-you" role="status">
+        <div class="container">
             <p>🎮 ¡Gracias por apoyar la web, amigo! La Contraseña ES <strong>123</strong> 🎮</p>
         </div>
-
-    </main>
-
-    <!-- 👤 Sobre Nosotros, FAQ, Privacidad (ya existen, solo ajustadas para IDs consistentes) -->
-    <!-- (mantenidas como en tu código original, pero con IDs como #about, #faq, #privacy) -->
-
-    <!-- 📢 Modal de detalles del juego (ya existente, solo optimizado) -->
-    <!-- Se mantiene igual, pero se recomienda envolver en <dialog> en el futuro -->
+    </div>
 
     <!-- 👁️ Modal de vista previa -->
     <div id="previewModal" class="preview-modal" aria-hidden="true" role="dialog">
@@ -414,37 +418,39 @@
 
     <!-- 🌐 Footer optimizado -->
     <footer class="site-footer" role="contentinfo" aria-label="Pie de página">
-        <div class="footer-content">
-            <div class="footer-column">
-                <h3>Sobre Nosotros</h3>
-                <p>Proyecto independiente desde 2020. Juegos verificados, seguros y 100% gratis.</p>
-            </div>
-            <div class="footer-column">
-                <h3>Enlaces Rápidos</h3>
-                <a href="#games-section">Catálogo</a>
-                <a href="#download-guide">Guía de Descarga</a>
-                <a href="#faq">Preguntas Frecuentes</a>
-            </div>
-            <div class="footer-column">
-                <h3>Categorías</h3>
-                <a href="#" data-category="accion">Acción</a>
-                <a href="#" data-category="aventura">Aventura</a>
-                <a href="#" data-category="rpg">RPG</a>
-            </div>
-            <div class="footer-column">
-                <h3>Contacto</h3>
-                <a href="https://web.telegram.org/k/#-4959297719" target="_blank" rel="noopener">Telegram</a>
-                <div class="social-icons">
-                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sobre Nosotros</h3>
+                    <p>Proyecto independiente desde 2020. Juegos verificados, seguros y 100% gratis.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <a href="#games-section">Catálogo</a>
+                    <a href="#download-guide">Guía de Descarga</a>
+                    <a href="#faq">Preguntas Frecuentes</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Categorías</h3>
+                    <a href="#" data-category="accion">Acción</a>
+                    <a href="#" data-category="aventura">Aventura</a>
+                    <a href="#" data-category="rpg">RPG</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <a href="https://web.telegram.org/k/#-4959297719" target="_blank" rel="noopener">Telegram</a>
+                    <div class="social-icons">
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; <span id="currentYear">2025</span> GamesFullZ. Todos los derechos reservados.</p>
-            <div class="legal-links">
-                <a href="#privacy">Política de Privacidad</a>
-                <a href="#">Términos de Uso</a>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2025</span> GamesFullZ. Todos los derechos reservados.</p>
+                <div class="legal-links">
+                    <a href="#privacy">Política de Privacidad</a>
+                    <a href="#">Términos de Uso</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -470,6 +476,14 @@
             e.preventDefault();
             this.classList.add('logo-clicked');
             setTimeout(() => window.location.href = '/', 600);
+        });
+
+        // Toggle menú móvil
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const nav = document.getElementById('mobileNav');
+            const isOpen = nav.hidden;
+            nav.hidden = !isOpen;
+            this.setAttribute('aria-expanded', isOpen);
         });
     </script>
     <script src="data.js" defer></script>
