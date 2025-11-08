@@ -4,393 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamesFullZ - Descarga Juegos Gratis</title>
-    
-    <!-- Metadatos optimizados -->
-    <meta name="description" content="Descubre y descarga juegos gratis en GamesFullZ. Revive el historial de tus títulos favoritos con descargas seguras y rápidas.">
-    <meta name="keywords" content="juegos pc, descargar juegos, juegos gratis, torrents, juegos full">
-    <meta name="author" content="GamesFullZ">
-    
-    <!-- Open Graph para redes sociales -->
-    <meta property="og:title" content="GamesFullZ - Descarga Juegos Gratis para PC">
-    <meta property="og:description" content="Descubre y descarga juegos gratis para PC en GamesFullZ">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gamesfullz.com">
-    <meta property="og:image" content="https://gamesfullz.com/images/og-image.jpg">
-    
-    <!-- Datos estructurados para juegos -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "GamesFullZ",
-      "url": "https://gamesfullz.com",
-      "description": "Descarga de juegos gratis para PC",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://gamesfullz.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-    
-    <!-- AdManager (MANTENIDO) -->
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js " crossorigin="anonymous"></script>
-    <script>
-      window.googletag = window.googletag || {cmd: []};
-      googletag.cmd.push(function() {
-        googletag.defineSlot('/23318791520/GFZ_TOP_728x90', [728, 90], 'div-gpt-ad-1758490864512-0')
-                 .addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-      });
-    </script>
-    
-    <!-- Google AdSense (MANTENIDO) -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795479991735761 "
-     crossorigin="anonymous"></script>
-         
-    <!-- Google AdSense AMP (MANTENIDO) -->
-    <script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-    </script>
+      <!-- AdManager -->
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js " crossorigin="anonymous"></script>
+  <script>
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+      googletag.defineSlot('/23318791520/GFZ_TOP_728x90', [728, 90], 'div-gpt-ad-1758490864512-0')
+               .addService(googletag.pubads());
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });
+  </script>
+    <meta name="description" content="Descubre y descarga juegos gratis en GamesFullZ.revive el historial de tus títulos favoritos.">
     
     <!-- Fuentes modernas -->
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300 ;400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
     <!-- Iconos con Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css   ">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795479991735761 "
+     crossorigin="anonymous"></script>
+         <!-- Google AdSense AMP -->
+    <script async custom-element="amp-auto-ads"
+        src="  https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js   ">
+</script>
     
     <!-- Enlace al CSS externo -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- Estilos para la animación de entrada mejorada -->
-    <style>
-        /* Animación de entrada mejorada */
-        .welcome-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            overflow: hidden;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
-        
-        .welcome-screen.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-        
-        .particles-container {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(0, 255, 255, 0.8);
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-            animation: float 8s infinite linear;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) translateX(100px);
-                opacity: 0;
-            }
-        }
-        
-        .welcome-content {
-            text-align: center;
-            z-index: 10;
-            position: relative;
-        }
-        
-        .logo-animation {
-            margin-bottom: 40px;
-            position: relative;
-        }
-        
-        .logo-letter {
-            display: inline-block;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #fff;
-            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-            animation: glitch 2s infinite;
-            animation-delay: calc(var(--i) * 0.1s);
-            transform: translateY(50px);
-            opacity: 0;
-            animation-fill-mode: forwards;
-        }
-        
-        @keyframes glitch {
-            0%, 100% {
-                transform: translateY(0) scale(1);
-                opacity: 1;
-                text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-            }
-            20% {
-                transform: translateY(-5px) scale(1.05);
-                text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff;
-            }
-            40% {
-                transform: translateY(5px) scale(0.95);
-                text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
-            }
-        }
-        
-        .loading-container {
-            width: 300px;
-            margin: 0 auto;
-        }
-        
-        .loading-text {
-            font-family: 'Exo 2', sans-serif;
-            font-size: 1.2rem;
-            color: #00ffff;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        .loading-bar {
-            width: 100%;
-            height: 6px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 3px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .loading-progress {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, #00ffff, #ff00ff, #00ffff);
-            background-size: 200% 100%;
-            border-radius: 3px;
-            animation: loading 2s ease-in-out forwards, gradient 1.5s ease-in-out infinite;
-        }
-        
-        @keyframes loading {
-            to {
-                width: 100%;
-            }
-        }
-        
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-        
-        .loading-percentage {
-            margin-top: 10px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
-            color: #fff;
-            font-weight: 600;
-        }
-        
-        .skip-intro {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-family: 'Exo 2', sans-serif;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            z-index: 20;
-        }
-        
-        .skip-intro:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateX(-50%) scale(1.05);
-        }
-        
-        /* Efecto de scanlines gaming */
-        .scanlines {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                to bottom,
-                transparent 50%,
-                rgba(0, 255, 255, 0.03) 50%
-            );
-            background-size: 100% 4px;
-            animation: scanlines 8s linear infinite;
-            pointer-events: none;
-            z-index: 5;
-        }
-        
-        @keyframes scanlines {
-            0% {
-                background-position: 0 0;
-            }
-            100% {
-                background-position: 0 10px;
-            }
-        }
-        
-        /* Estilos para las pestañas de información */
-        .info-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: var(--space-lg);
-            border-bottom: 2px solid var(--border-primary);
-            position: relative;
-        }
-        
-        .info-tab {
-            padding: var(--space-md) var(--space-lg);
-            background: transparent;
-            border: none;
-            color: var(--clr-text-secondary);
-            font-family: var(--font-display);
-            font-size: var(--font-size-md);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all var(--transition-base);
-            position: relative;
-        }
-        
-        .info-tab::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: var(--gradient-accent);
-            transition: width var(--transition-bounce);
-        }
-        
-        .info-tab:hover {
-            color: var(--clr-text-primary);
-        }
-        
-        .info-tab.active {
-            color: var(--clr-accent-cyan);
-        }
-        
-        .info-tab.active::after {
-            width: 100%;
-        }
-        
-        .info-content {
-            display: none;
-            animation: fadeInUp 0.5s var(--transition-base);
-        }
-        
-        .info-content.active {
-            display: block;
-        }
-        
-        .info-container {
-            background: var(--clr-bg-card);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-primary);
-            border-radius: var(--radius-xl);
-            padding: var(--space-xl);
-            box-shadow: var(--shadow-md);
-        }
-    </style>
+    <!-- Estilos para el bloqueador de AdBlock (eliminados junto con su contenido) -->
+    <!-- Nota: Los estilos .adblock-* han sido removidos por completo -->
 </head>
 <body data-theme="dark" id="top">
     
-    <!-- Pantalla de bienvenida MEJORADA -->
+    <!-- Pantalla de bienvenida animada -->
     <div id="welcomeScreen" class="welcome-screen">
-        <!-- Partículas animadas -->
-        <div class="particles-container" id="particlesContainer"></div>
-        
-        <!-- Efecto scanlines -->
-        <div class="scanlines"></div>
-        
         <div class="welcome-content">
             <div class="logo-animation">
-                <span class="logo-letter" style="--i: 0">G</span>
-                <span class="logo-letter" style="--i: 1">a</span>
-                <span class="logo-letter" style="--i: 2">m</span>
-                <span class="logo-letter" style="--i: 3">e</span>
-                <span class="logo-letter" style="--i: 4">s</span>
-                <span class="logo-letter" style="--i: 5">F</span>
-                <span class="logo-letter" style="--i: 6">u</span>
-                <span class="logo-letter" style="--i: 7">l</span>
-                <span class="logo-letter" style="--i: 8">l</span>
-                <span class="logo-letter" style="--i: 9">Z</span>
+                <span class="logo-letter">G</span>
+                <span class="logo-letter">a</span>
+                <span class="logo-letter">m</span>
+                <span class="logo-letter">e</span>
+                <span class="logo-letter">s</span>
+                <span class="logo-letter">F</span>
+                <span class="logo-letter">u</span>
+                <span class="logo-letter">l</span>
+                <span class="logo-letter">l</span>
+                <span class="logo-letter">Z</span>
             </div>
-            
-            <div class="loading-container">
-                <div class="loading-text">Cargando juegos...</div>
-                <div class="loading-bar">
-                    <div class="loading-progress" id="loadingProgress"></div>
-                </div>
-                <div class="loading-percentage" id="loadingPercentage">0%</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
             </div>
         </div>
-        
-        <!-- Botón para saltar intro -->
-        <button class="skip-intro" id="skipIntro">Saltar introducción</button>
     </div>
 
     <!-- Cabecera fija -->
     <header id="mainHeader" class="site-header">
         <div class="container header-content">
             <!-- Logo que ahora recarga la página con animación -->
-            <a href="/" class="logo" id="logoLink" aria-label="Inicio de GamesFullZ">
+            <a href="/" class="logo" id="logoLink">
                 <span class="logo-text">Games<span>FullZ</span></span>
                 <span class="logo-loader"></span>
             </a>
             
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="🔍 Buscar juegos..." aria-label="Buscar juegos">
-                <div id="searchSuggestions" class="search-suggestions" aria-hidden="true"></div>
+                <input type="text" id="searchInput" placeholder="🔍 Buscar juegos...">
             </div>
             
             <div class="header-actions">
-                <!-- Botón de tema -->
-                <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
-                    <i class="fas fa-moon"></i>
-                </button>
-                
                 <!-- Botón hacia el grupo de Telegram -->
-                <a href="https://web.telegram.org/k/#-4959297719" target="_blank" rel="noopener noreferrer" class="boton-telegram" aria-label="Únete a nuestro Telegram">
+                <a href="https://web.telegram.org/k/#-4959297719 " target="_blank" rel="noopener noreferrer" class="boton-telegram">
                     <i class="fab fa-telegram-plane"></i> Telegram
                 </a>
             </div>
@@ -400,38 +83,31 @@
     <main class="container main-content">
         <!-- Sección de juegos -->
         <section id="games-section" class="content-section active">
-            <h1 class="section-title">Catálogo de Juegos</h1>
-            
             <!-- Galería de juegos -->
-            <div class="gallery__container" id="gallery" aria-live="polite">
+            <div class="gallery__container" id="gallery">
                 <!-- Los juegos se cargarán dinámicamente -->
             </div>
 
-            <!-- Anuncio TOP (MANTENIDO) -->
-            <div id='div-gpt-ad-1758490864512-0' 
-                 style='min-width: 728px; min-height: 90px; margin: 30px auto; text-align:center;'
-                 role="complementary" aria-label="Anuncio">
-                <script>
-                    googletag.cmd.push(function() { 
-                        googletag.display('div-gpt-ad-1758490864512-0'); 
-                    });
-                </script>
-            </div>
+            <!-- 👇anuncio -->
+<div id='div-gpt-ad-1758490864512-0' 
+     style='min-width: 728px; min-height: 90px; margin: 30px auto; text-align:center;'>
+  <script>
+    googletag.cmd.push(function() { 
+      googletag.display('div-gpt-ad-1758490864512-0'); 
+    });
+  </script>
+   </div>
 
-            <!-- Anuncio LATERAL (MANTENIDO) -->
-            <div id='div-gpt-ad-1762575181936-0' 
-                 style='min-width: 120px; min-height: 240px; margin: 20px auto; text-align:center;'
-                 role="complementary" aria-label="Anuncio lateral">
-                <script>
-                    googletag.cmd.push(function() { 
-                        googletag.display('div-gpt-ad-1762575181936-0'); 
-                    });
-                </script>
-            </div>
-            
+            <!-- /23318791520/GFZ_TOP_120x240 -->
+<div id='div-gpt-ad-1762575181936-0' style='min-width: 120px; min-height: 240px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1762575181936-0'); });
+  </script>
+</div>
+         
             <!-- Paginación con navegación directa -->
             <div class="pagination-container">
-                <button id="prevPage" class="pagination-btn" disabled aria-label="Página anterior">
+                <button id="prevPage" class="pagination-btn" disabled>
                     <i class="fas fa-chevron-left"></i> Anterior
                 </button>
                 
@@ -442,7 +118,7 @@
                     </div>
                 </div>
                 
-                <button id="nextPage" class="pagination-btn" aria-label="Página siguiente">
+                <button id="nextPage" class="pagination-btn">
                     Siguiente <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
@@ -464,13 +140,13 @@
                 </div>
                 <div class="guide-step">
                     <i class="fas fa-file-archive"></i>
-                    <h3>3. Extrae</h3>
+                    <h3>3. Extrae o usa un cliente torrent para instalarlo</h3>
                     <p>Usa la contraseña <strong>123</strong> para descomprimir</p>
                 </div>
                 <div class="guide-step">
                     <i class="fas fa-play"></i>
                     <h3>4. Juega</h3>
-                    <p>Ejecuta el instalador y disfruta del juego</p>
+                    <p>Ejecuta el instalador O Ejecuta directamente el juego y depues disfruta del juego</p>
                 </div>
             </div>
         </section>
@@ -498,8 +174,8 @@
         <!-- Sección de contacto -->
         <section class="contact-section">
             <h2>¿Necesitas ayuda?</h2>
-            <p>Contáctanos si tienes problemas con una descarga o para reportar un error.</p>
-            <form action="https://formspree.io/f/mpwlozqz" method="POST">
+            <p>Contáctanos si tienes problemas con una descarga o reportar un error.</p>
+            <form action="  https://formspree.io/f/mpwlozqz   " method="POST">
                 <div class="form-group">
                     <label for="email">Tu Correo</label>
                     <input type="email" name="Correo" id="email" placeholder="tu@correo.com" required>
@@ -521,7 +197,7 @@
     <!-- Modal de detalles del juego -->
     <div id="gameModal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" id="closeDetails" aria-label="Cerrar">&times;</span>
+            <span class="close-btn" id="closeDetails">&times;</span>
             <div class="modal-body">
                 <img id="modalImage" src="" alt="Portada del juego">
                 <div class="modal-info">
@@ -546,33 +222,27 @@
                             </a>
                         </div>
                     </div>
-                    
-                    <!-- Contenedor de extras opcionales -->
-                    <div class="download-options extra-downloads" id="extraDownloads" style="display:none;">
-                        <h3>Extras disponibles:</h3>
-                        <div class="links-extra">
-                            <!-- Aquí se inyectarán los links de Voces Latinas, Online Fix o Updates desde JS -->
-                        </div>
-                        <!-- Contenedor de nota del juego -->
-                        <div class="game-note" id="gameNote" style="display:none; margin-top: 10px; padding: 10px; background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: 5px;">
-                            <p class="note-text" style="margin:0; color:#856404; font-weight:bold;"></p>
-                        </div>
-                    </div>
-
-                    <!-- Sección de comentarios -->
-                    <div class="comments-section">
-                        <h3>Reseñas de usuarios</h3>
-                        <div id="commentsContainer" class="comments-list"></div>
-                        <div class="add-comment">
-                            <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput"></textarea>
-                            <button id="addCommentBtn">Publicar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Contenedor de extras opcionales -->
+<div class="download-options extra-downloads" id="extraDownloads" style="display:none;">
+    <h3>Extras disponibles:</h3>
+    <div class="links-extra">
+        <!-- Aquí se inyectarán los links de Voces Latinas, Online Fix o Updates desde JS -->
     </div>
+    <!-- Contenedor de nota del juego -->
+    <div class="game-note" id="gameNote" style="display:none; margin-top: 10px; padding: 10px; background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: 5px;">
+        <p class="note-text" style="margin:0; color:#856404; font-weight:bold;"></p>
+    </div>
+</div>
 
+<!-- Sección de comentarios -->
+<div class="comments-section">
+    <h3>Reseñas de usuarios</h3>
+    <div id="commentsContainer" class="comments-list"></div>
+    <div class="add-comment">
+        <textarea placeholder="Escribe tu opinión..." rows="3" id="commentInput"></textarea>
+        <button id="addCommentBtn">Publicar</button>
+    </div>
+</div>
     <!-- Modal de vista previa al pasar el cursor -->
     <div id="previewModal" class="preview-modal">
         <div class="preview-content">
@@ -589,146 +259,131 @@
     </div>
 
     <!-- Botón volver arriba -->
-    <button id="backToTop" class="back-to-top-btn" aria-label="Volver arriba">
+    <button id="backToTop" class="back-to-top-btn">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- Botones de navegación adicionales -->
     <div class="navigation-buttons">
-        <a href="#info" class="nav-btn info-btn">
-            <i class="fas fa-info-circle"></i> Información
+        <a href="#about" class="nav-btn about-btn">
+            <i class="fas fa-info-circle"></i> Sobre Nosotros
+        </a>
+        <a href="#faq" class="nav-btn faq-btn">
+            <i class="fas fa-question-circle"></i> FAQ
+        </a>
+        <a href="#privacy" class="nav-btn privacy-btn">
+            <i class="fas fa-lock"></i> Privacidad
         </a>
     </div>
 
-    <!-- Sección de Información Unificada -->
-    <section id="info" class="content-section">
-        <div class="info-container">
-            <h2 class="section-title">Centro de Información</h2>
-            
-            <!-- Pestañas de navegación -->
-            <div class="info-tabs">
-                <button class="info-tab active" data-tab="about">
-                    <i class="fas fa-info-circle"></i> Sobre Nosotros
-                </button>
-                <button class="info-tab" data-tab="faq">
-                    <i class="fas fa-question-circle"></i> FAQ
-                </button>
-                <button class="info-tab" data-tab="privacy">
-                    <i class="fas fa-lock"></i> Privacidad
-                </button>
+    <!-- Sección Sobre Nosotros -->
+    <section id="about" class="content-section about-section">
+        <div class="about-content">
+            <h2>Sobre GamesFullZ</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>GamesFullZ es un proyecto personal creado por un joven apasionado de los videojuegos. Mi objetivo es compartir juegos de calidad de forma gratuita y segura con la comunidad gamer.</p>
+                    <p>Desde 2020, he estado recopilando y verificando juegos para ofrecer una experiencia de descarga confiable. Cada juego es escaneado cuidadosamente antes de ser publicado.</p>
+                    <p>Este es un sitio independiente sin fines de lucro. Si tienes alguna sugerencia o encuentras un problema, no dudes en contactarme. ¡Tu feedback ayuda a mejorar la comunidad!</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <i class="fas fa-gamepad"></i>
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Juegos</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Usuarios</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-download"></i>
+                        <span class="stat-number">2M+</span>
+                        <span class="stat-label">Descargas</span>
+                    </div>
+                </div>
             </div>
-            
-            <!-- Contenido de las pestañas -->
-            <div class="tab-content">
-                <!-- Contenido de Sobre Nosotros -->
-                <div id="about" class="info-content active">
-                    <div class="about-content">
-                        <h3>Sobre GamesFullZ</h3>
-                        <div class="about-grid">
-                            <div class="about-text">
-                                <p>GamesFullZ es un proyecto personal creado por un joven apasionado de los videojuegos. Mi objetivo es compartir juegos de calidad de forma gratuita y segura con la comunidad gamer.</p>
-                                <p>Desde 2020, he estado recopilando y verificando juegos para ofrecer una experiencia de descarga confiable. Cada juego es escaneado cuidadosamente antes de ser publicado.</p>
-                                <p>Este es un sitio independiente sin fines de lucro. Si tienes alguna sugerencia o encuentras un problema, no dudes en contactarme. ¡Tu feedback ayuda a mejorar la comunidad!</p>
-                            </div>
-                            <div class="about-stats">
-                                <div class="stat">
-                                    <i class="fas fa-gamepad"></i>
-                                    <span class="stat-number">500+</span>
-                                    <span class="stat-label">Juegos</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-users"></i>
-                                    <span class="stat-number">50K+</span>
-                                    <span class="stat-label">Usuarios</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-download"></i>
-                                    <span class="stat-number">2M+</span>
-                                    <span class="stat-label">Descargas</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+    </section>
+
+    <!-- Sección FAQ -->
+    <section id="faq" class="content-section faq-section">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cómo descargo un juego?</h3>
+                    <i class="fas fa-chevron-down"></i>
                 </div>
+                <div class="faq-answer">
+                    <p>Para descargar un juego, simplemente haz clic en la tarjeta del juego que te interesa. En la ventana emergente, encontrarás los enlaces de descarga. Haz clic en uno de los enlaces y sigue las instrucciones en el sitio externo.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Son seguros los juegos?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Sí, todos nuestros juegos son escaneados regularmente con múltiples antivirus y verificados antes de ser publicados. Además, utilizamos solo servicios de descarga confiables como Mediafire y Gofile.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Por qué necesito una contraseña para extraer los archivos?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>La contraseña es una medida de seguridad para evitar que los antivirus marquen los archivos como maliciosos. La contraseña para todos nuestros juegos es: <strong>123</strong></p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Puedo solicitar un juego específico?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>¡Por supuesto! Puedes solicitarnos juegos a través de nuestro formulario de contacto o directamente en nuestro grupo de Telegram O Mi Cuenta De Tiktok. Hago mi mejor esfuerzo para agregar los títulos más solicitados.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Qué hago si un enlace no funciona?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Si un enlace no funciona, por favor contáctanos a través de nuestro formulario de contacto o en Telegram. Me encargaré de resolver el problema lo antes posible.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Por qué algunos juegos van lentos?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Algunos juegos son ports de consolas y pueden presentar problemas de rendimiento. Siempre indico en la descripción si un juego es un port para que estés informado antes de descargar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Política de Privacidad -->
+    <section id="privacy" class="content-section privacy-section">
+        <div class="privacy-content">
+            <h2>Política de Privacidad</h2>
+            <div class="privacy-text">
+                <p>En GamesFullZ, respeto tu privacidad y me comprometo a proteger tus datos personales. Esta política de privacidad explica cómo recopilo, uso y protejo tu información.</p>
+                <h3>Protección de datos</h3>
+                <p>Implemento medidas de seguridad técnicas para proteger tu información contra acceso no autorizado, alteración, divulgación o destrucción.</p>
                 
-                <!-- Contenido de FAQ -->
-                <div id="faq" class="info-content">
-                    <h3>Preguntas Frecuentes</h3>
-                    <div class="faq-container">
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h4>¿Cómo descargo un juego?</h4>
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Para descargar un juego, simplemente haz clic en la tarjeta del juego que te interesa. En la ventana emergente, encontrarás los enlaces de descarga. Haz clic en uno de los enlaces y sigue las instrucciones en el sitio externo.</p>
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h4>¿Son seguros los juegos?</h4>
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Sí, todos nuestros juegos son escaneados regularmente con múltiples antivirus y verificados antes de ser publicados. Además, utilizamos solo servicios de descarga confiables como Mediafire y Gofile.</p>
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h4>¿Por qué necesito una contraseña para extraer los archivos?</h4>
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                            <div class="faq-answer">
-                                <p>La contraseña es una medida de seguridad para evitar que los antivirus marquen los archivos como maliciosos. La contraseña para todos nuestros juegos es: <strong>123</strong></p>
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h4>¿Puedo solicitar un juego específico?</h4>
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                            <div class="faq-answer">
-                                <p>¡Por supuesto! Puedes solicitarnos juegos a través de nuestro formulario de contacto o directamente en nuestro grupo de Telegram o mi cuenta de Tiktok. Hago mi mejor esfuerzo para agregar los títulos más solicitados.</p>
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h4>¿Qué hago si un enlace no funciona?</h4>
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Si un enlace no funciona, por favor contáctanos a través de nuestro formulario de contacto o en Telegram. Me encargaré de resolver el problema lo antes posible.</p>
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h4>¿Por qué algunos juegos van lentos?</h4>
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Algunos juegos son ports de consolas y pueden presentar problemas de rendimiento. Siempre indico en la descripción si un juego es un port para que estés informado antes de descargar.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h3>Enlaces a terceros</h3>
+                <p>Nuestro sitio puede contener enlaces a sitios de terceros. No soy responsable por las prácticas de privacidad de estos sitios y te recomiendo revisar sus políticas de privacidad.</p>
                 
-                <!-- Contenido de Política de Privacidad -->
-                <div id="privacy" class="info-content">
-                    <h3>Política de Privacidad</h3>
-                    <div class="privacy-text">
-                        <p>En GamesFullZ, respeto tu privacidad y me comprometo a proteger tus datos personales. Esta política de privacidad explica cómo recopilo, uso y protejo tu información.</p>
-                        <h4>Protección de datos</h4>
-                        <p>Implemento medidas de seguridad técnicas para proteger tu información contra acceso no autorizado, alteración, divulgación o destrucción.</p>
-                        
-                        <h4>Enlaces a terceros</h4>
-                        <p>Nuestro sitio puede contener enlaces a sitios de terceros. No soy responsable por las prácticas de privacidad de estos sitios y te recomiendo revisar sus políticas de privacidad.</p>
-                        
-                        <h4>Cambios en esta política</h4>
-                        <p>Me reservo el derecho de actualizar esta política de privacidad en cualquier momento. Te notificaré sobre cambios importantes a través de nuestro sitio web.</p>
-                        
-                        <p>Si tienes alguna pregunta sobre nuestra política de privacidad, no dudes en contactarnos a través de nuestro formulario de contacto.</p>
-                    </div>
-                </div>
+                <h3>Cambios en esta política</h3>
+                <p>Me reservo el derecho de actualizar esta política de privacidad en cualquier momento. Te notificaré sobre cambios importantes a través de nuestro sitio web.</p>
+                
+                <p>Si tienes alguna pregunta sobre nuestra política de privacidad, no dudes en contactarnos a través de nuestro formulario de contacto.</p>
             </div>
         </div>
     </section>
@@ -763,9 +418,10 @@
                 <p class="footer-description">Descargas gratuitas y seguras de juegos</p>
             </div>
             <div class="footer-links">
-                <a href="#info">Información</a>
+                <a href="#about">Sobre Nosotros</a>
+                <a href="#faq">FAQ</a>
+                <a href="#privacy">Privacidad</a>
                 <a href="#games-section">Juegos</a>
-                <a href="https://web.telegram.org/k/#-4959297719" target="_blank">Telegram</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -774,7 +430,7 @@
     </footer>
 
     <!-- Botón para volver al inicio -->
-    <a href="#top" class="back-to-top-mobile" aria-label="Volver arriba">
+    <a href="#top" class="back-to-top-mobile">
         <i class="fas fa-arrow-up"></i>
     </a>
 
@@ -794,128 +450,6 @@
             setTimeout(function() {
                 window.location.href = '/';
             }, 600);
-        });
-    </script>
-    
-    <!-- Script para la animación de entrada mejorada -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const welcomeScreen = document.getElementById('welcomeScreen');
-            const loadingProgress = document.getElementById('loadingProgress');
-            const loadingPercentage = document.getElementById('loadingPercentage');
-            const skipIntro = document.getElementById('skipIntro');
-            const particlesContainer = document.getElementById('particlesContainer');
-            
-            // Crear partículas animadas
-            function createParticles() {
-                for (let i = 0; i < 50; i++) {
-                    const particle = document.createElement('div');
-                    particle.className = 'particle';
-                    particle.style.left = Math.random() * 100 + '%';
-                    particle.style.animationDelay = Math.random() * 8 + 's';
-                    particle.style.animationDuration = (Math.random() * 3 + 5) + 's';
-                    particlesContainer.appendChild(particle);
-                }
-            }
-            
-            // Simular progreso de carga
-            let progress = 0;
-            const loadingInterval = setInterval(() => {
-                progress += Math.random() * 15;
-                if (progress > 100) progress = 100;
-                
-                loadingProgress.style.width = progress + '%';
-                loadingPercentage.textContent = Math.floor(progress) + '%';
-                
-                if (progress >= 100) {
-                    clearInterval(loadingInterval);
-                    setTimeout(() => {
-                        welcomeScreen.classList.add('hidden');
-                    }, 500);
-                }
-            }, 200);
-            
-            // Opción para saltar la introducción
-            skipIntro.addEventListener('click', function() {
-                clearInterval(loadingInterval);
-                welcomeScreen.classList.add('hidden');
-            });
-            
-            // Inicializar partículas
-            createParticles();
-        });
-    </script>
-    
-    <!-- Script para la navegación de pestañas -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Obtener todos los botones de pestaña y el contenido
-            const tabButtons = document.querySelectorAll('.info-tab');
-            const tabContents = document.querySelectorAll('.info-content');
-            
-            // Función para cambiar de pestaña
-            function switchTab(tabId) {
-                // Desactivar todas las pestañas y contenidos
-                tabButtons.forEach(button => button.classList.remove('active'));
-                tabContents.forEach(content => content.classList.remove('active'));
-                
-                // Activar la pestaña y contenido seleccionados
-                document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
-                document.getElementById(tabId).classList.add('active');
-            }
-            
-            // Agregar evento de clic a cada botón de pestaña
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const tabId = button.getAttribute('data-tab');
-                    switchTab(tabId);
-                });
-            });
-            
-            // Manejar navegación desde enlaces externos
-            function handleNavigation() {
-                const hash = window.location.hash.substring(1);
-                
-                if (hash === 'about' || hash === 'faq' || hash === 'privacy') {
-                    // Ocultar sección de juegos y mostrar sección de información
-                    document.getElementById('games-section').classList.remove('active');
-                    document.getElementById('info').classList.add('active');
-                    
-                    // Cambiar a la pestaña correspondiente
-                    switchTab(hash);
-                    
-                    // Desplazarse a la sección de información
-                    setTimeout(() => {
-                        document.getElementById('info').scrollIntoView({ behavior: 'smooth' });
-                    }, 100);
-                } else if (hash === 'games-section' || hash === '') {
-                    // Mostrar sección de juegos y ocultar sección de información
-                    document.getElementById('info').classList.remove('active');
-                    document.getElementById('games-section').classList.add('active');
-                    
-                    // Desplazarse a la sección de juegos
-                    setTimeout(() => {
-                        document.getElementById('games-section').scrollIntoView({ behavior: 'smooth' });
-                    }, 100);
-                }
-            }
-            
-            // Verificar el hash al cargar la página
-            handleNavigation();
-            
-            // Escuchar cambios en el hash
-            window.addEventListener('hashchange', handleNavigation);
-            
-            // Manejar clics en los enlaces de navegación
-            document.querySelectorAll('a[href^="#"]').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    
-                    // Actualizar el hash
-                    window.location.hash = targetId;
-                });
-            });
         });
     </script>
 </body>
