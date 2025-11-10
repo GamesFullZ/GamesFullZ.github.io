@@ -2302,5 +2302,24 @@ imagen: "Images/nig.webp",
         mediafire: "https://cuty.io/e9d9"
     },
     imagen: "Images/silent-hill-f-tag-page-cover-art.webp"
+},
+  {
+    id: 133,
+    nombre: "Mortal Kombat 9",
+    tipo: "juego",
+    descripcion: "Juego de lucha lanzado en 2011 que reinicia la saga con una narrativa más oscura y violenta. Incluye un modo historia cinematográfico donde Raiden intenta cambiar el destino de la Tierra enfrentándose a Shao Kahn, además de combates clásicos con fatalities brutales y un amplio roster de personajes icónicos.",
+    requisitos: "Windows 7/8/10 64-bit, Intel Core 2 Duo 2.4 GHz / AMD Athlon X2 2.8 GHz, 2 GB RAM, NVIDIA GeForce 8800 GTS / AMD Radeon HD 3850, 10 GB espacio.",
+    downloads: 0,
+    rating: "⭐⭐⭐⭐⭐",
+    comments: [
+        "El reinicio perfecto de la saga, con un modo historia que engancha de principio a fin",
+        "Los fatalities son más sangrientos y espectaculares que nunca, puro Mortal Kombat",
+        "Ideal para jugar con amigos y revivir la nostalgia de los clásicos"
+    ],
+    links: {
+        direct: "https://www.mediafire.com/file/a4wku6vdzunf3mm/Mortal+Kombat+9+GamesFullZ.torrent/file",
+        mediafire: "https://cuty.io/ZXyoxK"
+    },
+    imagen: "Images/Mortal_Kombat_box_art.webp"
 }
 ];
